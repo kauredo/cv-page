@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, h4, h5 {
   margin: 0;
 }
@@ -78,11 +82,24 @@ h2 {
   top: 5% !important;
 }
 
+.active {
+  background-color: #5F021F;
+}
+
+
 #profile {
   margin-top: -200px;
+  /*text-align: center;*/
+}
+
+.avatar {
+  border-radius: 50%;
+  max-width: 250px;
 }
 
 #profile, #education, #experiences, #contact {
+  padding: 50px;
   min-height: 100vh;
   border: 1px solid black;
 }
+

@@ -25,37 +25,85 @@
   </div>
   <div class="resume">
     <div id="options">
-      <a href="#profile">Profile</a>
-      <a href="#education">Education</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#contact">Contact</a>
+      <div id="options-profile">
+        <a href="#profile">Profile</a>
+      </div>
+      <div id="options-education">
+        <a href="#education">Education</a>
+      </div>
+      <div id="options-experiences">
+        <a href="#experiences">Experiences</a>
+      </div>
+      <div id="options-contact">
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-    <div id="profile">
-
+    <div id="profile" class="panel">
+      <h2><i class="fas fa-user-circle"></i> about me</h2>
+      <hr>
+      <img src="images/PIC.jpg" class="avatar">
+      <p>
+        TODO WRITE ABOUT MYSELF
+      </p>
     </div>
-    <div id="education">
-
+    <div id="education" class="panel">
+      <h2><i class="fas fa-university"></i> education</h2>
+      <hr>
+      <ul>
+        <li>LeWagon - Coding Bootcamp</li>
+        <li>University of Exeter - BENG Electronical Engineering</li>
+        <li>St. Julians School Portugal - International Baccalaureate</li>
+      </ul>
     </div>
-    <div id="experiences">
-
+    <div id="experiences" class="panel">
     </div>
-    <div id="contact">
-
+    <div id="contact" class="panel">
+      <ul>
+        <li><i class="fab fa-linkedin"></i></li>
+        <li><i class="fas fa-envelope-square"></i></li>
+      </ul>
     </div>
 
   </div>
   <script language="javascript">
+    const option = document.getElementById('options');
     window.addEventListener("scroll", function(event) {
       var top = this.scrollY,
       left =this.scrollX;
+      const profile = document.getElementById('options-profile');
+      const education = document.getElementById('options-education');
+      const experiences = document.getElementById('options-experiences');
+      const contact = document.getElementById('options-contact');
       if (top >= 855) {
         option.classList.add('sticky');
       }
       if (top < 855) {
         option.classList.remove('sticky');
       }
+      if (top < 928) {
+        profile.classList.remove('active');
+        education.classList.remove('active');
+        experiences.classList.remove('active');
+        contact.classList.remove('active');
+      }
+      if (top >= 928 && top < 1350) {
+        profile.classList.add('active');
+        education.classList.remove('active');
+      }
+      // TODO -- AT THE END GET SCROLL VALUES
+      if (top >= 1350) {
+        education.classList.add('active');
+        profile.classList.remove('active');
+      }
+      // if (top < 855) {
+      //   experiences.classList.add('active');
+      //   profile.classList.remove('active');
+      // }
+      // if (top < 855) {
+      //   contact.classList.add('active');
+      //   profile.classList.remove('active');
+      // }
     }, false);
-    const option = document.getElementById('options');
     option.addEventListener('mouseover', () => {
       var top = this.scrollY;
       console.log(top);
