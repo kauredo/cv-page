@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Vasco Figueiredo's Curriculum</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="title">
+      <h1>
+        Vasco K Figueiredo
+      </h1>
+      <h2>
+        resume
+      </h2>
+    </div>
+  </div>
+  <div class="arrow">
+    <a href="#profile">
+      <i class="fas fa-angle-double-down"></i>
+    </a>
+  </div>
+  <div class="resume">
+    <div id="options">
+      <a href="#profile">Profile</a>
+      <a href="#education">Education</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div id="profile">
+
+    </div>
+    <div id="education">
+
+    </div>
+    <div id="experiences">
+
+    </div>
+    <div id="contact">
+
+    </div>
+
+  </div>
+  <script language="javascript">
+    window.addEventListener("scroll", function(event) {
+      var top = this.scrollY,
+      left =this.scrollX;
+      if (top >= 855) {
+        option.classList.add('sticky');
+      }
+      if (top < 855) {
+        option.classList.remove('sticky');
+      }
+    }, false);
+    const option = document.getElementById('options');
+    option.addEventListener('mouseover', () => {
+      var top = this.scrollY;
+      console.log(top);
+    });
+  </script>
+</body>
+</html>

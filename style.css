@@ -1,0 +1,88 @@
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(200,200,200,0.7), rgba(200,200,200,0.7)), url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+}
+
+.title {
+  text-align: center;
+  width: -moz-fit-content;
+  color: white;
+  text-shadow: 1px 1px 10px gray;
+}
+
+h2 {
+  border-top: 1px solid white;
+}
+
+.arrow {
+  width: 110px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 10px gray;
+  font-size: 2em;
+  position: absolute;
+  bottom: 0px;
+  left: 80%;
+  background-color: black;
+}
+
+.arrow > a:hover {
+  font-size: 1.3em;
+  transition: ease font-size 0.2s;
+}
+
+.resume {
+  /*margin-top: -200px;*/
+}
+
+#options {
+  width: 110px;
+  height: 200px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 10px gray;
+
+  border: 0px;
+  background-color: black;
+  position: relative;
+  top: 100%;
+  left: 80%;
+  z-index: 999;
+  /*margin-top: 200px;*/
+}
+
+#options > a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transition: ease font-size 0.2s;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 5% !important;
+}
+
+#profile {
+  margin-top: -200px;
+}
+
+#profile, #education, #experiences, #contact {
+  min-height: 100vh;
+  border: 1px solid black;
+}
