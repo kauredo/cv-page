@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  <div class="wrapper">
+  <div id="wrapper">
 
     <div class="title">
       <h1>
@@ -115,47 +115,50 @@
   <script language="javascript">
     const option = document.getElementById('options');
     window.addEventListener("scroll", function(event) {
-      var top = this.scrollY,
-      left =this.scrollX;
+      var top = this.scrollY;
+      const wrapper = document.getElementById('wrapper');
+      const profile_pg = document.getElementById('profile');
+      const education_pg = document.getElementById('education');
+      const experiences_pg = document.getElementById('experiences');
+
       const profile = document.getElementById('options-profile');
       const education = document.getElementById('options-education');
       const experiences = document.getElementById('options-experiences');
       const contact = document.getElementById('options-contact');
-      // if (top >= 855) {
-      //   option.classList.add('sticky');
-      // }
-      // if (top < 855) {
-      //   option.classList.remove('sticky');
-      // }
-      if (top < 775) {
+
+      if (top < wrapper.scrollHeight) {
         profile.classList.remove('active');
         education.classList.remove('active');
         experiences.classList.remove('active');
         contact.classList.remove('active');
       }
-      if (top >= 775 && top < 1958) {
+      if (top >= wrapper.scrollHeight && top < (wrapper.scrollHeight + profile_pg.scrollHeight)) {
         profile.classList.add('active');
         education.classList.remove('active');
       }
-      // TODO -- AT THE END GET SCROLL VALUES
-      if (top >= 1958 && top < 2988) {
+      if (top >= (wrapper.scrollHeight + profile_pg.scrollHeight) && top < (wrapper.scrollHeight + profile_pg.scrollHeight + education_pg.scrollHeight)) {
         education.classList.add('active');
         profile.classList.remove('active');
         experiences.classList.remove('active');
       }
-      if (top >= 2988 && top < 4018) {
+      if (top >= (wrapper.scrollHeight + profile_pg.scrollHeight + education_pg.scrollHeight) && top < (wrapper.scrollHeight + profile_pg.scrollHeight + education_pg.scrollHeight + experiences_pg.scrollHeight)) {
         experiences.classList.add('active');
         education.classList.remove('active');
         contact.classList.remove('active');
       }
-      if (top >= 4018) {
+      if (top >= (wrapper.scrollHeight + profile_pg.scrollHeight + education_pg.scrollHeight + experiences_pg.scrollHeight)) {
         contact.classList.add('active');
         experiences.classList.remove('active');
       }
     }, false);
     option.addEventListener('mouseover', () => {
       var top = this.scrollY;
-      console.log(top);
+      // console.log("TEST")
+      // console.log(top);
+      // console.log((wrapper.scrollHeight));
+      // console.log((wrapper.scrollHeight + profile.scrollHeight));
+      // console.log((wrapper.scrollHeight + profile.scrollHeight + education_pg.scrollHeight));
+      // console.log((wrapper.scrollHeight + profile.scrollHeight + education.scrollHeight + experiences_pg.scrollHeight));
     });
   </script>
 </body>
