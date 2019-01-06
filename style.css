@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
-  font-family: 'Gothic A1', sans-serif;
-  font-weight: 300;
+  font-family: 'Questrial', sans-serif;
+  /*font-weight: 300;*/
 }
 
 body, h1, h2, h3, h4, h5 {
@@ -18,25 +18,37 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(100,100,100,0.5), rgba(100,100,100,0.5)), url('images/background.png');
+  background-image: linear-gradient(white, white), url('images/backgroundwhite.png');
   background-size: cover;
-  background-position: left;
+  background-position: bottom left;
+  background-blend-mode: saturation;
+  /*background-position: bottom;*/
+  /*filter: grayscale(100%);*/
+  /*-webkit-filter: grayscale(100%);*/
 }
 
 .title {
   text-align: center;
   width: -moz-fit-content;
-  color: white;
-  text-shadow: 1px 1px 10px rgb(95,2,31);
+  color: rgb(95,2,31);
+  /*text-shadow: 1px 1px 10px rgb(95,2,31);*/
 }
 
 .title > h1 {
   font-size: 50px;
+  font-variant: small-caps;
 }
 
 .title > h2 {
   font-size: 35px;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(95,2,31);
+  font-variant: small-caps;
+
+}
+
+h2, h3 {
+  font-variant: small-caps;
+
 }
 
 .arrow {
@@ -52,12 +64,13 @@ a {
   position: absolute;
   bottom: 0px;
   left: 80%;
-  background-color: black;
+  background-color: rgb(95,2,31);
 }
 
 .arrow > a:hover {
   font-size: 1.3em;
   transition: ease font-size 0.2s;
+  color: white;
 }
 
 .resume {
@@ -69,6 +82,7 @@ a {
   height: 250px;
   line-height: 62.5px;
   text-align: center;
+  font-variant: small-caps;
   color: white;
   text-shadow: 1px 1px 10px gray;
 
@@ -117,7 +131,7 @@ a {
 }
 
 #profile, #experiences {
-  background-color: rgba(200, 200, 200, 0.2);
+  /*background-color: rgba(200, 200, 200, 0.2);*/
 }
 
 #education, #contact {
