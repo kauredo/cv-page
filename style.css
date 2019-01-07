@@ -32,7 +32,7 @@ a {
 }
 
 .title {
-  color: rgb(95,2,31);
+  color: white;
   /*text-shadow: 1px 1px 10px rgb(95,2,31);*/
 }
 
@@ -43,16 +43,18 @@ a {
 }
 
 #vasco {
-  transition: 1s;
+  transition: ease 1s;
+  background-color: rgb(95,2,31);
+  padding: 10px 50px 0px 50px;
   margin-left: -300%;
 }
 
 #cv {
   transition: 1s;
+  background-color: rgb(95,2,31);
   margin-right: -300%;
-}
-.border {
-  border-top: 1px solid rgb(95,2,31);
+  padding-bottom: 10px;
+  border-top: 2px solid white;
 }
 
 .title > h2 {
