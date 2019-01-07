@@ -27,21 +27,37 @@ a {
   /*-webkit-filter: grayscale(100%);*/
 }
 
-.title {
-  text-align: center;
+.thing {
   width: -moz-fit-content;
+}
+
+.title {
   color: rgb(95,2,31);
   /*text-shadow: 1px 1px 10px rgb(95,2,31);*/
 }
 
 .title > h1 {
+  text-align: center;
   font-size: 95px;
   font-variant: small-caps;
 }
 
-.title > h2 {
-  font-size: 35px;
+#vasco {
+  transition: 1s;
+  margin-left: -300%;
+}
+
+#cv {
+  transition: 1s;
+  margin-right: -300%;
+}
+.border {
   border-top: 1px solid rgb(95,2,31);
+}
+
+.title > h2 {
+  text-align: center;
+  font-size: 35px;
   font-variant: small-caps;
 
 }

@@ -9,14 +9,17 @@
 </head>
 <body>
   <div id="wrapper">
-
-    <div class="title">
-      <h1>
-        vasco k figueiredo
-      </h1>
-      <h2>
-        online curriculum
-      </h2>
+    <div class="thing">
+      <div class="title" id="vasco">
+        <h1>
+          vasco k figueiredo
+        </h1>
+      </div>
+      <div class="title" id="cv">
+        <h2>
+          online curriculum
+        </h2>
+      </div>
     </div>
   </div>
   <div class="arrow">
@@ -153,13 +156,18 @@
     }, false);
     option.addEventListener('mouseover', () => {
       var top = this.scrollY;
-      // console.log("TEST")
-      // console.log(top);
-      // console.log((wrapper.scrollHeight));
-      // console.log((wrapper.scrollHeight + profile.scrollHeight));
-      // console.log((wrapper.scrollHeight + profile.scrollHeight + education_pg.scrollHeight));
-      // console.log((wrapper.scrollHeight + profile.scrollHeight + education.scrollHeight + experiences_pg.scrollHeight));
     });
+    window.onload = function() {
+      var vasco = document.getElementById('vasco');
+      var cv = document.getElementById('cv');
+      vasco.style.marginLeft = "0px";
+      cv.style.marginRight = "0px";
+      const borders = function() {
+        cv.classList.add('border');
+      };
+      setTimeout(borders, 1000);
+    };
+
   </script>
 </body>
 </html>
