@@ -172,6 +172,13 @@ h2, h3 {
   max-width: 70%;
 }
 
+
+.education-list > ul {
+  font-variant: small-caps;
+  /*font-size:*/
+}
+
+
 #contact > ul {
   list-style: none;
   font-size: 1em;
