@@ -23,9 +23,6 @@ a {
   background-size: cover;
   background-position: bottom left;
   background-blend-mode: saturation;
-  /*background-position: bottom;*/
-  /*filter: grayscale(100%);*/
-  /*-webkit-filter: grayscale(100%);*/
 }
 
 .thing {
@@ -34,7 +31,6 @@ a {
 
 .title {
   color: white;
-  /*text-shadow: 1px 1px 10px rgb(95,2,31);*/
 }
 
 .title > h1 {
@@ -111,7 +107,6 @@ h2, h3 {
   top: 150px;
   left: 80%;
   z-index: 999;
-  /*margin-top: 200px;*/
 }
 
 #options a:hover {
@@ -131,7 +126,6 @@ h2, h3 {
 
 #profile {
   margin-top: -250px;
-  /*text-align: center;*/
 }
 
 .avatar {
@@ -140,17 +134,18 @@ h2, h3 {
   margin-left: 10%;
 }
 
-#profile, #education, #experiences, #contact {
+#profile, #education, #experiences {
   padding: 50px;
   min-height: 50vh;
 }
 
+ #contact {
+  padding: 50px;
+  height: 20vh;
+ }
+
 #profile h3, #profile ul, #profile p, #education h3, #education ul, #education p, #experiences h3, #experiences ul, #experiences p, #contact h3, #contact ul, #contact p {
   margin-left: 10%;
-}
-
-#profile, #experiences {
-  /*background-color: rgba(200, 200, 200, 0.2);*/
 }
 
 #education, #contact {
@@ -172,12 +167,10 @@ h2, h3 {
   max-width: 70%;
 }
 
-
 .education-list > ul {
   font-variant: small-caps;
   font-size: 2em;
 }
-
 
 #contact > ul {
   list-style: none;
