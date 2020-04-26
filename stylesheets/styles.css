@@ -25,11 +25,17 @@
   font-weight: bold;
   height: 3.75rem;
   border-bottom: 0.25rem solid;
-  position: fixed; }
+  position: fixed;
+  z-index: 10; }
   .navbar .logo {
-    margin: auto 0; }
-    .navbar .logo img {
-      height: 2rem; }
+    margin: auto 1rem; }
+    .navbar .logo svg {
+      height: 2rem;
+      width: 2rem; }
+      .navbar .logo svg:hover {
+        margin-left: -0.25rem;
+        height: 2.5rem;
+        width: 2.5rem; }
   .navbar .container {
     display: flex;
     justify-content: space-between;

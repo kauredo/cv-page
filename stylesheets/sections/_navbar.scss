@@ -7,12 +7,20 @@
 	height: $navbar-height;
 	border-bottom: 0.25rem solid;
 	position: fixed;
+	z-index: 10;
 
 	.logo {
-		margin: auto 0;
+		margin: auto 1rem;
 
-		img {
+		svg {
 			height: 2rem;
+			width: 2rem;
+
+			&:hover {
+				margin-left: -0.25rem;
+				height: 2.5rem;
+				width: 2.5rem;
+			}
 		}
 	}
 
