@@ -3,14 +3,13 @@
 .hero {
 	width: 100%;
 	height: calc(100vh - 0.25rem - #{$navbar-height});
-	background-color: $main-color;
+	background-color: black;
 
 	.title {
 		text-align: center;
-		text-transform: lowercase;
+		text-transform: uppercase;
 		margin: auto;
 		font-size: 5rem;
-		height: 6rem;
 		width: fit-content;
 		padding: 2rem;
 		position: relative;
@@ -18,13 +17,20 @@
 		display: flex;
 		align-items: baseline;
 
+		animation-name: colorChange;
+		animation-duration: 2s;
+		animation-delay: 0;
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
 
-		img {
-			height: 42%;
+		svg {
+			height: 13rem;
+			width: 15rem;
 		}
 
 		p {
-			margin: 0 0 0 0.2rem;
+			margin: 0 0 0 -0.2rem;
+			letter-spacing: 0.5rem;
 		}
 	}
 }

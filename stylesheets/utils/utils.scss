@@ -1,6 +1,26 @@
 $main-color: #EFC88B;
 $secondary-color: #543864;
-$third-color: #CF5C36;
-$fourth-color: #FFBD69;
+$third-color: #23B5D3;
+$fourth-color: #FFFFFF;
 
 $navbar-height: 3.75rem;
+
+
+@keyframes colorChange {
+  0%   {
+  	fill: $main-color;
+  	color: $main-color;
+  }
+  25%  {
+  	fill: $secondary-color;
+  	color: $secondary-color;
+  }
+  50%  {
+  	fill: $third-color;
+  	color: $third-color;
+  }
+  100% {
+  	fill: $fourth-color;
+  	color: $fourth-color;
+  }
+}

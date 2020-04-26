@@ -1,7 +1,7 @@
 @import '../utils/utils';
 
 .navbar {
-	background-color: $third-color;
+	background-color: black;
 	width: 100%;
 	font-weight: bold;
 	height: $navbar-height;
@@ -15,7 +15,8 @@
 		svg {
 			height: 2rem;
 			width: 2rem;
-
+			fill: white;
+			
 			&:hover {
 				margin-left: -0.25rem;
 				height: 2.5rem;

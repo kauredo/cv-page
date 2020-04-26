@@ -1,26 +1,58 @@
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #543864;
+    color: #543864; }
+  50% {
+    fill: #23B5D3;
+    color: #23B5D3; }
+  100% {
+    fill: #FFFFFF;
+    color: #FFFFFF; } }
 .hero {
   width: 100%;
   height: calc(100vh - 0.25rem - 3.75rem);
-  background-color: #EFC88B; }
+  background-color: black; }
   .hero .title {
     text-align: center;
-    text-transform: lowercase;
+    text-transform: uppercase;
     margin: auto;
     font-size: 5rem;
-    height: 6rem;
     width: fit-content;
     padding: 2rem;
     position: relative;
     top: calc(50vh - (9rem/2) - 3.75rem);
     display: flex;
-    align-items: baseline; }
-    .hero .title img {
-      height: 42%; }
+    align-items: baseline;
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; }
+    .hero .title svg {
+      height: 13rem;
+      width: 15rem; }
     .hero .title p {
-      margin: 0 0 0 0.2rem; }
+      margin: 0 0 0 -0.2rem;
+      letter-spacing: 0.5rem; }
 
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #543864;
+    color: #543864; }
+  50% {
+    fill: #23B5D3;
+    color: #23B5D3; }
+  100% {
+    fill: #FFFFFF;
+    color: #FFFFFF; } }
 .navbar {
-  background-color: #CF5C36;
+  background-color: black;
   width: 100%;
   font-weight: bold;
   height: 3.75rem;
@@ -31,7 +63,8 @@
     margin: auto 1rem; }
     .navbar .logo svg {
       height: 2rem;
-      width: 2rem; }
+      width: 2rem;
+      fill: white; }
       .navbar .logo svg:hover {
         margin-left: -0.25rem;
         height: 2.5rem;
@@ -46,11 +79,26 @@
     justify-content: space-between;
     list-style-type: none; }
 
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #543864;
+    color: #543864; }
+  50% {
+    fill: #23B5D3;
+    color: #23B5D3; }
+  100% {
+    fill: #FFFFFF;
+    color: #FFFFFF; } }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 16px; }
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: black; }
   body .body {
     padding: calc(3.75rem + 0.25rem) 0 0 0; }
 
@@ -61,5 +109,9 @@ body {
 
 .section {
   height: 100vh; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */
