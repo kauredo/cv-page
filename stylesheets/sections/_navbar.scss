@@ -1,0 +1,31 @@
+@import '../utils/utils';
+
+.navbar {
+	background-color: $third-color;
+	width: 100%;
+	font-weight: bold;
+	height: $navbar-height;
+	border-bottom: 0.25rem solid;
+	position: fixed;
+
+	.logo {
+		margin: auto 0;
+
+		img {
+			height: 2rem;
+		}
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.sections {
+		width: 35%;
+		display: flex;
+		justify-content: space-between;	
+		list-style-type: none;
+	}
+}

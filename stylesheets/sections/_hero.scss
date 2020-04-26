@@ -1,0 +1,30 @@
+@import '../utils/utils';
+
+.hero {
+	width: 100%;
+	height: calc(100vh - 0.25rem - #{$navbar-height});
+	background-color: $main-color;
+
+	.title {
+		text-align: center;
+		text-transform: lowercase;
+		margin: auto;
+		font-size: 5rem;
+		height: 6rem;
+		width: fit-content;
+		padding: 2rem;
+		position: relative;
+		top: calc(50vh - (9rem/2) - #{$navbar-height});
+		display: flex;
+		align-items: baseline;
+
+
+		img {
+			height: 42%;
+		}
+
+		p {
+			margin: 0 0 0 0.2rem;
+		}
+	}
+}
