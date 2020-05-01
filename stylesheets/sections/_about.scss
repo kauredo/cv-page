@@ -2,13 +2,14 @@
 
 #about {
   .avatar-box-top {
-    border: 1rem solid $background-color;
+    border: 1rem solid $secondary-color;
     border-bottom: none;
     width: 32rem;
     height: 20rem;
   }
+
   .avatar-box-bot {
-    border-bottom: 1rem solid $background-color;
+    border-bottom: 1rem solid $secondary-color;
     width: 32rem;
     height: 2rem;
   }

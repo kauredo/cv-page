@@ -3,11 +3,11 @@
     fill: #EFC88B;
     color: #EFC88B; }
   25% {
-    fill: #6A5837;
-    color: #6A5837; }
+    fill: #EFFFC8;
+    color: #EFFFC8; }
   50% {
-    fill: #988F2A;
-    color: #988F2A; }
+    fill: #D7CDCC;
+    color: #D7CDCC; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -29,7 +29,8 @@
   .navbar .nav-burger {
     display: none; }
   .navbar .logo {
-    margin: auto 1rem; }
+    margin: auto 1rem;
+    filter: drop-shadow(0 0 0.2rem black); }
     .navbar .logo .svg-logo-nav {
       height: 2rem;
       width: 2rem;
@@ -51,6 +52,14 @@
 @media only screen and (max-device-width: 736px) and (orientation: portrait) {
   .navbar {
     height: 8rem; }
+
+  .navbar .logo .svg-logo-nav {
+    height: 4rem;
+    width: 4rem; }
+    .navbar .logo .svg-logo-nav:hover {
+      margin-left: 0;
+      height: 4rem;
+      width: 4rem; }
 
   .navbar .nav-burger {
     display: block;
@@ -99,11 +108,11 @@
     fill: #EFC88B;
     color: #EFC88B; }
   25% {
-    fill: #6A5837;
-    color: #6A5837; }
+    fill: #EFFFC8;
+    color: #EFFFC8; }
   50% {
-    fill: #988F2A;
-    color: #988F2A; }
+    fill: #D7CDCC;
+    color: #D7CDCC; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -150,11 +159,11 @@
     fill: #EFC88B;
     color: #EFC88B; }
   25% {
-    fill: #6A5837;
-    color: #6A5837; }
+    fill: #EFFFC8;
+    color: #EFFFC8; }
   50% {
-    fill: #988F2A;
-    color: #988F2A; }
+    fill: #D7CDCC;
+    color: #D7CDCC; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -162,12 +171,12 @@
     fill: #EFC88B;
     color: #EFC88B; } }
 #about .avatar-box-top {
-  border: 1rem solid #272727;
+  border: 1rem solid #EFFFC8;
   border-bottom: none;
   width: 32rem;
   height: 20rem; }
 #about .avatar-box-bot {
-  border-bottom: 1rem solid #272727;
+  border-bottom: 1rem solid #EFFFC8;
   width: 32rem;
   height: 2rem; }
 #about .bot-left {
@@ -205,11 +214,11 @@
     fill: #EFC88B;
     color: #EFC88B; }
   25% {
-    fill: #6A5837;
-    color: #6A5837; }
+    fill: #EFFFC8;
+    color: #EFFFC8; }
   50% {
-    fill: #988F2A;
-    color: #988F2A; }
+    fill: #D7CDCC;
+    color: #D7CDCC; }
   75% {
     fill: #111111;
     color: #111111; }

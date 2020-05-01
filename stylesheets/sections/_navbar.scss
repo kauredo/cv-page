@@ -21,6 +21,7 @@
 
 	.logo {
 		margin: auto 1rem;
+		filter: drop-shadow(0 0 0.2rem black);
 
 		.svg-logo-nav {
 			height: 2rem;
@@ -44,13 +45,25 @@
 	.nav-sections {
 		width: 35%;
 		display: flex;
-		justify-content: space-between;	
+		justify-content: space-between;
 		list-style-type: none;
 	}
 }
+
 @media only screen and (max-device-width: 736px) and (orientation: portrait) {
 	.navbar {
 		height: 8rem;
+	}
+
+	.navbar .logo .svg-logo-nav {
+		height: 4rem;
+		width: 4rem;
+
+		&:hover {
+			margin-left: 0;
+			height: 4rem;
+			width: 4rem;
+		}
 	}
 
 	.navbar .nav-burger {
