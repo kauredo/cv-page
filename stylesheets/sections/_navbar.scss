@@ -1,22 +1,22 @@
 @import '../utils/utils';
 
 .navbar {
-	background-color: black;
 	width: 100%;
 	font-weight: bold;
 	height: $navbar-height;
 	border-bottom: 0.25rem solid;
 	position: fixed;
 	z-index: 10;
+	background-color: $background-color;
 
 	.logo {
 		margin: auto 1rem;
 
-		svg {
+		.svg-logo-nav {
 			height: 2rem;
 			width: 2rem;
-			fill: white;
-			
+			fill: $text-color;
+
 			&:hover {
 				margin-left: -0.25rem;
 				height: 2.5rem;
@@ -31,7 +31,7 @@
 		align-items: center;
 	}
 
-	.sections {
+	.nav-sections {
 		width: 35%;
 		display: flex;
 		justify-content: space-between;	

@@ -3,34 +3,45 @@
 .hero {
 	width: 100%;
 	height: calc(100vh - 0.25rem - #{$navbar-height});
-	background-color: black;
 
 	.title {
 		text-align: center;
-		text-transform: uppercase;
 		margin: auto;
 		font-size: 5rem;
 		width: fit-content;
 		padding: 2rem;
 		position: relative;
-		top: calc(50vh - (9rem/2) - #{$navbar-height});
-		display: flex;
+		top: calc(50vh - (20rem/2) - #{$navbar-height});
+		display: block;
 		align-items: baseline;
-
-		animation-name: colorChange;
-		animation-duration: 2s;
-		animation-delay: 0;
-		animation-iteration-count: infinite;
-		animation-direction: alternate-reverse;
-
-		svg {
+		
+		// animation-name: colorChange;
+		// animation-duration: 2s;
+		// animation-delay: 0;
+		// animation-iteration-count: 20;
+		// animation-direction: alternate-reverse;
+		fill: $main-color;
+		color: $main-color;
+		
+		.hero-btn {
+			border: 3px solid;
+			margin-top: 1rem;
+			transform: skewX(-28deg);
+			background-color: $text-color;
+			.hero-btn-text {
+				color: $background-color;
+				text-transform: lowercase;
+				font-size: 2rem;
+				padding: 0.5rem 2rem;
+				margin: 0;
+				transform: skewX(28deg);
+			}
+		}
+		
+		.hero-svg {
 			height: 13rem;
 			width: 15rem;
-		}
-
-		p {
-			margin: 0 0 0 -0.2rem;
-			letter-spacing: 0.5rem;
+			margin-right: 2rem;
 		}
 	}
 }

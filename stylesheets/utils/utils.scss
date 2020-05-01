@@ -1,7 +1,13 @@
+$text-color: #FFFFFF;
+$text-color: #EFC88B;
+$background-color: rgb(39, 39, 39);
 $main-color: #EFC88B;
-$secondary-color: #543864;
-$third-color: #23B5D3;
-$fourth-color: #FFFFFF;
+$secondary-color: #6A5837;
+$third-color: #988F2A;
+$fourth-color: #111111;
+
+$headings: 'Muli', sans-serif;
+$text: 'Lato', sans-serif;
 
 $navbar-height: 3.75rem;
 
@@ -19,8 +25,12 @@ $navbar-height: 3.75rem;
   	fill: $third-color;
   	color: $third-color;
   }
+  75% {
+    fill: $fourth-color;
+    color: $fourth-color;
+  }
   100% {
-  	fill: $fourth-color;
-  	color: $fourth-color;
+    fill: $main-color;
+    color: $main-color;
   }
 }
