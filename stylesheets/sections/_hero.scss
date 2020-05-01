@@ -3,6 +3,9 @@
 .hero {
 	width: 100%;
 	height: calc(100vh - 0.25rem - #{$navbar-height});
+	background-image: url('../images/backgroundblack.png');
+	background-position: top left;
+	background-size: cover;
 
 	.title {
 		text-align: center;
