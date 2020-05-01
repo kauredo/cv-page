@@ -1,0 +1,36 @@
+$text-color: #FFFFFF;
+$text-color: #EFC88B;
+$background-color: rgb(39, 39, 39);
+$main-color: #EFC88B;
+$secondary-color: #EFFFC8;
+$third-color: #D7CDCC;
+$fourth-color: #111111;
+
+$headings: 'Muli', sans-serif;
+$text: 'Lato', sans-serif;
+
+$navbar-height: 3.75rem;
+
+
+@keyframes colorChange {
+  0%   {
+  	fill: $main-color;
+  	color: $main-color;
+  }
+  25%  {
+  	fill: $secondary-color;
+  	color: $secondary-color;
+  }
+  50%  {
+  	fill: $third-color;
+  	color: $third-color;
+  }
+  75% {
+    fill: $fourth-color;
+    color: $fourth-color;
+  }
+  100% {
+    fill: $main-color;
+    color: $main-color;
+  }
+}
