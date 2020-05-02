@@ -388,6 +388,73 @@
   100% {
     fill: #EFC88B;
     color: #EFC88B; } }
+h1 {
+  text-align: center;
+  color: #a8a8a8; }
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto; }
+  form input, form textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    resize: none; }
+  form #input-submit {
+    color: white;
+    background: #272727;
+    cursor: pointer; }
+  form textarea {
+    height: 126px; }
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em; }
+
+.right {
+  width: 50%; }
+
+.left {
+  margin-right: 2%; }
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0; } }
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #EFFFC8;
+    color: #EFFFC8; }
+  50% {
+    fill: #D7CDCC;
+    color: #D7CDCC; }
+  75% {
+    fill: #111111;
+    color: #111111; }
+  100% {
+    fill: #EFC88B;
+    color: #EFC88B; } }
 html {
   scroll-behavior: smooth; }
 
@@ -418,9 +485,9 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto; }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: calc(3.75rem + 0.25rem); }
-  .section:nth-child(2) {
+  .section:nth-child(even) {
     background-color: #EFC88B;
     color: #272727; }
   @media only screen and (max-device-width: 736px) and (orientation: portrait) {
