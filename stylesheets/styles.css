@@ -208,205 +208,167 @@
     #about .about-text p {
       line-height: 2rem; } }
 
-#experiences {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* ================ Timeline Media Queries ================ */ }
-  #experiences .timeline-group {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center; }
-  #experiences .tl-divider {
-    border-bottom: 0.25rem dashed #D7CDCC;
-    opacity: 25%;
-    width: 80%;
-    margin: 0 auto; }
-  #experiences .timeline-text {
-    width: 660px;
-    text-align: center; }
-  #experiences .timeline {
-    position: relative;
-    width: 660px;
-    margin-top: 20px;
-    padding: 1em 0;
-    list-style-type: none; }
-  #experiences .timeline:before {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    content: ' ';
-    display: block;
-    width: 6px;
-    height: 100%;
-    margin-left: -3px;
-    background: #EFC88B;
-    background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, #D7CDCC 8%, #D7CDCC 92%, rgba(80, 80, 80, 0) 100%);
-    z-index: 5; }
-  #experiences .timeline li {
-    padding: 1em 0; }
-  #experiences .timeline li:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-  #experiences .direction-l {
-    position: relative;
-    width: 300px;
-    float: left;
-    text-align: right; }
-  #experiences .direction-r {
-    position: relative;
-    width: 300px;
-    float: right; }
-  #experiences .flag-wrapper {
-    position: relative;
-    display: inline-block;
-    text-align: center; }
-  #experiences .flag {
-    position: relative;
-    display: inline;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-weight: 600;
-    text-align: left; }
-  #experiences .direction-l .flag {
-    -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15); }
-  #experiences .direction-r .flag {
-    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15); }
-  #experiences .direction-l .flag:before,
-  #experiences .direction-r .flag:before {
-    position: absolute;
-    top: 50%;
-    right: -40px;
-    content: ' ';
-    display: block;
-    width: 12px;
-    height: 12px;
-    margin-top: -10px;
-    border-radius: 10px;
-    border: 4px solid #EFC88B;
-    z-index: 10; }
-  #experiences .direction-r .flag:before {
-    left: -40px; }
-  #experiences .direction-l .flag:after {
-    content: "";
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    height: 0;
-    width: 0;
-    margin-top: -8px;
-    border: solid transparent;
-    border-left-color: #f8f8f8;
-    border-width: 8px;
-    pointer-events: none; }
-  #experiences .direction-r .flag:after {
-    content: "";
-    position: absolute;
-    right: 100%;
-    top: 50%;
-    height: 0;
-    width: 0;
-    margin-top: -8px;
-    border: solid transparent;
-    border-right-color: #f8f8f8;
-    border-width: 8px;
-    pointer-events: none; }
-  #experiences .time-wrapper {
-    display: inline;
-    line-height: 1em;
-    font-size: 0.66666em;
-    color: #D7CDCC;
-    vertical-align: middle; }
-  #experiences .direction-l .time-wrapper {
-    float: left; }
-  #experiences .direction-r .time-wrapper {
-    float: right; }
-  #experiences .time {
-    display: inline-block;
-    padding: 4px 6px; }
-  #experiences .desc {
-    margin: 1em 0.75em 0 0;
-    font-size: 0.77777em;
-    font-style: italic;
-    line-height: 1.5em; }
-  #experiences .direction-r .desc {
-    margin: 1em 0 0 0.75em; }
-  @media screen and (max-width: 660px) {
-    #experiences .timeline {
-      width: 100%;
-      padding: 4em 0 1em 0; }
-    #experiences .timeline li {
-      padding: 2em 0; }
-    #experiences .direction-l,
-    #experiences .direction-r {
-      float: none;
-      width: 100%;
-      text-align: center; }
-    #experiences .flag-wrapper {
-      text-align: center; }
-    #experiences .flag {
-      z-index: 15; }
-    #experiences .direction-l .flag:before,
-    #experiences .direction-r .flag:before {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      content: ' ';
-      display: block;
-      width: 12px;
-      height: 12px;
-      margin-left: -9px;
-      border-radius: 10px;
-      border: 4px solid #D7CDCC;
-      z-index: 10; }
-    #experiences .direction-l .flag:after,
-    #experiences .direction-r .flag:after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: -8px;
-      height: 0;
-      width: 0;
-      margin-left: -8px;
-      border: solid transparent;
-      border-bottom-color: white;
-      border-width: 8px;
-      pointer-events: none; }
-    #experiences .time-wrapper {
-      display: block;
-      position: relative;
-      margin: 4px 0 0 0;
-      z-index: 14; }
-    #experiences .direction-l .time-wrapper {
-      float: none; }
-    #experiences .direction-r .time-wrapper {
-      float: none; }
-    #experiences .desc {
-      position: relative;
-      margin: 1em 0 0 0;
-      padding: 1em;
-      -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-      z-index: 15; }
-    #experiences .direction-l .desc,
-    #experiences .direction-r .desc {
-      position: relative;
-      margin: 1em 1em 0 1em;
-      padding: 1em;
-      z-index: 15; } }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
-    #experiences .direction-l .desc,
-    #experiences .direction-r .desc {
-      margin: 1em 4em 0 4em; } }
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #EFFFC8;
+    color: #EFFFC8; }
+  50% {
+    fill: #D7CDCC;
+    color: #D7CDCC; }
+  75% {
+    fill: #111111;
+    color: #111111; }
+  100% {
+    fill: #EFC88B;
+    color: #EFC88B; } }
+.timeline .timeline-item:after, .timeline .timeline-item:before {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both; }
 
+.timeline-group {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.timeline-text {
+  width: 25%;
+  text-align: center;
+  font-size: 2.5rem; }
+
+.tl-divider {
+  display: block;
+  width: 25rem;
+  height: 3px;
+  left: 37.5%;
+  top: -7.9%;
+  position: relative;
+  background: #EFC88B; }
+
+.timeline {
+  width: 70%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .timeline:before {
+    content: "";
+    width: 3px;
+    height: 109%;
+    background: #EFC88B;
+    left: 50%;
+    top: -15%;
+    position: absolute; }
+  .timeline:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%; }
+  .timeline .timeline-item {
+    margin-bottom: 50px;
+    position: relative; }
+    .timeline .timeline-item .timeline-icon {
+      background: #EFC88B;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      overflow: hidden;
+      margin-left: -23px;
+      transform: skewX(-14deg); }
+      .timeline .timeline-item .timeline-icon .svg-tl {
+        position: relative;
+        top: 14px;
+        left: 14px;
+        fill: #272727;
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: skewX(14deg); }
+    .timeline .timeline-item .timeline-content {
+      width: 45%;
+      background: #272727;
+      padding: 20px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .timeline .timeline-item .timeline-content .tl-main-text {
+        transform: skewX(-14deg);
+        background: #EFC88B;
+        color: #272727;
+        padding: 0 1rem;
+        height: 50px;
+        display: flex;
+        margin: -20px -20px 0 -20px;
+        justify-content: space-between;
+        align-items: baseline; }
+      .timeline .timeline-item .timeline-content h2 {
+        font-weight: 300;
+        transform: skewX(14deg);
+        padding: 0.5rem;
+        height: 2rem; }
+      .timeline .timeline-item .timeline-content:before {
+        content: '';
+        position: absolute;
+        left: calc(45% - 2px);
+        top: 20px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid #EFC88B;
+        transform: skewX(-14deg); }
+      .timeline .timeline-item .timeline-content.right {
+        float: right; }
+        .timeline .timeline-item .timeline-content.right:before {
+          content: '';
+          right: calc(45% - 1px);
+          left: inherit;
+          border-left: 0;
+          border-right: 7px solid #EFC88B; }
+
+@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  .timeline-group {
+    flex-direction: column-reverse; }
+    .timeline-group:nth-child(1) {
+      flex-direction: column; }
+
+  .tl-divider {
+    display: none; }
+
+  .timeline-text {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2rem; }
+
+  .timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%; }
+    .timeline:before {
+      left: 0;
+      top: -25%;
+      height: 115%; }
+    .timeline .timeline-item .timeline-content {
+      width: 90%;
+      float: right; }
+      .timeline .timeline-item .timeline-content .tl-main-text {
+        height: 5rem; }
+      .timeline .timeline-item .timeline-content:before, .timeline .timeline-item .timeline-content.right:before {
+        left: 10%;
+        margin-left: -6px;
+        border-left: 0;
+        border-right: 7px solid; }
+    .timeline .timeline-item .timeline-icon {
+      left: 0; } }
 @keyframes colorChange {
   0% {
     fill: #EFC88B;
@@ -458,6 +420,9 @@ h1, h2, h3, h4, h5 {
   .section:nth-child(2) {
     background-color: #EFC88B;
     color: #272727; }
+  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+    .section {
+      padding-top: calc(8rem + 0.25rem); } }
 
 a {
   color: inherit;
