@@ -33,6 +33,7 @@
 
     p {
       line-height: 1.5rem;
+      text-align: justify;
     }
   }
 
@@ -51,7 +52,9 @@
     }
 
     .about-text {
-      width: 60%;
+      width: 85%;
+      margin: 0.5rem 2rem 0 auto;
+
       p {
         line-height: 2rem;
       }

@@ -194,7 +194,8 @@
   margin: 7rem 8rem 0 auto;
   width: 40%; }
   #about .about-text p {
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    text-align: justify; }
 @media only screen and (max-device-width: 736px) and (orientation: portrait) {
   #about img {
     height: 65vh; }
@@ -204,7 +205,8 @@
   #about .avatar-box-bot {
     width: 52rem; }
   #about .about-text {
-    width: 60%; }
+    width: 85%;
+    margin: 0.5rem 2rem 0 auto; }
     #about .about-text p {
       line-height: 2rem; } }
 
@@ -238,7 +240,8 @@
 .timeline-text {
   width: 25%;
   text-align: center;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  text-transform: capitalize; }
 
 .tl-divider {
   display: block;
