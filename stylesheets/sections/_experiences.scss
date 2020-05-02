@@ -46,13 +46,20 @@
   padding: 0 10px;
   @include prefix(transition, all .4s ease);
   
+  &:nth-child(1) {
+    &:before {
+      height: 100%;
+      top: -10%;
+    }
+  }
+
   &:before {
     content:"";
     width: 3px;
     height: 109%;
     background: $main-color;
     left: 50%;
-    top: -15%;
+    top: -17%;
     position: absolute;
   }
   
@@ -163,10 +170,16 @@
     margin: 30px;
     padding: 0px;
     width: 90%;
+    &:nth-child(1) {
+      &:before {
+        height: 100%;
+        top: -10%;
+      }
+    }
     &:before {
       left: 0;
       top: -25%;
-      height: 115%;
+      height: 137%;
     }
     
     .timeline-item {

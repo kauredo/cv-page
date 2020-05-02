@@ -152,6 +152,9 @@
       height: 13rem;
       width: 15rem;
       margin-right: 2rem; }
+  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+    .hero .title .hero-svg {
+      margin: 0; } }
 
 @keyframes colorChange {
   0% {
@@ -198,7 +201,7 @@
     text-align: justify; }
 @media only screen and (max-device-width: 736px) and (orientation: portrait) {
   #about img {
-    height: 65vh; }
+    height: 57vh; }
   #about .avatar-box-top {
     width: 52rem;
     height: 29rem; }
@@ -261,13 +264,16 @@
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease; }
+  .timeline:nth-child(1):before {
+    height: 100%;
+    top: -10%; }
   .timeline:before {
     content: "";
     width: 3px;
     height: 109%;
     background: #EFC88B;
     left: 50%;
-    top: -15%;
+    top: -17%;
     position: absolute; }
   .timeline:after {
     content: "";
@@ -356,10 +362,13 @@
     margin: 30px;
     padding: 0px;
     width: 90%; }
+    .timeline:nth-child(1):before {
+      height: 100%;
+      top: -10%; }
     .timeline:before {
       left: 0;
       top: -25%;
-      height: 115%; }
+      height: 137%; }
     .timeline .timeline-item .timeline-content {
       width: 90%;
       float: right; }
@@ -470,6 +479,9 @@ body {
   background-color: #272727; }
   body .body {
     padding: calc(3.75rem + 0.25rem) 0 0 0; }
+    @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+      body .body {
+        padding-top: calc(8rem + 0.25rem); } }
   @media only screen and (max-device-width: 736px) and (orientation: portrait) {
     body {
       font-size: 32px; } }

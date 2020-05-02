@@ -44,4 +44,10 @@
 			margin-right: 2rem;
 		}
 	}
+
+	@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+		.title .hero-svg {
+			margin: 0;
+		}
+	}
 }
