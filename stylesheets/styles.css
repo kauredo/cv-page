@@ -243,7 +243,7 @@
 .timeline-text {
   width: 25%;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize; }
 
 .tl-divider {
@@ -468,7 +468,7 @@
     width: 50%; }
   .contact-container .left {
     margin-right: 2%; }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 736px) {
     .contact-container {
       padding-bottom: calc(8rem + 0.25rem); }
       .contact-container form {
