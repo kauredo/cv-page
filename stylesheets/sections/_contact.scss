@@ -74,7 +74,7 @@
     margin-right: 2%; 
   }
   
-  @media only screen and (max-device-width: 736px) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
   padding-bottom: calc(8rem + 0.25rem);
 
     form {

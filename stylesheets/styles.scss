@@ -20,12 +20,12 @@ body {
 	.body {
 		padding: calc(#{$navbar-height} + 0.25rem)  0 0 0;
 
-		@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+		@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
 			padding-top: calc(8rem + 0.25rem);
 		}
 	}
 
-	@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
 		font-size: 32px;
 	}
 }
@@ -59,7 +59,7 @@ textarea, input, button, select {
 		color: $background-color;
 	}
 
-	@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
 		padding-top: calc(8rem + 0.25rem);
 	}
 }

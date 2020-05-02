@@ -49,7 +49,7 @@
     justify-content: space-between;
     list-style-type: none; }
 
-@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   .navbar {
     height: 8rem; }
 
@@ -152,7 +152,7 @@
       height: 13rem;
       width: 15rem;
       margin-right: 2rem; }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
     .hero .title .hero-svg {
       margin: 0; } }
 
@@ -199,7 +199,7 @@
   #about .about-text p {
     line-height: 1.5rem;
     text-align: justify; }
-@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   #about img {
     height: 57vh; }
   #about .avatar-box-top {
@@ -344,7 +344,7 @@
           border-left: 0;
           border-right: 7px solid #EFC88B; }
 
-@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   .timeline-group {
     flex-direction: column-reverse; }
     .timeline-group:nth-child(1) {
@@ -468,7 +468,7 @@
     width: 50%; }
   .contact-container .left {
     margin-right: 2%; }
-  @media only screen and (max-device-width: 736px) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
     .contact-container {
       padding-bottom: calc(8rem + 0.25rem); }
       .contact-container form {
@@ -518,7 +518,7 @@
     align-items: center; }
     .footer .links p, .footer .links a {
       margin-right: 0.5rem; }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
     .footer {
       height: fit-content; }
       .footer .container {
@@ -555,10 +555,10 @@ body {
   background-color: #272727; }
   body .body {
     padding: calc(3.75rem + 0.25rem) 0 0 0; }
-    @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+    @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
       body .body {
         padding-top: calc(8rem + 0.25rem); } }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
     body {
       font-size: 32px; } }
 
@@ -584,7 +584,7 @@ textarea, input, button, select {
   .section:nth-child(even) {
     background-color: #EFC88B;
     color: #272727; }
-  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
     .section {
       padding-top: calc(8rem + 0.25rem); } }
 

@@ -150,7 +150,7 @@
   }
 }
 
-@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
   .timeline-group {
     flex-direction: column-reverse;
 
