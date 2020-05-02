@@ -1,73 +1,107 @@
 @import '../utils/utils';
 
+.contact-container {
+  padding-bottom: calc(#{$navbar-height} + 0.25rem);
+  width: 90vw;
+  margin: 0 auto;
 
-h1 {
-  text-align: center;
-  color: #a8a8a8;
-}
-
-form {
-  max-width: 600px;
-  text-align: center;
-  margin: 20px auto;
+  h2 {
+    font-size: 2.5rem;
+  }
   
-  input, textarea {
-    border:0; outline:0;
-    padding: 1em;
-    display: block;
-    width: 100%;
-    margin-top: 1em;
-    font-family: 'Merriweather', sans-serif;
-    resize: none;
+  .contact-list {
+    list-style: none;
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
     
-    &:focus {
+    i {
+      margin-right: 0.5rem;
     }
   }
   
-  #input-submit {
-    color: white; 
-    background: $background-color;
-    cursor: pointer;
+  form {
+    font-family: $headings;
+    width: 600px;
+    text-align: center;
+    margin: 20px auto;
     
-    &:hover {
+    input, textarea {
+      border:0; outline:0;
+      font-family: $headings;
+      font-size: 1rem;
+      padding: 1rem;
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      resize: none;
+    }
+
+    input {
+      height: 3rem;
+    }
+
+    textarea {
+      height: 7rem;
+    }
+    
+    #input-submit { 
+      border: none;
+      font-family: $headings;
+      background: $main-color;
+      cursor: pointer;
+			transform: skewX(-14deg);
+      
+      p {
+        margin: 0;
+        padding: 0.5rem 3rem;
+        transform: skewX(14deg);
+      }
     }
   }
   
-  textarea {
-    height: 126px;
-  }
-}
-
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-  margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
   .half {
-    width: 100%; 
-    float: none;
-    margin-bottom: 0; 
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
   }
-}
+  
+  .right { width: 50%; }
+  
+  .left {
+    margin-right: 2%; 
+  }
+  
+  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  padding-bottom: calc(8rem + 0.25rem);
 
+    form {
+      width: auto;
 
-/* Clearfix */
-.cf:before,
-.cf:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
-}
+      #input-submit { 
+        transform: none;
+        
+        p {
+          transform: none;
+        }
+      }
+    }
 
-.cf:after {
-  clear: both;
+    .half {
+      width: 100%; 
+      float: none;
+      margin-bottom: 0; 
+    }
+
+    #input-submit { 
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    ::placeholder {
+      font-size: 2rem;
+    }
+  }
 }

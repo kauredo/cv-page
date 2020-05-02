@@ -397,56 +397,132 @@
   100% {
     fill: #EFC88B;
     color: #EFC88B; } }
-h1 {
-  text-align: center;
-  color: #a8a8a8; }
+#skills h2 {
+  font-size: 2.5rem; }
 
-form {
-  max-width: 600px;
-  text-align: center;
-  margin: 20px auto; }
-  form input, form textarea {
-    border: 0;
-    outline: 0;
-    padding: 1em;
-    display: block;
-    width: 100%;
-    margin-top: 1em;
-    font-family: 'Merriweather', sans-serif;
-    resize: none; }
-  form #input-submit {
-    color: white;
-    background: #272727;
-    cursor: pointer; }
-  form textarea {
-    height: 126px; }
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #EFFFC8;
+    color: #EFFFC8; }
+  50% {
+    fill: #D7CDCC;
+    color: #D7CDCC; }
+  75% {
+    fill: #111111;
+    color: #111111; }
+  100% {
+    fill: #EFC88B;
+    color: #EFC88B; } }
+.contact-container {
+  padding-bottom: calc(3.75rem + 0.25rem);
+  width: 90vw;
+  margin: 0 auto; }
+  .contact-container h2 {
+    font-size: 2.5rem; }
+  .contact-container .contact-list {
+    list-style: none;
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem; }
+    .contact-container .contact-list i {
+      margin-right: 0.5rem; }
+  .contact-container form {
+    font-family: "Muli", sans-serif;
+    width: 600px;
+    text-align: center;
+    margin: 20px auto; }
+    .contact-container form input, .contact-container form textarea {
+      border: 0;
+      outline: 0;
+      font-family: "Muli", sans-serif;
+      font-size: 1rem;
+      padding: 1rem;
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      resize: none; }
+    .contact-container form input {
+      height: 3rem; }
+    .contact-container form textarea {
+      height: 7rem; }
+    .contact-container form #input-submit {
+      border: none;
+      font-family: "Muli", sans-serif;
+      background: #EFC88B;
+      cursor: pointer;
+      transform: skewX(-14deg); }
+      .contact-container form #input-submit p {
+        margin: 0;
+        padding: 0.5rem 3rem;
+        transform: skewX(14deg); }
+  .contact-container .half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em; }
+  .contact-container .right {
+    width: 50%; }
+  .contact-container .left {
+    margin-right: 2%; }
+  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+    .contact-container {
+      padding-bottom: calc(8rem + 0.25rem); }
+      .contact-container form {
+        width: auto; }
+        .contact-container form #input-submit {
+          transform: none; }
+          .contact-container form #input-submit p {
+            transform: none; }
+      .contact-container .half {
+        width: 100%;
+        float: none;
+        margin-bottom: 0; }
+      .contact-container #input-submit {
+        margin-top: 1rem;
+        width: 100%; }
+      .contact-container ::placeholder {
+        font-size: 2rem; } }
 
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em; }
-
-.right {
-  width: 50%; }
-
-.left {
-  margin-right: 2%; }
-
-@media (max-width: 480px) {
-  .half {
-    width: 100%;
-    float: none;
-    margin-bottom: 0; } }
-/* Clearfix */
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.cf:after {
-  clear: both; }
+@keyframes colorChange {
+  0% {
+    fill: #EFC88B;
+    color: #EFC88B; }
+  25% {
+    fill: #EFFFC8;
+    color: #EFFFC8; }
+  50% {
+    fill: #D7CDCC;
+    color: #D7CDCC; }
+  75% {
+    fill: #111111;
+    color: #111111; }
+  100% {
+    fill: #EFC88B;
+    color: #EFC88B; } }
+.footer {
+  background-color: #272727;
+  color: #EFC88B;
+  height: 3.75rem;
+  width: 100%;
+  border-top: 0.25rem solid; }
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer .links {
+    display: flex;
+    align-items: center; }
+    .footer .links p, .footer .links a {
+      margin-right: 0.5rem; }
+  @media only screen and (max-device-width: 736px) and (orientation: portrait) {
+    .footer {
+      height: fit-content; }
+      .footer .container {
+        flex-direction: column; } }
 
 @keyframes colorChange {
   0% {
@@ -491,6 +567,10 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0; }
 
+textarea, input, button, select {
+  font-family: inherit;
+  font-size: inherit; }
+
 .container {
   width: 90vw;
   height: 100%;
@@ -499,6 +579,8 @@ h1, h2, h3, h4, h5 {
 .section {
   min-height: 100vh;
   padding-top: calc(3.75rem + 0.25rem); }
+  .section:nth-last-child(2) {
+    min-height: fit-content; }
   .section:nth-child(even) {
     background-color: #EFC88B;
     color: #272727; }
