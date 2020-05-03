@@ -43,7 +43,7 @@
   @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
     img {
       height: 57vh;
-      top: 147vh;
+      top: calc(143vh + 4px);
     }
 
     .avatar-box-top {
