@@ -1,8 +1,13 @@
-$text-color: #FFFFFF;
-$text-color: #EFC88B;
-$background-color: #272727;
-$main-color: #EFC88B;
-$secondary-color: #EFFFC8;
+:root {
+  --main-color: #EFC88B;
+  --background-color: #272727;
+  --secondary-color: #EFFFC8;
+}
+
+$text-color: var(--main-color);
+$background-color: var(--background-color);
+$main-color: var(--main-color);
+$secondary-color: var(--secondary-color);
 $third-color: #D7CDCC;
 $fourth-color: #111111;
 

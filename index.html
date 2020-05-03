@@ -6,6 +6,7 @@
   <!-- <link rel="alternate icon" href="favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Muli:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/styles.css">
+  <script src="stylesheets/main.js"></script>
   <script src="https://kit.fontawesome.com/f01d8e868a.js" crossorigin="anonymous"></script>
   <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </head>
@@ -42,6 +43,16 @@
         <a href="#experiences"><h5>experiences</h5></a>
         <a href="#skills"><h5>skills</h5></a>
         <a href="#contact"><h5>contact</h5></a>
+        <div class="colors-box">
+          <div class="color-part">
+            <input type="color" id="main-color" name="head" value="#EFC88B" onchange="changeColor('main')">
+            <label for="head"><h5>Main</h5></label>
+          </div>
+          <div class="color-part">
+            <input type="color" id="background-color" name="body" value="#272727" onchange="changeColor('bg')">
+            <label for="body"><h5>Background</h5></label>
+          </div>
+        </div>
       </div>
     </div>
   </div>

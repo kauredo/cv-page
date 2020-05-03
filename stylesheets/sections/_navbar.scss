@@ -47,10 +47,14 @@
 	}
 
 	.nav-sections {
-		width: 35%;
+		width: 50%;
 		display: flex;
 		justify-content: space-between;
-		list-style-type: none;
+		align-items: center;
+	}
+
+	.color-part {
+		display: flex;
 	}
 }
 
