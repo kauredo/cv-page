@@ -422,17 +422,28 @@
   height: 5rem;
   background-color: #272727;
   display: flex; }
+  #skills .skill-box:before {
+    content: "";
+    position: relative;
+    left: calc(100% + 0.9rem);
+    top: calc(50% - 80%/2);
+    width: 1rem;
+    height: 80%;
+    background-color: #272727; }
   #skills .skill-box .skill {
     height: 3rem;
     margin: 0;
+    margin-left: -1rem;
     background-color: #EFC88B; }
     #skills .skill-box .skill:after {
       content: "";
       float: right;
-      width: 0;
-      height: 0;
-      border-bottom: 3rem solid #272727;
-      border-left: 1rem solid transparent; }
+      width: 10px;
+      height: 10px;
+      border-bottom: 4rem solid #272727;
+      border-left: 1rem solid transparent;
+      margin-top: -10px;
+      margin-right: -10px; }
   #skills .skill-box #html {
     width: 90%; }
   #skills .skill-box #css {
@@ -454,9 +465,19 @@
       width: 2.5rem; }
   #skills .skill-col {
     margin-top: 2rem;
-    width: 100%; }
+    width: calc(100% - 1.4rem); }
   #skills .skill-box {
-    width: 100%; } }
+    width: 100%;
+    padding: 1.5rem;
+    height: 7rem; }
+    #skills .skill-box:before {
+      width: 1.5rem; }
+    #skills .skill-box .skill {
+      height: 4rem;
+      margin-left: -1.5rem; }
+      #skills .skill-box .skill:after {
+        border-bottom: 5rem solid #272727;
+        border-left: 1.25rem solid transparent; } }
 
 @keyframes colorChange {
   0% {

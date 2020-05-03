@@ -21,7 +21,7 @@
     text-transform: uppercase;
     padding: 1rem 0 0 1rem;
     font-size: 1.2rem;
-
+    
     svg {
       height: 1.5rem;
       width: 1.5rem;
@@ -34,18 +34,31 @@
     background-color: $background-color;
     display: flex;
     
+    &:before {
+      content: "";
+      position: relative;
+      left: calc(100% + 0.9rem);
+      top: calc(50% - 80%/2);
+      width: 1rem;
+      height: 80%;
+      background-color: $background-color;
+    }
+    
     .skill {
       height: 3rem;
       margin: 0;
+      margin-left: -1rem;
       background-color: $main-color;
       
       &:after {
         content: "";
         float: right;
-        width: 0;
-        height: 0;
-        border-bottom: 3rem solid $background-color;
+        width: 10px;
+        height: 10px;
+        border-bottom: 4rem solid $background-color;
         border-left: 1rem solid transparent;
+        margin-top: -10px;
+        margin-right: -10px;
       }
     }
     
@@ -65,33 +78,49 @@
       width: 55%;
     }
   }
-
+  
   @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9) {
     h2 {
       font-size: 4rem;
     }
-
+    
     .skill-row {
       flex-direction: column;
       margin-top: 0;
     }
-
+    
     .skill-title {
       font-size: 2.5rem;
-  
+      
       svg {
         height: 2.5rem;
         width: 2.5rem;
       }
     }
-
+    
     .skill-col {
       margin-top: 2rem;
-      width: 100%;
+      width: calc(100% - 1.4rem);
     }
-
+    
     .skill-box {
       width: 100%;
+      padding: 1.5rem;
+      height: 7rem;
+      
+      &:before {
+        width: 1.5rem;
+      }
+
+      .skill {
+        height: 4rem;
+        margin-left: -1.5rem;
+
+        &:after {
+          border-bottom: 5rem solid $background-color;
+          border-left: 1.25rem solid transparent;
+        }
+      }
     }  
   }
 }
