@@ -13,8 +13,8 @@
 <body>
   <div class="navbar">
     <input type="checkbox" id="nav-check">
-    <div class="nav-container container">
-      <div class="logo">
+    <div class="nav-container container" id="navbar">
+      <div class="logo" id="main-logo">
         <a href="#">
           <svg class="svg-logo-nav" version="1.1" viewBox="0 0 65.516 62.116" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <g transform="translate(-25.536 -93.179)">
@@ -43,15 +43,13 @@
         <a href="#experiences"><h5>experiences</h5></a>
         <a href="#skills"><h5>skills</h5></a>
         <a href="#contact"><h5>contact</h5></a>
-        <div class="colors-box">
-          <div class="color-part">
-            <input type="color" id="main-color" name="head" value="#EFC88B" onchange="changeColor('main')">
-            <label for="head"><h5>Main</h5></label>
-          </div>
-          <div class="color-part">
-            <input type="color" id="background-color" name="body" value="#272727" onchange="changeColor('bg')">
-            <label for="body"><h5>Background</h5></label>
-          </div>
+        <div class="color-part">
+          <input type="color" id="main-color" name="head" value="#EFC88B" onchange="changeColor('main')">
+          <label for="head"><h5>Main</h5></label>
+        </div>
+        <div class="color-part">
+          <input type="color" id="background-color" name="body" value="#272727" onchange="changeColor('bg')">
+          <label for="body"><h5>Background</h5></label>
         </div>
       </div>
     </div>

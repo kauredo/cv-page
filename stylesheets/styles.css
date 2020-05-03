@@ -58,6 +58,10 @@
   .navbar .color-part {
     display: flex;
     align-items: center; }
+  .navbar .hidden {
+    display: none; }
+  .navbar .reverse {
+    flex-direction: row-reverse; }
 
 @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   .navbar {
@@ -88,8 +92,8 @@
     border-top: 3px solid; }
 
   .navbar .nav-sections {
-    width: 50%;
-    font-size: 2rem;
+    width: 100%;
+    font-size: 5rem;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -106,17 +110,24 @@
     display: block;
     width: 100%; }
 
-  .colors-box {
+  .color-part {
     width: 100%; }
+    .color-part input {
+      margin-right: 1rem;
+      height: 4rem;
+      width: 5rem; }
 
   .navbar #nav-check:not(:checked) ~ .container .nav-sections {
     height: 0px; }
 
   .navbar #nav-check:checked ~ .container .nav-sections {
-    height: calc(25vh - 8rem);
-    border: 0.25rem solid;
+    height: calc(80vh - 8rem);
+    border-bottom: 0.25rem solid;
+    border-right: none;
     border-top: 0;
-    overflow-y: auto; }
+    overflow-y: auto;
+    top: 0;
+    padding-left: 5vw; }
 
   #nav-icon1 {
     width: 60px;

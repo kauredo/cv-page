@@ -19,6 +19,10 @@ function changeColor(color) {
 
 
 function openBurger() {
-  let burger = document.querySelector("#nav-icon1");
+  const burger = document.querySelector("#nav-icon1");
+  const logo = document.querySelector("#main-logo");
+  const nav = document.querySelector("#navbar");
   burger.classList.toggle('open');
+  logo.classList.toggle('hidden');
+  nav.classList.toggle('reverse');
 }
