@@ -155,8 +155,10 @@
       width: 15rem;
       margin-right: 2rem; }
   @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
-    .hero .title .hero-svg {
-      margin: 0; } }
+    .hero {
+      height: calc(100vh - 8rem - 0.25rem); }
+      .hero .title .hero-svg {
+        margin: 0; } }
 
 @keyframes colorChange {
   0% {
@@ -198,6 +200,8 @@
   border: 1rem solid #272727;
   margin: 7rem 8rem 0 auto;
   width: 40%; }
+  #about .about-text h2 {
+    margin-bottom: 2rem; }
   #about .about-text p {
     line-height: 1.5rem; }
 @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
@@ -326,6 +330,8 @@
         transform: skewX(14deg);
         padding: 0.5rem;
         height: 2rem; }
+      .timeline .timeline-item .timeline-content p {
+        padding: 1rem; }
       .timeline .timeline-item .timeline-content:before {
         content: '';
         position: absolute;
@@ -358,7 +364,8 @@
   .timeline-text {
     width: 25%;
     text-align: center;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    font-size: 3rem; }
 
   .timeline {
     margin: 30px;
@@ -399,85 +406,94 @@
   100% {
     fill: #EFC88B;
     color: #EFC88B; } }
-#skills h2 {
-  margin-top: 3rem;
-  font-size: 2.5rem; }
-#skills .skill-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem; }
-#skills .skill-title {
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  padding: 1rem 0 0 1rem;
-  font-size: 1.2rem; }
-  #skills .skill-title svg {
-    height: 1.5rem;
-    width: 1.5rem; }
-#skills .skill-box {
-  padding: 1rem;
-  width: 40vw;
-  height: 5rem;
-  background-color: #272727;
-  display: flex; }
-  #skills .skill-box:before {
-    content: "";
-    position: relative;
-    left: calc(100% + 0.9rem);
-    top: calc(50% - 80%/2);
-    width: 1rem;
-    height: 80%;
-    background-color: #272727; }
-  #skills .skill-box .skill {
-    height: 3rem;
-    margin: 0;
-    margin-left: -1rem;
-    background-color: #EFC88B; }
-    #skills .skill-box .skill:after {
-      content: "";
-      float: right;
-      width: 10px;
-      height: 10px;
-      border-bottom: 4rem solid #272727;
-      border-left: 1rem solid transparent;
-      margin-top: -10px;
-      margin-right: -10px; }
-  #skills .skill-box #html {
+#skills {
+  padding-bottom: calc(3.75rem + 0.25rem); }
+  #skills #html {
     width: 90%; }
-  #skills .skill-box #css {
+  #skills #css {
     width: 85%; }
-  #skills .skill-box #ror {
+  #skills #ror {
     width: 75%; }
-  #skills .skill-box #react {
+  #skills #react {
     width: 55%; }
-@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+  #skills #gql {
+    width: 75%; }
+  #skills #js {
+    width: 55%; }
   #skills h2 {
-    font-size: 4rem; }
-  #skills .skill-row {
-    flex-direction: column;
-    margin-top: 0; }
-  #skills .skill-title {
+    margin-top: 3rem;
     font-size: 2.5rem; }
+  #skills .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem; }
+  #skills .skill-title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem 0 0 1rem;
+    font-size: 1.2rem; }
     #skills .skill-title svg {
-      height: 2.5rem;
-      width: 2.5rem; }
-  #skills .skill-col {
-    margin-top: 2rem;
-    width: calc(100% - 1.4rem); }
-  #skills .skill-box {
-    width: 100%;
-    padding: 1.5rem;
-    height: 7rem; }
-    #skills .skill-box:before {
+      height: 1.5rem;
       width: 1.5rem; }
+  #skills .skill-box {
+    padding: 0.5rem;
+    border: 0.5rem solid;
+    width: 40vw;
+    height: 5rem;
+    background-color: #EFC88B;
+    display: flex; }
+    #skills .skill-box:before {
+      content: "";
+      position: relative;
+      left: calc(100% + 0.9rem);
+      top: calc(50% - 80%/2);
+      width: 1rem;
+      height: 80%;
+      background-color: #272727; }
     #skills .skill-box .skill {
-      height: 4rem;
-      margin-left: -1.5rem; }
+      height: 3rem;
+      margin: 0;
+      margin-left: -1rem;
+      background-color: #272727; }
       #skills .skill-box .skill:after {
-        border-bottom: 5rem solid #272727;
-        border-left: 1.25rem solid transparent; } }
+        content: "";
+        float: right;
+        width: 10px;
+        height: 10px;
+        border-bottom: 3.5rem solid #EFC88B;
+        border-left: 1rem solid transparent;
+        margin-top: -10px;
+        margin-right: -10px; }
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+    #skills {
+      padding-bottom: calc(8rem + 0.25rem); }
+      #skills h2 {
+        font-size: 4rem; }
+      #skills .skill-row {
+        flex-direction: column;
+        margin-top: 0; }
+      #skills .skill-title {
+        font-size: 2.5rem; }
+        #skills .skill-title svg {
+          height: 2.5rem;
+          width: 2.5rem; }
+      #skills .skill-col {
+        margin-top: 2rem;
+        width: 100%; }
+      #skills .skill-box {
+        width: 100%;
+        padding: 1rem;
+        height: 7rem; }
+        #skills .skill-box:before {
+          width: 0; }
+        #skills .skill-box .skill {
+          height: 4rem;
+          margin-left: 0; }
+          #skills .skill-box .skill:after {
+            border-bottom: 4.5rem solid #EFC88B;
+            border-left: 1.25rem solid transparent; } }
 
 @keyframes colorChange {
   0% {
@@ -592,7 +608,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0; }
+    .footer .container .footer-row {
+      padding: 0.5rem 0; }
   .footer .links {
     display: flex;
     align-items: center; }
@@ -602,7 +622,9 @@
     .footer {
       height: fit-content; }
       .footer .container {
-        flex-direction: column; } }
+        flex-direction: column; }
+        .footer .container .footer-row {
+          font-size: 1.5rem; } }
 
 @keyframes colorChange {
   0% {
@@ -647,6 +669,15 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0; }
 
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0; }
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+    p {
+      font-size: 1.5rem; } }
+
 textarea, input, button, select {
   font-family: inherit;
   font-size: inherit; }
@@ -658,7 +689,7 @@ textarea, input, button, select {
 .section {
   min-height: 100vh;
   padding-top: calc(3.75rem + 0.25rem); }
-  .section:nth-last-child(2) {
+  .section:nth-last-child(-n + 3) {
     min-height: fit-content; }
   .section:nth-child(even) {
     background-color: #EFC88B;

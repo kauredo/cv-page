@@ -46,6 +46,8 @@
 	}
 
 	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
+		height: calc(100vh - 8rem - 0.25rem);
+
 		.title .hero-svg {
 			margin: 0;
 		}
