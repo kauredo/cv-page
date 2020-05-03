@@ -55,6 +55,7 @@
 
 	.color-part {
 		display: flex;
+		align-items: center;
 	}
 }
 
@@ -110,6 +111,10 @@
 
 	.nav-sections > a {
 		display: block;
+		width: 100%;
+	}
+
+	.colors-box {
 		width: 100%;
 	}
 
