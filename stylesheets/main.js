@@ -26,3 +26,11 @@ function openBurger() {
   logo.classList.toggle('hidden');
   nav.classList.toggle('reverse');
 }
+
+function removeHash() {
+  history.pushState("", document.title, window.location.pathname + window.location.search);
+  console.log(history);
+  console.log(document.title);
+  console.log(window.location.pathname);
+  console.log(window.location.search);
+}

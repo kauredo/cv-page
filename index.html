@@ -15,7 +15,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-container container" id="navbar">
       <div class="logo" id="main-logo">
-        <a href="#">
+        <a onclick="removeHash()" href="#">
           <svg class="svg-logo-nav" version="1.1" viewBox="0 0 65.516 62.116" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <g transform="translate(-25.536 -93.179)">
               <text x="67.279762" y="77.017853" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="67.279762" y="86.381622" stroke-width=".26458"/></text>
@@ -39,10 +39,10 @@
         </label>
       </div>
       <div class="nav-sections">
-        <a href="#about"><h5>about</h5></a>
-        <a href="#experiences"><h5>experiences</h5></a>
-        <a href="#skills"><h5>skills</h5></a>
-        <a href="#contact"><h5>contact</h5></a>
+        <a onclick="removeHash()" href="#about"><h5>about</h5></a>
+        <a onclick="removeHash()" href="#experiences"><h5>experiences</h5></a>
+        <a onclick="removeHash()" href="#skills"><h5>skills</h5></a>
+        <a onclick="removeHash()" href="#contact"><h5>contact</h5></a>
         <div class="color-part">
           <input type="color" id="main-color" name="head" value="#EFC88B" onchange="changeColor('main')">
           <label for="head"><h5>Main</h5></label>
