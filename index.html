@@ -7,11 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Muli:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/styles.css">
   <script src="https://kit.fontawesome.com/f01d8e868a.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </head>
 <body>
   <div class="navbar">
     <input type="checkbox" id="nav-check">
-    <div class="container">
+    <div class="nav-container container">
       <div class="logo">
         <a href="#">
           <svg class="svg-logo-nav" version="1.1" viewBox="0 0 65.516 62.116" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -162,6 +163,46 @@
     <div class="section" id="skills">
       <div class="container">
         <h2>Skills</h2>
+        <div class="skill-row">
+          <div class="skill-col">
+            <div class="skill-title">
+              <span class="iconify" data-icon="mdi:language-html5" data-inline="false"></span>
+              <h3 class="skill-name"> HTML</h3>
+            </div>
+            <div class="skill-box">
+              <div class="skill" id="html"></div>
+            </div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-title">
+              <span class="iconify" data-icon="mdi:language-css3" data-inline="false"></span>
+              <h3 class="skill-name"> CSS</h3>
+            </div>
+            <div class="skill-box">
+              <div class="skill" id="css"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-col">
+            <div class="skill-title">
+              <span class="iconify" data-icon="mdi:language-ruby-on-rails" data-inline="false"></span>
+              <h3 class="skill-name"> Ruby on Rails</h3>
+            </div>
+            <div class="skill-box">
+              <div class="skill" id="ror"></div>
+            </div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-title">
+              <span class="iconify" data-icon="mdi:react" data-inline="false"></span>
+              <h3 class="skill-name">React</h3>
+            </div>
+            <div class="skill-box">
+              <div class="skill" id="react"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section" id="contact">
@@ -177,7 +218,7 @@
           </div>
           <button id="input-submit" type="submit"><p>Send</p></button>
           <input type="hidden" name="_subject"
-            value="New submission from contact form"
+          value="New submission from contact form"
           />
         </form>
       </div>

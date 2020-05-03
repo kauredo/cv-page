@@ -24,6 +24,8 @@
   position: fixed;
   z-index: 10;
   background-color: #272727; }
+  .navbar .nav-container {
+    height: 100%; }
   .navbar #nav-check {
     display: none; }
   .navbar .nav-burger {
@@ -197,11 +199,11 @@
   margin: 7rem 8rem 0 auto;
   width: 40%; }
   #about .about-text p {
-    line-height: 1.5rem;
-    text-align: justify; }
+    line-height: 1.5rem; }
 @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   #about img {
-    height: 57vh; }
+    height: 57vh;
+    top: 147vh; }
   #about .avatar-box-top {
     width: 52rem;
     height: 29rem; }
@@ -398,7 +400,63 @@
     fill: #EFC88B;
     color: #EFC88B; } }
 #skills h2 {
+  margin-top: 3rem;
   font-size: 2.5rem; }
+#skills .skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem; }
+#skills .skill-title {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 0 0 1rem;
+  font-size: 1.2rem; }
+  #skills .skill-title svg {
+    height: 1.5rem;
+    width: 1.5rem; }
+#skills .skill-box {
+  padding: 1rem;
+  width: 40vw;
+  height: 5rem;
+  background-color: #272727;
+  display: flex; }
+  #skills .skill-box .skill {
+    height: 3rem;
+    margin: 0;
+    background-color: #EFC88B; }
+    #skills .skill-box .skill:after {
+      content: "";
+      float: right;
+      width: 0;
+      height: 0;
+      border-bottom: 3rem solid #272727;
+      border-left: 1rem solid transparent; }
+  #skills .skill-box #html {
+    width: 90%; }
+  #skills .skill-box #css {
+    width: 85%; }
+  #skills .skill-box #ror {
+    width: 75%; }
+  #skills .skill-box #react {
+    width: 55%; }
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+  #skills h2 {
+    font-size: 4rem; }
+  #skills .skill-row {
+    flex-direction: column;
+    margin-top: 0; }
+  #skills .skill-title {
+    font-size: 2.5rem; }
+    #skills .skill-title svg {
+      height: 2.5rem;
+      width: 2.5rem; }
+  #skills .skill-col {
+    margin-top: 2rem;
+    width: 100%; }
+  #skills .skill-box {
+    width: 100%; } }
 
 @keyframes colorChange {
   0% {
@@ -512,7 +570,8 @@
   .footer .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
   .footer .links {
     display: flex;
     align-items: center; }
@@ -573,7 +632,6 @@ textarea, input, button, select {
 
 .container {
   width: 90vw;
-  height: 100%;
   margin: 0 auto; }
 
 .section {

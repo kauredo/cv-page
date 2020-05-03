@@ -1,7 +1,97 @@
 @import '../utils/utils';
 
 #skills {
+  
   h2 {
+    margin-top: 3rem;
     font-size: 2.5rem;
+  }
+  
+  .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .skill-col {
+  }
+  .skill-title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem 0 0 1rem;
+    font-size: 1.2rem;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  .skill-box {
+    padding: 1rem;
+    width: 40vw;
+    height: 5rem;
+    background-color: $background-color;
+    display: flex;
+    
+    .skill {
+      height: 3rem;
+      margin: 0;
+      background-color: $main-color;
+      
+      &:after {
+        content: "";
+        float: right;
+        width: 0;
+        height: 0;
+        border-bottom: 3rem solid $background-color;
+        border-left: 1rem solid transparent;
+      }
+    }
+    
+    #html {
+      width: 90%;
+    }
+    
+    #css {
+      width: 85%;
+    }
+    
+    #ror {
+      width: 75%;
+    }
+    
+    #react {
+      width: 55%;
+    }
+  }
+
+  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9) {
+    h2 {
+      font-size: 4rem;
+    }
+
+    .skill-row {
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    .skill-title {
+      font-size: 2.5rem;
+  
+      svg {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    .skill-col {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .skill-box {
+      width: 100%;
+    }  
   }
 }
