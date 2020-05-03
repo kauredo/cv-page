@@ -1,3 +1,4 @@
+let root = document.documentElement;
 
 function changeColor(color) {
   let root = document.documentElement;
@@ -14,4 +15,10 @@ function changeColor(color) {
     default:
       break;
   }
+}
+
+
+function openBurger() {
+  let burger = document.querySelector("#nav-icon1");
+  burger.classList.toggle('open');
 }
