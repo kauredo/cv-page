@@ -519,9 +519,11 @@
   #skills #react {
     width: 55%; }
   #skills #gql {
-    width: 75%; }
+    width: 40%; }
   #skills #js {
-    width: 55%; }
+    width: 65%; }
+  #skills #java {
+    width: 35%; }
   #skills h2 {
     margin-top: 3rem;
     font-size: 2.5rem; }
