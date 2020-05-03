@@ -56,6 +56,10 @@
 	.color-part {
 		display: flex;
 		align-items: center;
+
+		input {
+			margin-right: 0.5rem;
+		}
 	}
 
 	.hidden {

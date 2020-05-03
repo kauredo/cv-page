@@ -58,6 +58,8 @@
   .navbar .color-part {
     display: flex;
     align-items: center; }
+    .navbar .color-part input {
+      margin-right: 0.5rem; }
   .navbar .hidden {
     display: none; }
   .navbar .reverse {
