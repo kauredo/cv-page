@@ -298,16 +298,19 @@
     line-height: 1.5rem; }
 @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   #about img {
-    height: 57vh;
-    top: calc(143vh + 4px); }
+    height: 55vh;
+    top: calc(145vh + 4px); }
   #about .avatar-box-top {
     width: 52rem;
     height: 29rem; }
   #about .avatar-box-bot {
     width: 52rem; }
+  #about .bot-left {
+    bottom: calc(-100vh + 9rem);
+    margin-left: calc(50% - 52rem/2); }
   #about .about-text {
     width: 85%;
-    margin: 0.5rem 2rem 0 auto; }
+    margin: 0.5rem auto 0; }
     #about .about-text p {
       line-height: 2rem; } }
 
