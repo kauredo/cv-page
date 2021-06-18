@@ -51,10 +51,11 @@
     justify-content: space-between;
     align-items: center; }
   .navbar .nav-sections {
-    width: 50%;
+    min-width: 50%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    gap: 1rem; }
   .navbar .color-part {
     display: flex;
     align-items: center; }
@@ -65,7 +66,7 @@
   .navbar .reverse {
     flex-direction: row-reverse; }
 
-@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+@media screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   .navbar {
     height: 8rem; }
 
