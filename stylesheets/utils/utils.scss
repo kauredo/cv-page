@@ -1,14 +1,14 @@
 :root {
-  --main-color: #EFC88B;
-  --background-color: #272727;
-  --secondary-color: #EFFFC8;
+	--main-color: #efc88b;
+	--background-color: #272727;
+	--secondary-color: #f8e8ce;
 }
 
 $text-color: var(--main-color);
 $background-color: var(--background-color);
 $main-color: var(--main-color);
 $secondary-color: var(--secondary-color);
-$third-color: #D7CDCC;
+$third-color: #d7cdcc;
 $fourth-color: #111111;
 
 $headings: 'Muli', sans-serif;
@@ -16,26 +16,25 @@ $text: 'Lato', sans-serif;
 
 $navbar-height: 3.75rem;
 
-
 @keyframes colorChange {
-  0%   {
-  	fill: $main-color;
-  	color: $main-color;
-  }
-  25%  {
-  	fill: $secondary-color;
-  	color: $secondary-color;
-  }
-  50%  {
-  	fill: $third-color;
-  	color: $third-color;
-  }
-  75% {
-    fill: $fourth-color;
-    color: $fourth-color;
-  }
-  100% {
-    fill: $main-color;
-    color: $main-color;
-  }
+	0% {
+		fill: $main-color;
+		color: $main-color;
+	}
+	25% {
+		fill: $secondary-color;
+		color: $secondary-color;
+	}
+	50% {
+		fill: $third-color;
+		color: $third-color;
+	}
+	75% {
+		fill: $fourth-color;
+		color: $fourth-color;
+	}
+	100% {
+		fill: $main-color;
+		color: $main-color;
+	}
 }

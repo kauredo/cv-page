@@ -1,7 +1,7 @@
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -11,8 +11,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -66,7 +66,7 @@
   .navbar .reverse {
     flex-direction: row-reverse; }
 
-@media screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
+@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13 / 9) {
   .navbar {
     height: 8rem; }
 
@@ -189,9 +189,9 @@
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg); } }
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -201,8 +201,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -249,9 +249,9 @@
         margin: 0; } }
 
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -261,8 +261,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -316,9 +316,9 @@
       line-height: 2rem; } }
 
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -328,8 +328,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -492,9 +492,9 @@
     .timeline .timeline-item .timeline-icon {
       left: 0; } }
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -504,8 +504,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -602,9 +602,9 @@
             border-left: 1.25rem solid transparent; } }
 
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -614,8 +614,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -694,9 +694,9 @@
         font-size: 2rem; } }
 
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -706,8 +706,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
@@ -743,9 +743,9 @@
           font-size: 1.5rem; } }
 
 :root {
-  --main-color: #EFC88B;
+  --main-color: #efc88b;
   --background-color: #272727;
-  --secondary-color: #EFFFC8; }
+  --secondary-color: #f8e8ce; }
 
 @keyframes colorChange {
   0% {
@@ -755,8 +755,8 @@
     fill: var(--secondary-color);
     color: var(--secondary-color); }
   50% {
-    fill: #D7CDCC;
-    color: #D7CDCC; }
+    fill: #d7cdcc;
+    color: #d7cdcc; }
   75% {
     fill: #111111;
     color: #111111; }
