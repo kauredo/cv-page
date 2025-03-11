@@ -1,7 +1,20 @@
 [
 	{
-		"degree": "BSc in Computer Science",
-		"institution": "University of Lisbon",
-		"period": "2016 – 2020"
+		"degree": "Web Development Bootcamp",
+		"institution": "Le Wagon",
+		"period": "2018",
+		"description": "LeWagon is a coding bootcamp focused on Full-Stack web development. Here I learned HTML, CSS and JavaScript on the front-end and Ruby on Rails on the back-end. It was then I decided I wanted to work in tech."
+	},
+	{
+		"degree": "Bachelor in Electric and Electronic Engineering",
+		"institution": "University of Exeter",
+		"period": "2015 - 2018",
+		"description": "I completed my bachelors in Electrical Engineering, gaining some experience in PIC Programming, C and 3D modelling, amongst many hardware classes."
+	},
+	{
+		"degree": "International Baccalaureate",
+		"institution": "St. Julian's School",
+		"period": "2007 - 2015",
+		"description": "St. Julians was where I studied from 5th to 12th grade, having completed the International Baccalaureate with higher level Physics, Mathematics and Economics, after finishing the Portuguese Secondary School system with the highest possible grades."
 	}
 ]

@@ -2,18 +2,7 @@
 	import experienceData from '$lib/data/experience.json';
 	import educationData from '$lib/data/education.json';
 	import skillsData from '$lib/data/skills.json';
-
-	type Experience = {
-		title: string;
-		period: string;
-		description: string;
-	};
-
-	type Education = {
-		degree: string;
-		institution: string;
-		period: string;
-	};
+	import type { Experience, Education } from '$lib/types';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
@@ -22,11 +11,23 @@
 
 <main class="mx-auto max-w-4xl space-y-16 p-6">
 	<!-- Introduction Section -->
-	<section class="text-center">
-		<h1 class="mb-4 text-4xl font-bold">Hi, I'm Vasco</h1>
-		<p class="text-lg text-gray-600">
-			Full-stack developer focused on crafting clean, efficient, and modern web applications.
-		</p>
+	<section class="mb-12 flex flex-col items-center gap-6 md:flex-row">
+		<img src="/images/me.png" alt="Vasco" class="h-42 rounded-full" />
+		<div>
+			<h1 class="mb-4 text-4xl font-bold">Hi, I'm Vasco</h1>
+			<p class="mb-2 text-lg text-gray-600">Welcome to my personal page!</p>
+			<div class="text-justify">
+				<p>
+					I'm a Web Developer based in Lisbon, Portugal. My interests include watching and playing
+					basketball, reading and watching TV - series, movies or documentaries.
+					<br />
+					<br />
+					I want this page to serve as a way for me to practice and showcase my skills, therefore I plan
+					to update and revamp it on a semi-regular basis. If you have any questions or suggestions feel
+					free to contact me through any of my socials!
+				</p>
+			</div>
+		</div>
 	</section>
 
 	<!-- Professional Experience Section -->
@@ -35,8 +36,10 @@
 		<ul class="space-y-4">
 			{#each experiences as exp}
 				<li>
-					<h3 class="text-xl font-semibold">{exp.title}</h3>
-					<p class="text-gray-600">{exp.period}</p>
+					<div class="flex items-center gap-2">
+						<h3 class="text-xl font-semibold">{exp.title}</h3>
+						<p class="text-gray-600">{exp.period}</p>
+					</div>
 					<p>{exp.description}</p>
 				</li>
 			{/each}
@@ -49,8 +52,11 @@
 		<ul class="space-y-2">
 			{#each education as edu}
 				<li>
-					<h3 class="text-xl font-semibold">{edu.degree}</h3>
-					<p class="text-gray-600">{edu.institution}, {edu.period}</p>
+					<div class="flex items-center gap-2">
+						<h3 class="text-xl font-semibold">{edu.degree}:</h3>
+						<p class="text-gray-600">{edu.institution}, {edu.period}</p>
+					</div>
+					<p class="text-gray-700">{edu.description}</p>
 				</li>
 			{/each}
 		</ul>
@@ -69,15 +75,13 @@
 	<!-- Contact Section -->
 	<section class="text-center">
 		<h2 class="mb-4 text-2xl font-bold">Get in Touch</h2>
-		<p class="mb-4 text-gray-600">Let's build something awesome together.</p>
+		<p class="mb-4 text-gray-600">
+			Feel free to reach out to me for any inquiries or collaborations, or just to say hi!
+		</p>
 		<div class="flex justify-center space-x-6">
-			<a href="mailto:hello@vascokf.com" class="text-blue-600 hover:underline">Email</a>
-			<a href="https://github.com/vascokf" class="text-blue-600 hover:underline">GitHub</a>
+			<a href="mailto:vasco.kf@gmail.com" class="text-blue-600 hover:underline">Email</a>
+			<a href="https://github.com/kauredo" class="text-blue-600 hover:underline">GitHub</a>
 			<a href="https://linkedin.com/in/vascokf" class="text-blue-600 hover:underline">LinkedIn</a>
 		</div>
 	</section>
 </main>
-
-<style>
-	/* Add any custom styles here if needed */
-</style>

@@ -1,20 +1,67 @@
 [
 	{
-		"title": "FPB Calendar",
-		"description": "Tool to fetch basketball games and sync to Google Calendar.",
-		"link": "https://github.com/vascokf/fpb-calendar",
-		"image": "/images/fpb-calendar.png"
+		"title": "Real Estate Scraper",
+		"slug": "real-estate-scraper",
+		"description": "A tool for scraping and publishing a real estate portfolio on a custom domain.",
+		"details": "Built for a real estate agent, this tool scrapes listings from her company’s website and republishes them with better SEO and a personalized domain. It supports a blog system and is now being rebuilt as an API to serve other agents. Built with Rails and React, with a focus on SEO-first content publishing.",
+		"stack": [
+			"Ruby on Rails",
+			"React",
+			"SEO",
+			"Web Scraping",
+			"Fly.io",
+			"TailwindCSS",
+			"PostgreSQL"
+		],
+		"images": ["/images/sgg-1.png", "/images/sgg-2.png", "/images/sgg-3.png", "/images/sgg-4.png"],
+		"github": "https://github.com/kauredo/real-estate-scraper",
+		"link": "https://sofiagalvaogroup.com"
 	},
 	{
-		"title": "Fluently App",
-		"description": "React Native project for language learners.",
-		"link": "https://github.com/vascokf/fluently",
-		"image": "/images/fluently.png"
+		"title": "FPB Calendar",
+		"slug": "fpb-calendar",
+		"description": "Tool to fetch basketball games and sync them to Google Calendar, with sharing options for teams.",
+		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
+		"stack": ["Sinatra", "Google Calendar API"],
+		"images": ["/images/fpb-calendar.png", "/images/fpb-calendar-2.png"],
+		"github": "https://github.com/kauredo/fpb-calendar",
+		"link": "https://fpb-calendar.fly.dev"
+	},
+	{
+		"title": "IMKAUFMANN",
+		"slug": "nn",
+		"description": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
+		"details": "This project was designed for a professional photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
+		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
+		"images": ["/images/nn-1.png", "/images/nn-2.png", "/images/nn-3.png", "/images/nn-4.png"],
+		"github": "https://github.com/kauredo/nn",
+		"link": "https://imkaufmann.com"
+	},
+	{
+		"title": "Jovens Futuro",
+		"slug": "jovens-futuro",
+		"description": "Blog platform for young adults to share their passions with SEO optimization and social media previews.",
+		"details": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
+		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave", "SEO"],
+		"images": ["/images/jovens-futuro-1.png", "/images/jovens-futuro-2.png"],
+		"github": "https://github.com/kauredo/jovens_futuro"
 	},
 	{
 		"title": "Portfolio Site",
-		"description": "My personal site built with SvelteKit and Tailwind.",
-		"link": "https://vascokf.com",
-		"image": "/images/portfolio.png"
+		"slug": "portfolio-site",
+		"description": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
+		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
+		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
+		"images": ["/images/portfolio.png", "/images/portfolio-2.png"],
+		"github": "https://github.com/kauredo/portfolio-site"
+	},
+	{
+		"title": "AOC Ruby (aoc_rb)",
+		"slug": "aoc-rb",
+		"description": "Ruby gem to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
+		"details": "This gem sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
+		"stack": ["Ruby", "CLI", "Open Source"],
+		"images": ["/images/aoc_rb.png"],
+		"github": "https://github.com/kauredo/aoc_rb"
 	}
 ]
