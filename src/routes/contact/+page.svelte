@@ -16,7 +16,9 @@
 			class="space-y-6"
 		>
 			<div>
-				<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+				<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-400"
+					>Name</label
+				>
 				<input
 					type="text"
 					id="name"
@@ -27,7 +29,9 @@
 			</div>
 
 			<div>
-				<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+				<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-400"
+					>Email</label
+				>
 				<input
 					type="email"
 					id="email"
@@ -38,7 +42,9 @@
 			</div>
 
 			<div>
-				<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+				<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-400"
+					>Message</label
+				>
 				<textarea
 					id="message"
 					name="message"

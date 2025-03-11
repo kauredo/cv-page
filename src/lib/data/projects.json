@@ -61,7 +61,6 @@
 		"description": "Ruby gem to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
 		"details": "This gem sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
 		"stack": ["Ruby", "CLI", "Open Source"],
-		"images": ["/images/aoc_rb.png"],
 		"github": "https://github.com/kauredo/aoc_rb"
 	}
 ]

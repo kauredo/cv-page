@@ -21,7 +21,7 @@
 	<meta property="og:type" content="website" />
 </svelte:head>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex min-h-screen flex-col dark:bg-gray-800 dark:text-gray-200">
 	<Navbar />
 	<main class="flex-1">
 		{@render children()}
