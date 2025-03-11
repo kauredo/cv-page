@@ -46,19 +46,25 @@
 			<span class="sr-only">Home</span>
 		</a>
 
-		<div class="space-x-4">
+		<div class="flex items-center space-x-4">
 			<a href="/projects" class="hover:underline dark:text-white">Projects</a>
 			<a href="/contact" class="hover:underline dark:text-white">Contact</a>
-			<button
-				on:click={toggleDarkMode}
-				class="hover:cursor-pointer hover:underline dark:text-white"
-			>
-				{#if darkMode}
-					🌞
-				{:else}
-					🌙
-				{/if}
-			</button>
+
+			<label class="me-5 inline-flex cursor-pointer items-center">
+				<input
+					type="checkbox"
+					value=""
+					class="peer sr-only"
+					checked={darkMode}
+					on:change={toggleDarkMode}
+				/>
+				<div
+					class="peer peer-checked:bg-vasco-600 peer-focus:ring-vasco-300 dark:peer-checked:bg-vasco-600 dark:peer-focus:ring-vasco-800 relative h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 after:absolute after:start-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700"
+				></div>
+				<span class="ms-3 w-10 text-sm font-medium text-gray-900 dark:text-gray-300">
+					{darkMode ? 'Dark' : 'Light'}
+				</span>
+			</label>
 		</div>
 	</nav>
 </header>

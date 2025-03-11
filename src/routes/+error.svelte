@@ -14,5 +14,5 @@
 	<p class="mb-4 text-gray-600">
 		{status === 404 ? "Sorry, we couldn't find the page you're looking for." : error.message}
 	</p>
-	<a href="/" class="text-blue-600 underline">Go back home</a>
+	<a href="/" class="text-vasco-600 underline">Go back home</a>
 </main>

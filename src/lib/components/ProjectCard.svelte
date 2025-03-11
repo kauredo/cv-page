@@ -25,7 +25,7 @@
 		<a
 			href={link}
 			target="_blank"
-			class="inline-flex items-center gap-1 text-sm text-blue-600 hover:underline dark:text-blue-400"
+			class="text-vasco-600 dark:text-vasco-400 inline-flex items-center gap-1 text-sm hover:underline"
 		>
 			<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 				<path d="M14 3h7v7M10 14L21 3M5 5l14 14" />

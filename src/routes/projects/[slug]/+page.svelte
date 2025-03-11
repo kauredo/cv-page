@@ -1,27 +1,29 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import type { Project } from '$lib/types';
 	export let data: PageData;
+	export let project: Project = data.project;
 </script>
 
 <svelte:head>
-	<title>{data.project.title} — Vasco</title>
-	<meta name="description" content={data.project.description} />
+	<title>{project.title} — Vasco</title>
+	<meta name="description" content={project.description} />
 </svelte:head>
 
-<main class="mx-auto max-w-3xl p-6">
-	<h1 class="mb-4 text-3xl font-bold">{data.project.title}</h1>
+<section class="mx-auto max-w-3xl p-6">
+	<h1 class="mb-4 text-3xl font-bold">{project.title}</h1>
 
 	<!-- Project Description -->
-	<p class="mb-4 text-base text-gray-700 dark:text-gray-400">{data.project.description}</p>
+	<p class="mb-4 text-base text-gray-700 dark:text-gray-400">{project.description}</p>
 
 	<!-- Display multiple images if available -->
-	{#if data.project.images && data.project.images.length > 0}
+	{#if project.images && project.images.length > 0}
 		<div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-			{#each data.project.images as image}
+			{#each project.images as image}
 				<img
 					src={image}
-					alt={data.project.title}
-					class="rounded-xl border border-3 border-gray-200 transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
+					alt={project.title}
+					class="h-60 w-full rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
 				/>
 			{/each}
 		</div>
@@ -30,15 +32,15 @@
 	<!-- Project Details -->
 	<section class="mb-4">
 		<h2 class="mb-2 text-2xl font-semibold">Details</h2>
-		<p class="text-gray-700 dark:text-gray-400">{data.project.details}</p>
+		<p class="text-gray-700 dark:text-gray-400">{project.details}</p>
 	</section>
 
 	<!-- Technology Stack -->
-	{#if data.project.stack && data.project.stack.length > 0}
+	{#if project.stack && project.stack.length > 0}
 		<section class="mb-4">
 			<h2 class="mb-2 text-2xl font-semibold">Technology Stack</h2>
 			<ul class="flex flex-wrap gap-2">
-				{#each data.project.stack as tech}
+				{#each project.stack as tech}
 					<li
 						class="rounded-full bg-gray-200 px-3 py-1 text-sm text-gray-700 dark:bg-gray-400 dark:text-gray-800"
 					>
@@ -51,23 +53,23 @@
 
 	<!-- Links -->
 	<div class="flex gap-4">
-		{#if data.project.github}
+		{#if project.github}
 			<a
-				href={data.project.github}
+				href={project.github}
 				target="_blank"
-				class="text-blue-600 underline hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+				class="text-vasco-600 hover:text-vasco-500 dark:text-vasco-400 dark:hover:text-vasco-300 underline"
 			>
 				View on GitHub
 			</a>
 		{/if}
-		{#if data.project.link}
+		{#if project.link}
 			<a
-				href={data.project.link}
+				href={project.link}
 				target="_blank"
-				class="text-blue-600 underline hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+				class="text-vasco-600 hover:text-vasco-500 dark:text-vasco-400 dark:hover:text-vasco-300 underline"
 			>
 				Visit Website
 			</a>
 		{/if}
 	</div>
-</main>
+</section>

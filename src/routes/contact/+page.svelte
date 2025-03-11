@@ -24,7 +24,7 @@
 					id="name"
 					name="name"
 					required
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+					class="focus:border-vasco-500 focus:ring-vasco-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 				/>
 			</div>
 
@@ -37,7 +37,7 @@
 					id="email"
 					name="email"
 					required
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+					class="focus:border-vasco-500 focus:ring-vasco-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 				/>
 			</div>
 
@@ -50,13 +50,13 @@
 					name="message"
 					rows="5"
 					required
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+					class="focus:border-vasco-500 focus:ring-vasco-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 				></textarea>
 			</div>
 
 			<button
 				type="submit"
-				class="rounded-md bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+				class="bg-vasco-600 hover:bg-vasco-700 rounded-md px-4 py-2 text-white transition"
 			>
 				Send Message
 			</button>

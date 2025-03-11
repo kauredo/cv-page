@@ -4,8 +4,8 @@ export interface Project {
 	description: string;
 	details: string;
 	stack: string[];
-	images: string[];
 	github: string;
+	images?: string[];
 	link?: string;
 }
 

@@ -79,9 +79,9 @@
 			Feel free to reach out to me for any inquiries or collaborations, or just to say hi!
 		</p>
 		<div class="flex justify-center space-x-6">
-			<a href="mailto:vasco.kf@gmail.com" class="text-blue-600 hover:underline">Email</a>
-			<a href="https://github.com/kauredo" class="text-blue-600 hover:underline">GitHub</a>
-			<a href="https://linkedin.com/in/vascokf" class="text-blue-600 hover:underline">LinkedIn</a>
+			<a href="mailto:vasco.kf@gmail.com" class="text-vasco-600 hover:underline">Email</a>
+			<a href="https://github.com/kauredo" class="text-vasco-600 hover:underline">GitHub</a>
+			<a href="https://linkedin.com/in/vascokf" class="text-vasco-600 hover:underline">LinkedIn</a>
 		</div>
 	</section>
 </main>

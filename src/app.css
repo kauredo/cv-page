@@ -4,6 +4,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+	--color-vasco-100: #f0f5ff;
+	--color-vasco-200: #cbe0ff;
+	--color-vasco-300: #a5cdff;
+	--color-vasco-400: #7fbaff;
+	--color-vasco-500: #59a7ff;
+	--color-vasco-600: #3f8ff5;
+	--color-vasco-700: #2f6fd0;
+	--color-vasco-800: #1f4fad;
+	--color-vasco-900: #0f2e8a;
+}
+
 html {
 	scrollbar-gutter: stable;
 }
