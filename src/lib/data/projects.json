@@ -1,0 +1,20 @@
+[
+	{
+		"title": "FPB Calendar",
+		"description": "Tool to fetch basketball games and sync to Google Calendar.",
+		"link": "https://github.com/vascokf/fpb-calendar",
+		"image": "/images/fpb-calendar.png"
+	},
+	{
+		"title": "Fluently App",
+		"description": "React Native project for language learners.",
+		"link": "https://github.com/vascokf/fluently",
+		"image": "/images/fluently.png"
+	},
+	{
+		"title": "Portfolio Site",
+		"description": "My personal site built with SvelteKit and Tailwind.",
+		"link": "https://vascokf.com",
+		"image": "/images/portfolio.png"
+	}
+]
