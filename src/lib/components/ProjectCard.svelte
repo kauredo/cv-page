@@ -3,34 +3,19 @@
 	import type { Project } from '$lib/types';
 
 	export let project: Project;
-	const { title, description, images, link, slug } = project;
+	const { title, description, images, slug } = project;
 </script>
 
 <div
-	class="max-w-[300px] min-w-[250px] flex-1 rounded-2xl bg-white p-4 shadow transition hover:shadow-lg dark:bg-gray-900 dark:text-gray-200"
-	in:fade
+	class="max-w-[300px] min-w-[250px] flex-1 rounded-xl bg-white p-4 transition hover:shadow-lg dark:bg-gray-800 dark:text-gray-200 dark:hover:opacity-90"
 >
-	<a href={`/projects/${slug}`}>
-		{#if images && images.length > 0}
-			<img
-				src={images[0]}
-				alt={title}
-				class="mb-4 rounded-xl transition hover:opacity-90 dark:opacity-70"
-			/>
+	<a href={`/projects/${slug}`} class="group block">
+		{#if images && images[0]}
+			<img src={images[0]} alt={title} class="mb-3 rounded-lg" />
+		{:else}
+			<img src="/images/placeholder.png" alt={title} class="mb-3 rounded-lg" />
 		{/if}
-		<h2 class="mb-1 text-xl font-semibold hover:underline">{title}</h2>
+		<h3 class="group-hover:text-vasco-600 text-lg font-semibold">{title}</h3>
+		<p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
 	</a>
-	<p class="mb-2 text-sm text-gray-600">{description}</p>
-	{#if link}
-		<a
-			href={link}
-			target="_blank"
-			class="text-vasco-600 dark:text-vasco-400 inline-flex items-center gap-1 text-sm hover:underline"
-		>
-			<svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-				<path d="M14 3h7v7M10 14L21 3M5 5l14 14" />
-			</svg>
-			External Link
-		</a>
-	{/if}
 </div>

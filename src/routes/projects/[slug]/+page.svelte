@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Project } from '$lib/types';
+	import { fade } from 'svelte/transition';
 	export let data: PageData;
 	export let project: Project = data.project;
 </script>
@@ -10,7 +11,7 @@
 	<meta name="description" content={project.description} />
 </svelte:head>
 
-<section class="mx-auto max-w-3xl p-6">
+<section in:fade={{ duration: 100 }} class="mx-auto max-w-3xl p-6">
 	<h1 class="mb-4 text-3xl font-bold">{project.title}</h1>
 
 	<!-- Project Description -->
