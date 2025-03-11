@@ -3,103 +3,148 @@
 	import educationData from '$lib/data/education.json';
 	import skillsData from '$lib/data/skills.json';
 	import projectsData from '$lib/data/projects.json';
-	import type { Experience, Education, Project } from '$lib/types';
 	import { fade } from 'svelte/transition';
+	import type { Experience, Education, Project } from '$lib/types';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import DribblingBall from '$lib/components/DribblingBall.svelte';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
 	const skills: string[] = skillsData;
-	let projects: Project[] = projectsData;
-	projects = projects.slice(0, 2);
+	const projects: Project[] = projectsData.slice(0, 2);
 </script>
 
 <main class="mx-auto max-w-4xl space-y-16 p-6">
-	<!-- Introduction Section -->
-	<section in:fade={{ duration: 100 }} class="mb-12 flex flex-col items-center gap-6 md:flex-row">
-		<img src="/images/me.png" alt="Vasco" class="h-42 dark:bg-gray-800" />
-		<div>
-			<h1 class="text-4xl font-bold">Hi, I'm Vasco 👋</h1>
-			<p class="mt-2 mb-6 text-lg text-gray-600 dark:text-gray-400">
-				Web Developer • Problem Solver • Basketball Enthusiast
-			</p>
-
-			<div class="text-justify">
-				<p>
-					I'm a Web Developer based in Lisbon, Portugal. My interests include watching and playing
-					basketball, reading and watching TV - series, movies or documentaries.
-				</p>
-				<p>
-					I want this page to serve as a way for me to practice and showcase my skills, therefore I
-					plan to update and revamp it on a semi-regular basis. If you have any questions or
-					suggestions feel free to contact me through any of my socials!
-				</p>
-			</div>
+	<!-- Hero Section -->
+	<section class="space-y-4 pt-10 text-center" in:fade={{ duration: 200 }}>
+		<div class="flex items-center justify-center gap-4">
+			<h1 class="text-5xl font-bold">Hey, I'm Vasco</h1>
+			<DribblingBall />
 		</div>
+		<p class="text-lg text-gray-600 dark:text-gray-400">
+			Web Developer • Problem Solver • Basketball Enthusiast
+		</p>
+		<p class="mx-auto max-w-xl text-gray-600 dark:text-gray-400">
+			I build clean, functional, and playful web apps. Currently exploring 3D printing, basketball
+			scheduling tools, and how to make the web a little more fun.
+		</p>
 	</section>
 
 	<!-- Projects Section -->
-	<section in:fade={{ duration: 100 }}>
-		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I've Been Building & Learning</h2>
+	<section in:fade={{ duration: 200 }}>
+		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I've Been Building</h2>
 		<div class="grid gap-6 sm:grid-cols-2">
 			{#each projects as project}
 				<ProjectCard {project} />
 			{/each}
 		</div>
+		<a href="/projects" class="text-vasco-600 block hover:underline">See all my projects →</a>
 	</section>
 
-	<!-- Professional Experience Section -->
-	<section in:fade={{ duration: 100 }}>
-		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">Jobs I've Had</h2>
-		<ul class="space-y-4">
+	<!-- Experience Section -->
+	<section in:fade={{ duration: 200 }}>
+		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">Places I've Worked At</h2>
+		<ul class="space-y-6">
 			{#each experiences as exp}
 				<li>
-					<div class="flex items-center gap-2">
+					<div class="flex items-center gap-3">
 						<h3 class="text-xl font-semibold">{exp.title}</h3>
-						<p class="text-gray-600 dark:text-gray-400">{exp.period}</p>
+						<span class="text-sm text-gray-500">{exp.period}</span>
 					</div>
-					<p>{exp.description}</p>
+					<p class="text-gray-700 dark:text-gray-400">{exp.description}</p>
 				</li>
 			{/each}
 		</ul>
 	</section>
 
 	<!-- Education Section -->
-	<section in:fade={{ duration: 100 }}>
+	<section in:fade={{ duration: 200 }}>
 		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">Where I've Studied</h2>
-		<ul class="space-y-2">
+		<ul class="space-y-4">
 			{#each education as edu}
 				<li>
-					<div class="flex items-center gap-2">
-						<h3 class="text-xl font-semibold">{edu.degree}:</h3>
-						<p class="text-gray-600 dark:text-gray-400">{edu.institution}, {edu.period}</p>
+					<div class="flex items-center gap-3">
+						<h3 class="text-lg font-semibold">{edu.degree}</h3>
+						<span class="text-sm text-gray-500">{edu.institution}, {edu.period}</span>
 					</div>
-					<p class="text-gray-700 dark:text-gray-400">{edu.description}</p>
+					<p class="text-gray-600 dark:text-gray-400">{edu.description}</p>
 				</li>
 			{/each}
 		</ul>
 	</section>
 
 	<!-- Skills Section -->
-	<section in:fade={{ duration: 100 }}>
-		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">Skills & Technologies I Work With</h2>
-		<ul class="grid grid-cols-2 gap-4 text-sm text-gray-700 sm:grid-cols-3 dark:text-gray-400">
+	<section in:fade={{ duration: 200 }}>
+		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">Tools & Tech I Enjoy</h2>
+		<ul class="grid grid-cols-2 gap-3 text-sm text-gray-700 sm:grid-cols-3 dark:text-gray-400">
 			{#each skills as skill}
-				<li>{skill}</li>
+				<li class="rounded-lg bg-gray-100 px-3 py-1 dark:bg-gray-800">{skill}</li>
 			{/each}
 		</ul>
 	</section>
 
-	<!-- Contact Section -->
-	<section in:fade={{ duration: 100 }} class="text-center">
-		<h2 class="mb-4 text-2xl font-bold">Get in Touch</h2>
-		<p class="mb-4 text-gray-600 dark:text-gray-400">
-			Got a cool idea? Want to chat code or hoops? Hit me up!
+	<!-- Now Section -->
+	<section in:fade={{ duration: 200 }}>
+		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I'm Up to Now</h2>
+		<p class="text-gray-600 dark:text-gray-400">
+			📅 Building a calendar tool for all Portuguese basketball leagues<br />
+			🖨️ 3D printing a wine rack(!) using my Bambu P1S<br />
+			🏀 Playing basketball for a local club (vamos SIMECQ)<br />
+			📚 Reading "The Peculiar life of a lonely Postman"<br />
 		</p>
-		<div class="flex justify-center space-x-6">
+	</section>
+
+	<!-- Contact Section -->
+	<section class="space-y-4 text-center" in:fade={{ duration: 200 }}>
+		<h2 class="text-2xl font-bold">Hit me up!</h2>
+		<p class="text-gray-600 dark:text-gray-400">
+			Got a cool project idea? Want to chat code or hoops? Drop me a message wherever you prefer:
+		</p>
+		<div class="flex justify-center gap-6">
 			<a href="mailto:vasco.kf@gmail.com" class="text-vasco-600 hover:underline">Email</a>
 			<a href="https://github.com/kauredo" class="text-vasco-600 hover:underline">GitHub</a>
 			<a href="https://linkedin.com/in/vascokf" class="text-vasco-600 hover:underline">LinkedIn</a>
 		</div>
 	</section>
 </main>
+
+<style>
+	@keyframes dribble {
+		0% {
+			transform: translateY(0) rotate(0deg) scaleY(1);
+		}
+		10% {
+			transform: translateY(-60px) rotate(45deg) scaleY(1);
+		}
+		20% {
+			transform: translateY(-60px) rotate(90deg) scaleY(1);
+		}
+		30% {
+			transform: translateY(-60px) rotate(135deg) scaleY(1);
+		}
+		40% {
+			transform: translateY(0) rotate(180deg) scaleY(0.85);
+		}
+		50% {
+			transform: translateY(-50px) rotate(225deg) scaleY(1);
+		}
+		60% {
+			transform: translateY(-50px) rotate(270deg) scaleY(1);
+		}
+		70% {
+			transform: translateY(-50px) rotate(315deg) scaleY(1);
+		}
+		80% {
+			transform: translateY(0) rotate(360deg) scaleY(0.85);
+		}
+		100% {
+			transform: translateY(0) rotate(360deg) scaleY(1);
+		}
+	}
+
+	.animate-ball {
+		animation: dribble 1s infinite cubic-bezier(0.33, 0, 0.66, 1);
+		transform-origin: center;
+		display: inline-block;
+	}
+</style>
