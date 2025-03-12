@@ -12,19 +12,27 @@
 </svelte:head>
 
 <section in:fade={{ duration: 100 }} class="mx-auto max-w-3xl p-6">
-	<h1 class="mb-4 text-3xl font-bold">{project.title}</h1>
+	<h1 class="mb-4 text-3xl font-bold" style="view-transition-name: project-title-{project.slug}">
+		{project.title}
+	</h1>
 
 	<!-- Project Description -->
-	<p class="mb-4 text-base text-gray-700 dark:text-gray-400">{project.description}</p>
+	<p
+		class="mb-4 text-base text-gray-700 dark:text-gray-400"
+		style="view-transition-name: project-description-{project.slug}"
+	>
+		{project.description}
+	</p>
 
 	<!-- Display multiple images if available -->
 	{#if project.images && project.images.length > 0}
 		<div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-			{#each project.images as image}
+			{#each project.images as image, i}
 				<img
 					src={image}
 					alt={project.title}
 					class="aspect-3/2 w-full rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
+					style="view-transition-name: project-image-{project.slug}-{i}"
 				/>
 			{/each}
 		</div>

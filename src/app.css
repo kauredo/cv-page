@@ -19,3 +19,8 @@
 html {
 	scrollbar-gutter: stable;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	/* animation-duration: 4s; */
+}
