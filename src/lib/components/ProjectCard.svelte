@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import type { Project } from '$lib/types';
 
 	export let project: Project;
