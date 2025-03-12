@@ -30,7 +30,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-10 bg-stone-100 shadow transition-colors duration-300 dark:bg-gray-800 dark:shadow-stone-100"
+	class="sticky top-0 z-10 bg-stone-50 shadow transition-colors duration-300 dark:bg-gray-800 dark:shadow-stone-50"
 >
 	<nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
 		<a href="/" class="flex items-center gap-2 text-xl font-bold">
@@ -47,8 +47,8 @@
 		</a>
 
 		<div class="flex items-center space-x-4">
-			<a href="/projects" class="hover:underline dark:text-stone-100">Projects</a>
-			<a href="/contact" class="hover:underline dark:text-stone-100">Contact</a>
+			<a href="/projects" class="hover:underline dark:text-stone-50">Projects</a>
+			<a href="/contact" class="hover:underline dark:text-stone-50">Contact</a>
 
 			<label class="inline-flex cursor-pointer items-center">
 				<input
@@ -59,7 +59,7 @@
 					on:change={toggleDarkMode}
 				/>
 				<div
-					class="peer peer-checked:bg-vasco-600 peer-focus:ring-vasco-300 dark:peer-checked:bg-vasco-600 dark:peer-focus:ring-vasco-800 relative h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 after:absolute after:start-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-stone-100 after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-stone-100 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700"
+					class="peer peer-checked:bg-vasco-600 peer-focus:ring-vasco-300 dark:peer-checked:bg-vasco-600 dark:peer-focus:ring-vasco-800 relative h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 after:absolute after:start-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-stone-50 after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-stone-50 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700"
 				></div>
 				<span class="ms-3 w-10 text-sm font-medium text-gray-900 dark:text-gray-300">
 					{darkMode ? 'Dark' : 'Light'}

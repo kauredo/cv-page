@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="mx-auto max-w-[300px] min-w-[250px] flex-1 rounded-xl bg-stone-100 p-4 transition hover:shadow-lg dark:bg-gray-800 dark:text-gray-200 dark:hover:opacity-90"
+	class="mx-auto max-w-[300px] min-w-[250px] flex-1 rounded-xl bg-stone-50 p-4 transition hover:shadow-lg dark:bg-gray-800 dark:text-gray-200 dark:hover:opacity-90"
 >
 	<a href={`/projects/${slug}`} class="group block" data-sveltekit-preload-data="hover">
 		{#if images && images[0]}
