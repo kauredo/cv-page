@@ -18,7 +18,7 @@
 	<!-- Hero Section -->
 	<section class="space-y-4 pt-10 text-center" in:fade={{ duration: 200 }}>
 		<div class="flex items-center justify-center gap-4">
-			<h1 class="text-5xl font-bold">Hey, I'm Vasco</h1>
+			<h1 class="text-3xl font-bold sm:text-5xl">Hey, I'm Vasco</h1>
 			<DribblingBall />
 		</div>
 		<p class="text-lg text-gray-600 dark:text-gray-400">

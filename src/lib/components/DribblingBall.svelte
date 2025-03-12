@@ -30,7 +30,7 @@
 	});
 </script>
 
-<div class="relative mt-6">
+<div class="relative mb-6 h-12 w-12">
 	<div id="suport">
 		<div id="smash" class="animation-untriggered">
 			<div id="dribble" class="animation-untriggered">

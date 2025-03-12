@@ -50,7 +50,7 @@
 			<a href="/projects" class="hover:underline dark:text-white">Projects</a>
 			<a href="/contact" class="hover:underline dark:text-white">Contact</a>
 
-			<label class="me-5 inline-flex cursor-pointer items-center">
+			<label class="inline-flex cursor-pointer items-center">
 				<input
 					type="checkbox"
 					value=""

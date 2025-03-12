@@ -6,7 +6,7 @@
 		<a
 			href="/files/cv_vascokf_2025.pdf"
 			target="_blank"
-			class=" hover:text-gray-800 dark:hover:text-gray-200"
+			class="hover:text-gray-800 dark:hover:text-gray-200"
 		>
 			Download my CV
 		</a>

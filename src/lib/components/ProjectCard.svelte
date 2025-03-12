@@ -14,7 +14,7 @@
 				src={images[0]}
 				alt={title}
 				class="mb-3 rounded-lg"
-				style="view-transition-name: project-image-{slug}-1"
+				style="view-transition-name: project-image-{slug}-0"
 				loading="lazy"
 				decoding="async"
 			/>
@@ -23,7 +23,7 @@
 				src="/images/placeholder.png"
 				alt={title}
 				class="mb-3 rounded-lg"
-				style="view-transition-name: project-image-{slug}-1"
+				style="view-transition-name: project-image-{slug}-0"
 			/>
 		{/if}
 		<h3
