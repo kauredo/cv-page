@@ -11,16 +11,13 @@
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
 	const skills: string[] = skillsData;
-	const projects: Project[] = projectsData.slice(0, 2);
+	const projects: Project[] = projectsData.slice(0, 3);
 </script>
 
 <main class="mx-auto max-w-4xl space-y-16 p-6">
 	<!-- Hero Section -->
 	<section class="space-y-4 pt-10 text-center" in:fade={{ duration: 200 }}>
-		<div class="flex items-center justify-center gap-4">
-			<h1 class="text-3xl font-bold sm:text-5xl">Hey, I'm Vasco</h1>
-			<DribblingBall />
-		</div>
+		<h1 class="text-3xl font-bold sm:text-5xl">Hey, I'm Vasco</h1>
 		<p class="text-lg text-gray-600 dark:text-gray-400">
 			Web Developer • Problem Solver • Basketball Enthusiast
 		</p>
@@ -33,12 +30,12 @@
 	<!-- Projects Section -->
 	<section in:fade={{ duration: 200 }}>
 		<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I've Been Building</h2>
-		<div class="grid gap-6 sm:grid-cols-2">
+		<div class="flex flex-wrap gap-6 sm:grid-cols-2">
 			{#each projects as project}
 				<ProjectCard {project} />
 			{/each}
 		</div>
-		<a href="/projects" class="text-vasco-600 block hover:underline">See all my projects →</a>
+		<a href="/projects" class="text-vasco-600 mt-4 block hover:underline">See all my projects →</a>
 	</section>
 
 	<!-- Experience Section -->
@@ -96,7 +93,10 @@
 
 	<!-- Contact Section -->
 	<section class="space-y-4 text-center" in:fade={{ duration: 200 }}>
-		<h2 class="text-2xl font-bold">Hit me up!</h2>
+		<div class="flex items-center justify-center gap-4">
+			<h2 class="text-2xl font-bold">Hit me up!</h2>
+			<DribblingBall width={30} ballJumpHeight={100} duration={0.35} />
+		</div>
 		<p class="text-gray-600 dark:text-gray-400">
 			Got a cool project idea? Want to chat code or hoops? Drop me a message wherever you prefer:
 		</p>

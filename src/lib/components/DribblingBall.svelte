@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	export let isAnimating = false;
+	export let width = 50;
+	export let ballJumpHeight = 205;
+	export let duration = 1.1;
+
+	let isAnimating = false;
 
 	const animateBall = () => {
 		if (isAnimating) return;
@@ -30,15 +34,20 @@
 	});
 </script>
 
-<div class="relative mb-6 h-12 w-12">
-	<div id="suport">
-		<div id="smash" class="animation-untriggered">
-			<div id="dribble" class="animation-untriggered">
+<div class="relative mb-6 h-full w-fit">
+	<div id="suport" class="h-full w-fit">
+		<div id="smash" class="animation-untriggered h-full w-fit">
+			<div
+				id="dribble"
+				class="animation-untriggered h-full w-fit"
+				style={`--ballWidth: ${width}px; --ballJumpHeight: ${ballJumpHeight}px; --animationDuration: ${duration}s; width: ${width}px; height: ${width}px;`}
+			>
 				<img
 					id="rotateImg"
 					src="/images/bball.svg"
 					alt="Basketball"
-					class="animation-untriggered mx-auto h-12 w-12 dark:invert"
+					class="animation-untriggered mx-auto dark:invert"
+					style="width: {width}px; height: {width}px;"
 				/>
 			</div>
 		</div>
@@ -55,7 +64,7 @@
 
 	#smash {
 		animation-name: smash;
-		animation-duration: 1.1s;
+		animation-duration: var(--animationDuration);
 		animation-direction: alternate;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
@@ -66,13 +75,11 @@
 	#rotateImg {
 		border-radius: 50%;
 		display: inline-block;
-		width: 50px;
-		height: 50px;
 	}
 
 	#dribble {
 		animation-name: dribble;
-		animation-duration: 1.1s;
+		animation-duration: var(--animationDuration);
 		animation-direction: alternate;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-out;
@@ -81,7 +88,7 @@
 	#rotateImg {
 		background-size: 100%;
 		animation-name: rotateImg;
-		animation-duration: calc(1.1s * 5.3);
+		animation-duration: calc(var(--animationDuration) * 5.3);
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 	}
@@ -91,16 +98,16 @@
 	#dribble.animation-untriggered,
 	#smash.animation-untriggered {
 		animation-play-state: paused;
-		animation-delay: calc(1.1s * 0.1);
-		transform: translateY(5px);
+		animation-delay: calc(var(--animationDuration) * 0.1);
+		transform: translateY(calc(-var(--ballWidth) / 10));
 	}
 
 	@keyframes dribble {
 		0% {
-			transform: translateY(30px);
+			transform: translateY(0px);
 		}
 		100% {
-			transform: translateY(-205px);
+			transform: translateY(calc(-1 * var(--ballJumpHeight)));
 		}
 	}
 	@keyframes smash {
