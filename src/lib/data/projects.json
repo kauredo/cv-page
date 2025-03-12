@@ -20,7 +20,7 @@
 	{
 		"title": "FPB Calendar",
 		"slug": "fpb-calendar",
-		"description": "Tool to fetch basketball games and sync them to Google Calendar, with sharing options for teams.",
+		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
 		"stack": ["Sinatra", "Google Calendar API"],
 		"images": ["/images/fpb-calendar.png", "/images/fpb-calendar-2.png"],
@@ -31,7 +31,7 @@
 		"title": "IMKAUFMANN",
 		"slug": "nn",
 		"description": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
-		"details": "This project was designed for a professional photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
+		"details": "This project was designed for an amateur photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
 		"images": ["/images/nn-1.png", "/images/nn-2.png", "/images/nn-3.png", "/images/nn-4.png"],
 		"github": "https://github.com/kauredo/nn",
@@ -63,8 +63,8 @@
 	{
 		"title": "AOC Ruby (aoc_rb)",
 		"slug": "aoc-rb",
-		"description": "Ruby gem to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
-		"details": "This gem sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
+		"description": "Ruby toolkit to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
+		"details": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
 		"stack": ["Ruby", "CLI", "Open Source"],
 		"github": "https://github.com/pacso/aoc_rb",
 		"images": ["/images/aoc-rb.png"]
