@@ -24,7 +24,7 @@
 				<img
 					src={image}
 					alt={project.title}
-					class="h-60 w-full rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
+					class="aspect-3/2 w-full rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
 				/>
 			{/each}
 		</div>
