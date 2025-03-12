@@ -22,7 +22,7 @@
 	<title>VascoKF — Developer Portfolio</title>
 	<meta
 		name="description"
-		content="Vasco's personal developer portfolio showcasing web projects and skills."
+		content="Vasco KF's personal developer portfolio showcasing his latest web projects, skills and experience."
 	/>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="author" content="VascoKF" />

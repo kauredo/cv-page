@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>{project.title} — Vasco</title>
+	<title>{project.title} — Vasco KF</title>
 	<meta name="description" content={project.description} />
 </svelte:head>
 
