@@ -17,7 +17,7 @@
 }
 
 html {
-	scrollbar-gutter: stable;
+	/* scrollbar-gutter: stable; */
 }
 
 ::view-transition-old(root),

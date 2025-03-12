@@ -43,7 +43,12 @@
 		"description": "Blog platform for young adults to share their passions with SEO optimization and social media previews.",
 		"details": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave", "SEO"],
-		"images": ["/images/jovens-futuro-1.png", "/images/jovens-futuro-2.png"],
+		"images": [
+			"/images/jovens-futuro-1.png",
+			"/images/jovens-futuro-2.png",
+			"/images/jovens-futuro-3.png",
+			"/images/jovens-futuro-4.png"
+		],
 		"github": "https://github.com/kauredo/jovens_futuro"
 	},
 	{
@@ -61,6 +66,7 @@
 		"description": "Ruby gem to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
 		"details": "This gem sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
 		"stack": ["Ruby", "CLI", "Open Source"],
-		"github": "https://github.com/kauredo/aoc_rb"
+		"github": "https://github.com/pacso/aoc_rb",
+		"images": ["/images/aoc-rb.png"]
 	}
 ]
