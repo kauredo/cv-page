@@ -2,8 +2,20 @@
 	import type { PageData } from './$types';
 	import type { Project } from '$lib/types';
 	import { fade } from 'svelte/transition';
+	import Modal from '$lib/components/Modal.svelte';
+
 	export let data: PageData;
 	export let project: Project = data.project;
+
+	let selectedImage: string | null = null;
+
+	function openModal(image: string) {
+		selectedImage = image;
+	}
+
+	function closeModal() {
+		selectedImage = null;
+	}
 </script>
 
 <svelte:head>
@@ -28,12 +40,14 @@
 	{#if project.images && project.images.length > 0}
 		<div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
 			{#each project.images as image, i}
-				<img
-					src={image}
-					alt={project.title}
-					class="aspect-3/2 w-full rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
-					style="view-transition-name: project-image-{project.slug}-{i}"
-				/>
+				<button class="rounded-xl" on:click={() => openModal(image)}>
+					<img
+						src={image}
+						style="view-transition-name: project-image-{project.slug}-{i}"
+						alt={project.title}
+						class="aspect-3/2 w-full cursor-pointer rounded-xl border border-3 border-gray-200 object-cover object-top transition hover:opacity-90 dark:border-gray-800 dark:opacity-70"
+					/>
+				</button>
 			{/each}
 		</div>
 	{/if}
@@ -82,3 +96,12 @@
 		{/if}
 	</div>
 </section>
+
+<!-- Modal Component -->
+<Modal
+	images={project.images}
+	isOpen={selectedImage !== null}
+	imageSrc={selectedImage ?? ''}
+	altText={project.title}
+	{closeModal}
+/>

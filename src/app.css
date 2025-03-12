@@ -24,3 +24,7 @@ html {
 ::view-transition-new(root) {
 	/* animation-duration: 4s; */
 }
+
+body {
+	font-family: 'Inter', sans-serif;
+}
