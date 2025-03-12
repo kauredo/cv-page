@@ -56,7 +56,7 @@
 
 			<button
 				type="submit"
-				class="bg-vasco-600 hover:bg-vasco-700 rounded-md px-4 py-2 text-white transition"
+				class="bg-vasco-600 hover:bg-vasco-700 rounded-md px-4 py-2 text-stone-100 transition"
 			>
 				Send Message
 			</button>

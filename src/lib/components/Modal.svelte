@@ -60,7 +60,7 @@
 
 		<!-- Next and Previous Buttons -->
 		<button
-			class="bg-opacity-50 absolute top-1/2 left-4 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-white p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+			class="bg-opacity-50 absolute top-1/2 left-4 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-100 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
 			on:click={() => {
 				const currentIndex = images.indexOf(imageSrc);
 				const prevIndex = currentIndex - 1;
@@ -71,7 +71,7 @@
 			{'<'}
 		</button>
 		<button
-			class="bg-opacity-50 absolute top-1/2 right-8 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-white p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+			class="bg-opacity-50 absolute top-1/2 right-8 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-100 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
 			on:click={() => {
 				const currentIndex = images.indexOf(imageSrc);
 				const nextIndex = currentIndex + 1;
@@ -84,7 +84,7 @@
 
 		<!-- Modal Content -->
 		<div
-			class="relative mx-4 aspect-3/4 max-h-full w-full max-w-7xl rounded-xl bg-white shadow-lg sm:aspect-auto"
+			class="relative mx-4 aspect-3/4 max-h-full w-full max-w-7xl rounded-xl bg-stone-100 shadow-lg sm:aspect-auto"
 		>
 			<img src={imageSrc} alt={altText} class="h-full w-full rounded object-cover object-top" />
 		</div>

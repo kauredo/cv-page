@@ -10,7 +10,7 @@
 </svelte:head>
 
 <main
-	class="flex min-h-screen items-center justify-center bg-white p-6 text-center dark:bg-gray-800 dark:text-gray-200"
+	class="flex min-h-screen items-center justify-center bg-stone-100 p-6 text-center dark:bg-gray-800 dark:text-gray-200"
 >
 	<div class="w-full max-w-xl">
 		<div class="mb-6">
@@ -47,7 +47,7 @@
 
 		<a
 			href="/"
-			class="bg-vasco-600 hover:bg-vasco-700 inline-block rounded-xl px-6 py-3 font-medium text-white shadow transition"
+			class="bg-vasco-600 hover:bg-vasco-700 inline-block rounded-xl px-6 py-3 font-medium text-stone-100 shadow transition"
 		>
 			← Go back home
 		</a>

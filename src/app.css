@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-vasco-100: #f0f5ff;
+	--color-vasco-100: #d5e3ff;
 	--color-vasco-200: #cbe0ff;
 	--color-vasco-300: #a5cdff;
 	--color-vasco-400: #7fbaff;
