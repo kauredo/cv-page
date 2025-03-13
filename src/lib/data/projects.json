@@ -57,7 +57,12 @@
 		"description": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
 		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
 		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
-		"images": ["/images/portfolio.png", "/images/portfolio-2.png"],
+		"images": [
+			"/images/portfolio.png",
+			"/images/portfolio-2.png",
+			"/images/portfolio-3.png",
+			"/images/portfolio-4.png"
+		],
 		"github": "https://github.com/kauredo/portfolio-site"
 	},
 	{

@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { MetaTags } from 'svelte-meta-tags';
 
 	export let error: App.Error | null = page.error;
 	export let status: number = page.status;
 </script>
 
-<svelte:head>
-	<title>{status === 404 ? 'Page Not Found' : `Error ${status}`} — Vasco KF</title>
-</svelte:head>
+<MetaTags title="{status === 404 ? 'Page Not Found' : `Error ${status}`} — Vasco KF" />
 
 <main
 	class="flex min-h-screen items-center justify-center bg-stone-50 p-6 text-center dark:bg-gray-800 dark:text-gray-200"

@@ -3,6 +3,8 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { onNavigate } from '$app/navigation';
+	import { page } from '$app/state';
+	import { MetaTags, deepMerge } from 'svelte-meta-tags';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -15,23 +17,13 @@
 		});
 	});
 
-	let { children } = $props();
+	let { data, children } = $props();
+	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
 </script>
 
+<MetaTags {...metaTags} />
+
 <svelte:head>
-	<title>VascoKF — Developer Portfolio</title>
-	<meta
-		name="description"
-		content="Vasco KF's personal developer portfolio showcasing his latest web projects, skills and experience."
-	/>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="author" content="VascoKF" />
-	<meta property="og:title" content="VascoKF — Developer Portfolio" />
-	<meta
-		property="og:description"
-		content="Showcasing my latest web projects, skills and experience."
-	/>
-	<meta property="og:type" content="website" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
