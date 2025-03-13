@@ -12,12 +12,24 @@ export const load: PageLoad = async ({ params }) => {
 	}
 
 	const project: Project = projectData;
+
+	const projectImage =
+		project.images && project.images[0].length > 0 ? project.images[0] : '/images/portfolio.png';
+	const projectImageUrl = `https://www.vascokf.com${projectImage}`;
 	const pageMetaTags = Object.freeze({
 		title: project.title,
 		description: project.description,
 		openGraph: {
 			title: project.title,
-			description: project.description
+			description: project.description,
+			images: [
+				{
+					url: projectImageUrl,
+					alt: project.title,
+					secureUrl: projectImageUrl,
+					type: 'image/png'
+				}
+			]
 		}
 	}) satisfies MetaTagsProps;
 

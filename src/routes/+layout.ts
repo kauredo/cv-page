@@ -2,7 +2,7 @@ import type { MetaTagsProps } from 'svelte-meta-tags';
 
 export const load = ({ url }) => {
 	const baseMetaTags = Object.freeze({
-		title: 'VascoKF — Developer Portfolio',
+		title: 'My Portfolio',
 		titleTemplate: '%s | VascoKF',
 		description:
 			"Vasco KF's personal developer portfolio showcasing his latest web projects, skills and experience.",
@@ -11,13 +11,13 @@ export const load = ({ url }) => {
 			type: 'website',
 			url: new URL(url.pathname, url.origin).href,
 			locale: 'en_IE',
-			title: 'VascoKF — Developer Portfolio',
+			title: 'VascoKF — Portfolio',
 			description: 'Showcasing my latest web projects, skills and experience.',
 			siteName: 'VascoKF',
 			images: [
 				{
 					url: 'https://www.vascokf.com/images/portfolio.png',
-					alt: 'VascoKF — Developer Portfolio',
+					alt: 'VascoKF — Portfolio',
 					secureUrl: 'https://www.vascokf.com/images/portfolio.png',
 					type: 'image/png'
 				}
