@@ -3,6 +3,7 @@
 	import type { Project } from '$lib/types';
 	import { fade } from 'svelte/transition';
 	import Modal from '$lib/components/Modal.svelte';
+	import BackButton from '$lib/components/BackButton.svelte';
 
 	export let data: PageData;
 	export let project: Project = data.project;
@@ -23,8 +24,9 @@
 	<meta name="description" content={project.description} />
 </svelte:head>
 
-<section in:fade={{ duration: 100 }} class="mx-auto max-w-3xl p-6">
-	<h1 class="mb-4 text-3xl font-bold" style="view-transition-name: project-title-{project.slug}">
+<section in:fade={{ duration: 100 }} class="mx-auto max-w-4xl p-6">
+  <h1 class="mb-4 text-3xl font-bold" style="view-transition-name: project-title-{project.slug}">
+    <BackButton href="/projects" />
 		{project.title}
 	</h1>
 

@@ -87,7 +87,8 @@
 			📅 Building a calendar tool for all Portuguese basketball leagues<br />
 			🖨️ 3D printing a wine rack(!) using my Bambu P1S<br />
 			🏀 Playing basketball for a local club (vamos SIMECQ)<br />
-			📚 Reading "The Peculiar life of a lonely Postman"<br />
+			👨‍💻 Learning React Native and Python <br />
+			📚 Reading "The Peculiar life of a lonely Postman"
 		</p>
 	</section>
 
@@ -95,7 +96,7 @@
 	<section class="space-y-4 text-center" in:fade={{ duration: 200 }}>
 		<div class="flex items-center justify-center gap-4">
 			<h2 class="text-2xl font-bold">Hit me up!</h2>
-			<DribblingBall width={30} ballJumpHeight={100} duration={0.35} />
+			<DribblingBall width={30} ballJumpHeight={70} duration={0.35} />
 		</div>
 		<p class="text-gray-600 dark:text-gray-400">
 			Got a cool project idea? Want to chat code or hoops? Drop me a message wherever you prefer:
