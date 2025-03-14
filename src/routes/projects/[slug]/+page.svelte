@@ -2,9 +2,8 @@
 	import type { PageData } from './$types';
 	import type { Project } from '$lib/types';
 	import { fade } from 'svelte/transition';
-	import Modal from '$lib/components/Modal.svelte';
-	import BackButton from '$lib/components/BackButton.svelte';
-	import { MetaTags } from 'svelte-meta-tags';
+	import Modal from '$lib/components/shared/Modal.svelte';
+	import BackButton from '$lib/components/shared/BackButton.svelte';
 
 	export let data: PageData;
 	export let project: Project = data.project;

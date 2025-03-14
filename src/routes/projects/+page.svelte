@@ -1,9 +1,9 @@
 <script lang="ts">
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import ProjectCard from '$lib/components/shared/ProjectCard.svelte';
+	import BackButton from '$lib/components/shared/BackButton.svelte';
 	import type { Project } from '$lib/types';
-	import { fade } from 'svelte/transition';
 	import type { PageData } from './$types';
-	import BackButton from '$lib/components/BackButton.svelte';
+	import { fade } from 'svelte/transition';
 
 	export let data: PageData;
 	export let projects: Project[] = data.projects;
