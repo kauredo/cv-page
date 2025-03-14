@@ -309,7 +309,7 @@
 		},
 		{
 			"name": "nn",
-			"description": "This project was designed for an amateur photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
+			"description": "This project was designed for an up-and-coming photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
 			"url": "https://imkaufmann.com/",
 			"highlights": [],
 			"keywords": [],

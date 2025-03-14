@@ -8,7 +8,7 @@
 
 <section in:fade={{ duration: 200 }}>
 	<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I've Been Building</h2>
-	<div class="flex flex-wrap gap-6 sm:grid-cols-2">
+	<div class="flex justify-center gap-6">
 		{#each projects as project}
 			<ProjectCard {project} />
 		{/each}

@@ -16,16 +16,17 @@
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
 	const skills: string[] = skillsData;
-	let projects: Project[] = projectsData;
+	let unfilteredProjects: Project[] = projectsData;
+	let projects: Project[] = [];
 
 	onMount(() => {
 		// depending on screen size, slice the projects array to show only 1, 2, or 3 projects
 		if (window.innerWidth < 640) {
-			projects = projects.slice(0, 1);
+			projects = unfilteredProjects.slice(0, 1);
 		} else if (window.innerWidth < 1024) {
-			projects = projects.slice(0, 2);
+			projects = unfilteredProjects.slice(0, 2);
 		} else {
-			projects = projects.slice(0, 3);
+			projects = unfilteredProjects.slice(0, 3);
 		}
 	});
 </script>
