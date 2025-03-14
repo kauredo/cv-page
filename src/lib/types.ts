@@ -11,8 +11,12 @@ export interface Project {
 
 export interface Experience {
 	title: string;
+	company: string;
 	period: string;
 	description: string;
+	logo?: string;
+	achievements?: string[];
+	skills?: string[];
 }
 
 export interface Education {
