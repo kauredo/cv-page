@@ -30,7 +30,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-10 bg-stone-50 shadow transition-colors duration-300 dark:bg-gray-800 dark:shadow-stone-50"
+	class="sticky top-0 z-20 bg-stone-50 shadow transition-colors duration-300 dark:bg-gray-800 dark:shadow-stone-50"
 >
 	<nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
 		<a href="/" class="flex items-center gap-2 text-xl font-bold">

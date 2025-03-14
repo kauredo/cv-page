@@ -5,7 +5,7 @@ export interface Project {
 	details: string;
 	stack: string[];
 	github: string;
-	images?: string[];
+	images: string[];
 	link?: string;
 }
 

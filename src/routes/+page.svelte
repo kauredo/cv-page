@@ -11,11 +11,23 @@
 	import Now from '$lib/components/Now.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import Skills from '$lib/components/Skills.svelte';
+	import { onMount } from 'svelte';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
 	const skills: string[] = skillsData;
-	const projects: Project[] = projectsData.slice(0, 3);
+	let projects: Project[] = projectsData;
+
+	onMount(() => {
+		// depending on screen size, slice the projects array to show only 1, 2, or 3 projects
+		if (window.innerWidth < 640) {
+			projects = projects.slice(0, 1);
+		} else if (window.innerWidth < 1024) {
+			projects = projects.slice(0, 2);
+		} else {
+			projects = projects.slice(0, 3);
+		}
+	});
 </script>
 
 <main class="mx-auto max-w-4xl space-y-16 p-6">

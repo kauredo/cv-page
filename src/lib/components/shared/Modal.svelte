@@ -47,7 +47,7 @@
 </script>
 
 {#if isOpen}
-	<div class="fixed inset-0 z-20 flex items-center justify-center">
+	<div class="fixed inset-0 z-30 flex items-center justify-center">
 		<!-- Background Div with Opacity -->
 		<div
 			class="absolute inset-0 bg-black opacity-80"
@@ -60,7 +60,7 @@
 
 		<!-- Next and Previous Buttons -->
 		<button
-			class="bg-opacity-50 absolute top-1/2 left-4 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-50 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+			class="bg-opacity-50 absolute top-1/2 left-4 z-40 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-50 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
 			on:click={() => {
 				const currentIndex = images.indexOf(imageSrc);
 				const prevIndex = currentIndex - 1;
@@ -71,7 +71,7 @@
 			{'<'}
 		</button>
 		<button
-			class="bg-opacity-50 absolute top-1/2 right-8 z-30 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-50 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+			class="bg-opacity-50 absolute top-1/2 right-8 z-40 h-10 w-10 -translate-y-1/2 transform rounded-full bg-stone-50 p-2 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
 			on:click={() => {
 				const currentIndex = images.indexOf(imageSrc);
 				const nextIndex = currentIndex + 1;
