@@ -23,7 +23,7 @@
 		"slug": "fpb-calendar",
 		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
-		"stack": ["Sinatra", "Google Calendar API", "OAuth", "Web Scraping"],
+		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
 		"images": ["/images/fpb-calendar.png", "/images/fpb-calendar-2.png"],
 		"github": "https://github.com/kauredo/fpb-calendar",
 		"link": "https://fpb-calendar.fly.dev"
