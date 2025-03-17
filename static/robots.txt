@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point to your sitemap
+Sitemap: https://www.vascokf.com/sitemap.xml

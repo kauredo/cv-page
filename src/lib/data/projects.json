@@ -16,6 +16,7 @@
 		],
 		"images": ["/images/sgg-1.png", "/images/sgg-2.png", "/images/sgg-3.png", "/images/sgg-4.png"],
 		"github": "https://github.com/kauredo/real-estate-scraper",
+		"updatedAt": "2025-03-17",
 		"link": "https://sofiagalvaogroup.com"
 	},
 	{
@@ -26,6 +27,7 @@
 		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
 		"images": ["/images/fpb-calendar.png", "/images/fpb-calendar-2.png"],
 		"github": "https://github.com/kauredo/fpb-calendar",
+		"updatedAt": "2025-03-17",
 		"link": "https://fpb-calendar.fly.dev"
 	},
 	{
@@ -36,6 +38,7 @@
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
 		"images": ["/images/nn-1.png", "/images/nn-2.png", "/images/nn-3.png", "/images/nn-4.png"],
 		"github": "https://github.com/kauredo/nn",
+		"updatedAt": "2025-03-17",
 		"link": "https://imkaufmann.com"
 	},
 	{
@@ -50,7 +53,8 @@
 			"/images/jovens-futuro-3.png",
 			"/images/jovens-futuro-4.png"
 		],
-		"github": "https://github.com/kauredo/jovens_futuro"
+		"github": "https://github.com/kauredo/jovens_futuro",
+		"updatedAt": "2025-03-17"
 	},
 	{
 		"title": "Portfolio Site",
@@ -64,7 +68,8 @@
 			"/images/portfolio-3.png",
 			"/images/portfolio-4.png"
 		],
-		"github": "https://github.com/kauredo/portfolio-site"
+		"github": "https://github.com/kauredo/portfolio-site",
+		"updatedAt": "2025-03-17"
 	},
 	{
 		"title": "AOC Ruby (aoc_rb)",
@@ -73,6 +78,7 @@
 		"details": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
 		"stack": ["Ruby", "CLI", "Open Source"],
 		"github": "https://github.com/pacso/aoc_rb",
+		"updatedAt": "2025-03-17",
 		"images": ["/images/aoc-rb.png"]
 	}
 ]
