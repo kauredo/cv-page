@@ -13,17 +13,16 @@
 	<a href={`/projects/${slug}`} class="block h-full" data-sveltekit-preload-data="hover">
 		<div class="relative overflow-hidden">
 			{#if images && images[0]}
-				<img
-					src={images[0]}
-					alt={title}
+				<picture
 					class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
 					style="view-transition-name: project-image-{slug}-0"
-					loading="lazy"
-					decoding="async"
-				/>
+				>
+					<source srcset={images[0]} type="image/webp" />
+					<img src={images[0]} alt={title} decoding="async" />
+				</picture>
 			{:else}
 				<img
-					src="/images/placeholder.png"
+					src="/images/placeholder.webp"
 					alt={title}
 					class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
 					style="view-transition-name: project-image-{slug}-0"
