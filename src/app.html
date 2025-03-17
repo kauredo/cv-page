@@ -9,6 +9,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   %sveltekit.head%
+
+  <script>
+    // Immediately execute this script to prevent flash of wrong theme
+    (function () {
+      const savedDarkMode = localStorage.getItem('darkMode');
+      const isDark = savedDarkMode !== null
+        ? savedDarkMode === 'true'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
 
 <body data-sveltekit-preload-data="hover">

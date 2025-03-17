@@ -34,6 +34,21 @@
 					<Button type="secondary" href="/contact">Get In Touch</Button>
 				</div>
 			</div>
+		{:else}
+			<div class="animate-pulse">
+				<h1 class="mb-4 text-4xl font-bold sm:text-6xl md:text-7xl">Hey, I'm Vasco</h1>
+				<p class="mb-4 text-lg font-medium sm:text-xl">
+					Web Developer • Problem Solver • Basketball Enthusiast
+				</p>
+				<p class="mx-auto max-w-xl text-gray-600 sm:text-lg dark:text-gray-400">
+					I build clean, functional, and playful web apps. Currently exploring 3D printing,
+					basketball scheduling tools, and making the web a little more fun.
+				</p>
+				<div class="mt-8 flex justify-center gap-4">
+					<Button type="primary" href="/projects">See My Work</Button>
+					<Button type="secondary" href="/contact">Get In Touch</Button>
+				</div>
+			</div>
 		{/if}
 	</div>
 </section>

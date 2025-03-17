@@ -27,7 +27,7 @@ export const load: PageLoad = async ({ params }) => {
 					url: projectImageUrl,
 					alt: project.title,
 					secureUrl: projectImageUrl,
-					type: 'image/png'
+					type: 'image/webp'
 				}
 			]
 		}
