@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
+# Prevent crawling of old content
+Disallow: /old/
+
 # Point to your sitemap
 Sitemap: https://www.vascokf.com/sitemap.xml
