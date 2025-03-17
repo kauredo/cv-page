@@ -14,7 +14,12 @@
 			"Fly.io",
 			"PostgreSQL"
 		],
-		"images": ["/images/sgg-1.png", "/images/sgg-2.png", "/images/sgg-3.png", "/images/sgg-4.png"],
+		"images": [
+			"/images/sgg-1.webp",
+			"/images/sgg-2.webp",
+			"/images/sgg-3.webp",
+			"/images/sgg-4.webp"
+		],
 		"github": "https://github.com/kauredo/real-estate-scraper",
 		"updatedAt": "2025-03-17",
 		"link": "https://sofiagalvaogroup.com"
@@ -25,7 +30,7 @@
 		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
 		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
-		"images": ["/images/fpb-calendar.png", "/images/fpb-calendar-2.png"],
+		"images": ["/images/fpb-calendar.webp", "/images/fpb-calendar-2.webp"],
 		"github": "https://github.com/kauredo/fpb-calendar",
 		"updatedAt": "2025-03-17",
 		"link": "https://fpb-calendar.fly.dev"
@@ -36,7 +41,7 @@
 		"description": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
 		"details": "This project was designed for an up-and-coming photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
-		"images": ["/images/nn-1.png", "/images/nn-2.png", "/images/nn-3.png", "/images/nn-4.png"],
+		"images": ["/images/nn-1.webp", "/images/nn-2.webp", "/images/nn-3.webp", "/images/nn-4.webp"],
 		"github": "https://github.com/kauredo/nn",
 		"updatedAt": "2025-03-17",
 		"link": "https://imkaufmann.com"
@@ -48,10 +53,10 @@
 		"details": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave", "SEO"],
 		"images": [
-			"/images/jovens-futuro-1.png",
-			"/images/jovens-futuro-2.png",
-			"/images/jovens-futuro-3.png",
-			"/images/jovens-futuro-4.png"
+			"/images/jovens-futuro-1.webp",
+			"/images/jovens-futuro-2.webp",
+			"/images/jovens-futuro-3.webp",
+			"/images/jovens-futuro-4.webp"
 		],
 		"github": "https://github.com/kauredo/jovens_futuro",
 		"updatedAt": "2025-03-17"
@@ -63,10 +68,10 @@
 		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
 		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
 		"images": [
-			"/images/portfolio.png",
-			"/images/portfolio-2.png",
-			"/images/portfolio-3.png",
-			"/images/portfolio-4.png"
+			"/images/portfolio.webp",
+			"/images/portfolio-2.webp",
+			"/images/portfolio-3.webp",
+			"/images/portfolio-4.webp"
 		],
 		"github": "https://github.com/kauredo/portfolio-site",
 		"updatedAt": "2025-03-17"
@@ -79,6 +84,6 @@
 		"stack": ["Ruby", "CLI", "Open Source"],
 		"github": "https://github.com/pacso/aoc_rb",
 		"updatedAt": "2025-03-17",
-		"images": ["/images/aoc-rb.png"]
+		"images": ["/images/aoc-rb.webp"]
 	}
 ]

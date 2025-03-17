@@ -14,7 +14,7 @@ export const load: PageLoad = async ({ params }) => {
 	const project: Project = projectData;
 
 	const projectImage =
-		project.images && project.images[0].length > 0 ? project.images[0] : '/images/portfolio.png';
+		project.images && project.images[0].length > 0 ? project.images[0] : '/images/portfolio.webp';
 	const projectImageUrl = `https://www.vascokf.com${projectImage}`;
 	const pageMetaTags = Object.freeze({
 		title: project.title,

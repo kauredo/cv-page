@@ -16,10 +16,10 @@ export const load = ({ url }) => {
 			siteName: 'VascoKF',
 			images: [
 				{
-					url: 'https://www.vascokf.com/images/portfolio.png',
+					url: 'https://www.vascokf.com/images/portfolio.webp',
 					alt: 'VascoKF — Portfolio',
-					secureUrl: 'https://www.vascokf.com/images/portfolio.png',
-					type: 'image/png'
+					secureUrl: 'https://www.vascokf.com/images/portfolio.webp',
+					type: 'image/webp'
 				}
 			]
 		}
