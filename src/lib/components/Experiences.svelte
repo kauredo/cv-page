@@ -13,19 +13,24 @@
 			}
 		};
 	}
+	const cardHeight = 310;
 </script>
 
 <section in:fade={{ duration: 200 }}>
 	<h2 class="mb-12 border-b pb-2 text-2xl font-bold">Places I've Worked At</h2>
 
 	<!-- Desktop timeline (hidden on mobile) -->
-	<div class="relative mx-auto hidden md:block">
+	<div
+		class="relative mx-auto hidden md:block"
+		style="min-height: {experiences.length * cardHeight}px"
+	>
 		<!-- Timeline center line -->
 		<div class="absolute left-1/2 h-full w-1 -translate-x-1/2 bg-gray-300 dark:bg-gray-700"></div>
 
 		{#each experiences as exp, index}
 			<div
-				class="relative mb-16"
+				class="absolute w-full"
+				style="top: {index * cardHeight}px"
 				use:inview={{ rootMargin: '0px', threshold: 0.2 }}
 				on:inview_change={handleIntersect(index)}
 			>
@@ -36,23 +41,22 @@
 					></div>
 				</div>
 
-				<!-- Timeline content -->
-				<div class={`flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-					<!-- Date marker -->
-					<div
-						class="w-1/2 px-6 text-sm text-gray-500 dark:text-gray-400 {index % 2 === 0
-							? 'text-left'
-							: 'text-right'}"
-					>
-						{exp.period}
-					</div>
-
-					<!-- Content card -->
-					{#if visibleItems[index]}
+				<!-- Single container with alternating sides -->
+				{#if visibleItems[index]}
+					<div class="flex w-full items-center justify-center">
 						<div
-							class="w-1/2 px-6"
+							class="w-[48%] {index % 2 === 0 ? 'mr-auto pr-2' : 'ml-auto pl-2'}"
 							in:fly={{ duration: 500, x: index % 2 === 0 ? -30 : 30, delay: 200 }}
 						>
+							<!-- Period at the top of each card -->
+							<div
+								class="mb-3 text-sm font-medium text-gray-500 dark:text-gray-400 {index % 2 === 0
+									? 'text-right'
+									: 'text-left'}"
+							>
+								{exp.period}
+							</div>
+							<!-- Card content -->
 							<div class="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
 								<div class="mb-2 flex items-center gap-3">
 									{#if exp.logo}
@@ -85,8 +89,8 @@
 								{/if}
 							</div>
 						</div>
-					{/if}
-				</div>
+					</div>
+				{/if}
 			</div>
 		{/each}
 	</div>

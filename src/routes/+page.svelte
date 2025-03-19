@@ -38,7 +38,7 @@
 	});
 </script>
 
-<main class="mx-auto max-w-4xl space-y-16 p-6">
+<div class="mx-auto max-w-4xl space-y-16 p-6">
 	<Hero />
 	<Projects {projects} />
 	<Experiences {experiences} />
@@ -46,4 +46,4 @@
 	<Skills {skills} />
 	<Now />
 	<Contact />
-</main>
+</div>

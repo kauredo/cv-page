@@ -94,7 +94,7 @@
 	}
 </script>
 
-<main class="mx-auto max-w-xl p-6">
+<section class="mx-auto max-w-xl p-6">
 	<h1 class="mb-6 text-3xl font-bold">Contact Me</h1>
 
 	{#if formStatus === 'success'}
@@ -256,4 +256,4 @@
 			</div>
 		</form>
 	{/if}
-</main>
+</section>
