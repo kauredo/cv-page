@@ -19,8 +19,7 @@
 	let unfilteredProjects: Project[] = projectsData;
 	let projects: Project[] = [];
 
-	onMount(() => {
-		// depending on screen size, slice the projects array to show only 1, 2, or 3 projects
+	function updateProjects() {
 		if (window.innerWidth < 640) {
 			projects = unfilteredProjects.slice(0, 1);
 		} else if (window.innerWidth < 1024) {
@@ -28,6 +27,14 @@
 		} else {
 			projects = unfilteredProjects.slice(0, 3);
 		}
+	}
+
+	onMount(() => {
+		updateProjects();
+		window.addEventListener('resize', updateProjects);
+		return () => {
+			window.removeEventListener('resize', updateProjects);
+		};
 	});
 </script>
 
