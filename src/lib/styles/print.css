@@ -29,6 +29,24 @@
 	.print-wrapper {
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 	}
+
+	.screen-only-nav {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		background: #f7fafc;
+		padding: 1rem 0;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid #e2e8f0;
+	}
+
+	.nav-content {
+		max-width: 21cm;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 /* Layout */
@@ -273,5 +291,9 @@ h3 {
 	.project,
 	.education-item {
 		page-break-inside: avoid;
+	}
+
+	.screen-only-nav {
+		display: none;
 	}
 }
