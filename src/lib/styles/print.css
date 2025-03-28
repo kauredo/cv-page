@@ -1,0 +1,164 @@
+/* A4 Print Styles */
+@page {
+	size: A4;
+	margin: 1.5cm;
+	margin-header: 0;
+	margin-footer: 0;
+}
+
+.print-wrapper {
+	max-width: 21cm;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #333;
+}
+
+/* Only show on print */
+@media screen {
+	.print-wrapper {
+		padding: 2rem;
+		background: white;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* Print optimizations */
+@media print {
+	body {
+		background: none;
+	}
+
+	.print-wrapper {
+		width: 100%;
+		padding: 1cm;
+	}
+
+	/* Hide browser's default headers and footers */
+	@page {
+		size: A4;
+		margin: 0;
+	}
+}
+
+/* Layout */
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 1rem;
+}
+
+h1 {
+	font-size: 24px;
+	margin: 0;
+	color: #2a2a2a;
+}
+
+h2 {
+	font-size: 16px;
+	color: #2a2a2a;
+	border-bottom: 1px solid #eee;
+	margin: 1.5rem 0 1rem;
+}
+
+h3 {
+	font-size: 14px;
+	margin: 0.5rem 0;
+}
+
+section {
+	margin-bottom: 1.5rem;
+}
+
+.contact-info {
+	text-align: right;
+}
+
+.contact-info p {
+	margin: 0.2rem 0;
+}
+
+.job,
+.education-item,
+.project {
+	margin-bottom: 1rem;
+}
+
+.job-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.job-title {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.job-title span::before {
+	content: '•';
+	color: #666;
+	margin-right: 0.5rem;
+}
+
+.company {
+	color: #666;
+}
+
+.dates {
+	color: #666;
+	font-size: 0.9em;
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 0.5rem;
+}
+
+.skill {
+	display: flex;
+	justify-content: space-between;
+}
+
+a {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+/* Ensure links are visible in print */
+@media print {
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+
+	a[href]:after {
+		content: ' (' attr(href) ')';
+		font-size: 0.8em;
+		color: #666;
+	}
+}
+
+/* Ensure page breaks don't cut sections awkwardly */
+section {
+	break-inside: avoid;
+}
+
+/* Add logo styles */
+.logo {
+	width: 50px;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+@media print {
+	.logo {
+		filter: grayscale(100%);
+	}
+}
