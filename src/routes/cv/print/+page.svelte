@@ -3,6 +3,11 @@
 	import '$lib/styles/print.css';
 
 	const { basics, work, education, skills, projects } = cv;
+
+	// Sort skills by years of experience
+	const sortedSkills = skills.sort(
+		(a, b) => (b.yearsOfExperience || 0) - (a.yearsOfExperience || 0)
+	);
 </script>
 
 <svelte:head>
@@ -49,16 +54,19 @@
 		{/each}
 	</section>
 
-	<section class="skills">
-		<h2>Skills</h2>
-		<div class="skills-grid">
-			{#each skills as skill}
-				<div class="skill">
-					<span class="skill-name">{skill.name}</span>
-					<span class="skill-level">{skill.level}</span>
-				</div>
-			{/each}
-		</div>
+	<section class="projects">
+		<h2>Notable Projects</h2>
+		{#each projects as project}
+			<div class="project">
+				<h3>{project.displayName}</h3>
+				<p>{project.description}</p>
+				{#if project.website}
+					<a href={project.website} target="_blank" rel="noopener noreferrer"> View Project → </a>
+				{:else}
+					<p>Site offline</p>
+				{/if}
+			</div>
+		{/each}
 	</section>
 
 	<section class="education">
@@ -66,9 +74,13 @@
 		{#each education as edu}
 			<div class="education-item">
 				<h3>{edu.institution}</h3>
-				<p>{edu.area} - {edu.studyType}</p>
+				<p>{edu.area} {edu.studyType ? `- ${edu.studyType}` : ''}</p>
 				<span class="dates">
-					{edu.start.year} - {edu.end.year}
+					{#if edu.start?.year && edu.end?.year}
+						{edu.start.year} - {edu.end.year}
+					{:else}
+						{edu.end?.year || ''}
+					{/if}
 				</span>
 				{#if edu.gpa}
 					<p class="gpa">{edu.gpa}</p>
@@ -77,16 +89,17 @@
 		{/each}
 	</section>
 
-	<section class="projects">
-		<h2>Notable Projects</h2>
-		{#each projects.slice(0, 3) as project}
-			<div class="project">
-				<h3>{project.displayName}</h3>
-				<p>{project.description}</p>
-				{#if project.website}
-					<a href={project.website} target="_blank" rel="noopener noreferrer"> View Project → </a>
-				{/if}
-			</div>
-		{/each}
+	<section class="skills">
+		<h2>Skills</h2>
+		<div class="skills-grid">
+			{#each sortedSkills as skill}
+				<div class="skill-item">
+					<span class="skill-name">{skill.name}:</span>
+					<span class="years"
+						>{skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'}</span
+					>
+				</div>
+			{/each}
+		</div>
 	</section>
 </div>
