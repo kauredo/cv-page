@@ -22,7 +22,7 @@
 <div class="screen-only-nav">
 	<div class="nav-content">
 		<div class="flex items-center gap-2">
-			<BackButton href="/cv" />
+			<BackButton href="/" />
 			<div class="h-6 w-px bg-gray-300 dark:bg-gray-700"></div>
 			<span class="text-sm text-gray-500 dark:text-gray-400">CV</span>
 		</div>
