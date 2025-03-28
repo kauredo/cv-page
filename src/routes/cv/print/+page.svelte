@@ -56,37 +56,60 @@
 
 	<section class="projects">
 		<h2>Notable Projects</h2>
-		{#each projects as project}
+		{#each projects.slice(0, 4) as project}
 			<div class="project">
-				<h3>{project.displayName}</h3>
-				<p>{project.description}</p>
-				{#if project.website}
-					<a href={project.website} target="_blank" rel="noopener noreferrer"> View Project → </a>
-				{:else}
-					<p>Site offline</p>
-				{/if}
+				<div class="project-header">
+					<h3>{project.displayName}</h3>
+					<div class="project-links">
+						{#if project.website}
+							<a
+								href={project.website}
+								class="project-link"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Website
+							</a>
+						{/if}
+						{#if project.githubUrl}
+							<a
+								href={project.githubUrl}
+								class="project-link"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								GitHub
+							</a>
+						{/if}
+					</div>
+				</div>
+				<p class="project-description">{project.description}</p>
 			</div>
 		{/each}
 	</section>
 
 	<section class="education">
 		<h2>Education</h2>
-		{#each education as edu}
-			<div class="education-item">
-				<h3>{edu.institution}</h3>
-				<p>{edu.area} {edu.studyType ? `- ${edu.studyType}` : ''}</p>
-				<span class="dates">
-					{#if edu.start?.year && edu.end?.year}
-						{edu.start.year} - {edu.end.year}
-					{:else}
-						{edu.end?.year || ''}
+		<div class="education-grid">
+			{#each education as edu}
+				<div class="education-item">
+					<div class="education-header">
+						<h3>{edu.institution}</h3>
+						<span class="dates">
+							{#if edu.start?.year && edu.end?.year}
+								{edu.start.year} - {edu.end.year}
+							{:else}
+								{edu.end?.year || ''}
+							{/if}
+						</span>
+					</div>
+					<p class="degree">{edu.area} {edu.studyType ? `- ${edu.studyType}` : ''}</p>
+					{#if edu.gpa}
+						<p class="achievement">{edu.gpa}</p>
 					{/if}
-				</span>
-				{#if edu.gpa}
-					<p class="gpa">{edu.gpa}</p>
-				{/if}
-			</div>
-		{/each}
+				</div>
+			{/each}
+		</div>
 	</section>
 
 	<section class="skills">

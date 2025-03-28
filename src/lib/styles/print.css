@@ -196,3 +196,77 @@ section {
 		filter: grayscale(100%);
 	}
 }
+
+/* Education Grid */
+.education-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+.education-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 0.25rem;
+}
+
+.degree {
+	color: #666;
+	font-size: 0.9em;
+}
+
+.achievement {
+	color: #666;
+	font-style: italic;
+	font-size: 0.85em;
+	margin-top: 0.25rem;
+}
+
+/* Projects Styles */
+.project {
+	margin-bottom: 1.5rem;
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
+
+.project-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 0.25rem;
+}
+
+/* Remove projects grid styles */
+.projects-grid {
+	display: none;
+}
+
+.project-links {
+	display: flex;
+	gap: 1rem;
+	font-size: 0.9em;
+}
+
+.project-link {
+	color: #666;
+}
+
+.project-description {
+	font-size: 0.9em;
+	line-height: 1.4;
+}
+
+@media print {
+	.project-links a::after {
+		content: none;
+	}
+
+	.project-link:not(:last-child)::after {
+		content: '•';
+		margin-left: 1rem;
+		color: #666;
+	}
+}
