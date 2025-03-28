@@ -36,3 +36,199 @@ html {
 body {
 	font-family: 'Inter', sans-serif;
 }
+
+/* CV Print Styles */
+.cv-print {
+	max-width: 21cm;
+	margin: 0 auto;
+	padding: 2cm;
+	font-size: 13px;
+	line-height: 1.6;
+	color: #2d3748;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	background: white;
+}
+
+@media screen {
+	.cv-print {
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		margin-bottom: 4rem;
+	}
+
+	.cv-print .screen-only-nav {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		padding: 1rem 0;
+		margin-bottom: 2rem;
+	}
+
+	.cv-print .nav-content {
+		max-width: 21cm;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.cv-print header {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 2px solid #e2e8f0;
+	padding-bottom: 1.5rem;
+}
+
+.cv-print .header-main {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.cv-print .avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #e2e8f0;
+}
+
+.cv-print main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.cv-print h1 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #1a202c;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.cv-print h2 {
+	font-size: 20px;
+	color: #2d3748;
+	margin: 0 0 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid #4299e180;
+}
+
+.cv-print h3 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #2d3748;
+	margin: 0;
+}
+
+.cv-print .title {
+	font-size: 18px;
+	color: #4a5568;
+	margin: 0.5rem 0;
+}
+
+.cv-print .contact-info {
+	text-align: right;
+}
+
+.cv-print .contact-item {
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+	color: #4a5568;
+}
+
+.cv-print .contact-item a {
+	color: #4299e1;
+	text-decoration: none;
+}
+
+.cv-print .job {
+	margin-bottom: 2rem;
+}
+
+.cv-print .job-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 0.5rem;
+}
+
+.cv-print .job-title-group {
+	display: flex;
+	align-items: baseline;
+}
+
+.cv-print .company {
+	color: #4a5568;
+	font-size: 15px;
+	margin-left: 0.5rem;
+}
+
+.cv-print .job-title-group span::before {
+	content: '•';
+	color: #718096;
+	margin: 0 0.5rem;
+}
+
+.cv-print .skills-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.cv-print .skill-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	border-bottom: 1px dotted #e2e8f0;
+	padding-bottom: 0.25rem;
+}
+
+.cv-print .education-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+.cv-print .project-links {
+	display: flex;
+	gap: 1rem;
+	font-size: 13px;
+}
+
+.cv-print .project-links a {
+	color: #4299e180;
+	text-decoration: none;
+}
+
+@media print {
+	@page {
+		margin: 2cm;
+		size: A4 portrait;
+	}
+
+	.cv-print {
+		margin: 0;
+		padding: 0;
+		max-width: 100%;
+		box-shadow: none;
+	}
+
+	.cv-print main {
+		gap: 0 !important;
+	}
+
+	.cv-print section {
+		page-break-inside: avoid;
+		margin-bottom: 0 !important;
+	}
+
+	.cv-print .screen-only-nav {
+		display: none;
+	}
+}
