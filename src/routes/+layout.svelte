@@ -5,6 +5,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { MetaTags, deepMerge } from 'svelte-meta-tags';
+	import { page as pageStore } from '$app/stores';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -19,6 +20,8 @@
 
 	let { data, children } = $props();
 	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
+
+	let isPrintRoute = $derived($pageStore.url.pathname.includes('/cv/print'));
 </script>
 
 <MetaTags {...metaTags} />
@@ -51,9 +54,13 @@
 <div
 	class="to-vasco-100 flex min-h-screen flex-col bg-gradient-to-br from-stone-50 dark:from-gray-800 dark:to-gray-900 dark:text-gray-200"
 >
-	<Navbar />
+	{#if !isPrintRoute}
+		<Navbar />
+	{/if}
 	<main class="flex-1">
 		{@render children()}
 	</main>
-	<Footer />
+	{#if !isPrintRoute}
+		<Footer />
+	{/if}
 </div>
