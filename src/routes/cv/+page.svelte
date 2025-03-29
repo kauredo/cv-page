@@ -85,7 +85,7 @@
 
 		<section class="experience">
 			<h2>Professional Experience</h2>
-			{#each work.slice(0, 3) as job}
+			{#each work as job}
 				<div class="job">
 					<div class="job-header">
 						<div class="job-title-group">
@@ -104,7 +104,7 @@
 
 		<section class="projects">
 			<h2>Featured Projects</h2>
-			{#each projects.slice(0, 4) as project}
+			{#each projects as project}
 				<div class="project mb-4">
 					<div class="project-header">
 						<div
