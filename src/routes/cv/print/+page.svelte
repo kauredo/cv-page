@@ -54,14 +54,14 @@
 	<header>
 		<div class="personal-info">
 			<div class="header-main">
-				<img src={basics.image} alt={basics.name} class="avatar" />
+				<img src={basics.image} alt={basics.name} class="avatar w-20 sm:w-[100px]" />
 				<div class="name-title">
-					<h1>{basics.name}</h1>
-					<p class="title">{basics.label}</p>
+					<h1 class="text-2xl sm:text-3xl">{basics.name}</h1>
+					<p class="title text-base sm:text-lg">{basics.label}</p>
 				</div>
 			</div>
 		</div>
-		<div class="contact-info">
+		<div class="contact-info text-left sm:text-right">
 			<div class="contact-item">
 				<span>{basics.email}</span>
 			</div>
@@ -107,8 +107,10 @@
 			{#each projects.slice(0, 4) as project}
 				<div class="project mb-4">
 					<div class="project-header">
-						<div class="project-title-group flex justify-between">
-							<h3>{project.displayName}</h3>
+						<div
+							class="project-title-group flex flex-col sm:flex-row sm:items-center sm:justify-between"
+						>
+							<h3 class="mb-2 sm:mb-0">{project.displayName}</h3>
 							<div class="project-links">
 								{#if project.website}
 									<a href={project.website} target="_blank" rel="noopener noreferrer">View Live</a>
@@ -119,7 +121,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="project-description">{project.description}</p>
+					<p class="project-description mt-2">{project.description}</p>
 				</div>
 			{/each}
 		</section>
