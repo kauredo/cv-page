@@ -55,12 +55,20 @@ body {
 		margin-bottom: 4rem;
 	}
 
-	.cv-print .screen-only-nav {
+	.screen-only-nav {
 		position: sticky;
 		top: 0;
 		z-index: 10;
+		width: 100%;
+	}
+
+	.screen-only-nav nav {
+		max-width: 21cm;
+		margin: 0 auto;
 		padding: 1rem 0;
-		margin-bottom: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.cv-print .nav-content {
@@ -225,10 +233,10 @@ body {
 
 	.cv-print section {
 		page-break-inside: avoid;
-		margin-bottom: 0 !important;
+		margin-bottom: 1cm !important;
 	}
 
-	.cv-print .screen-only-nav {
+	.screen-only-nav {
 		display: none;
 	}
 }

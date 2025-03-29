@@ -48,7 +48,9 @@
 	}
 </script>
 
-<header class="sticky top-0 z-20 bg-stone-50 shadow dark:bg-gray-800 dark:shadow-stone-50">
+<header
+	class="sticky top-0 z-20 bg-stone-50 shadow dark:bg-gray-800 dark:shadow-stone-50 print:hidden"
+>
 	<nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
 		<a href="/" class="flex items-center gap-2 text-xl font-bold">
 			<img

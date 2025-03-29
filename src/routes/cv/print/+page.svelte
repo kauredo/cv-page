@@ -18,8 +18,8 @@
 	<title>{basics.name} - CV</title>
 </svelte:head>
 
-<div class="screen-only-nav bg-stone-50 shadow dark:bg-gray-800 dark:shadow-stone-50">
-	<div class="nav-content">
+<section class="screen-only-nav">
+	<nav>
 		<div class="flex items-center gap-2">
 			<BackButton href="/" />
 			<div class="h-6 w-px bg-gray-300 dark:bg-gray-700"></div>
@@ -47,8 +47,8 @@
 			</svg>
 			Print CV
 		</button>
-	</div>
-</div>
+	</nav>
+</section>
 
 <div class="cv-print">
 	<header>
@@ -105,9 +105,9 @@
 		<section class="projects">
 			<h2>Featured Projects</h2>
 			{#each projects.slice(0, 4) as project}
-				<div class="project">
+				<div class="project mb-4">
 					<div class="project-header">
-						<div class="project-title-group">
+						<div class="project-title-group flex justify-between">
 							<h3>{project.displayName}</h3>
 							<div class="project-links">
 								{#if project.website}
