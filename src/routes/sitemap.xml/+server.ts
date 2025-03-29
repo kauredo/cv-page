@@ -4,7 +4,8 @@ export async function GET() {
 	const pages = [
 		{ url: '/', lastmod: '2025-03-17', changefreq: 'monthly', priority: '1.0' },
 		{ url: '/projects', lastmod: '2025-03-17', changefreq: 'monthly', priority: '0.8' },
-		{ url: '/contact', lastmod: '2025-03-17', changefreq: 'monthly', priority: '0.8' }
+		{ url: '/contact', lastmod: '2025-03-17', changefreq: 'monthly', priority: '0.8' },
+		{ url: '/cv', lastmod: '2025-03-17', changefreq: 'monthly', priority: '0.7' }
 	];
 
 	projectsData.forEach((project) => {
