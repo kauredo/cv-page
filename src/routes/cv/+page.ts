@@ -9,7 +9,15 @@ export const load: PageLoad = async () => {
 		openGraph: {
 			title: `${cv.basics.name} - CV`,
 			description: cv.basics.summary,
-			type: 'profile'
+			type: 'profile',
+			images: [
+				{
+					url: `https://www.vascokf.com/images/cv.webp`,
+					alt: `${cv.basics.name} - CV`,
+					secureUrl: `https://www.vascokf.com/images/cv.webp`,
+					type: 'image/webp'
+				}
+			]
 		}
 	}) satisfies MetaTagsProps;
 
