@@ -5,7 +5,7 @@
 		"image": "https://avatars.githubusercontent.com/u/38565160?v=4",
 		"email": "vaskafig@gmail.com",
 		"phone": "",
-		"url": "http://www.vascokf.com",
+		"url": "https://www.vascokf.com",
 		"summary": "I'm a Web Developer based in Lisbon, Portugal. My interests include watching and playing basketball, reading and watching TV - series, movies or documentaries. Beginner 3D printing enthusiast. I'm very passionate about learning, developing and working in cohesive, friendly teams, and am always looking for new ways of simplifying or automating any processes that are monotonous or tedious.",
 		"profiles": [
 			{
@@ -27,7 +27,7 @@
 		"followers": 5,
 		"following": 5,
 		"picture": "https://avatars.githubusercontent.com/u/38565160?v=4",
-		"website": "http://www.vascokf.com"
+		"website": "https://www.vascokf.com"
 	},
 	"skills": [
 		{
@@ -233,7 +233,7 @@
 		{
 			"name": "cv-page",
 			"description": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
-			"url": "www.vascokf.com",
+			"url": "https://www.vascokf.com",
 			"highlights": [],
 			"keywords": [],
 			"roles": [],
@@ -242,7 +242,7 @@
 			"entity": "",
 			"type": "",
 			"displayName": "Portfolio",
-			"website": "www.vascokf.com",
+			"website": "https://www.vascokf.com",
 			"summary": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
 			"primaryLanguage": "HTML",
 			"languages": ["Typescript"],
