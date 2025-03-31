@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+	import { pageview } from '$lib/services/analytics';
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -19,6 +21,12 @@
 
 	let { data, children } = $props();
 	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
+
+	$effect(() => {
+		if (browser) {
+			pageview(page.url.pathname);
+		}
+	});
 </script>
 
 <MetaTags {...metaTags} />
