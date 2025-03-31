@@ -9,6 +9,10 @@
 		(a, b) => (b.yearsOfExperience || 0) - (a.yearsOfExperience || 0)
 	);
 
+	const filteredProfiles = basics.profiles.filter((profile) => {
+		return profile.network !== 'gitconnected';
+	});
+
 	function handlePrint() {
 		window.print();
 	}
@@ -68,7 +72,7 @@
 			<div class="contact-item">
 				<span>{basics.locationAsString}</span>
 			</div>
-			{#each basics.profiles as profile}
+			{#each filteredProfiles as profile}
 				<div class="contact-item">
 					<span>{profile.network}: </span>
 					<a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.username}</a>
