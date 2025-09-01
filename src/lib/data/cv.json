@@ -1,612 +1,273 @@
 {
 	"basics": {
-		"name": "Vasco Kaufmann Figueiredo",
-		"label": "Full-Stack Enginner @Medihive",
-		"image": "https://avatars.githubusercontent.com/u/38565160?v=4",
-		"email": "vasco.kf@gmail.com",
-		"phone": "",
-		"url": "https://www.vascokf.com",
-		"summary": "I'm a Web Developer based in Lisbon, Portugal. My interests include watching and playing basketball, reading and watching TV - series, movies or documentaries. Beginner 3D printing enthusiast. I'm very passionate about learning, developing and working in cohesive, friendly teams, and am always looking for new ways of simplifying or automating any processes that are monotonous or tedious.",
-		"profiles": [
-			{
-				"network": "gitconnected",
-				"username": "kauredo",
-				"url": "https://gitconnected.com/kauredo"
-			},
-			{ "network": "GitHub", "username": "kauredo", "url": "https://github.com/kauredo" },
-			{ "network": "LinkedIn", "url": "https://www.linkedin.com/in/vascokf", "username": "vascokf" }
-		],
+		"name": "Ines Costa",
+		"label": "Senior School Counsellor",
+		"image": "",
+		"email": "inescosta1997@gmail.com",
+		"phone": "+351918502961",
+		"url": "",
+		"summary": "My journey in psychology began with a deep curiosity about how people think, feel, and grow. I am particularly drawn to working with students experiencing mood disorders, anxiety, and emerging personality disorders. My approach is grounded in cognitive behavioural therapy (CBT), with a strong focus on helping young people develop insight and practical strategies to manage their thoughts, emotions, and behaviours. I am committed to continued growth in the field of youth mental health and to delivering evidence-based, compassionate support for children and adolescents.",
+		"profiles": [],
 		"headline": "",
 		"blog": null,
 		"yearsOfExperience": 5,
-		"username": "kauredo",
+		"username": "",
 		"locationAsString": "Lisbon, Portugal",
 		"region": "Lisbon, Portugal",
-		"karma": 12,
-		"id": "e1a24db7-85af-470a-ae81-7f7c00d4f4a6",
-		"followers": 5,
-		"following": 5,
-		"picture": "https://avatars.githubusercontent.com/u/38565160?v=4",
-		"website": "https://www.vascokf.com"
+		"karma": 0,
+		"id": "",
+		"followers": 0,
+		"following": 0,
+		"picture": "",
+		"website": ""
 	},
 	"skills": [
 		{
-			"name": "Ruby on Rails",
-			"level": "Expert",
+			"name": "Cognitive Behavioural Therapy (CBT)",
+			"level": "Intermediate",
 			"keywords": [],
-			"rating": 5,
-			"yearsOfExperience": 6
-		},
-		{ "name": "React", "level": "Advanced", "keywords": [], "rating": 4, "yearsOfExperience": 4 }
-	],
-	"projects": [
-		{
-			"name": "sofia_galvao",
-			"description": "Built for a real estate agent, this tool scrapes listings from her company’s website and republishes them with better SEO and a personalized domain. It supports a blog system and is now being rebuilt as an API to serve other agents. Built with Rails and React, with a focus on SEO-first content publishing.",
-			"url": "https://sofiagalvaogroup.com/",
-			"highlights": [],
-			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "real_estate_scraper",
-			"website": "https://sofiagalvaogroup.com/",
-			"summary": "A tool for scraping and publishing a real estate portfolio on a custom domain.",
-			"primaryLanguage": "HTML",
-			"languages": ["Ruby", "JavaScript", "HTML", "Shell", "TypeScript", "Dockerfile", "SCSS"],
-			"libraries": [],
-			"githubUrl": "https://github.com/kauredo/real_estate_scraper",
-			"repositoryUrl": "https://github.com/kauredo/real_estate_scraper",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/e0d0f98c-356a-47a0-bc5b-3e5eb209c528-micro",
-							"size": 1168,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/e0d0f98c-356a-47a0-bc5b-3e5eb209c528-thumbnail",
-							"size": 7872,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/e0d0f98c-356a-47a0-bc5b-3e5eb209c528-mobile",
-							"size": 33678,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/e0d0f98c-356a-47a0-bc5b-3e5eb209c528-desktop",
-							"size": 103401,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				},
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/d129a131-46ff-42a8-a042-4d7d5875c7e8-micro",
-							"size": 1583,
-							"width": 32,
-							"height": 29
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/d129a131-46ff-42a8-a042-4d7d5875c7e8-thumbnail",
-							"size": 16597,
-							"width": 224,
-							"height": 203
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/d129a131-46ff-42a8-a042-4d7d5875c7e8-mobile",
-							"size": 71442,
-							"width": 600,
-							"height": 544
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/d129a131-46ff-42a8-a042-4d7d5875c7e8-desktop",
-							"size": 216639,
-							"width": 1200,
-							"height": 1088
-						}
-					}
-				},
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/11a13099-5eaf-40c4-8a93-6cd30271f9be-micro",
-							"size": 1375,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/11a13099-5eaf-40c4-8a93-6cd30271f9be-thumbnail",
-							"size": 8881,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/11a13099-5eaf-40c4-8a93-6cd30271f9be-mobile",
-							"size": 35063,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/11a13099-5eaf-40c4-8a93-6cd30271f9be-desktop",
-							"size": 100707,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				}
-			],
-			"videos": []
+			"rating": 3,
+			"yearsOfExperience": 2
 		},
 		{
-			"name": "fpb_calendar",
-			"description": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
-			"url": "https://fpb-calendar.fly.dev/",
-			"highlights": [],
+			"name": "Oral & Written Proficiency in English and Portuguese",
+			"level": "Advanced",
 			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "fpb_calendar",
-			"website": "https://fpb-calendar.fly.dev/",
-			"summary": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
-			"primaryLanguage": "",
-			"languages": [],
-			"libraries": [],
-			"githubUrl": "https://github.com/kauredo/fpb-calendar",
-			"repositoryUrl": "https://github.com/kauredo/fpb-calendar",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/eff1f3d5-df62-4c85-9ac9-12d37fd5e20d-micro",
-							"size": 655,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/eff1f3d5-df62-4c85-9ac9-12d37fd5e20d-thumbnail",
-							"size": 4050,
-							"width": 224,
-							"height": 184
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/eff1f3d5-df62-4c85-9ac9-12d37fd5e20d-mobile",
-							"size": 13591,
-							"width": 600,
-							"height": 493
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/eff1f3d5-df62-4c85-9ac9-12d37fd5e20d-desktop",
-							"size": 37186,
-							"width": 1200,
-							"height": 986
-						}
-					}
-				},
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/e43e0005-f814-4af8-94f8-45050ba0ec7a-micro",
-							"size": 451,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/e43e0005-f814-4af8-94f8-45050ba0ec7a-thumbnail",
-							"size": 3181,
-							"width": 224,
-							"height": 184
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/e43e0005-f814-4af8-94f8-45050ba0ec7a-mobile",
-							"size": 9585,
-							"width": 600,
-							"height": 493
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/e43e0005-f814-4af8-94f8-45050ba0ec7a-desktop",
-							"size": 24461,
-							"width": 1200,
-							"height": 986
-						}
-					}
-				}
-			],
-			"videos": []
+			"rating": 4,
+			"yearsOfExperience": 10
 		},
 		{
-			"name": "cv-page",
-			"description": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
-			"url": "https://www.vascokf.com",
-			"highlights": [],
-			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "Portfolio",
-			"website": "https://www.vascokf.com",
-			"summary": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
-			"primaryLanguage": "HTML",
-			"languages": ["Typescript"],
-			"libraries": ["TailwindCSS", "Svelte", "SvelteKit"],
-			"githubUrl": "https://github.com/kauredo/cv-page",
-			"repositoryUrl": "https://github.com/kauredo/cv-page",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/5493669b-672f-4fd3-a032-053399418374-micro",
-							"size": 781,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/5493669b-672f-4fd3-a032-053399418374-thumbnail",
-							"size": 5454,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/5493669b-672f-4fd3-a032-053399418374-mobile",
-							"size": 19757,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/5493669b-672f-4fd3-a032-053399418374-desktop",
-							"size": 54806,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				}
-			],
-			"videos": []
+			"name": "Microsoft Office",
+			"level": "Advanced",
+			"keywords": ["Word", "Excel", "PowerPoint"],
+			"rating": 4,
+			"yearsOfExperience": 8
 		},
 		{
-			"name": "aoc_rb",
-			"description": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
-			"url": "",
-			"highlights": [],
-			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "aoc_rb",
-			"website": "",
-			"summary": "Ruby toolkit to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
-			"primaryLanguage": "Ruby",
-			"languages": ["HTML", "Shell", "Ruby"],
-			"libraries": [],
-			"githubUrl": "https://github.com/pacso/aoc_rb",
-			"repositoryUrl": "https://github.com/pacso/aoc_rb",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [],
-			"videos": []
-		},
-		{
-			"name": "nn",
-			"description": "This project was designed for an up-and-coming photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
-			"url": "https://imkaufmann.com/",
-			"highlights": [],
-			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "IMKAUFMANN",
-			"website": "https://imkaufmann.com/",
-			"summary": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
-			"primaryLanguage": "Ruby",
-			"languages": ["SCSS", "Ruby", "HTML", "TypeScript", "Dockerfile", "JavaScript", "Shell"],
-			"libraries": [],
-			"githubUrl": "https://github.com/kauredo/nn",
-			"repositoryUrl": "https://github.com/kauredo/nn",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/dcf41c5a-0e17-48fc-ba69-87fa66961358-micro",
-							"size": 1391,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/dcf41c5a-0e17-48fc-ba69-87fa66961358-thumbnail",
-							"size": 11764,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/dcf41c5a-0e17-48fc-ba69-87fa66961358-mobile",
-							"size": 62397,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/dcf41c5a-0e17-48fc-ba69-87fa66961358-desktop",
-							"size": 220403,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				},
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/015bc81d-da22-47ed-a87d-2fc380dd47b0-micro",
-							"size": 1420,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/015bc81d-da22-47ed-a87d-2fc380dd47b0-thumbnail",
-							"size": 14312,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/015bc81d-da22-47ed-a87d-2fc380dd47b0-mobile",
-							"size": 78456,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/015bc81d-da22-47ed-a87d-2fc380dd47b0-desktop",
-							"size": 288055,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				}
-			],
-			"videos": []
-		},
-		{
-			"name": "jovens_futuro",
-			"description": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
-			"url": "",
-			"highlights": [],
-			"keywords": [],
-			"roles": [],
-			"startDate": "",
-			"endDate": "",
-			"entity": "",
-			"type": "",
-			"displayName": "jovens_futuro",
-			"website": "",
-			"summary": "Blog platform for young adults to share their passions with SEO optimization and social media previews.",
-			"primaryLanguage": "Ruby",
-			"languages": [
-				"Ruby",
-				"HTML",
-				"Shell",
-				"TypeScript",
-				"SCSS",
-				"CoffeeScript",
-				"JavaScript",
-				"Dockerfile",
-				"CSS"
-			],
-			"libraries": [],
-			"githubUrl": "https://github.com/kauredo/jovens_futuro",
-			"repositoryUrl": "https://github.com/kauredo/jovens_futuro",
-			"start": { "year": null, "month": null, "day": null },
-			"end": { "year": null, "month": null, "day": null },
-			"images": [
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/fa54b046-cba1-4ef4-93aa-8567aa358b7b-micro",
-							"size": 1483,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/fa54b046-cba1-4ef4-93aa-8567aa358b7b-thumbnail",
-							"size": 12862,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/fa54b046-cba1-4ef4-93aa-8567aa358b7b-mobile",
-							"size": 56235,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/fa54b046-cba1-4ef4-93aa-8567aa358b7b-desktop",
-							"size": 165382,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				},
-				{
-					"resolutions": {
-						"micro": {
-							"url": "https://project-images.gitconnectedcontent.com/5062b87f-9d56-4183-a4a8-434e3e214001-micro",
-							"size": 1147,
-							"width": 32,
-							"height": 26
-						},
-						"thumbnail": {
-							"url": "https://project-images.gitconnectedcontent.com/5062b87f-9d56-4183-a4a8-434e3e214001-thumbnail",
-							"size": 8600,
-							"width": 224,
-							"height": 185
-						},
-						"mobile": {
-							"url": "https://project-images.gitconnectedcontent.com/5062b87f-9d56-4183-a4a8-434e3e214001-mobile",
-							"size": 35947,
-							"width": 600,
-							"height": 497
-						},
-						"desktop": {
-							"url": "https://project-images.gitconnectedcontent.com/5062b87f-9d56-4183-a4a8-434e3e214001-desktop",
-							"size": 99335,
-							"width": 1200,
-							"height": 993
-						}
-					}
-				}
-			],
-			"videos": []
+			"name": "SPSS",
+			"level": "Intermediate",
+			"keywords": ["Marketing Analytics"],
+			"rating": 3,
+			"yearsOfExperience": 2
 		}
 	],
+	"projects": [],
 	"work": [
 		{
-			"name": "Medihive",
-			"location": "Remote",
+			"name": "St. Dominic's International School",
+			"location": "Lisbon, Portugal",
 			"description": "",
-			"position": "Full-stack Developer",
-			"url": "https://www.medihive.com/",
-			"startDate": "2022-10-01",
+			"position": "Senior School Counsellor",
+			"url": "",
+			"startDate": "2023-09-01",
 			"endDate": "",
-			"summary": "At Medihive, I work mostly with Ruby on Rails. We are a cross-functional team, with a focus on delivering the best possible product to our clients. I do work on the company's internal tools, such as the admin panel and doctor panels, as well as the client-facing website. I am full-stack, so I also work on the front-end, using mostly ERB and some React in small projects. I've been gradually increasing my responsibilities in the company, as well as owning and developing features.",
+			"summary": "",
 			"highlights": [],
 			"isCurrentRole": true,
-			"start": { "year": 2022, "month": 10 },
+			"start": { "year": 2023, "month": 9 },
 			"end": {},
-			"company": "Medihive",
-			"website": "https://www.medihive.com/"
-		},
-		{
-			"name": "BitZesty",
-			"location": "Remote",
-			"description": "",
-			"position": "Ruby on Rails Developer",
-			"url": "https://bitzesty.com/",
-			"startDate": "2021-08-01",
-			"endDate": "2022-10-01",
-			"summary": "As a Full-Stack Software Developer at BitZesty, I've had the opportunity to work fully remotely in Ruby on Rails on a cross-functional team. Here I worked on several projects with different ruby and rails versions, trying to find the best budget conscious solution for clients.",
-			"highlights": [],
-			"isCurrentRole": false,
-			"start": { "year": 2021, "month": 8 },
-			"end": { "year": 2022, "month": 10 },
-			"company": "BitZesty",
-			"website": "https://bitzesty.com/"
-		},
-		{
-			"name": "Landing.jobs",
-			"location": "Lisbon, Portugal",
-			"description": "",
-			"position": "Full-stack Developer",
-			"url": "https://landing.jobs/",
-			"startDate": "2020-02-01",
-			"endDate": "2021-07-01",
-			"summary": "At Landing.Jobs, I worked my way up from Junior to Mid-Level Software Developer in under a year. I had the opportunity to work with Ruby on Rails, React, Typescript, GraphQL and CSS. This was my first developing job and I was able to apply my skills in a real-world setting, contributing to the company's success.",
-			"highlights": [],
-			"isCurrentRole": false,
-			"start": { "year": 2020, "month": 2 },
-			"end": { "year": 2021, "month": 7 },
-			"company": "Landing.jobs",
-			"website": "https://landing.jobs/"
-		},
-		{
-			"name": "Accenture Portugal",
-			"location": "Lisbon, Portugal",
-			"description": "",
-			"position": "Technology Trainee",
-			"url": "",
-			"startDate": "2019-01-01",
-			"endDate": "2020-01-01",
-			"summary": "At Accenture, I mainly worked with VBA and a Customer Care & Billing software, in Java. It was my first experience with any of these languages, which I acquired reasonably quickly at a basic level.",
-			"highlights": [],
-			"isCurrentRole": false,
-			"start": { "year": 2019, "month": null },
-			"end": { "year": 2020, "month": null },
-			"company": "Accenture Portugal",
+			"company": "St. Dominic's International School",
 			"website": ""
 		},
 		{
-			"name": "WeDo Technologies",
+			"name": "St. Dominic's International School",
 			"location": "Lisbon, Portugal",
 			"description": "",
-			"position": "Junior Consultant",
+			"position": "Psychology Intern",
 			"url": "",
-			"startDate": "2019-01-01",
-			"endDate": "2019-01-01",
-			"summary": "During my tenure at WeDo Technologies (now Mobileum), I worked with their proprietary software 'RAID'. This is a logic based development software. I had the chance to work in a very small team and work a bit with unix, VMs and JavaScript.",
+			"startDate": "2022-09-01",
+			"endDate": "2023-09-01",
+			"summary": "",
 			"highlights": [],
 			"isCurrentRole": false,
-			"start": { "year": 2019, "month": null },
-			"end": { "year": 2019, "month": null },
-			"company": "WeDo Technologies",
+			"start": { "year": 2022, "month": 9 },
+			"end": { "year": 2023, "month": 9 },
+			"company": "St. Dominic's International School",
+			"website": ""
+		},
+		{
+			"name": "Fidelidade",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "International Marketing Manager",
+			"url": "",
+			"startDate": "2020-07-01",
+			"endDate": "2021-10-01",
+			"summary": "",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2020, "month": 7 },
+			"end": { "year": 2021, "month": 10 },
+			"company": "Fidelidade",
+			"website": ""
+		},
+		{
+			"name": "Fidelidade",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "Branding and Communications Intern",
+			"url": "",
+			"startDate": "2020-01-01",
+			"endDate": "2020-07-01",
+			"summary": "",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2020, "month": 1 },
+			"end": { "year": 2020, "month": 7 },
+			"company": "Fidelidade",
+			"website": ""
+		},
+		{
+			"name": "Cherish",
+			"location": "Brighton, UK",
+			"description": "Non-profit service for young adults with disabilities.",
+			"position": "Youth Worker",
+			"url": "",
+			"startDate": "2016-01-01",
+			"endDate": "2017-01-01",
+			"summary": "Supporting and assisting Cherish members during their evening sessions. Ensuring all members are involved, in good spirits and taught daily life skills. Working on a one-to-one basis during holiday schemes.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2016 },
+			"end": { "year": 2017 },
+			"company": "Cherish",
+			"website": ""
+		},
+		{
+			"name": "Hospital Beatriz Angelo",
+			"location": "Loures, Portugal",
+			"description": "",
+			"position": "Psychology Intern",
+			"url": "",
+			"startDate": "2017-07-01",
+			"endDate": "2017-07-31",
+			"summary": "Observed patients with ADD, autism, and other learning disabilities. Observed diagnosis and therapy sessions including speech therapy, CBT, and learning support.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2017, "month": 7 },
+			"end": { "year": 2017, "month": 7 },
+			"company": "Hospital Beatriz Angelo",
+			"website": ""
+		},
+		{
+			"name": "Hospital da Luz",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "Psychology Intern",
+			"url": "",
+			"startDate": "2017-07-01",
+			"endDate": "2017-07-31",
+			"summary": "",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2017, "month": 7 },
+			"end": { "year": 2017, "month": 7 },
+			"company": "Hospital da Luz",
+			"website": ""
+		},
+		{
+			"name": "International Preparatory School (IPS)",
+			"location": "Portugal",
+			"description": "",
+			"position": "Teacher Assistant",
+			"url": "",
+			"startDate": "2013-01-01",
+			"endDate": "2013-12-31",
+			"summary": "",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2013 },
+			"end": { "year": 2013 },
+			"company": "International Preparatory School (IPS)",
 			"website": ""
 		}
 	],
 	"publications": [],
 	"education": [
 		{
-			"institution": "University of Exeter",
+			"institution": "Universidade Católica Portuguesa",
 			"url": "",
-			"area": "Electrical and Electronical Engineering",
-			"studyType": "Bachelors of Engineering",
-			"startDate": "2015-09-01",
-			"endDate": "2018-08-01",
+			"area": "Clinical Health Psychology",
+			"studyType": "Masters (MSc)",
+			"startDate": "2021-01-01",
+			"endDate": "2023-01-01",
 			"score": "",
 			"courses": [],
 			"description": "",
-			"activities": "Vice-captain of the Basketball Club",
-			"start": { "year": 2015, "month": 9 },
-			"end": { "year": 2018, "month": 8 },
+			"activities": "",
+			"start": { "year": 2021 },
+			"end": { "year": 2023 },
 			"website": "",
 			"gpa": ""
 		},
 		{
-			"institution": "LeWagon",
+			"institution": "University of Sussex",
 			"url": "",
-			"area": "Coding Bootcamp",
-			"studyType": "",
-			"startDate": "",
-			"endDate": "2018-01-01",
-			"score": "Top 4 in class",
+			"area": "Marketing and Consumer Psychology",
+			"studyType": "Masters (MSc)",
+			"startDate": "2018-01-01",
+			"endDate": "2019-01-01",
+			"score": "",
 			"courses": [],
 			"description": "",
 			"activities": "",
-			"start": { "year": null, "month": null },
-			"end": { "year": 2018, "month": null },
+			"start": { "year": 2018 },
+			"end": { "year": 2019 },
 			"website": "",
-			"gpa": "Top 4 in class"
+			"gpa": ""
+		},
+		{
+			"institution": "University of Brighton",
+			"url": "",
+			"area": "Applied Psychology",
+			"studyType": "Bachelors (BSc)",
+			"startDate": "2015-01-01",
+			"endDate": "2018-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "Volleyball Team President (2017–2018)",
+			"start": { "year": 2015 },
+			"end": { "year": 2018 },
+			"website": "",
+			"gpa": ""
+		},
+		{
+			"institution": "St. Julian's School",
+			"url": "",
+			"area": "International Baccalaureate (IB) / IGCSE",
+			"studyType": "",
+			"startDate": "2005-01-01",
+			"endDate": "2015-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "",
+			"start": { "year": 2005 },
+			"end": { "year": 2015 },
+			"website": "",
+			"gpa": ""
 		}
 	],
 	"volunteer": [],
 	"awards": [],
-	"languages": [],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Native / Bilingual Proficiency"
+		},
+		{
+			"language": "Portuguese",
+			"fluency": "Native / Bilingual Proficiency"
+		}
+	],
 	"interests": [],
 	"references": [],
 	"certificates": [],
 	"meta": {
-		"note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+		"note": "Extracted from CV and mapped to JSON Resume schema.",
 		"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
 		"version": "v1.0.0",
-		"lastModified": "2020-12-29T15:53:00"
+		"lastModified": "2025-09-01T12:00:00"
 	}
 }
