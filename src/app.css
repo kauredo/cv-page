@@ -5,15 +5,15 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-vasco-100: #d5e3ff;
-	--color-vasco-200: #cbe0ff;
-	--color-vasco-300: #a5cdff;
-	--color-vasco-400: #7fbaff;
-	--color-vasco-500: #59a7ff;
-	--color-vasco-600: #3f8ff5;
-	--color-vasco-700: #2f6fd0;
-	--color-vasco-800: #1f4fad;
-	--color-vasco-900: #0f2e8a;
+	--color-vasco-100: #e8f4f8;
+	--color-vasco-200: #d1e9f2;
+	--color-vasco-300: #a3d3e6;
+	--color-vasco-400: #75bdda;
+	--color-vasco-500: #4da7ce;
+	--color-vasco-600: #3b8bb5;
+	--color-vasco-700: #2d6b8a;
+	--color-vasco-800: #1f4b60;
+	--color-vasco-900: #112b35;
 }
 
 html {

@@ -108,32 +108,35 @@
 			{/each}
 		</section>
 
-		<section class="projects">
-			<h2>Featured Projects</h2>
-			{#each projects as project}
-				<div class="project mb-4">
-					<div class="project-header">
-						<div
-							class="project-title-group flex flex-col sm:flex-row sm:items-center sm:justify-between"
-						>
-							<h3 class="mb-2 sm:mb-0">{project.displayName}</h3>
-							<div class="project-links">
-								{#if project.website}
-									<a href={project.website} target="_blank" rel="noopener noreferrer">View Live</a>
-								{/if}
-								{#if project.githubUrl}
-									<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-								{/if}
+		{#if projects && projects.length > 0}
+			<section class="projects">
+				<h2>Featured Projects</h2>
+				{#each projects as project}
+					<div class="project mb-4">
+						<div class="project-header">
+							<div
+								class="project-title-group flex flex-col sm:flex-row sm:items-center sm:justify-between"
+							>
+								<h3 class="mb-2 sm:mb-0">{project.displayName}</h3>
+								<div class="project-links">
+									{#if project.website}
+										<a href={project.website} target="_blank" rel="noopener noreferrer">View Live</a
+										>
+									{/if}
+									{#if project.githubUrl}
+										<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+									{/if}
+								</div>
 							</div>
 						</div>
+						<p class="project-description mt-2">{project.description}</p>
 					</div>
-					<p class="project-description mt-2">{project.description}</p>
-				</div>
-			{/each}
-		</section>
+				{/each}
+			</section>
+		{/if}
 
 		<section class="skills">
-			<h2>Technical Skills</h2>
+			<h2>Professional Skills</h2>
 			<div class="skills-grid">
 				{#each sortedSkills as skill}
 					<div class="skill-item">
