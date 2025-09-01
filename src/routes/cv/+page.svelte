@@ -58,7 +58,9 @@
 	<header>
 		<div class="personal-info">
 			<div class="header-main">
-				<img src={basics.image} alt={basics.name} class="avatar w-20 sm:w-[100px]" />
+				{#if basics.image}
+					<img src={basics.image} alt={basics.name} class="avatar w-20 sm:w-[100px]" />
+				{/if}
 				<div class="name-title">
 					<h1 class="text-2xl sm:text-3xl">{basics.name}</h1>
 					<p class="title text-base sm:text-lg">{basics.label}</p>

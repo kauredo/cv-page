@@ -118,6 +118,11 @@ body {
 	margin-bottom: 1rem;
 }
 
+/* Header layout without photo */
+.cv-print .header-main:not(:has(img)) {
+	gap: 0;
+}
+
 .cv-print .avatar {
 	width: 100px;
 	height: 100px;

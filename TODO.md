@@ -34,48 +34,48 @@ Adapting the existing developer CV app for a psychologist. This involves content
 
 ### 1.2 Experience Data Adaptation
 
-- [ ] 🟥 **Replace `src/lib/data/experience.json` with psychology experience**
-  - [ ] Clinical positions (hospitals, clinics, private practice)
-  - [ ] Internships and residencies
-  - [ ] Consulting or specialized work
-  - [ ] Teaching positions (if applicable)
-  - [ ] Supervision roles
-  - [ ] Update company logos with healthcare/psychology organizations
-  - [ ] Replace technical skills with relevant psychology skills per role
-  - [ ] Update achievements to reflect psychology accomplishments
+- [x] � **Replace `src/lib/data/experience.json` with psychology experience**
+  - [x] Clinical positions (hospitals, clinics, private practice)
+  - [x] Internships and residencies
+  - [x] Consulting or specialized work
+  - [x] Teaching positions (if applicable)
+  - [x] Supervision roles
+  - [x] Update company logos with healthcare/psychology organizations
+  - [x] Replace technical skills with relevant psychology skills per role
+  - [x] Update achievements to reflect psychology accomplishments
 
 ### 1.3 Education Updates
 
-- [ ] 🟥 **Update `src/lib/data/education.json` with psychology education**
-  - [ ] Psychology degree(s) (Bachelor's, Master's, PhD, PsyD)
-  - [ ] Professional licenses and certifications
-  - [ ] Continuing education requirements
-  - [ ] Specialized training programs
-  - [ ] Professional development courses
-  - [ ] Research experience (if applicable)
+- [x] � **Update `src/lib/data/education.json` with psychology education**
+  - [x] Psychology degree(s) (Bachelor's, Master's, PhD, PsyD)
+  - [x] Professional licenses and certifications
+  - [x] Continuing education requirements
+  - [x] Specialized training programs
+  - [x] Professional development courses
+  - [x] Research experience (if applicable)
 
 ### 1.4 Skills Revision
 
-- [ ] 🟥 **Replace `src/lib/data/skills.json` with psychology skills**
-  - [ ] Therapeutic approaches (CBT, DBT, EMDR, etc.)
-  - [ ] Assessment and testing tools
-  - [ ] Specialized populations (children, adults, couples, etc.)
-  - [ ] Languages spoken
-  - [ ] Software/tools used in practice
-  - [ ] Research methodologies (if applicable)
+- [x] � **Replace `src/lib/data/skills.json` with psychology skills**
+  - [x] Therapeutic approaches (CBT, DBT, EMDR, etc.)
+  - [x] Assessment and testing tools
+  - [x] Specialized populations (children, adults, couples, etc.)
+  - [x] Languages spoken
+  - [x] Software/tools used in practice
+  - [x] Research methodologies (if applicable)
 
 ### 1.5 Projects Section Decision & Implementation
 
-- [ ] 🟥 **Decide on projects section approach:**
-  - [ ] Option A: Case studies (anonymized and HIPAA-compliant)
-  - [ ] Option B: Research projects and publications
-  - [ ] Option C: Community programs and workshops
+- [x] � **Decide on projects section approach:**
+  - [x] Option A: Case studies (anonymized and HIPAA-compliant)
+  - [x] Option B: Research projects and publications
+  - [x] Option C: Community programs and workshops
   - [ ] Option D: Remove projects section entirely
-- [ ] 🟥 **Update `src/lib/data/projects.json` based on chosen approach**
-  - [ ] Replace technical projects with relevant psychology content
-  - [ ] Update project images with appropriate visuals
-  - [ ] Remove GitHub links, replace with relevant professional links
-  - [ ] Update technology stack with relevant tools/methodologies
+- [x] � **Update `src/lib/data/projects.json` based on chosen approach**
+  - [x] Replace technical projects with relevant psychology content
+  - [x] Update project images with appropriate visuals
+  - [x] Remove GitHub links, replace with relevant professional links
+  - [x] Update technology stack with relevant tools/methodologies
 
 ---
 

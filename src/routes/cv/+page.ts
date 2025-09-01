@@ -10,14 +10,16 @@ export const load: PageLoad = async () => {
 			title: `${cv.basics.name} - CV`,
 			description: cv.basics.summary,
 			type: 'profile',
-			images: [
-				{
-					url: `https://www.vascokf.com/images/cv.webp`,
-					alt: `${cv.basics.name} - CV`,
-					secureUrl: `https://www.vascokf.com/images/cv.webp`,
-					type: 'image/webp'
-				}
-			]
+			images: cv.basics.image
+				? [
+						{
+							url: cv.basics.image,
+							alt: `${cv.basics.name} - CV`,
+							secureUrl: cv.basics.image,
+							type: 'image/webp'
+						}
+					]
+				: []
 		}
 	}) satisfies MetaTagsProps;
 

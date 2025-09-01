@@ -1,89 +1,54 @@
 [
 	{
-		"title": "Real Estate Scraper",
-		"slug": "real-estate-scraper",
-		"description": "A tool for scraping and publishing a real estate portfolio on a custom domain.",
-		"details": "Built for a real estate agent, this tool scrapes listings from her company’s website and republishes them with better SEO and a personalized domain. It supports a blog system and is now being rebuilt as an API to serve other agents. Built with Rails and React, with a focus on SEO-first content publishing.",
+		"title": "Student Mental Health Support Program",
+		"slug": "student-mental-health-program",
+		"description": "Comprehensive mental health support program for adolescents experiencing mood disorders and anxiety.",
+		"details": "Developed and implemented a comprehensive mental health support program at St. Dominic's International School, focusing on students with mood disorders, anxiety, and emerging personality disorders. The program utilizes evidence-based CBT techniques and provides both individual and group therapy sessions, helping students develop practical strategies for managing their mental health.",
 		"stack": [
-			"Ruby on Rails",
-			"React",
-			"TailwindCSS",
-			"TypeScript",
-			"Web Scraping",
-			"SEO",
-			"Fly.io",
-			"PostgreSQL"
+			"Cognitive Behavioural Therapy",
+			"Individual Therapy",
+			"Group Therapy",
+			"Crisis Intervention",
+			"Mental Health Assessment",
+			"Student Support Systems"
 		],
-		"images": [
-			"/images/sgg-1.webp",
-			"/images/sgg-2.webp",
-			"/images/sgg-3.webp",
-			"/images/sgg-4.webp"
+		"images": ["/images/placeholder-therapy.webp"],
+		"github": "",
+		"updatedAt": "2025-09-01",
+		"link": ""
+	},
+	{
+		"title": "Cross-Cultural Psychology Research",
+		"slug": "cross-cultural-psychology",
+		"description": "Research into consumer psychology and cross-cultural behaviour patterns.",
+		"details": "Conducted research in marketing and consumer psychology, analyzing cross-cultural behaviour patterns and decision-making processes. This research enhanced understanding of cultural influences on psychological processes and contributed to evidence-based approaches in multicultural settings.",
+		"stack": [
+			"SPSS",
+			"Research Methodology",
+			"Statistical Analysis",
+			"Cross-cultural Psychology",
+			"Consumer Behaviour"
 		],
-		"github": "https://github.com/kauredo/real-estate-scraper",
-		"updatedAt": "2025-03-17",
-		"link": "https://sofiagalvaogroup.com"
+		"images": ["/images/placeholder-research.webp"],
+		"github": "",
+		"updatedAt": "2019-01-01",
+		"link": ""
 	},
 	{
-		"title": "FPB Calendar",
-		"slug": "fpb-calendar",
-		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
-		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
-		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
-		"images": ["/images/fpb-calendar.webp", "/images/fpb-calendar-2.webp"],
-		"github": "https://github.com/kauredo/fpb-calendar",
-		"updatedAt": "2025-03-17",
-		"link": "https://fpb-calendar.fly.dev"
-	},
-	{
-		"title": "IMKAUFMANN",
-		"slug": "nn",
-		"description": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
-		"details": "This project was designed for an up-and-coming photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
-		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
-		"images": ["/images/nn-1.webp", "/images/nn-2.webp", "/images/nn-3.webp", "/images/nn-4.webp"],
-		"github": "https://github.com/kauredo/nn",
-		"updatedAt": "2025-03-17",
-		"link": "https://imkaufmann.com"
-	},
-	{
-		"title": "Jovens Futuro",
-		"slug": "jovens-futuro",
-		"description": "Blog platform for young adults to share their passions with SEO optimization and social media previews.",
-		"details": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
-		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave", "SEO"],
-		"images": [
-			"/images/jovens-futuro-1.webp",
-			"/images/jovens-futuro-2.webp",
-			"/images/jovens-futuro-3.webp",
-			"/images/jovens-futuro-4.webp"
+		"title": "Disability Support Initiative",
+		"slug": "disability-support",
+		"description": "One-to-one support program for young adults with disabilities.",
+		"details": "Provided comprehensive support to young adults with disabilities through Cherish, a non-profit organization in Brighton. Developed individualized support plans, taught daily life skills, and facilitated social inclusion during evening sessions and holiday programs. This experience strengthened skills in adaptive communication and person-centered care.",
+		"stack": [
+			"Disability Support",
+			"Life Skills Training",
+			"Adaptive Communication",
+			"Person-centered Care",
+			"Social Inclusion"
 		],
-		"github": "https://github.com/kauredo/jovens_futuro",
-		"updatedAt": "2025-03-17"
-	},
-	{
-		"title": "Portfolio Site",
-		"slug": "portfolio-site",
-		"description": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
-		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
-		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
-		"images": [
-			"/images/portfolio.webp",
-			"/images/portfolio-2.webp",
-			"/images/portfolio-3.webp",
-			"/images/portfolio-4.webp"
-		],
-		"github": "https://github.com/kauredo/portfolio-site",
-		"updatedAt": "2025-03-17"
-	},
-	{
-		"title": "AOC Ruby (aoc_rb)",
-		"slug": "aoc-rb",
-		"description": "Ruby toolkit to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
-		"details": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
-		"stack": ["Ruby", "CLI", "Open Source"],
-		"github": "https://github.com/pacso/aoc_rb",
-		"updatedAt": "2025-03-17",
-		"images": ["/images/aoc-rb.webp"]
+		"images": ["/images/placeholder-support.webp"],
+		"github": "",
+		"updatedAt": "2017-01-01",
+		"link": ""
 	}
 ]
