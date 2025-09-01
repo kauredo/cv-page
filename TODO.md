@@ -83,26 +83,26 @@ Adapting the existing developer CV app for a psychologist. This involves content
 
 ### 2.1 Color Scheme Customization
 
-- [ ] 🟥 **Research and choose psychology-appropriate color palette**
+- [x] � **Research and choose psychology-appropriate color palette**
 
-  - [ ] Consider calming, trustworthy colors (blues, greens, warm neutrals)
-  - [ ] Research color psychology for professional branding
-  - [ ] Ensure accessibility and contrast requirements
+  - [x] Consider calming, trustworthy colors (blues, greens, warm neutrals)
+  - [x] Research color psychology for professional branding
+  - [x] Ensure accessibility and contrast requirements
 
-- [ ] 🟥 **Update CSS variables in `src/app.css`**
-  - [ ] Replace `--color-vasco-100` through `--color-vasco-900`
-  - [ ] Test color changes across all components
-  - [ ] Update dark mode colors accordingly
-  - [ ] Verify print styles still work with new colors
+- [x] � **Update CSS variables in `src/app.css`**
+  - [x] Replace `--color-vasco-100` through `--color-vasco-900`
+  - [x] Test color changes across all components
+  - [x] Update dark mode colors accordingly
+  - [x] Verify print styles still work with new colors
 
 ### 2.2 Typography and Branding
 
-- [ ] 🟥 **Update brand name references throughout codebase**
+- [x] � **Update brand name references throughout codebase**
 
-  - [ ] Search and replace "Vasco" references in components
-  - [ ] Update `src/lib/components/Hero.svelte` greeting
-  - [ ] Update `src/lib/components/Footer.svelte` copyright text
-  - [ ] Update `src/lib/components/Navbar.svelte` logo and branding
+  - [x] Search and replace "Vasco" references in components
+  - [x] Update `src/lib/components/Hero.svelte` greeting
+  - [x] Update `src/lib/components/Footer.svelte` copyright text
+  - [x] Update `src/lib/components/Navbar.svelte` logo and branding
 
 - [ ] 🟥 **Professional imagery updates**
   - [ ] Replace logo with psychology professional logo/initials
@@ -111,11 +111,11 @@ Adapting the existing developer CV app for a psychologist. This involves content
 
 ### 2.3 Hero Section Customization
 
-- [ ] 🟥 **Modify `src/lib/components/Hero.svelte`**
-  - [ ] Update greeting text for psychology professional
-  - [ ] Adjust professional messaging and tone
-  - [ ] Consider psychology-specific imagery or icons
-  - [ ] Update call-to-action buttons for psychology context
+- [x] � **Modify `src/lib/components/Hero.svelte`**
+  - [x] Update greeting text for psychology professional
+  - [x] Adjust professional messaging and tone
+  - [x] Consider psychology-specific imagery or icons
+  - [x] Update call-to-action buttons for psychology context
 
 ---
 
@@ -123,21 +123,21 @@ Adapting the existing developer CV app for a psychologist. This involves content
 
 ### 3.1 Component Text Updates
 
-- [ ] 🟥 **Review and update all component text**
-  - [ ] `src/lib/components/Hero.svelte` - Professional introduction
+- [x] � **Review and update all component text**
+  - [x] `src/lib/components/Hero.svelte` - Professional introduction
   - [ ] `src/lib/components/Experiences.svelte` - Section headers and labels
   - [ ] `src/lib/components/Schools.svelte` - Education section terminology
-  - [ ] `src/lib/components/Skills.svelte` - Skills presentation
-  - [ ] `src/lib/components/Projects.svelte` - Projects/research section
+  - [x] `src/lib/components/Skills.svelte` - Skills presentation
+  - [x] `src/lib/components/Projects.svelte` - Projects/research section
   - [ ] `src/lib/components/Contact.svelte` - Contact preferences
 
 ### 3.2 Professional Language Adaptation
 
-- [ ] 🟥 **Replace technical terminology with psychology terminology**
-  - [ ] Developer → Psychologist/Therapist/Clinician
-  - [ ] Technical skills → Clinical skills/Therapeutic approaches
-  - [ ] Projects → Research/Case studies/Programs
-  - [ ] Review all hardcoded text for professional appropriateness
+- [x] � **Replace technical terminology with psychology terminology**
+  - [x] Developer → Psychologist/Therapist/Clinician
+  - [x] Technical skills → Clinical skills/Therapeutic approaches
+  - [x] Projects → Research/Case studies/Programs
+  - [x] Review all hardcoded text for professional appropriateness
 
 ### 3.3 Contact Section Enhancement
 
@@ -161,11 +161,13 @@ Adapting the existing developer CV app for a psychologist. This involves content
 
 ### 4.2 Print CV Optimization
 
-- [ ] 🟥 **Review and adjust print styles in `src/app.css`**
-  - [ ] Ensure psychology CV format is professional
-  - [ ] Check that all relevant sections print correctly
-  - [ ] Optimize for standard CV length expectations
-  - [ ] Test print layout with new content structure
+- [x] � **Review and adjust print styles in `src/app.css`**
+  - [x] Ensure psychology CV format is professional
+  - [x] Check that all relevant sections print correctly
+  - [x] Optimize for standard CV length expectations
+  - [x] Test print layout with new content structure
+  - [x] Hide photo when no image is available
+  - [x] Ensure PDF generation works properly
 
 ### 4.3 Analytics and Privacy
 

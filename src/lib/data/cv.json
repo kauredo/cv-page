@@ -26,29 +26,25 @@
 			"name": "Cognitive Behavioural Therapy (CBT)",
 			"level": "Intermediate",
 			"keywords": [],
-			"rating": 3,
-			"yearsOfExperience": 2
+			"rating": 3
 		},
 		{
 			"name": "Oral & Written Proficiency in English and Portuguese",
 			"level": "Advanced",
 			"keywords": [],
-			"rating": 4,
-			"yearsOfExperience": 10
+			"rating": 4
 		},
 		{
-			"name": "Microsoft Office",
+			"name": "Proficiency in Microsoft Office: Word, Excel and Powerpoint",
 			"level": "Advanced",
 			"keywords": ["Word", "Excel", "PowerPoint"],
-			"rating": 4,
-			"yearsOfExperience": 8
+			"rating": 4
 		},
 		{
-			"name": "SPSS",
+			"name": "Marketing Analytics (SPSS)",
 			"level": "Intermediate",
 			"keywords": ["Marketing Analytics"],
-			"rating": 3,
-			"yearsOfExperience": 2
+			"rating": 3
 		}
 	],
 	"projects": [],

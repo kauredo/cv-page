@@ -141,9 +141,11 @@
 				{#each sortedSkills as skill}
 					<div class="skill-item">
 						<span class="skill-name">{skill.name}</span>
-						<span class="years"
-							>{skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'}</span
-						>
+						{#if skill.yearsOfExperience}
+							<span class="years"
+								>{skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'}</span
+							>
+						{/if}
 					</div>
 				{/each}
 			</div>
