@@ -2,7 +2,7 @@
 	import cv from '$lib/data/cv.json';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 
-	const { basics, work, education, skills, projects } = cv;
+	const { basics, work, education, skills, projects, accomplishments } = cv;
 
 	// Sort skills by years of experience
 	const sortedSkills = skills.sort(
@@ -92,18 +92,18 @@
 		<section class="experience">
 			<h2>Professional Experience</h2>
 			{#each work as job}
-				<div class="job">
-					<div class="job-header">
-						<div class="job-title-group">
-							<h3>{job.position}</h3>
-							<span class="company">{job.company}</span>
+				<div class="mb-6">
+					<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+						<div class="mb-1 flex items-baseline gap-2 sm:mb-0">
+							<h3 class="text-lg font-semibold text-gray-800">{job.position}</h3>
+							<span class="text-sm text-gray-600">• {job.company}</span>
 						</div>
-						<span class="dates">
+						<span class="text-sm text-gray-500">
 							{new Date(job.startDate).getFullYear()} -
 							{job.endDate ? new Date(job.endDate).getFullYear() : 'Present'}
 						</span>
 					</div>
-					<p class="job-description">{job.summary}</p>
+					<p class="text-sm leading-relaxed text-gray-600">{job.summary}</p>
 				</div>
 			{/each}
 		</section>
@@ -112,24 +112,31 @@
 			<section class="projects">
 				<h2>Featured Projects</h2>
 				{#each projects as project}
-					<div class="project mb-4">
-						<div class="project-header">
-							<div
-								class="project-title-group flex flex-col sm:flex-row sm:items-center sm:justify-between"
-							>
-								<h3 class="mb-2 sm:mb-0">{project.displayName}</h3>
-								<div class="project-links">
-									{#if project.website}
-										<a href={project.website} target="_blank" rel="noopener noreferrer">View Live</a
-										>
-									{/if}
-									{#if project.githubUrl}
-										<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-									{/if}
-								</div>
+					<div class="project mb-6">
+						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+							<h3 class="mb-1 text-lg font-semibold text-gray-800 sm:mb-0">
+								{project.displayName}
+							</h3>
+							<div class="flex gap-3 text-sm">
+								{#if project.website}
+									<a
+										href={project.website}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-blue-600 hover:text-blue-800 hover:underline">View Live</a
+									>
+								{/if}
+								{#if project.githubUrl}
+									<a
+										href={project.githubUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-blue-600 hover:text-blue-800 hover:underline">GitHub</a
+									>
+								{/if}
 							</div>
 						</div>
-						<p class="project-description mt-2">{project.description}</p>
+						<p class="text-sm leading-relaxed text-gray-600">{project.description}</p>
 					</div>
 				{/each}
 			</section>
@@ -137,12 +144,14 @@
 
 		<section class="skills">
 			<h2>Professional Skills</h2>
-			<div class="skills-grid">
+			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 				{#each sortedSkills as skill}
-					<div class="skill-item">
-						<span class="skill-name">{skill.name}</span>
+					<div
+						class="flex items-baseline justify-between border-b border-dotted border-gray-300 pb-1"
+					>
+						<span class="text-sm font-medium text-gray-800">{skill.name}</span>
 						{#if skill.yearsOfExperience}
-							<span class="years"
+							<span class="text-xs text-gray-500"
 								>{skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'}</span
 							>
 						{/if}
@@ -151,15 +160,54 @@
 			</div>
 		</section>
 
+		{#if accomplishments && accomplishments.length > 0}
+			<section class="accomplishments">
+				<h2>Certificates & Accomplishments</h2>
+				{#each accomplishments as accomplishment}
+					<div class="mb-6">
+						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+							<div class="mb-1 flex items-baseline gap-2 sm:mb-0">
+								<h3 class="text-lg font-semibold text-gray-800">{accomplishment.title}</h3>
+								{#if accomplishment.link}
+									<a
+										href={accomplishment.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+										>View Certificate</a
+									>
+								{/if}
+							</div>
+							<span class="text-sm text-gray-500">
+								{#if accomplishment.startDate && accomplishment.endDate}
+									{new Date(accomplishment.startDate).getFullYear()} - {new Date(
+										accomplishment.endDate
+									).getFullYear()}
+								{:else if accomplishment.startDate}
+									{new Date(accomplishment.startDate).getFullYear()}
+								{:else if accomplishment.endDate}
+									{new Date(accomplishment.endDate).getFullYear()}
+								{/if}
+							</span>
+						</div>
+						<p class="text-sm leading-relaxed text-gray-600">{accomplishment.description}</p>
+					</div>
+				{/each}
+			</section>
+		{/if}
+
 		<section class="education">
 			<h2>Education</h2>
-			<div class="education-grid">
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 				{#each education as edu}
-					<div class="education-item">
-						<h3>{edu.institution}</h3>
-						<p class="degree">{edu.area} {edu.studyType ? `- ${edu.studyType}` : ''}</p>
-						<div class="education-details">
-							<span class="dates">
+					<div class="space-y-1">
+						<h3 class="text-lg font-semibold text-gray-800">{edu.institution}</h3>
+						<p class="text-sm text-gray-600">
+							{edu.area}
+							{edu.studyType ? `- ${edu.studyType}` : ''}
+						</p>
+						<div class="flex items-baseline justify-between text-sm text-gray-500">
+							<span>
 								{#if edu.start?.year && edu.end?.year}
 									{edu.start.year} - {edu.end.year}
 								{:else}
@@ -167,7 +215,7 @@
 								{/if}
 							</span>
 							{#if edu.gpa}
-								<span class="achievement">{edu.gpa}</span>
+								<span class="font-medium">{edu.gpa}</span>
 							{/if}
 						</div>
 					</div>

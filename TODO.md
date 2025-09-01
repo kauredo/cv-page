@@ -1,8 +1,25 @@
 # CV App Adaptation for Psychologist - TODO List
 
-## Project Overview
+## Project Overv### 1.5 Projects Section Decision & Implementation
 
-Adapting the existing developer CV app for a psychologist. This involves content changes, visual customization, and structure modifications to make it appropriate for a psychology professional.
+- [x] 🟩 **Decide on projects section approach:**
+  - [x] Option A: Case studies (anonymized and HIPAA-compliant)
+  - [x] Option B: Research projects and publications
+  - [x] Option C: Community programs and workshops
+  - [ ] Option D: Remove projects section entirely
+- [x] 🟩 **Update `src/lib/data/projects.json` based on chosen approach**
+  - [x] Replace technical projects with relevant psychology content
+  - [x] Update project images with appropriate visuals
+  - [x] Remove GitHub links, replace with relevant professional links
+  - [x] Update technology stack with relevant tools/methodologies
+
+### 1.6 Certificates and Accomplishments Section
+
+- [x] 🟩 **Add new "accomplishments" section to cv.json**
+  - [x] Create array structure with title, description, startDate, endDate (optional), link (optional)
+  - [x] Perfect for leadership roles, certificates, professional accomplishments
+  - [x] Add to CV page template with conditional display
+  - [x] Style section for professional appearance in both screen and printg the existing developer CV app for a psychologist. This involves content changes, visual customization, and structure modifications to make it appropriate for a psychology professional.
 
 ## Progress Tracking
 

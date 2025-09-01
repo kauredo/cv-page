@@ -230,29 +230,6 @@ body {
 	padding-bottom: 0.25rem;
 }
 
-.cv-print .education-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-	.cv-print .education-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-.cv-print .project-links {
-	display: flex;
-	gap: 1rem;
-	font-size: 13px;
-}
-
-.cv-print .project-links a {
-	color: #4299e180;
-	text-decoration: none;
-}
-
 @media print {
 	@page {
 		margin: 2cm;

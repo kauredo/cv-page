@@ -260,6 +260,14 @@
 	"interests": [],
 	"references": [],
 	"certificates": [],
+	"accomplishments": [
+		{
+			"title": "University of Brighton Volleyball Team President",
+			"startDate": "2017",
+			"endDate": "2018",
+			"description": "Organising all administrative matters within the club. Challenging role that has improved my leadership and delegating skills. Managing the women's and men's team. Motivating teams and pushing towards a more effective committee."
+		}
+	],
 	"meta": {
 		"note": "Extracted from CV and mapped to JSON Resume schema.",
 		"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
