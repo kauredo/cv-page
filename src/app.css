@@ -239,7 +239,7 @@ body {
 	html,
 	body {
 		width: 210mm;
-		height: 297mm;
+		/* height: 297mm; */
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 		color-adjust: exact;
@@ -265,9 +265,12 @@ body {
 	}
 
 	.cv-print section {
+		margin-bottom: 1cm !important;
+	}
+
+	.cv-print section:not(.experience) {
 		page-break-inside: avoid;
 		break-inside: avoid;
-		margin-bottom: 1cm !important;
 	}
 
 	.cv-print .avatar {
@@ -282,5 +285,20 @@ body {
 	.cv-print a {
 		text-decoration: none !important;
 		color: inherit !important;
+	}
+
+	/* Simple fix: make timeline line taller for print */
+	.cv-print .experience {
+		overflow: hidden;
+	}
+
+	.cv-print .experience .absolute {
+		height: 200vh !important;
+	}
+
+	.cv-print .experience > div > div,
+	.cv-print .education > div > div {
+		page-break-inside: avoid;
+		break-inside: avoid;
 	}
 }
