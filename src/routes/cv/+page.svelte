@@ -130,7 +130,7 @@
 
 						<!-- Content -->
 						<div class="ml-6 flex-1">
-							<div class="mt-6 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+							<div class="mt-4 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 								<div class="mb-1 sm:mb-0">
 									<h3 class="text-lg font-semibold text-gray-800">{job.position}</h3>
 									<p class="text-sm font-medium text-blue-600">{job.company}</p>
@@ -286,7 +286,7 @@
 
 						<!-- Content -->
 						<div class="ml-6 flex-1">
-							<div class="mt-6 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+							<div class="mt-4 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 								<div class="mb-1 sm:mb-0">
 									<h3 class="text-lg font-semibold text-gray-800">{edu.institution}</h3>
 									<p class="text-sm font-medium text-green-600">

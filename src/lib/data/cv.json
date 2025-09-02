@@ -70,7 +70,7 @@
 			"end": {},
 			"company": "St. Dominic's International School",
 			"website": "",
-			"logo": "/images/institutions/st-dominics.svg"
+			"logo": "/images/institutions/st-dominics.jpg"
 		},
 		{
 			"name": "St. Dominic's International School",
@@ -87,7 +87,7 @@
 			"end": { "year": 2023, "month": 9 },
 			"company": "St. Dominic's International School",
 			"website": "",
-			"logo": "/images/institutions/st-dominics.svg"
+			"logo": "/images/institutions/st-dominics.jpg"
 		},
 		{
 			"name": "Fidelidade",
@@ -104,7 +104,7 @@
 			"end": { "year": 2021, "month": 10 },
 			"company": "Fidelidade",
 			"website": "",
-			"logo": "/images/institutions/fidelidade.svg"
+			"logo": "/images/institutions/fidelidade.png"
 		},
 		{
 			"name": "Fidelidade",
@@ -121,7 +121,7 @@
 			"end": { "year": 2020, "month": 7 },
 			"company": "Fidelidade",
 			"website": "",
-			"logo": "/images/institutions/fidelidade.svg"
+			"logo": "/images/institutions/fidelidade.png"
 		},
 		{
 			"name": "Hospital Beatriz Angelo",
@@ -138,7 +138,7 @@
 			"end": { "year": 2017, "month": 7 },
 			"company": "Hospital Beatriz Angelo",
 			"website": "",
-			"logo": "/images/institutions/hospital-beatriz-angelo.svg"
+			"logo": "/images/institutions/hospital-beatriz-angelo.png"
 		},
 		{
 			"name": "Hospital da Luz",
@@ -155,7 +155,7 @@
 			"end": { "year": 2017, "month": 7 },
 			"company": "Hospital da Luz",
 			"website": "",
-			"logo": "/images/institutions/hospital-da-luz.svg"
+			"logo": "/images/institutions/hospital-da-luz.png"
 		},
 		{
 			"name": "Cherish",
@@ -189,7 +189,7 @@
 			"end": { "year": 2013 },
 			"company": "International Preparatory School (IPS)",
 			"website": "",
-			"logo": "/images/institutions/ips.svg"
+			"logo": "/images/institutions/ips.png"
 		}
 	],
 	"publications": [],
@@ -209,7 +209,7 @@
 			"end": { "year": 2023 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/ucp.svg"
+			"logo": "/images/institutions/ucp.jpg"
 		},
 		{
 			"institution": "University of Sussex",
@@ -226,7 +226,7 @@
 			"end": { "year": 2019 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/sussex.svg"
+			"logo": "/images/institutions/sussex.jpg"
 		},
 		{
 			"institution": "University of Brighton",
@@ -243,7 +243,7 @@
 			"end": { "year": 2018 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/brighton.svg"
+			"logo": "/images/institutions/brighton.jpg"
 		},
 		{
 			"institution": "St. Julian's School",
@@ -260,7 +260,7 @@
 			"end": { "year": 2015 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/st-julians.svg"
+			"logo": "/images/institutions/st-julians.jpg"
 		}
 	],
 	"volunteer": [],
