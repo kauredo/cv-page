@@ -7,7 +7,13 @@
 		"phone": "+351918502961",
 		"url": "",
 		"summary": "My journey in psychology began with a deep curiosity about how people think, feel, and grow. I am particularly drawn to working with students experiencing mood disorders, anxiety, and emerging personality disorders. My approach is grounded in cognitive behavioural therapy (CBT), with a strong focus on helping young people develop insight and practical strategies to manage their thoughts, emotions, and behaviours. I am committed to continued growth in the field of youth mental health and to delivering evidence-based, compassionate support for children and adolescents.",
-		"profiles": [],
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"url": "https://www.linkedin.com/in/inês-araújo-costa-53a749178/",
+				"username": "ines-costa"
+			}
+		],
 		"headline": "",
 		"blog": null,
 		"yearsOfExperience": 5,
@@ -63,7 +69,8 @@
 			"start": { "year": 2023, "month": 9 },
 			"end": {},
 			"company": "St. Dominic's International School",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/st-dominics.svg"
 		},
 		{
 			"name": "St. Dominic's International School",
@@ -79,7 +86,8 @@
 			"start": { "year": 2022, "month": 9 },
 			"end": { "year": 2023, "month": 9 },
 			"company": "St. Dominic's International School",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/st-dominics.svg"
 		},
 		{
 			"name": "Fidelidade",
@@ -95,7 +103,8 @@
 			"start": { "year": 2020, "month": 7 },
 			"end": { "year": 2021, "month": 10 },
 			"company": "Fidelidade",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/fidelidade.svg"
 		},
 		{
 			"name": "Fidelidade",
@@ -111,7 +120,8 @@
 			"start": { "year": 2020, "month": 1 },
 			"end": { "year": 2020, "month": 7 },
 			"company": "Fidelidade",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/fidelidade.svg"
 		},
 		{
 			"name": "Hospital Beatriz Angelo",
@@ -127,7 +137,8 @@
 			"start": { "year": 2017, "month": 7 },
 			"end": { "year": 2017, "month": 7 },
 			"company": "Hospital Beatriz Angelo",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/hospital-beatriz-angelo.svg"
 		},
 		{
 			"name": "Hospital da Luz",
@@ -143,7 +154,8 @@
 			"start": { "year": 2017, "month": 7 },
 			"end": { "year": 2017, "month": 7 },
 			"company": "Hospital da Luz",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/hospital-da-luz.svg"
 		},
 		{
 			"name": "Cherish",
@@ -159,7 +171,8 @@
 			"start": { "year": 2016 },
 			"end": { "year": 2017 },
 			"company": "Cherish",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/cherish.svg"
 		},
 		{
 			"name": "International Preparatory School (IPS)",
@@ -175,7 +188,8 @@
 			"start": { "year": 2013 },
 			"end": { "year": 2013 },
 			"company": "International Preparatory School (IPS)",
-			"website": ""
+			"website": "",
+			"logo": "/images/institutions/ips.svg"
 		}
 	],
 	"publications": [],
@@ -194,7 +208,8 @@
 			"start": { "year": 2021 },
 			"end": { "year": 2023 },
 			"website": "",
-			"gpa": ""
+			"gpa": "",
+			"logo": "/images/institutions/ucp.svg"
 		},
 		{
 			"institution": "University of Sussex",
@@ -210,7 +225,8 @@
 			"start": { "year": 2018 },
 			"end": { "year": 2019 },
 			"website": "",
-			"gpa": ""
+			"gpa": "",
+			"logo": "/images/institutions/sussex.svg"
 		},
 		{
 			"institution": "University of Brighton",
@@ -226,7 +242,8 @@
 			"start": { "year": 2015 },
 			"end": { "year": 2018 },
 			"website": "",
-			"gpa": ""
+			"gpa": "",
+			"logo": "/images/institutions/brighton.svg"
 		},
 		{
 			"institution": "St. Julian's School",
@@ -242,7 +259,8 @@
 			"start": { "year": 2005 },
 			"end": { "year": 2015 },
 			"website": "",
-			"gpa": ""
+			"gpa": "",
+			"logo": "/images/institutions/st-julians.svg"
 		}
 	],
 	"volunteer": [],
