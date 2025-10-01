@@ -300,6 +300,14 @@
 			"endDate": "2024"
 		}
 	],
+	"references": [
+		{
+			"name": "Dra. Carolina Viana",
+			"relationship": "Psicóloga Clínica",
+			"phone": "+351 917 919 595",
+			"email": "carolina.rf.viana@gmail.com"
+		}
+	],
 	"meta": {
 		"note": "Extraído de CV e mapeado para o esquema JSON Resume.",
 		"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",

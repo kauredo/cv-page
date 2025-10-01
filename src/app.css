@@ -137,6 +137,36 @@ body {
 	gap: 2rem;
 }
 
+/* References section (compact) */
+.cv-print .references {
+	margin-top: 0.5rem;
+	font-size: 11px;
+}
+
+.cv-print .references h2 {
+	font-size: 14px;
+	margin: 0 0 0.4rem;
+	padding: 0 0 0.25rem;
+	border-bottom: 1px solid var(--color-vasco-700);
+}
+
+.cv-print .references-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.cv-print .reference-item {
+	line-height: 1.2;
+}
+
+.cv-print .reference-item .ref-contact,
+.cv-print .reference-item .ref-rel {
+	color: #555;
+	font-weight: 400;
+	font-size: 10px;
+}
+
 .cv-print h1 {
 	font-size: 32px;
 	font-weight: 700;
@@ -246,7 +276,6 @@ body {
 		/* height: 297mm; */
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
-		color-adjust: exact;
 	}
 
 	.cv-print {
@@ -272,9 +301,19 @@ body {
 		margin-bottom: 0.5cm !important;
 	}
 
-	.cv-print section:not(.experience) {
-		/* page-break-inside: avoid; */
-		/* break-inside: avoid; */
+	.cv-print .references {
+		margin-top: 0.3cm !important;
+		font-size: 9pt;
+	}
+
+	.cv-print .references h2 {
+		font-size: 11pt;
+		margin-bottom: 4px;
+		border-bottom-width: 1px;
+	}
+
+	.cv-print .reference-item {
+		font-size: 8.5pt;
 	}
 
 	.cv-print .avatar {
@@ -289,9 +328,6 @@ body {
 	.cv-print a {
 		text-decoration: none !important;
 		color: var(--color-vasco-900) !important;
-	}
-
-	.cv-print .accomplishments > .mb-6 {
 	}
 
 	/* Simple fix: make timeline line taller for print */

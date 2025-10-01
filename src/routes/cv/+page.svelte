@@ -3,7 +3,7 @@
 	import cv from '$lib/data/cv_pt.json';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 
-	const { basics, work, education, skills, projects, accomplishments } = cv;
+	const { basics, work, education, skills, projects, accomplishments, references } = cv;
 
 	// Sort skills by years of experience
 	const sortedSkills = skills.sort(
@@ -329,6 +329,26 @@
 					</div>
 				{/each}
 			</div>
+		</section>
+
+		<!-- References (compact) -->
+		<section class="references">
+			<h2>Referências</h2>
+			{#if references && references.length > 0}
+				<div class="references-list">
+					{#each references as ref}
+						<div class="reference-item">
+							<strong>{ref.name}</strong>
+							{#if ref.relationship}<span class="ref-rel"> – {ref.relationship}</span>{/if}
+							{#if ref.contact}<span class="ref-contact"> | {ref.contact}</span>{/if}
+							{#if ref.email && !ref.contact}<span class="ref-contact"> | {ref.email}</span>{/if}
+							{#if ref.phone}<span class="ref-contact"> | {ref.phone}</span>{/if}
+						</div>
+					{/each}
+				</div>
+			{:else}
+				<p class="text-xs text-gray-500">Disponíveis mediante pedido.</p>
+			{/if}
 		</section>
 	</main>
 </div>
