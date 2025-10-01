@@ -1,0 +1,309 @@
+{
+	"basics": {
+		"name": "Inês Costa",
+		"label": "Psicóloga",
+		"image": "images/ines.jpg",
+		"email": "inescosta1997@gmail.com",
+		"phone": "+351918502961",
+		"url": "",
+		"summary": "O meu percurso em Psicologia nasceu da curiosidade em compreender como pensamos, sentimos e crescemos. Tenho especial interesse em apoiar indivíduos com perturbações do humor, ansiedade e dificuldades ligadas à personalidade emergente. Trabalho com base em Terapia Cognitivo-Comportamental (TCC), ajudando crianças e adolescentes a ganhar clareza e a criar estratégias práticas para gerir pensamentos, emoções e comportamentos. Estou focada no desenvolvimento contínuo e em prestar apoio próximo e baseado em evidência a crianças e adolescentes.",
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"url": "https://www.linkedin.com/in/inês-araújo-costa-53a749178/",
+				"username": "ines-costa"
+			}
+		],
+		"headline": "",
+		"blog": null,
+		"yearsOfExperience": 5,
+		"username": "",
+		"locationAsString": "Lisboa, Portugal",
+		"region": "Lisboa, Portugal",
+		"karma": 0,
+		"id": "",
+		"followers": 0,
+		"following": 0,
+		"picture": "",
+		"website": ""
+	},
+	"skills": [
+		{
+			"name": "Terapia Cognitivo-Comportamental (TCC)",
+			"level": "Intermédio",
+			"keywords": [],
+			"rating": 3
+		},
+		{
+			"name": "Proficiência Oral e Escrita em Inglês e Português",
+			"level": "Avançado",
+			"keywords": [],
+			"rating": 4
+		},
+		{
+			"name": "Proficiência em Microsoft Office: Word, Excel e Powerpoint",
+			"level": "Avançado",
+			"keywords": ["Word", "Excel", "PowerPoint"],
+			"rating": 4
+		},
+		{
+			"name": "Competência em criação de conteúdos digitais com Canva e Intelligência Artificial",
+			"level": "Intermédio",
+			"keywords": ["Análise de Marketing"],
+			"rating": 3
+		}
+	],
+	"projects": [],
+	"work": [
+		{
+			"name": "St. Dominic's International School",
+			"location": "Lisboa, Portugal",
+			"description": "",
+			"position": "Psicóloga Júnior",
+			"url": "",
+			"startDate": "2023-09-01",
+			"endDate": "",
+			"summary": "Dar apoio psicológico e socioemocional numa escola internacional exigente e dinâmica. Realizar sessões individuais, intervenção em crise, intervenção de grupo e sessões de promoção de competências socioemocionais. Trabalhar em proximidade com docentes, direção e famílias, tal como com apoio externo de outros especialistas para criar um ambiente de aprendizagem seguro e inclusivo.",
+			"highlights": [],
+			"isCurrentRole": true,
+			"start": { "year": 2023, "month": 9 },
+			"end": {},
+			"company": "St. Dominic's International School",
+			"website": "",
+			"logo": "/images/institutions/st-dominics.jpg"
+		},
+		{
+			"name": "St. Dominic's International School",
+			"location": "Lisboa, Portugal",
+			"description": "",
+			"position": "Estagiária de Psicologia",
+			"url": "",
+			"startDate": "2022-09-01",
+			"endDate": "2023-09-01",
+			"summary": "Apoio a psicóloga escolar na implementação do programa de aprendizagem socioemocional. Preparação e condução de sessões para alunos, inicialmente em cofacilitação e mais tarde com gestão de casos próprios sob supervisão. Apoio individual a alunos com dificuldades emocionais, sociais e comportamentais.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2022, "month": 9 },
+			"end": { "year": 2023, "month": 9 },
+			"company": "St. Dominic's International School",
+			"website": "",
+			"logo": "/images/institutions/st-dominics.jpg"
+		},
+		{
+			"name": "Fidelidade",
+			"location": "Lisboa, Portugal",
+			"description": "",
+			"position": "Gestora de Marketing Internacional",
+			"url": "",
+			"startDate": "2020-07-01",
+			"endDate": "2021-10-01",
+			"summary": "Garantir que todas as franquias cumpriam as políticas de marketing e as diretrizes da marca. Apoiar equipas regionais no planeamento de campanhas, fornecer orientação estratégica e rever materiais para garantir consistência e alinhamento com os padrões corporativos.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2020, "month": 7 },
+			"end": { "year": 2021, "month": 10 },
+			"company": "Fidelidade",
+			"website": "",
+			"logo": "/images/institutions/fidelidade.png"
+		},
+		{
+			"name": "Fidelidade",
+			"location": "Lisboa, Portugal",
+			"description": "",
+			"position": "Estagiária de Branding e Comunicação",
+			"url": "",
+			"startDate": "2020-01-01",
+			"endDate": "2020-07-01",
+			"summary": "Apoiar a equipa de branding e comunicação, incluindo tarefas de revisão de materiais, preparação de conteúdos e coordenação de iniciativas de marketing.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2020, "month": 1 },
+			"end": { "year": 2020, "month": 7 },
+			"company": "Fidelidade",
+			"website": "",
+			"logo": "/images/institutions/fidelidade.png"
+		},
+		{
+			"name": "Hospital Beatriz Ângelo",
+			"location": "Loures, Portugal",
+			"description": "",
+			"position": "Estagiária de Psicologia",
+			"url": "",
+			"startDate": "2017-07-01",
+			"endDate": "2017-07-31",
+			"summary": "Acompanhamento dos psicólogos em Psiquiatria de adultos e observei consultas de Psicologia Forense, Neuropsicologia, de Ligação e Externa. Contacto regular com a unidade de Psiquiatria infantil.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2017, "month": 7 },
+			"end": { "year": 2017, "month": 7 },
+			"company": "Hospital Beatriz Ângelo",
+			"website": "",
+			"logo": "/images/institutions/hospital-beatriz-angelo.png"
+		},
+		{
+			"name": "Hospital da Luz",
+			"location": "Lisboa, Portugal",
+			"description": "",
+			"position": "Estagiária de Psicologia",
+			"url": "",
+			"startDate": "2017-07-01",
+			"endDate": "2017-07-31",
+			"summary": "Observação de crianças e jovens com Perturbação de Défice de Atenção, autismo e dificuldades de aprendizagem. Participação em sessões de diagnóstico e observação de diferentes terapias, incluindo fala, cognitivo-comportamental e apoio à aprendizagem.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2017, "month": 7 },
+			"end": { "year": 2017, "month": 7 },
+			"company": "Hospital da Luz",
+			"website": "",
+			"logo": "/images/institutions/hospital-da-luz.png"
+		},
+		{
+			"name": "Cherish",
+			"location": "Brighton, Reino Unido",
+			"description": "Serviço sem fins lucrativos para jovens adultos com deficiência.",
+			"position": "Assistente de Apoio Juvenil",
+			"url": "",
+			"startDate": "2016-01-01",
+			"endDate": "2017-01-01",
+			"summary": "Apoio a jovens adultos com deficiência em sessões de grupo e programas de férias. Garantir a sua participação ativa, bem-estar e desenvolvimento de competências de vida diária.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2016 },
+			"end": { "year": 2017 },
+			"company": "Cherish",
+			"website": "",
+			"logo": "/images/institutions/cherish.svg"
+		},
+		{
+			"name": "International Preparatory School (IPS)",
+			"location": "Portugal",
+			"description": "",
+			"position": "Assistente de Professora",
+			"url": "",
+			"startDate": "2013-01-01",
+			"endDate": "2013-12-31",
+			"summary": "Apoio em contexto de sala de aula e acompanhamento de alunos em tarefas diárias.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": { "year": 2013 },
+			"end": { "year": 2013 },
+			"company": "International Preparatory School (IPS)",
+			"website": "",
+			"logo": "/images/institutions/ips.png"
+		}
+	],
+	"publications": [],
+	"education": [
+		{
+			"institution": "Universidade Católica Portuguesa",
+			"url": "",
+			"area": "Psicologia do Bem-Estar e Promoção da Saúde",
+			"studyType": "Mestrado (MSc)",
+			"startDate": "2021-01-01",
+			"endDate": "2023-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "",
+			"start": { "year": 2021 },
+			"end": { "year": 2023 },
+			"website": "",
+			"gpa": "",
+			"logo": "/images/institutions/ucp.jpg"
+		},
+		{
+			"institution": "University of Sussex",
+			"url": "",
+			"area": "Marketing e Psicologia do Consumidor",
+			"studyType": "Mestrado (MSc)",
+			"startDate": "2018-01-01",
+			"endDate": "2019-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "",
+			"start": { "year": 2018 },
+			"end": { "year": 2019 },
+			"website": "",
+			"gpa": "",
+			"logo": "/images/institutions/sussex.jpg"
+		},
+		{
+			"institution": "University of Brighton",
+			"url": "",
+			"area": "Psicologia Aplicada",
+			"studyType": "Licenciatura (BSc)",
+			"startDate": "2015-01-01",
+			"endDate": "2018-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "Presidente da Equipa de Voleibol (2017–2018)",
+			"start": { "year": 2015 },
+			"end": { "year": 2018 },
+			"website": "",
+			"gpa": "",
+			"logo": "/images/institutions/brighton.jpg"
+		},
+		{
+			"institution": "St. Julian's School",
+			"url": "",
+			"area": "International Baccalaureate (IB) / IGCSE",
+			"studyType": "",
+			"startDate": "2005-01-01",
+			"endDate": "2015-01-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "",
+			"start": { "year": 2005 },
+			"end": { "year": 2015 },
+			"website": "",
+			"gpa": "",
+			"logo": "/images/institutions/st-julians.jpg"
+		}
+	],
+	"volunteer": [],
+	"awards": [],
+	"languages": [
+		{
+			"language": "Inglês",
+			"fluency": "Nativo / Proficiência Bilingue"
+		},
+		{
+			"language": "Português",
+			"fluency": "Nativo / Proficiência Bilingue"
+		}
+	],
+	"interests": [],
+	"references": [],
+	"certificates": [],
+	"accomplishments": [
+		{
+			"title": "Level 2 Certificate in Child Protection",
+			"endDate": "2025",
+			"link": "https://media.licdn.com/dms/image/v2/D4D2DAQH-TT8_IcMFww/profile-treasury-image-shrink_800_800/B4DZj8YxLiIYAc-/0/1756581008893?e=1759784400&v=beta&t=sl2xNFYkaClZQtVBi8W2kviShqGNp09a2VqKInDid3Q",
+			"description": "Certificação em Proteção Infantil.",
+			"issuer": "ECIS, the Educational Collaborative for International Schools"
+		},
+		{
+			"title": "Formação Inicial Psicólogo Júnior",
+			"endDate": "2024",
+			"link": "https://media.licdn.com/dms/image/v2/D4D2DAQHGDogsT6UXfA/profile-treasury-image-shrink_1280_1280/B4DZj8Zi9lG8AQ-/0/1756581212828?e=1759784400&v=beta&t=HSpadDw5_auoDpWRVEfAM17Zn5qVO_AXSIHPiQ4ZJes",
+			"description": "Credential Nº 14297571.",
+			"issuer": "Ordem dos Psicólogos Portugueses"
+		},
+		{
+			"title": "Certificate of Appreciation",
+			"issuer": "International School Counselor Association (ISCA)",
+			"link": "https://media.licdn.com/dms/image/v2/D4D2DAQFpwD6lQnRrMg/profile-treasury-image-shrink_800_800/B4DZj8YCY4HwAY-/0/1756580817334?e=1759784400&v=beta&t=Og9dh5dXMce6Bx4VjqzUzJ5beKFGClh2PI2h6MGgnZw",
+			"endDate": "2024"
+		}
+	],
+	"meta": {
+		"note": "Extraído de CV e mapeado para o esquema JSON Resume.",
+		"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+		"version": "v1.0.0",
+		"lastModified": "2025-09-01T12:00:00"
+	}
+}

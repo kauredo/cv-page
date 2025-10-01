@@ -5,15 +5,15 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-vasco-100: #e8f4f8;
-	--color-vasco-200: #d1e9f2;
-	--color-vasco-300: #a3d3e6;
-	--color-vasco-400: #75bdda;
-	--color-vasco-500: #4da7ce;
-	--color-vasco-600: #3b8bb5;
-	--color-vasco-700: #2d6b8a;
-	--color-vasco-800: #1f4b60;
-	--color-vasco-900: #112b35;
+	--color-vasco-100: #fffde7;
+	--color-vasco-200: #fff9c4;
+	--color-vasco-300: #fff59d;
+	--color-vasco-400: #fff176;
+	--color-vasco-500: #ffee58;
+	--color-vasco-600: #ffeb3b;
+	--color-vasco-700: #fdd835;
+	--color-vasco-800: #fbc02d;
+	--color-vasco-900: #f9a825;
 }
 
 html {
@@ -44,7 +44,7 @@ body {
 	padding: 1rem;
 	font-size: 13px;
 	line-height: 1.6;
-	color: #2d3748;
+	color: #222;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	background: white;
 }
@@ -59,6 +59,8 @@ body {
 @media screen {
 	.cv-print {
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid var(--color-vasco-700);
+		padding-left: 1rem;
 		margin-bottom: 4rem;
 	}
 
@@ -99,8 +101,6 @@ body {
 	flex-direction: column;
 	gap: 1rem;
 	margin-bottom: 1.5rem;
-	border-bottom: 2px solid #e2e8f0;
-	padding-bottom: 1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -124,11 +124,11 @@ body {
 }
 
 .cv-print .avatar {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	border-radius: 15%;
 	object-fit: cover;
-	border: 2px solid #e2e8f0;
+	border: 2px solid var(--color-vasco-200);
 }
 
 .cv-print main {
@@ -147,22 +147,22 @@ body {
 
 .cv-print h2 {
 	font-size: 20px;
-	color: #2d3748;
+	color: #333;
 	margin: 0 0 1.5rem;
 	padding-bottom: 0.5rem;
-	border-bottom: 2px solid #4299e180;
+	border-bottom: 2px solid var(--color-vasco-700);
 }
 
 .cv-print h3 {
 	font-size: 16px;
 	font-weight: 600;
-	color: #2d3748;
+	color: #333;
 	margin: 0;
 }
 
 .cv-print .title {
 	font-size: 18px;
-	color: #4a5568;
+	/* color: var(--color-vasco-700); */
 	margin: 0.5rem 0;
 }
 
@@ -173,12 +173,16 @@ body {
 .cv-print .contact-item {
 	margin-bottom: 0.5rem;
 	font-size: 14px;
-	color: #4a5568;
+	/* color: var(--color-vasco-800); */
 }
 
 .cv-print .contact-item a {
-	color: #4299e1;
+	color: var(--color-vasco-800);
 	text-decoration: none;
+}
+
+.cv-print .contact-item a:hover {
+	text-decoration: underline;
 }
 
 .cv-print .job {
@@ -198,14 +202,14 @@ body {
 }
 
 .cv-print .company {
-	color: #4a5568;
+	color: var(--color-vasco-700);
 	font-size: 15px;
 	margin-left: 0.5rem;
 }
 
 .cv-print .job-title-group span::before {
 	content: '•';
-	color: #718096;
+	color: var(--color-vasco-800);
 	margin: 0 0.5rem;
 }
 
@@ -226,7 +230,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	border-bottom: 1px dotted #e2e8f0;
+	border-bottom: 1px dotted var(--color-vasco-700);
 	padding-bottom: 0.25rem;
 }
 
@@ -238,7 +242,7 @@ body {
 
 	html,
 	body {
-		width: 210mm;
+		width: 220mm;
 		/* height: 297mm; */
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
@@ -265,12 +269,12 @@ body {
 	}
 
 	.cv-print section {
-		margin-bottom: 1cm !important;
+		margin-bottom: 0.5cm !important;
 	}
 
 	.cv-print section:not(.experience) {
-		page-break-inside: avoid;
-		break-inside: avoid;
+		/* page-break-inside: avoid; */
+		/* break-inside: avoid; */
 	}
 
 	.cv-print .avatar {
@@ -284,7 +288,10 @@ body {
 
 	.cv-print a {
 		text-decoration: none !important;
-		color: inherit !important;
+		color: var(--color-vasco-900) !important;
+	}
+
+	.cv-print .accomplishments > .mb-6 {
 	}
 
 	/* Simple fix: make timeline line taller for print */

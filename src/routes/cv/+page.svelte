@@ -1,5 +1,6 @@
 <script lang="ts">
-	import cv from '$lib/data/cv.json';
+	// import cv from '$lib/data/cv.json';
+	import cv from '$lib/data/cv_pt.json';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 
 	const { basics, work, education, skills, projects, accomplishments } = cv;
@@ -85,16 +86,16 @@
 
 	<main>
 		<section class="summary">
-			<h2>Summary</h2>
+			<h2>Resumo</h2>
 			<p class="summary-text">{basics.summary}</p>
 		</section>
 
 		<section class="experience">
-			<h2>Professional Experience</h2>
+			<h2>Experiência Profissional</h2>
 			<div class="relative">
 				<!-- Timeline line -->
 				<div
-					class="absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b from-blue-200 via-blue-300 to-blue-200"
+					class="from-vasco-700 via-vasco-800 to-vasco-700 absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b"
 				></div>
 
 				{#each work as job, index}
@@ -102,7 +103,7 @@
 						<!-- Timeline dot/logo - only show if first entry or different company -->
 						{#if index === 0 || work[index - 1].company !== job.company}
 							<div
-								class="relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg"
+								class="from-vasco-700 to-vasco-800 relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br shadow-lg"
 							>
 								{#if job.logo}
 									<img
@@ -113,7 +114,7 @@
 								{:else}
 									<!-- Fallback icon -->
 									<div
-										class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white"
+										class="bg-vasco-700 flex h-10 w-10 items-center justify-center rounded-full text-white"
 									>
 										<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
 											<path
@@ -133,7 +134,7 @@
 							<div class="mt-4 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 								<div class="mb-1 sm:mb-0">
 									<h3 class="text-lg font-semibold text-gray-800">{job.position}</h3>
-									<p class="text-sm font-medium text-blue-600">{job.company}</p>
+									<p class=" text-sm font-medium">{job.company}</p>
 									<p class="text-xs text-gray-500">{job.location}</p>
 								</div>
 								<span class="flex items-center text-sm text-gray-500">
@@ -145,7 +146,7 @@
 										/>
 									</svg>
 									{new Date(job.startDate).getFullYear()} -
-									{job.endDate ? new Date(job.endDate).getFullYear() : 'Present'}
+									{job.endDate ? new Date(job.endDate).getFullYear() : 'Presente'}
 								</span>
 							</div>
 							{#if job.summary}
@@ -159,7 +160,7 @@
 
 		{#if projects && projects.length > 0}
 			<section class="projects">
-				<h2>Featured Projects</h2>
+				<h2>Projetos em Destaque</h2>
 				{#each projects as project}
 					<div class="project mb-6">
 						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
@@ -192,7 +193,7 @@
 		{/if}
 
 		<section class="skills">
-			<h2>Professional Skills</h2>
+			<h2>Competências Profissionais</h2>
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 				{#each sortedSkills as skill}
 					<div
@@ -211,7 +212,7 @@
 
 		{#if accomplishments && accomplishments.length > 0}
 			<section class="accomplishments">
-				<h2>Certificates & Accomplishments</h2>
+				<h2>Certificados e Conquistas Pessoais</h2>
 				{#each accomplishments as accomplishment}
 					<div class="mb-6">
 						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
@@ -222,8 +223,8 @@
 										href={accomplishment.link}
 										target="_blank"
 										rel="noopener noreferrer"
-										class="text-sm text-blue-600 hover:text-blue-800 hover:underline"
-										>View Certificate</a
+										class="text-vasco-800 hover:text-vasco-800 text-sm hover:underline"
+										>Ver Certificado</a
 									>
 								{/if}
 							</div>
@@ -240,17 +241,20 @@
 							</span>
 						</div>
 						<p class="text-sm leading-relaxed text-gray-600">{accomplishment.description}</p>
+						{#if accomplishment.issuer}
+							<p class="mt-1 text-xs text-gray-500">Emitido por: {accomplishment.issuer}</p>
+						{/if}
 					</div>
 				{/each}
 			</section>
 		{/if}
 
 		<section class="education">
-			<h2>Education</h2>
+			<h2>Educação</h2>
 			<div class="relative">
 				<!-- Timeline line -->
 				<div
-					class="absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b from-green-200 via-green-300 to-green-200"
+					class="from-vasco-700 via-vasco-800 to-vasco-700 absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b"
 				></div>
 
 				{#each education as edu, index}
@@ -258,7 +262,7 @@
 						<!-- Timeline dot/logo - only show if first entry or different institution -->
 						{#if index === 0 || education[index - 1].institution !== edu.institution}
 							<div
-								class="relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-green-50 to-green-100 shadow-lg"
+								class="from-vasco-700 to-vasco-800 relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br shadow-lg"
 							>
 								{#if edu.logo}
 									<img
@@ -269,7 +273,7 @@
 								{:else}
 									<!-- Fallback icon -->
 									<div
-										class="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 text-white"
+										class="bg-vasco-700 flex h-10 w-10 items-center justify-center rounded-full text-white"
 									>
 										<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
 											<path
@@ -289,7 +293,7 @@
 							<div class="mt-4 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 								<div class="mb-1 sm:mb-0">
 									<h3 class="text-lg font-semibold text-gray-800">{edu.institution}</h3>
-									<p class="text-sm font-medium text-green-600">
+									<p class=" text-sm font-medium">
 										{edu.area}
 										{edu.studyType ? `- ${edu.studyType}` : ''}
 									</p>
@@ -315,7 +319,7 @@
 							{#if edu.gpa}
 								<div class="mt-1">
 									<span
-										class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800"
+										class="bg-vasco-700 inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium"
 									>
 										{edu.gpa}
 									</span>
