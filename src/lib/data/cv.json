@@ -55,6 +55,23 @@
 	],
 	"projects": [],
 	"work": [
+    {
+			"name": "Cadin",
+			"location": "Cascais, Portugal",
+			"description": "",
+			"position": "Clinical Psychologist",
+			"url": "",
+			"startDate": "2025-10-01",
+			"endDate": "",
+			"summary": "Psychological intervention using a cognitive-behavioral (CBT) and integrative approach for children and adolescents with various emotional and behavioral difficulties. Intervention in mood and anxiety disorders, personality difficulties, and self-harming behaviors.",
+			"highlights": [],
+			"isCurrentRole": true,
+			"start": { "year": 2025, "month": 10 },
+			"end": {},
+			"company": "Cadin",
+			"website": "",
+			"logo": "/images/institutions/cadin.png"
+		},
 		{
 			"name": "St. Dominic's International School",
 			"location": "Lisbon, Portugal",

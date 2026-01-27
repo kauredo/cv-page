@@ -55,6 +55,23 @@
 	],
 	"projects": [],
 	"work": [
+    {
+			"name": "Cadin",
+			"location": "Cascais, Portugal",
+			"description": "",
+			"position": "Psicóloga Clínica",
+			"url": "",
+			"startDate": "2025-10-01",
+			"endDate": "",
+			"summary": "Intervenção psicológica com abordagem cognitivo-comportamental (CBT) e integrativa junto de crianças e adolescentes com diversas dificuldades emocionais e comportamentais. Intervenção em perturbações do humor e de ansiedade, dificuldades associadas à personalidade e comportamentos auto-lesivos.",
+			"highlights": [],
+			"isCurrentRole": true,
+			"start": { "year": 2025, "month": 10 },
+			"end": {},
+			"company": "Cadin",
+			"website": "",
+			"logo": "/images/institutions/cadin.png"
+		},
 		{
 			"name": "St. Dominic's International School",
 			"location": "Lisboa, Portugal",
