@@ -216,17 +216,19 @@
 				{#each accomplishments as accomplishment}
 					<div class="mb-6">
 						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
-							<div class="mb-1 flex items-baseline gap-2 sm:mb-0">
-								<h3 class="text-lg font-semibold text-gray-800">{accomplishment.title}</h3>
-								{#if accomplishment.link}
-									<a
-										href={accomplishment.link}
-										target="_blank"
-										rel="noopener noreferrer"
-										class="text-vasco-800 hover:text-vasco-800 text-sm hover:underline"
-										>Ver Certificado</a
-									>
-								{/if}
+							<div class="mr-4 mb-1 flex items-baseline gap-2 sm:mb-0">
+								<h3 class="text-lg font-semibold text-gray-800">
+									{accomplishment.title}
+									{#if accomplishment.link}
+										<a
+											href={accomplishment.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="text-vasco-800 hover:text-vasco-800 text-sm font-normal whitespace-nowrap hover:underline"
+											>Ver Certificado</a
+										>
+									{/if}
+								</h3>
 							</div>
 							<span class="text-sm text-gray-500">
 								{#if accomplishment.startDate && accomplishment.endDate}

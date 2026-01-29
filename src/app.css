@@ -335,6 +335,10 @@ body {
 		overflow: hidden;
 	}
 
+	.cv-print .education {
+		break-inside: avoid;
+	}
+
 	.cv-print .experience .absolute {
 		height: 180vh !important;
 	}
