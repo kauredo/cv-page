@@ -4,7 +4,28 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Font fallback metrics to prevent layout shift */
+@font-face {
+	font-family: 'Plus Jakarta Sans Fallback';
+	src: local('Arial');
+	size-adjust: 104%;
+	ascent-override: 98%;
+	descent-override: 24%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: 'Instrument Sans Fallback';
+	src: local('Arial');
+	size-adjust: 103%;
+	ascent-override: 96%;
+	descent-override: 23%;
+	line-gap-override: 0%;
+}
+
 @theme {
+	/* Brand colors - vasco blue */
+	--color-vasco-50: #eef6ff;
 	--color-vasco-100: #d5e3ff;
 	--color-vasco-200: #cbe0ff;
 	--color-vasco-300: #a5cdff;
@@ -14,27 +35,66 @@
 	--color-vasco-700: #2f6fd0;
 	--color-vasco-800: #1f4fad;
 	--color-vasco-900: #0f2e8a;
+	--color-vasco-950: #081b5c;
+
+	/* Tinted neutrals - warm blue undertone */
+	--color-slate-50: oklch(98% 0.005 250);
+	--color-slate-100: oklch(95% 0.008 250);
+	--color-slate-200: oklch(90% 0.01 250);
+	--color-slate-300: oklch(82% 0.012 250);
+	--color-slate-400: oklch(65% 0.015 250);
+	--color-slate-500: oklch(50% 0.015 250);
+	--color-slate-600: oklch(40% 0.015 250);
+	--color-slate-700: oklch(30% 0.012 250);
+	--color-slate-800: oklch(22% 0.01 250);
+	--color-slate-900: oklch(15% 0.008 250);
+	--color-slate-950: oklch(10% 0.005 250);
+
+	/* Custom easing curves */
+	--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+	/* Font families with fallback metrics */
+	--font-display: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, sans-serif;
+	--font-body: 'Instrument Sans', 'Instrument Sans Fallback', system-ui, sans-serif;
 }
 
 html {
-	/* always show scrollbar */
 	overflow-y: scroll;
 	overflow-x: hidden;
 	scrollbar-width: thin;
-	scrollbar-color: var(--color-vasco-300) var(--color-gray-100);
+	scrollbar-color: var(--color-vasco-400) var(--color-slate-100);
 
 	&.dark {
-		scrollbar-color: var(--color-vasco-100) var(--color-gray-800);
+		scrollbar-color: var(--color-vasco-500) var(--color-slate-900);
 	}
 }
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-	/* animation-duration: 4s; */
+	animation-timing-function: var(--ease-out-expo);
 }
 
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-body);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Display headings use the display font */
+h1, h2, .font-display {
+	font-family: var(--font-display);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* CV Print Styles */

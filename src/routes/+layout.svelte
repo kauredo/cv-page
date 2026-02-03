@@ -32,16 +32,40 @@
 <MetaTags {...metaTags} />
 
 <svelte:head>
+	<!-- JSON-LD Structured Data -->
+	{@html `<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Vasco Kaufmann Figueiredo",
+			"alternateName": "VascoKF",
+			"url": "https://www.vascokf.com",
+			"image": "https://www.vascokf.com/images/portfolio.webp",
+			"jobTitle": "Full Stack Web Developer",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Medihive"
+			},
+			"sameAs": [
+				"https://github.com/kauredo",
+				"https://linkedin.com/in/vascokf"
+			],
+			"knowsAbout": ["Ruby on Rails", "React", "TypeScript", "SvelteKit", "Web Development"],
+			"description": "Full-stack web developer building clean, functional, and playful web apps."
+		}
+	</script>`}
+
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
 		rel="preload"
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
 		as="style"
 	/>
 	<link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
 		media="print"
 		onload={function () {
 			this.media = 'all';
@@ -49,7 +73,7 @@
 	/>
 	<noscript>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 			type="text/css"
 		/>
@@ -57,7 +81,7 @@
 </svelte:head>
 
 <div
-	class="to-vasco-100 flex min-h-screen flex-col bg-gradient-to-br from-stone-50 dark:from-gray-800 dark:to-gray-900 dark:text-gray-200"
+	class="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 to-vasco-50 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100"
 >
 	<Navbar />
 	<main class="flex-1">

@@ -6,14 +6,15 @@
 
 <a
 	{href}
-	class="group inline-flex w-fit transform items-center gap-2 pr-3 text-gray-500 duration-300 ease-in-out"
+	class="group inline-flex w-fit items-center gap-2 pr-3 text-slate-500 transition-colors duration-200 hover:text-vasco-600 dark:text-slate-400 dark:hover:text-vasco-400"
 	style="view-transition-name: back-button"
 >
 	<svg
-		class="rotate-90 fill-gray-500 group-hover:fill-gray-600"
+		class="rotate-90 fill-current transition-transform duration-200 group-hover:-translate-x-1"
 		style={`height: ${height}px;`}
 		version="1.1"
 		viewBox="0 0 65.516 62.116"
+		aria-hidden="true"
 	>
 		<g transform="translate(-25.536 -93.179)">
 			<path
@@ -27,6 +28,6 @@
 	</svg>
 
 	{#if text}
-		<h3 class="text-lg font-semibold group-hover:text-gray-600">{text}</h3>
+		<span class="text-lg font-semibold">{text}</span>
 	{/if}
 </a>

@@ -6,7 +6,6 @@
 	let darkMode = false;
 
 	onMount(() => {
-		// Only get the value, we already applied the class in the inline script
 		const savedDarkMode = localStorage.getItem('darkMode');
 		darkMode =
 			savedDarkMode !== null
@@ -15,7 +14,6 @@
 
 		darkModeStore.set(darkMode);
 
-		// Listen for system preference changes
 		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 		const handleChange = (e: MediaQueryListEvent) => {
 			if (localStorage.getItem('darkMode') === null) {
@@ -49,13 +47,13 @@
 </script>
 
 <header
-	class="sticky top-0 z-20 bg-stone-50 shadow dark:bg-gray-800 dark:shadow-stone-50 print:hidden"
+	class="sticky top-0 z-20 border-b border-slate-200/50 bg-white/80 backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/80 print:hidden"
 >
-	<nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-		<a href="/" class="flex items-center gap-2 text-xl font-bold">
+	<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+		<a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white">
 			<img
 				src="/images/logo.svg"
-				class="h-6 w-auto dark:invert"
+				class="h-7 w-auto dark:invert"
 				on:error={(event) => {
 					const target = event.target as HTMLImageElement;
 					if (target) target.src = '/images/logo.webp';
@@ -64,24 +62,48 @@
 			/>
 			<span class="sr-only">Home</span>
 		</a>
-		<div class="flex items-center space-x-4">
-			<a href="/projects" class="hover:underline dark:text-stone-50">Projects</a>
-			<a href="/contact" class="hover:underline dark:text-stone-50">Contact</a>
-			<label class="inline-flex cursor-pointer items-center">
-				<input
-					type="checkbox"
-					value=""
-					class="peer sr-only"
-					checked={darkMode}
-					on:change={toggleDarkMode}
-				/>
-				<div
-					class="peer peer-checked:bg-vasco-600 peer-focus:ring-vasco-300 dark:peer-checked:bg-vasco-600 dark:peer-focus:ring-vasco-800 relative h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 after:absolute after:start-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-stone-50 after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-stone-50 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700"
-				></div>
-				<span class="ms-3 w-10 text-sm font-medium text-gray-900 dark:text-gray-300">
-					{darkMode ? 'Dark' : 'Light'}
+		<div class="flex items-center gap-6">
+			<a
+				href="/projects"
+				class="text-sm font-medium text-slate-600 transition-colors hover:text-vasco-600 dark:text-slate-300 dark:hover:text-vasco-400"
+			>
+				Projects
+			</a>
+			<a
+				href="/contact"
+				class="text-sm font-medium text-slate-600 transition-colors hover:text-vasco-600 dark:text-slate-300 dark:hover:text-vasco-400"
+			>
+				Contact
+			</a>
+
+			<!-- Dark mode toggle -->
+			<button
+				on:click={toggleDarkMode}
+				class="relative flex h-8 w-14 items-center rounded-full bg-slate-200 p-1 transition-colors dark:bg-slate-700"
+				aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+				role="switch"
+				aria-checked={darkMode}
+			>
+				<span
+					class="flex h-6 w-6 transform items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-200 {darkMode
+						? 'translate-x-6'
+						: 'translate-x-0'}"
+				>
+					{#if darkMode}
+						<svg class="h-4 w-4 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+						</svg>
+					{:else}
+						<svg class="h-4 w-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+							<path
+								fill-rule="evenodd"
+								d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+					{/if}
 				</span>
-			</label>
+			</button>
 		</div>
 	</nav>
 </header>

@@ -12,6 +12,7 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import Skills from '$lib/components/Skills.svelte';
 	import { onMount } from 'svelte';
+	import { debounce } from '$lib/utils';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
@@ -31,19 +32,46 @@
 
 	onMount(() => {
 		updateProjects();
-		window.addEventListener('resize', updateProjects);
+		const debouncedUpdate = debounce(updateProjects, 150);
+		window.addEventListener('resize', debouncedUpdate);
 		return () => {
-			window.removeEventListener('resize', updateProjects);
+			window.removeEventListener('resize', debouncedUpdate);
 		};
 	});
 </script>
 
-<div class="mx-auto max-w-4xl space-y-16 p-6">
-	<Hero />
-	<Projects {projects} />
-	<Experiences {experiences} />
-	<Schools {education} />
-	<Skills {skills} />
-	<Now />
-	<Contact />
+<!-- Hero breaks out of container for maximum impact -->
+<Hero />
+
+<!-- Main content with varied spacing for visual rhythm -->
+<div class="mx-auto max-w-6xl px-6">
+	<!-- Projects section - tight spacing after hero -->
+	<section class="pb-24">
+		<Projects {projects} />
+	</section>
+
+	<!-- Experience section - more breathing room -->
+	<section class="pb-32">
+		<Experiences {experiences} />
+	</section>
+
+	<!-- Education - moderate spacing -->
+	<section class="pb-20">
+		<Schools {education} />
+	</section>
+
+	<!-- Skills - moderate spacing -->
+	<section class="pb-20">
+		<Skills {skills} />
+	</section>
+
+	<!-- Now section - moderate spacing -->
+	<section class="pb-24">
+		<Now />
+	</section>
+
+	<!-- Contact section - generous spacing -->
+	<section class="pb-32">
+		<Contact />
+	</section>
 </div>

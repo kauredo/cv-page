@@ -22,22 +22,29 @@
 	}
 </script>
 
-<section in:fade={{ duration: 200 }}>
-	<h2 class="mb-4 border-b pb-2 text-2xl font-bold">What I'm Up to Now</h2>
-	<div class="space-y-2">
+<section in:fade={{ duration: 200 }} aria-labelledby="now-heading">
+	<h2
+		id="now-heading"
+		class="mb-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+	>
+		What I'm Up to Now
+	</h2>
+	<div class="space-y-4">
 		{#each activities as { emoji, text }, index}
 			<div
 				use:inview={{ rootMargin: '0px', threshold: 0.2 }}
 				on:inview_change={handleIntersect(index)}
 			>
 				{#if visibleItems[index]}
-					<p
-						in:fly={{ duration: 300, x: -20, delay: index * 100 }}
-						class="transform text-gray-600 transition-all duration-200 hover:translate-x-2 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+					<div
+						in:fly={{ duration: 400, x: -20, delay: index * 80 }}
+						class="group flex items-start gap-4 rounded-xl p-3 transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800/50"
 					>
-						<span class="inline-block w-8">{emoji}</span>
-						{text}
-					</p>
+						<span class="text-2xl" aria-hidden="true">{emoji}</span>
+						<p class="text-slate-600 transition-colors group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-white">
+							{text}
+						</p>
+					</div>
 				{/if}
 			</div>
 		{/each}
