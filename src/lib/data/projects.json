@@ -1,38 +1,125 @@
 [
 	{
-		"title": "Real Estate Scraper",
-		"slug": "real-estate-scraper",
-		"description": "A tool for scraping and publishing a real estate portfolio on a custom domain.",
-		"details": "Built for a real estate agent, this tool scrapes listings from her company’s website and republishes them with better SEO and a personalized domain. It supports a blog system and is now being rebuilt as an API to serve other agents. Built with Rails and React, with a focus on SEO-first content publishing.",
+		"title": "MyAgentWebsite",
+		"slug": "myagentwebsite",
+		"description": "SaaS platform for real estate agents to create professional websites without technical knowledge.",
+		"details": "A multi-tenant 'Shopify for Real Estate Agents' platform that empowers agents and small agencies to launch professional websites instantly. Features a unified admin backoffice for managing listings, blog posts, testimonials, and newsletters. Each agent gets their own branded domain with white-label capabilities. Built on a Rails API with multiple React frontends (customer site, admin dashboard, and marketing site), all deployed on Railway and Vercel.",
 		"stack": [
 			"Ruby on Rails",
 			"React",
-			"TailwindCSS",
 			"TypeScript",
-			"Web Scraping",
-			"SEO",
-			"Fly.io",
-			"PostgreSQL"
+			"TailwindCSS",
+			"PostgreSQL",
+			"Railway",
+			"Vercel"
 		],
 		"images": [
-			"/images/sgg-1.webp",
-			"/images/sgg-2.webp",
-			"/images/sgg-3.webp",
-			"/images/sgg-4.webp"
+			"/images/myagentwebsite-1.webp",
+			"/images/myagentwebsite-2.webp",
+			"/images/myagentwebsite-3.webp",
+			"/images/myagentwebsite-4.webp"
 		],
 		"github": "https://github.com/kauredo/real-estate-scraper",
-		"updatedAt": "2025-03-17",
+		"updatedAt": "2026-01-30",
 		"link": "https://sofiagalvaogroup.com"
+	},
+	{
+		"title": "UpSpeech",
+		"slug": "upspeech",
+		"description": "AI-powered speech therapy SaaS platform for speech-language pathologists focused on stuttering therapy.",
+		"details": "A multi-tenant SaaS platform that helps speech-language pathologists (SLPs) and their patients with stuttering therapy. Uses AI to automate clinical report writing and provide real-time speech analysis tools. Features include session recording, automated transcription via Groq, disfluency detection, and progress tracking. The platform streamlines the therapeutic workflow so clinicians can focus on patient care.",
+		"stack": [
+			"Ruby on Rails",
+			"React",
+			"TypeScript",
+			"Python",
+			"FastAPI",
+			"PostgreSQL",
+			"Docker",
+			"AI/ML"
+		],
+		"images": [
+			"/images/upspeech-1.webp",
+			"/images/upspeech-2.webp",
+			"/images/upspeech-3.webp",
+			"/images/upspeech-4.webp"
+		],
+		"updatedAt": "2026-02-03"
+	},
+	{
+		"title": "Basketball Stats App",
+		"slug": "basketball-stats-app",
+		"description": "Full-stack basketball statistics tracking with real-time game scoring, shot charts, and cross-platform mobile support.",
+		"details": "A comprehensive basketball statistics platform featuring live game scoring, visual shot charts with heatmaps and zone analysis, player comparisons with radar charts, and automatic league standings calculations. Built as a monorepo with shared TypeScript types, it includes both a React web app and a React Native mobile app (iOS/Android) powered by a Convex serverless backend for real-time updates.",
+		"stack": [
+			"React",
+			"React Native",
+			"Convex",
+			"TypeScript",
+			"TailwindCSS",
+			"Turborepo",
+			"Recharts"
+		],
+		"images": [
+			"/images/bball-stats-1.webp",
+			"/images/bball-stats-2.webp",
+			"/images/bball-stats-3.webp",
+			"/images/bball-stats-4.webp"
+		],
+		"github": "https://github.com/kauredo/basketball-stats-app",
+		"updatedAt": "2026-02-03"
+	},
+	{
+		"title": "Basketball Video Analyzer",
+		"slug": "basketball-video-analyzer",
+		"description": "Desktop app for basketball coaches to cut, categorize, and organize video clips for team scouting.",
+		"details": "A cross-platform desktop application (Windows, macOS, Linux) built for basketball coaches and analysts. Allows cutting specific plays from game footage, organizing clips with hierarchical categories, and saving category structures as reusable presets across projects. Features include time-based search, automatic clip organization, and export capabilities for sharing with teams and players. Includes auto-update functionality.",
+		"stack": [
+			"Electron",
+			"TypeScript",
+			"Webpack",
+			"SQLite"
+		],
+		"images": [
+			"/images/bball-video-1.webp",
+			"/images/bball-video-2.webp",
+			"/images/bball-video-3.webp",
+			"/images/bball-video-4.webp"
+		],
+		"github": "https://github.com/kauredo/basketball-video-analyzer",
+		"updatedAt": "2025-12-09"
+	},
+	{
+		"title": "Wallet Joy",
+		"slug": "wallet-joy",
+		"description": "Personal finance tracker with AI-powered bank statement parsing and household budget management.",
+		"details": "A modern personal finance app that makes managing money enjoyable. Features AI-powered parsing of bank statements (CSV, TSV, or images) using OpenAI GPT-4o, automatic transaction categorization, recurring transaction support, household management with role-based access, savings goals with visual progress, and interactive spending reports. Fully responsive with dark/light mode support.",
+		"stack": [
+			"Next.js",
+			"TypeScript",
+			"Supabase",
+			"OpenAI",
+			"TailwindCSS",
+			"Recharts"
+		],
+		"images": [
+			"/images/wallet-joy-1.webp",
+			"/images/wallet-joy-2.webp",
+			"/images/wallet-joy-3.webp",
+			"/images/wallet-joy-4.webp"
+		],
+		"github": "https://github.com/kauredo/finance_tracker",
+		"updatedAt": "2026-01-16"
 	},
 	{
 		"title": "FPB Calendar",
 		"slug": "fpb-calendar",
-		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with it's own calendar.",
+		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with its own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
 		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
 		"images": ["/images/fpb-calendar.webp", "/images/fpb-calendar-2.webp"],
 		"github": "https://github.com/kauredo/fpb-calendar",
-		"updatedAt": "2025-03-17",
+		"updatedAt": "2025-12-08",
 		"link": "https://fpb-calendar.fly.dev"
 	},
 	{
@@ -43,7 +130,7 @@
 		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
 		"images": ["/images/nn-1.webp", "/images/nn-2.webp", "/images/nn-3.webp", "/images/nn-4.webp"],
 		"github": "https://github.com/kauredo/nn",
-		"updatedAt": "2025-03-17",
+		"updatedAt": "2022-05-13",
 		"link": "https://imkaufmann.com"
 	},
 	{
@@ -59,13 +146,13 @@
 			"/images/jovens-futuro-4.webp"
 		],
 		"github": "https://github.com/kauredo/jovens_futuro",
-		"updatedAt": "2025-03-17"
+		"updatedAt": "2021-12-13"
 	},
 	{
 		"title": "Portfolio Site",
 		"slug": "portfolio-site",
 		"description": "My personal site built with SvelteKit and TailwindCSS, showcasing projects, experience and contact info.",
-		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using FormSubmit. It reflects my attention to clean UX and minimalist design.",
+		"details": "This site was built with SvelteKit and TailwindCSS. It features animated transitions, project showcase pages, JSON-powered content, and a no-backend contact form using Formspree. It reflects my attention to clean UX and minimalist design.",
 		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
 		"images": [
 			"/images/portfolio.webp",
@@ -73,8 +160,8 @@
 			"/images/portfolio-3.webp",
 			"/images/portfolio-4.webp"
 		],
-		"github": "https://github.com/kauredo/portfolio-site",
-		"updatedAt": "2025-03-17"
+		"github": "https://github.com/kauredo/cv-page",
+		"updatedAt": "2026-02-03"
 	},
 	{
 		"title": "AOC Ruby (aoc_rb)",
@@ -83,7 +170,7 @@
 		"details": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
 		"stack": ["Ruby", "CLI", "Open Source"],
 		"github": "https://github.com/pacso/aoc_rb",
-		"updatedAt": "2025-03-17",
+		"updatedAt": "2022-12-01",
 		"images": ["/images/aoc-rb.webp"]
 	}
 ]

@@ -7,6 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #4485 | 5:44 PM | 🟣 | Enhanced SEO Meta Tags with Twitter Card Support | ~576 |
+| #4476 | 5:42 PM | 🔵 | Portfolio Homepage Dynamic Project Display Logic | ~432 |
 | #4243 | 1:53 PM | 🟣 | JSON-LD Structured Data Added for SEO | ~607 |
 | #4242 | " | 🟣 | JSON-LD Structured Data Added for SEO | ~587 |
 | #4241 | " | 🔄 | Debounce Utility Extracted to Shared Utils Module | ~473 |

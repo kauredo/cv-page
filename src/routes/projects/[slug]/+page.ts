@@ -14,22 +14,32 @@ export const load: PageLoad = async ({ params }) => {
 	const project: Project = projectData;
 
 	const projectImage =
-		project.images && project.images[0].length > 0 ? project.images[0] : '/images/portfolio.webp';
+		project.images && project.images.length > 0 && project.images[0].length > 0
+			? project.images[0]
+			: '/images/portfolio.webp';
 	const projectImageUrl = `https://www.vascokf.com${projectImage}`;
 	const pageMetaTags = Object.freeze({
 		title: project.title,
 		description: project.description,
 		openGraph: {
-			title: project.title,
+			title: `${project.title} — VascoKF`,
 			description: project.description,
 			images: [
 				{
 					url: projectImageUrl,
 					alt: project.title,
 					secureUrl: projectImageUrl,
-					type: 'image/webp'
+					type: 'image/webp',
+					width: 1200,
+					height: 630
 				}
 			]
+		},
+		twitter: {
+			title: `${project.title} — VascoKF`,
+			description: project.description,
+			image: projectImageUrl,
+			imageAlt: project.title
 		}
 	}) satisfies MetaTagsProps;
 
