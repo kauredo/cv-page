@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
 	let mounted = false;
@@ -92,7 +92,7 @@
 
 <section class="mx-auto max-w-xl px-6 py-16">
 	{#if mounted}
-		<div in:fly={{ y: -20, duration: 500 }}>
+		<div>
 			<h1 class="mb-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
 				Contact Me
 			</h1>
@@ -104,7 +104,7 @@
 		{#if formStatus === 'success'}
 			<div
 				transition:fade
-				class="rounded-2xl border-2 border-green-200 bg-green-50 p-8 text-center dark:border-green-800 dark:bg-green-900/30"
+				class="rounded-lg border-2 border-green-200 bg-green-50 p-8 text-center dark:border-green-800 dark:bg-green-900/30"
 			>
 				<div
 					class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 dark:bg-green-800"
@@ -128,7 +128,7 @@
 				</p>
 				<button
 					on:click={resetForm}
-					class="rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-700"
+					class="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
 				>
 					Send Another Message
 				</button>
@@ -136,7 +136,7 @@
 		{:else if formStatus === 'error'}
 			<div
 				transition:fade
-				class="mb-8 rounded-2xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-800 dark:bg-red-900/30"
+				class="mb-8 rounded-lg border-2 border-red-200 bg-red-50 p-6 dark:border-red-800 dark:bg-red-900/30"
 			>
 				<div class="flex items-start gap-3">
 					<svg
@@ -170,7 +170,6 @@
 				on:submit={handleSubmit}
 				class="space-y-6"
 				novalidate
-				in:fly={{ y: 20, duration: 500, delay: 100 }}
 			>
 				<div>
 					<label
@@ -185,7 +184,7 @@
 						id="name"
 						name="name"
 						bind:value={formState.name}
-						class="w-full rounded-xl border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+						class="w-full rounded-lg border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
 						aria-required="true"
 						aria-invalid={errors.name ? 'true' : 'false'}
 						aria-describedby={errors.name ? 'name-error' : undefined}
@@ -207,7 +206,7 @@
 						id="email"
 						name="email"
 						bind:value={formState.email}
-						class="w-full rounded-xl border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+						class="w-full rounded-lg border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
 						aria-required="true"
 						aria-invalid={errors.email ? 'true' : 'false'}
 						aria-describedby={errors.email ? 'email-error' : undefined}
@@ -231,7 +230,7 @@
 						name="message"
 						rows="5"
 						bind:value={formState.message}
-						class="w-full resize-none rounded-xl border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+						class="w-full resize-none rounded-lg border-2 border-slate-200 bg-white px-4 py-3 text-slate-900 transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-white"
 						aria-required="true"
 						aria-invalid={errors.message ? 'true' : 'false'}
 						aria-describedby={errors.message ? 'message-error' : undefined}
@@ -250,7 +249,7 @@
 					<button
 						type="submit"
 						disabled={formStatus === 'submitting'}
-						class="inline-flex items-center rounded-xl bg-vasco-600 px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-vasco-700 hover:shadow-lg hover:shadow-vasco-600/25 disabled:cursor-not-allowed disabled:opacity-50"
+						class="inline-flex items-center rounded-lg bg-vasco-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-vasco-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-vasco-500 dark:hover:bg-vasco-600"
 					>
 						{#if formStatus === 'submitting'}
 							<svg

@@ -81,7 +81,7 @@
 </svelte:head>
 
 <div
-	class="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 to-vasco-50 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100"
+	class="flex min-h-screen flex-col bg-white dark:bg-slate-950 dark:text-slate-100"
 >
 	<Navbar />
 	<main class="flex-1">

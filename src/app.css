@@ -37,6 +37,19 @@
 	--color-vasco-900: #0f2e8a;
 	--color-vasco-950: #081b5c;
 
+	/* Accent color - basketball orange */
+	--color-hoop-50: #fff7ed;
+	--color-hoop-100: #ffedd5;
+	--color-hoop-200: #fed7aa;
+	--color-hoop-300: #fdba74;
+	--color-hoop-400: #fb923c;
+	--color-hoop-500: #f97316;
+	--color-hoop-600: #ea580c;
+	--color-hoop-700: #c2410c;
+	--color-hoop-800: #9a3412;
+	--color-hoop-900: #7c2d12;
+	--color-hoop-950: #431407;
+
 	/* Tinted neutrals - warm blue undertone */
 	--color-slate-50: oklch(98% 0.005 250);
 	--color-slate-100: oklch(95% 0.008 250);

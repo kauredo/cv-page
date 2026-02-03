@@ -3,7 +3,7 @@
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 	import type { Project } from '$lib/types';
 	import type { PageData } from './$types';
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
 	export let data: PageData;
@@ -121,7 +121,7 @@
 	});
 </script>
 
-<section in:fade={{ duration: 300 }} class="mx-auto max-w-6xl px-6 py-12">
+<section class="mx-auto max-w-6xl px-6 py-12">
 	{#if mounted}
 		<div class="mb-12">
 			<div class="mb-8 flex items-center gap-3">
@@ -130,24 +130,18 @@
 				<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Home</span>
 			</div>
 
-			<h1
-				class="mb-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-white"
-				in:fly={{ y: -20, duration: 500 }}
-			>
+			<h1 class="mb-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
 				All Projects
 			</h1>
 
-			<div
-				class="flex flex-col gap-4 sm:flex-row sm:items-center"
-				in:fly={{ y: -20, duration: 600, delay: 100 }}
-			>
+			<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
 				<!-- Search input -->
 				<div class="relative flex-1">
 					<input
 						type="text"
 						placeholder="Search projects..."
 						bind:value={searchQuery}
-						class="w-full rounded-xl border-2 border-slate-200 bg-white py-3 pr-12 pl-4 text-sm transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-400"
+						class="w-full rounded-lg border-2 border-slate-200 bg-white py-3 pr-12 pl-4 text-sm transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-400"
 					/>
 					{#if searchQuery}
 						<button
@@ -195,7 +189,7 @@
 							if (isFilterOpen) focusedIndex = 0;
 						}}
 						on:keydown={handleFilterKeydown}
-						class="flex w-full items-center justify-between gap-3 rounded-xl border-2 border-slate-200 bg-white px-4 py-3 text-sm font-medium transition-colors hover:border-slate-300 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:hover:border-slate-600"
+						class="flex w-full items-center justify-between gap-3 rounded-lg border-2 border-slate-200 bg-white px-4 py-3 text-sm font-medium transition-colors hover:border-slate-300 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:hover:border-slate-600"
 						aria-expanded={isFilterOpen}
 						aria-haspopup="listbox"
 						aria-controls="filter-listbox"
@@ -240,9 +234,10 @@
 						<div
 							bind:this={dropdownRef}
 							id="filter-listbox"
-							class="absolute right-0 left-0 z-50 mt-2 overflow-hidden rounded-xl border-2 border-slate-200 bg-white shadow-xl sm:right-0 sm:left-auto sm:w-52 dark:border-slate-700 dark:bg-slate-800"
+							class="absolute right-0 left-0 z-50 mt-2 overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-xl sm:right-0 sm:left-auto sm:w-52 dark:border-slate-700 dark:bg-slate-800"
 							transition:fade={{ duration: 150 }}
 							role="listbox"
+							tabindex="-1"
 							aria-label="Filter by category"
 							on:keydown={handleFilterKeydown}
 						>
@@ -269,18 +264,13 @@
 		</div>
 
 		{#if filteredProjects.length > 0}
-			<div
-				class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-				in:fly={{ y: 20, duration: 600, delay: 200 }}
-			>
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{#each filteredProjects as project (project.slug)}
-					<div in:fly={{ y: 20, duration: 400, delay: 100 }}>
-						<ProjectCard {project} />
-					</div>
+					<ProjectCard {project} />
 				{/each}
 			</div>
 		{:else}
-			<div class="py-24 text-center" in:fade={{ delay: 200 }}>
+			<div class="py-24 text-center">
 				<div
 					class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800"
 				>
@@ -305,7 +295,7 @@
 					Try adjusting your search or filter criteria
 				</p>
 				<button
-					class="rounded-xl bg-vasco-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-vasco-700 hover:shadow-lg hover:shadow-vasco-600/25"
+					class="rounded-lg bg-vasco-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-vasco-700 dark:bg-vasco-500 dark:hover:bg-vasco-600"
 					on:click={() => {
 						searchQuery = '';
 						selectedCategory = 'all';

@@ -46,7 +46,7 @@
 
 		<a
 			href="/"
-			class="bg-vasco-600 hover:bg-vasco-700 inline-block rounded-xl px-6 py-3 font-medium text-stone-50 shadow transition"
+			class="bg-vasco-600 hover:bg-vasco-700 inline-block rounded-lg px-6 py-3 font-medium text-stone-50 shadow transition"
 		>
 			← Go back home
 		</a>

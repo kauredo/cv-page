@@ -1,7 +1,6 @@
 <script lang="ts">
 	import experienceData from '$lib/data/experience.json';
 	import educationData from '$lib/data/education.json';
-	import skillsData from '$lib/data/skills.json';
 	import projectsData from '$lib/data/projects.json';
 	import type { Experience, Education, Project } from '$lib/types';
 	import Contact from '$lib/components/Contact.svelte';
@@ -10,23 +9,27 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Now from '$lib/components/Now.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import Skills from '$lib/components/Skills.svelte';
 	import { onMount } from 'svelte';
 	import { debounce } from '$lib/utils';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
-	const skills: string[] = skillsData;
 	let unfilteredProjects: Project[] = projectsData;
+	let featuredProject: Project | null = null;
 	let projects: Project[] = [];
 
 	function updateProjects() {
+		// First project is always featured
+		featuredProject = unfilteredProjects[0] || null;
+
+		// Remaining projects for the grid
+		const remaining = unfilteredProjects.slice(1);
 		if (window.innerWidth < 640) {
-			projects = unfilteredProjects.slice(0, 1);
+			projects = remaining.slice(0, 2);
 		} else if (window.innerWidth < 1024) {
-			projects = unfilteredProjects.slice(0, 2);
+			projects = remaining.slice(0, 2);
 		} else {
-			projects = unfilteredProjects.slice(0, 3);
+			projects = remaining.slice(0, 3);
 		}
 	}
 
@@ -40,38 +43,12 @@
 	});
 </script>
 
-<!-- Hero breaks out of container for maximum impact -->
 <Hero />
 
-<!-- Main content with varied spacing for visual rhythm -->
-<div class="mx-auto max-w-6xl px-6">
-	<!-- Projects section - tight spacing after hero -->
-	<section class="pb-24">
-		<Projects {projects} />
-	</section>
-
-	<!-- Experience section - more breathing room -->
-	<section class="pb-32">
-		<Experiences {experiences} />
-	</section>
-
-	<!-- Education - moderate spacing -->
-	<section class="pb-20">
-		<Schools {education} />
-	</section>
-
-	<!-- Skills - moderate spacing -->
-	<section class="pb-20">
-		<Skills {skills} />
-	</section>
-
-	<!-- Now section - moderate spacing -->
-	<section class="pb-24">
-		<Now />
-	</section>
-
-	<!-- Contact section - generous spacing -->
-	<section class="pb-32">
-		<Contact />
-	</section>
+<div class="mx-auto max-w-6xl space-y-16 px-6 pb-16 sm:space-y-20 sm:pb-20">
+	<Projects {featuredProject} {projects} />
+	<Experiences {experiences} />
+	<Schools {education} />
+	<Now />
+	<Contact />
 </div>

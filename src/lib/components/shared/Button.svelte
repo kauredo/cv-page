@@ -3,19 +3,17 @@
 	export let href: string;
 	export let target_blank: boolean = false;
 
-	const colors: { [key in 'primary' | 'secondary']: string } = {
+	const styles: { [key in 'primary' | 'secondary']: string } = {
 		primary:
-			'text-white bg-vasco-600 hover:bg-vasco-700 dark:bg-vasco-500 dark:hover:bg-vasco-600 shadow-lg shadow-vasco-600/25 hover:shadow-vasco-600/40',
+			'text-white bg-vasco-600 hover:bg-vasco-700 shadow-sm hover:shadow-md hover:shadow-vasco-500/25 dark:bg-vasco-500 dark:hover:bg-vasco-600 dark:hover:shadow-vasco-500/30',
 		secondary:
-			'text-slate-700 border-2 border-slate-300 bg-white/80 backdrop-blur-sm hover:border-vasco-400 hover:text-vasco-700 dark:text-slate-200 dark:border-slate-600 dark:bg-slate-800/80 dark:hover:border-vasco-400 dark:hover:text-vasco-300'
+			'text-slate-700 border border-slate-300 bg-white hover:border-slate-400 hover:bg-slate-50 dark:text-slate-200 dark:border-slate-600 dark:bg-slate-900 dark:hover:border-slate-500 dark:hover:bg-slate-800'
 	};
-
-	$: color = colors[type];
 </script>
 
 <a
 	{href}
-	class="inline-flex items-center rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 {color}"
+	class="inline-flex items-center rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 {styles[type]}"
 	target={target_blank ? '_blank' : undefined}
 	rel={target_blank ? 'noopener noreferrer' : undefined}
 >

@@ -1,52 +1,32 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
-	import { inview } from 'svelte-inview';
-
 	const activities = [
-		{ emoji: '📅', text: 'Building a calendar tool for all Portuguese basketball leagues' },
+		{ emoji: '📅', text: 'Building a calendar tool for all Portuguese basketball leagues', highlight: true },
 		{ emoji: '🖨️', text: '3D printing a wine rack(!) using my Bambu P1S' },
-		{ emoji: '🏀', text: 'Playing basketball for a local club (vamos SIMECQ)' },
+		{ emoji: '🏀', text: 'Playing basketball for a local club (vamos SIMECQ)', highlight: true },
 		{ emoji: '👨‍💻', text: 'Learning React Native and Python' },
 		{ emoji: '📚', text: 'Reading "The Peculiar life of a lonely Postman"' }
 	];
-
-	let visibleItems: Record<number, boolean> = {};
-
-	function handleIntersect(index: number) {
-		return (event: CustomEvent<{ entry: IntersectionObserverEntry }>) => {
-			const { isIntersecting } = event.detail.entry;
-			if (isIntersecting) {
-				visibleItems[index] = true;
-			}
-		};
-	}
 </script>
 
-<section in:fade={{ duration: 200 }} aria-labelledby="now-heading">
-	<h2
-		id="now-heading"
-		class="mb-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-	>
-		What I'm Up to Now
-	</h2>
-	<div class="space-y-4">
-		{#each activities as { emoji, text }, index}
-			<div
-				use:inview={{ rootMargin: '0px', threshold: 0.2 }}
-				on:inview_change={handleIntersect(index)}
-			>
-				{#if visibleItems[index]}
-					<div
-						in:fly={{ duration: 400, x: -20, delay: index * 80 }}
-						class="group flex items-start gap-4 rounded-xl p-3 transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800/50"
-					>
-						<span class="text-2xl" aria-hidden="true">{emoji}</span>
-						<p class="text-slate-600 transition-colors group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-white">
-							{text}
-						</p>
-					</div>
-				{/if}
-			</div>
-		{/each}
+<section aria-labelledby="now-heading">
+	<div class="mb-6 flex items-center gap-3">
+		<h2
+			id="now-heading"
+			class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+		>
+			What I'm Up to Now
+		</h2>
+		<span class="relative flex h-2.5 w-2.5">
+			<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-hoop-400 opacity-75"></span>
+			<span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-hoop-500"></span>
+		</span>
 	</div>
+	<ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+		{#each activities as { emoji, text, highlight }}
+			<li class="flex items-start gap-3 rounded-lg border border-slate-100 bg-slate-50/50 p-4 transition-colors hover:border-slate-200 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50 dark:hover:border-slate-700 dark:hover:bg-slate-900 {highlight ? 'ring-1 ring-hoop-200 dark:ring-hoop-900/50' : ''}">
+				<span class="text-xl" aria-hidden="true">{emoji}</span>
+				<span class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{text}</span>
+			</li>
+		{/each}
+	</ul>
 </section>

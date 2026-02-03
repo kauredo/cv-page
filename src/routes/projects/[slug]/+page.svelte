@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Project } from '$lib/types';
-	import { fade, fly } from 'svelte/transition';
 	import Modal from '$lib/components/shared/Modal.svelte';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 	import Button from '$lib/components/shared/Button.svelte';
@@ -44,7 +43,7 @@
 	});
 </script>
 
-<section in:fade={{ duration: 300 }} class="mx-auto max-w-4xl p-6">
+<section class="mx-auto max-w-4xl p-6">
 	{#if mounted}
 		<div class="mb-8">
 			<div class="flex items-center gap-2">
@@ -56,7 +55,6 @@
 			<h1
 				class="mt-4 text-4xl font-bold"
 				style="view-transition-name: project-title-{project.slug}"
-				in:fly={{ y: -20, duration: 400 }}
 			>
 				{project.title}
 			</h1>
@@ -65,14 +63,13 @@
 			<p
 				class="mt-4 text-lg text-gray-700 dark:text-gray-400"
 				style="view-transition-name: project-description-{project.slug}"
-				in:fly={{ y: -20, duration: 400, delay: 100 }}
 			>
 				{project.description}
 			</p>
 
 			<!-- Quick Stats -->
 			{#if project.stack && project.stack.length > 0}
-				<div class="mt-6 flex flex-wrap gap-4" in:fly={{ y: -20, duration: 400, delay: 200 }}>
+				<div class="mt-6 flex flex-wrap gap-4">
 					<div class="flex items-center gap-2">
 						<span class="text-sm font-semibold">Tech Stack:</span>
 						<div class="flex flex-wrap gap-2">
@@ -98,9 +95,9 @@
 
 		<!-- Display Featured Image -->
 		{#if project.images.length > 0 && imagesLoaded}
-			<div class="mb-12" in:fade={{ duration: 400, delay: 300 }}>
+			<div class="mb-12">
 				<button
-					class="w-full overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl"
+					class="w-full overflow-hidden rounded-lg shadow-lg transition hover:shadow-xl"
 					on:click={() => openModal(project.images[0])}
 				>
 					<img
@@ -116,14 +113,14 @@
 		<!-- Project Details -->
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-3">
 			<div class="col-span-1 md:col-span-2">
-				<section class="mb-10" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<section class="mb-10">
 					<h2 class="mb-4 text-2xl font-semibold">Overview</h2>
 					<p class="leading-relaxed text-gray-700 dark:text-gray-400">{project.details}</p>
 				</section>
 
 				<!-- Additional Images in a grid -->
 				{#if project.images && project.images.length > 1 && imagesLoaded}
-					<section class="mb-10" in:fade={{ duration: 400, delay: 500 }}>
+					<section class="mb-10">
 						<h2 class="mb-4 text-2xl font-semibold">Gallery</h2>
 						<div class="grid grid-cols-2 gap-4">
 							{#each project.images.slice(1) as image, i}
@@ -148,8 +145,7 @@
 				<!-- Technology Stack -->
 				{#if project.stack && project.stack.length > 0}
 					<section
-						class="mb-8 rounded-xl bg-gray-50 p-6 dark:bg-gray-800"
-						in:fly={{ y: 20, duration: 400, delay: 600 }}
+						class="mb-8 rounded-lg bg-gray-50 p-6 dark:bg-gray-800"
 					>
 						<h2 class="mb-4 text-xl font-semibold">Technology Stack</h2>
 						<ul class="flex flex-wrap gap-2">
@@ -166,8 +162,7 @@
 
 				<!-- Links -->
 				<section
-					class="mb-8 rounded-xl bg-gray-50 p-6 dark:bg-gray-800"
-					in:fly={{ y: 20, duration: 400, delay: 700 }}
+					class="mb-8 rounded-lg bg-gray-50 p-6 dark:bg-gray-800"
 				>
 					<h2 class="mb-4 text-xl font-semibold">Project Links</h2>
 					<div class="flex flex-col gap-3">

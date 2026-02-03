@@ -47,13 +47,13 @@
 </script>
 
 <header
-	class="sticky top-0 z-20 border-b border-slate-200/50 bg-white/80 backdrop-blur-lg dark:border-slate-700/50 dark:bg-slate-900/80 print:hidden"
+	class="sticky top-0 z-20 border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 print:hidden"
 >
-	<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-		<a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white">
+	<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+		<a href="/" class="flex items-center">
 			<img
 				src="/images/logo.svg"
-				class="h-7 w-auto dark:invert"
+				class="h-6 w-auto dark:invert"
 				on:error={(event) => {
 					const target = event.target as HTMLImageElement;
 					if (target) target.src = '/images/logo.webp';
@@ -62,47 +62,34 @@
 			/>
 			<span class="sr-only">Home</span>
 		</a>
-		<div class="flex items-center gap-6">
+		<div class="flex items-center gap-5">
 			<a
 				href="/projects"
-				class="text-sm font-medium text-slate-600 transition-colors hover:text-vasco-600 dark:text-slate-300 dark:hover:text-vasco-400"
+				class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
 			>
 				Projects
 			</a>
 			<a
 				href="/contact"
-				class="text-sm font-medium text-slate-600 transition-colors hover:text-vasco-600 dark:text-slate-300 dark:hover:text-vasco-400"
+				class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
 			>
 				Contact
 			</a>
 
-			<!-- Dark mode toggle -->
 			<button
 				on:click={toggleDarkMode}
-				class="relative flex h-8 w-14 items-center rounded-full bg-slate-200 p-1 transition-colors dark:bg-slate-700"
+				class="rounded p-1.5 text-slate-500 hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200"
 				aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-				role="switch"
-				aria-checked={darkMode}
 			>
-				<span
-					class="flex h-6 w-6 transform items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-200 {darkMode
-						? 'translate-x-6'
-						: 'translate-x-0'}"
-				>
-					{#if darkMode}
-						<svg class="h-4 w-4 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
-							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-						</svg>
-					{:else}
-						<svg class="h-4 w-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-							<path
-								fill-rule="evenodd"
-								d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					{/if}
-				</span>
+				{#if darkMode}
+					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+					</svg>
+				{:else}
+					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+					</svg>
+				{/if}
 			</button>
 		</div>
 	</nav>
