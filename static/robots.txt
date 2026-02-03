@@ -4,5 +4,8 @@ Allow: /
 # Prevent crawling of old content
 Disallow: /old/
 
+# Secret CV route
+Disallow: /ines-cv/
+
 # Point to your sitemap
 Sitemap: https://www.vascokf.com/sitemap.xml
