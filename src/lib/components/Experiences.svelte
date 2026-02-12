@@ -19,7 +19,7 @@
 				<div class="absolute top-3 bottom-0 left-[7px] w-px bg-slate-200 dark:bg-slate-700 {i === experiences.length - 1 ? 'hidden' : ''}"></div>
 
 				<!-- Timeline dot -->
-				<div class="absolute top-2 left-0 h-3.5 w-3.5 rounded-full border-2 {i === 0 ? 'border-hoop-500 bg-hoop-500' : 'border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-900'}"></div>
+				<div class="absolute top-2 left-0 h-3.5 w-3.5 rounded-full border-2 {exp.period.includes('Present') ? 'border-hoop-500 bg-hoop-500' : 'border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-900'}"></div>
 
 				<div class="flex items-start gap-4">
 					{#if exp.logo}

@@ -96,13 +96,17 @@ body {
 }
 
 /* Display headings use the display font */
-h1, h2, .font-display {
+h1,
+h2,
+.font-display {
 	font-family: var(--font-display);
 }
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-	*, *::before, *::after {
+	*,
+	*::before,
+	*::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
@@ -356,9 +360,23 @@ h1, h2, .font-display {
 	}
 
 	.cv-print section {
+		margin-bottom: 1cm !important;
+	}
+
+	.cv-print section > * {
 		page-break-inside: avoid;
 		break-inside: avoid;
-		margin-bottom: 1cm !important;
+	}
+
+	.cv-print h2 {
+		break-after: avoid;
+		page-break-after: avoid;
+		margin-bottom: 0.5rem !important;
+	}
+
+	.cv-print h2 + * {
+		break-before: avoid;
+		page-break-before: avoid;
 	}
 
 	.cv-print .avatar {

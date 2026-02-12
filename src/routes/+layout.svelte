@@ -42,10 +42,16 @@
 			"url": "https://www.vascokf.com",
 			"image": "https://www.vascokf.com/images/portfolio.webp",
 			"jobTitle": "Full Stack Web Developer",
-			"worksFor": {
-				"@type": "Organization",
-				"name": "Medihive"
-			},
+			"worksFor": [
+				{
+					"@type": "Organization",
+					"name": "UpSpeech"
+				},
+				{
+					"@type": "Organization",
+					"name": "Pixelmatters"
+				}
+			],
 			"sameAs": [
 				"https://github.com/kauredo",
 				"https://linkedin.com/in/vascokf"

@@ -17,7 +17,8 @@
 			"/images/myagentwebsite-1.webp",
 			"/images/myagentwebsite-2.webp",
 			"/images/myagentwebsite-3.webp",
-			"/images/myagentwebsite-4.webp"
+			"/images/myagentwebsite-4.webp",
+			"/images/myagentwebsite-5.webp"
 		],
 		"github": "https://github.com/kauredo/real-estate-scraper",
 		"updatedAt": "2026-01-30",
@@ -42,7 +43,8 @@
 			"/images/upspeech-1.webp",
 			"/images/upspeech-2.webp",
 			"/images/upspeech-3.webp",
-			"/images/upspeech-4.webp"
+			"/images/upspeech-4.webp",
+			"/images/upspeech-5.webp"
 		],
 		"updatedAt": "2026-02-03"
 	},
@@ -64,7 +66,11 @@
 			"/images/bball-stats-1.webp",
 			"/images/bball-stats-2.webp",
 			"/images/bball-stats-3.webp",
-			"/images/bball-stats-4.webp"
+			"/images/bball-stats-4.webp",
+			"/images/bball-stats-5.webp",
+			"/images/bball-stats-6.webp",
+			"/images/bball-stats-7.webp",
+			"/images/bball-stats-8.webp"
 		],
 		"github": "https://github.com/kauredo/basketball-stats-app",
 		"updatedAt": "2026-02-03"
@@ -106,7 +112,8 @@
 			"/images/wallet-joy-1.webp",
 			"/images/wallet-joy-2.webp",
 			"/images/wallet-joy-3.webp",
-			"/images/wallet-joy-4.webp"
+			"/images/wallet-joy-4.webp",
+			"/images/wallet-joy-5.webp"
 		],
 		"github": "https://github.com/kauredo/finance_tracker",
 		"updatedAt": "2026-01-16"
@@ -117,7 +124,7 @@
 		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with its own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
 		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
-		"images": ["/images/fpb-calendar.webp", "/images/fpb-calendar-2.webp"],
+		"images": ["/images/fpb-calendar-1.webp", "/images/fpb-calendar-2.webp", "/images/fpb-calendar-3.webp", "/images/fpb-calendar-4.webp"],
 		"github": "https://github.com/kauredo/fpb-calendar",
 		"updatedAt": "2025-12-08",
 		"link": "https://fpb-calendar.fly.dev"

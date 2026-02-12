@@ -17,7 +17,7 @@
 				<img
 					src={images[0]}
 					alt={`Screenshot of ${title}`}
-					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+					class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
 					style="view-transition-name: project-image-{slug}-0"
 					loading="lazy"
 					decoding="async"
@@ -26,16 +26,31 @@
 				<img
 					src="/images/placeholder.webp"
 					alt={`Placeholder for ${title}`}
-					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+					class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
 					style="view-transition-name: project-image-{slug}-0"
 					loading="lazy"
 				/>
 			{/if}
 			<!-- Hover overlay with arrow -->
-			<div class="absolute inset-0 flex items-center justify-center bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/40">
-				<div class="translate-y-2 rounded-full bg-white p-3 opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-slate-800">
-					<svg class="h-5 w-5 text-hoop-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+			<div
+				class="absolute inset-0 flex items-center justify-center bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/40"
+			>
+				<div
+					class="translate-y-2 rounded-full bg-white p-3 opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-slate-800"
+				>
+					<svg
+						class="text-hoop-500 h-5 w-5"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M17 8l4 4m0 0l-4 4m4-4H3"
+						/>
 					</svg>
 				</div>
 			</div>
@@ -43,13 +58,13 @@
 
 		<div class="flex flex-1 flex-col p-4">
 			<h3
-				class="font-semibold text-slate-900 transition-colors group-hover:text-hoop-600 dark:text-white dark:group-hover:text-hoop-400"
+				class="group-hover:text-hoop-600 dark:group-hover:text-hoop-400 font-semibold text-slate-900 transition-colors dark:text-white"
 				style="view-transition-name: project-title-{slug}"
 			>
 				{title}
 			</h3>
 			<p
-				class="mt-1.5 flex-1 line-clamp-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400"
+				class="mt-1.5 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400"
 				style="view-transition-name: project-description-{slug}"
 			>
 				{description}

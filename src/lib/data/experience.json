@@ -1,10 +1,31 @@
 [
 	{
+		"title": "Co-Founder",
+		"company": "UpSpeech",
+		"period": "2024 – Present",
+		"description": "Co-founded an AI-powered speech therapy SaaS platform for speech-language pathologists. Built the full product from scratch — a multi-tenant platform with session recording, AI-driven transcription via Groq, automated clinical report generation, disfluency detection, and patient progress tracking. Responsible for architecture decisions, product direction, and full-stack development across Rails, React, and a FastAPI AI service.",
+		"logo": "/images/companies/upspeech.png",
+		"skills": ["Rails", "React", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Docker", "AI/ML"],
+		"achievements": [
+			"Built entire platform from zero to production",
+			"Designed multi-tenant SaaS architecture with AI integration"
+		]
+	},
+	{
+		"title": "Full-Stack Engineer",
+		"company": "Pixelmatters",
+		"period": "2025 – Present",
+		"description": "Working as a full-stack engineer at Pixelmatters, a digital product studio that partners with ambitious tech companies to design, build, and scale standout digital products. Currently building features for UJET.cx, an AI-powered cloud contact center platform, using Ruby on Rails and Angular.",
+		"logo": "/images/companies/pixelmatters.png",
+		"skills": ["Rails", "Ruby", "Angular", "TypeScript", "PostgreSQL", "Git"],
+		"achievements": []
+	},
+	{
 		"title": "Ruby on Rails Developer",
 		"company": "Medihive",
-		"period": "2022 – Present",
-		"description": "At Medihive, I work mostly with Ruby on Rails. We are a cross-functional team, with a focus on delivering the best possible product to our clients. I do work on the company's internal tools, such as the admin panel and doctor panels, as well as the client-facing website. I am full-stack, so I also work on the front-end, using mostly ERB and some React in small projects. I've been gradually increasing my responsibilities in the company, as well as owning and developing features.",
-		"logo": "https://cdn.theorg.com/ab7d2dc3-be60-4a12-9c1f-b7d39e9b1fcc_medium.jpg",
+		"period": "2022 – 2025",
+		"description": "At Medihive, I worked mostly with Ruby on Rails in a cross-functional team focused on delivering the best possible product to our clients. I worked on the company's internal tools, such as the admin panel and doctor panels, as well as the client-facing website. As a full-stack developer, I also worked on the front-end, using mostly ERB and some React. I gradually increased my responsibilities, owning and developing features end-to-end.",
+		"logo": "/images/companies/medihive.jpg",
 		"skills": ["Rails", "Ruby", "React", "ERB", "Turbo", "PostgreSQL", "MySQL", "Git"],
 		"achievements": [
 			"Led several features from inception to production",
@@ -16,7 +37,7 @@
 		"company": "Bit Zesty",
 		"period": "2021 – 2022",
 		"description": "As a Full-Stack Software Developer at BitZesty, I've had the opportunity to work fully remotely in Ruby on Rails on a cross-functional team. Here I worked on several projects with different ruby and rails versions, trying to find the best budget conscious solution for clients.",
-		"logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.yIvVnthvryvgQ-Qu9OFU8wAAAA%26pid%3DApi&f=1&ipt=22eaaecabc20b747f2a94975d59bd4cdd6650e2dd700e6b2a68c9027bacf49c5&ipo=images",
+		"logo": "/images/companies/bitzesty.jpg",
 		"achievements": [
 			"Upgraded several projects from Rails 5 to Rails 6",
 			"Led the development of a new feature for a client"
@@ -28,7 +49,7 @@
 		"company": "Landing.Jobs",
 		"period": "2020 – 2021",
 		"description": "I worked my way up from Junior to Mid-Level Software Developer in under a year. I had the opportunity to work with Ruby on Rails, React, Typescript, GraphQL and CSS. This was my first developing job and I was able to apply my skills in a real-world setting, contributing to the company's success.",
-		"logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.yYXbS2v39AekC9euuXVJdgHaHa%26pid%3DApi&f=1&ipt=6c9e8eb5c60116750bb7c6806b61d32b38445c37122c0e429d577bbc65b2b6df&ipo=images",
+		"logo": "/images/companies/landingjobs.png",
 		"achievements": [
 			"Promoted to Mid-Level Developer in 12 months",
 			"Revelation of the Year internal award for 2020"
@@ -40,7 +61,7 @@
 		"company": "Accenture Portugal",
 		"period": "2019 – 2022",
 		"description": "At Accenture, I mainly worked with VBA and a Customer Care & Billing software, in Java. It was my first experience with any of these languages, which I acquired reasonably quickly at a basic level.",
-		"logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdynamicmedia.accenture.com%2Fis%2Fimage%2Faccenture%2Faccenture-logo-768x768%3Fqlt%3D85%26wid%3D1200%26ts%3D1663852195066%26%24auto-png-alpha%24%26fit%3Dconstrain%26dpr%3Doff&f=1&nofb=1&ipt=5017230aac9c6ef61492442f249019975ecc3881ff2e4a101ae9d66eda96e2e7&ipo=images",
+		"logo": "/images/companies/accenture.png",
 		"skills": ["VBA", "Java", "SQL", "Unix", "JavaScript"]
 	},
 	{
@@ -48,7 +69,7 @@
 		"company": "WeDo Technologies",
 		"period": "2019",
 		"description": "During my tenure at WeDo Technologies (now Mobileum), I worked with their proprietary software 'RAID'. This is a logic based development software. I had the chance to work in a very small team and work a bit with unix, VMs and JavaScript.",
-		"logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.EhKM4YV4QJLB2JM62ByILgHaHa%26pid%3DApi&f=1&ipt=5643325e9c80ab9f98156dc1d43cc3e7271128b50378ae6c709c06bef337483d&ipo=images",
+		"logo": "/images/companies/wedo.jpg",
 		"skills": ["JavaScript", "Unix", "SQL", "RAID"]
 	}
 ]
