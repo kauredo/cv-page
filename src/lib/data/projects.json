@@ -27,17 +27,14 @@
 	{
 		"title": "UpSpeech",
 		"slug": "upspeech",
-		"description": "AI-powered speech therapy SaaS platform for speech-language pathologists focused on stuttering therapy.",
-		"details": "A multi-tenant SaaS platform that helps speech-language pathologists (SLPs) and their patients with stuttering therapy. Uses AI to automate clinical report writing and provide real-time speech analysis tools. Features include session recording, automated transcription via Groq, disfluency detection, and progress tracking. The platform streamlines the therapeutic workflow so clinicians can focus on patient care.",
+		"description": "Multi-tenant SaaS platform for speech-language pathologists focused on stuttering therapy.",
+		"details": "A multi-tenant SaaS platform that helps speech-language pathologists (SLPs) and their patients with stuttering therapy. Features include session management, patient progress tracking, clinical report generation, and a streamlined therapeutic workflow so clinicians can focus on patient care. Built the full platform from scratch — backend API, frontend application, multi-tenancy, authentication, and deployment infrastructure.",
 		"stack": [
 			"Ruby on Rails",
 			"React",
 			"TypeScript",
-			"Python",
-			"FastAPI",
 			"PostgreSQL",
-			"Docker",
-			"AI/ML"
+			"Docker"
 		],
 		"images": [
 			"/images/upspeech-1.webp",

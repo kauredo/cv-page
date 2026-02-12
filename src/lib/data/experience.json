@@ -3,12 +3,12 @@
 		"title": "Co-Founder",
 		"company": "UpSpeech",
 		"period": "2024 – Present",
-		"description": "Co-founded an AI-powered speech therapy SaaS platform for speech-language pathologists. Built the full product from scratch — a multi-tenant platform with session recording, AI-driven transcription via Groq, automated clinical report generation, disfluency detection, and patient progress tracking. Responsible for architecture decisions, product direction, and full-stack development across Rails, React, and a FastAPI AI service.",
+		"description": "Co-founded a speech therapy SaaS platform for speech-language pathologists. Built the full platform from scratch — a multi-tenant application with session management, clinical report generation, patient progress tracking, and deployment infrastructure. Responsible for architecture decisions, product direction, and full-stack development across Rails and React.",
 		"logo": "/images/companies/upspeech.png",
-		"skills": ["Rails", "React", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Docker", "AI/ML"],
+		"skills": ["Rails", "React", "TypeScript", "PostgreSQL", "Docker"],
 		"achievements": [
 			"Built entire platform from zero to production",
-			"Designed multi-tenant SaaS architecture with AI integration"
+			"Designed multi-tenant SaaS architecture"
 		]
 	},
 	{

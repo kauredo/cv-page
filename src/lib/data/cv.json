@@ -489,7 +489,7 @@
 			"url": "",
 			"startDate": "2024-12-01",
 			"endDate": "",
-			"summary": "Co-founded an AI-powered speech therapy SaaS platform for speech-language pathologists. Built the full product from scratch — a multi-tenant platform with session recording, AI-driven transcription, automated clinical report generation, and patient progress tracking. Responsible for architecture, product direction, and full-stack development across Rails, React, and a FastAPI AI service.",
+			"summary": "Co-founded a speech therapy SaaS platform for speech-language pathologists. Built the full platform from scratch — a multi-tenant application with session management, clinical report generation, patient progress tracking, and deployment infrastructure. Responsible for architecture, product direction, and full-stack development across Rails and React.",
 			"highlights": [],
 			"isCurrentRole": true,
 			"start": { "year": 2024, "month": 12 },
