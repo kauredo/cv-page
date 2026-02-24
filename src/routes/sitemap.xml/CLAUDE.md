@@ -8,5 +8,4 @@
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
 | #14225 | 10:08 AM | 🔵 | Google Search Console Verification and Indexing Gaps Across All Deployed Apps | ~1341 |
-| #14222 | 9:57 AM | 🔵 | Comprehensive SEO Audit Across 6 Web Applications | ~904 |
 </claude-mem-context>

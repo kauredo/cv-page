@@ -1,8 +1,12 @@
-import type { PageLoad } from './$types';
+import type { PageLoad, EntryGenerator } from './$types';
 import type { MetaTagsProps } from 'svelte-meta-tags';
 import projects from '$lib/data/projects.json';
 import type { Project } from '$lib/types';
 import { error } from '@sveltejs/kit';
+
+export const entries: EntryGenerator = () => {
+	return projects.map((p) => ({ slug: p.slug }));
+};
 
 export const load: PageLoad = async ({ params }) => {
 	const projectData = projects.find((p) => p.slug === params.slug);

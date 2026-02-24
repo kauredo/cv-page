@@ -15,9 +15,17 @@ export const load: PageLoad = async () => {
 					url: `https://www.vascokf.com/images/cv.webp`,
 					alt: `${cv.basics.name} - CV`,
 					secureUrl: `https://www.vascokf.com/images/cv.webp`,
-					type: 'image/webp'
+					type: 'image/webp',
+					width: 1200,
+					height: 630
 				}
 			]
+		},
+		twitter: {
+			title: `${cv.basics.name} - CV`,
+			description: cv.basics.summary,
+			image: `https://www.vascokf.com/images/cv.webp`,
+			imageAlt: `${cv.basics.name} - CV`
 		}
 	}) satisfies MetaTagsProps;
 

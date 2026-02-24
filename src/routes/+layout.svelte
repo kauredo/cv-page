@@ -61,9 +61,7 @@
 		}
 	</script>`}
 
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<!-- Google Fonts (preconnect in app.html for early connection) -->
 	<link
 		rel="preload"
 		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"

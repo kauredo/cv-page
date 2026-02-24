@@ -1,5 +1,7 @@
 import type { MetaTagsProps } from 'svelte-meta-tags';
 
+export const prerender = true;
+
 export const load = ({ url }) => {
 	const baseUrl = 'https://www.vascokf.com';
 	const baseMetaTags = Object.freeze({

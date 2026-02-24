@@ -43,6 +43,18 @@
 	});
 </script>
 
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vascokf.com/" },
+			{ "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.vascokf.com/projects" },
+			{ "@type": "ListItem", "position": 3, "name": project.title, "item": "https://www.vascokf.com/projects/" + project.slug }
+		]
+	})}</script>`}
+</svelte:head>
+
 <section class="mx-auto max-w-4xl p-6">
 	{#if mounted}
 		<div class="mb-8">
