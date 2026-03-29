@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 	import { pageview } from '$lib/services/analytics';
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
@@ -18,6 +19,8 @@
 			});
 		});
 	});
+
+	inject({ mode: dev ? 'development' : 'production' });
 
 	let { data, children } = $props();
 	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
