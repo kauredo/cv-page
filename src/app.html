@@ -14,15 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   %sveltekit.head%
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-55TK9L8WDT'); // Replace with your GA4 measurement ID
-  </script>
-
   <script>
     // Immediately execute this script to prevent flash of wrong theme
     (function () {
@@ -40,6 +31,15 @@
 
 <body data-sveltekit-preload-data="hover">
   <div style="display: contents">%sveltekit.body%</div>
+
+  <!-- Google Analytics — deferred to avoid blocking FCP -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-55TK9L8WDT');
+  </script>
 </body>
 
 </html>

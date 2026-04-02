@@ -55,6 +55,9 @@
 							class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
 							style="view-transition-name: project-image-{featuredProject.slug}-0"
 							loading="eager"
+							fetchpriority="high"
+							width="640"
+							height="360"
 						/>
 					{:else}
 						<img
@@ -62,6 +65,8 @@
 							alt={`Placeholder for ${featuredProject.title}`}
 							class="h-full w-full object-cover"
 							style="view-transition-name: project-image-{featuredProject.slug}-0"
+							width="640"
+							height="360"
 						/>
 					{/if}
 					<!-- Featured badge -->

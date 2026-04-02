@@ -15,18 +15,14 @@
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
 	let unfilteredProjects: Project[] = projectsData;
-	let featuredProject: Project | null = null;
-	let projects: Project[] = [];
+	let featuredProject: Project | null = unfilteredProjects[0] || null;
+	// Default to 3 for SSR/prerender — resize will adjust on client
+	let projects: Project[] = unfilteredProjects.slice(1, 4);
 
 	function updateProjects() {
-		// First project is always featured
 		featuredProject = unfilteredProjects[0] || null;
-
-		// Remaining projects for the grid
 		const remaining = unfilteredProjects.slice(1);
-		if (window.innerWidth < 640) {
-			projects = remaining.slice(0, 2);
-		} else if (window.innerWidth < 1024) {
+		if (window.innerWidth < 1024) {
 			projects = remaining.slice(0, 2);
 		} else {
 			projects = remaining.slice(0, 3);

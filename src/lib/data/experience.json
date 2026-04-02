@@ -25,7 +25,7 @@
 		"company": "Medihive",
 		"period": "2022 – 2025",
 		"description": "At Medihive, I worked mostly with Ruby on Rails in a cross-functional team focused on delivering the best possible product to our clients. I worked on the company's internal tools, such as the admin panel and doctor panels, as well as the client-facing website. As a full-stack developer, I also worked on the front-end, using mostly ERB and some React. I gradually increased my responsibilities, owning and developing features end-to-end.",
-		"logo": "/images/companies/medihive.jpg",
+		"logo": "/images/companies/medihive.webp",
 		"skills": ["Rails", "Ruby", "React", "ERB", "Turbo", "PostgreSQL", "MySQL", "Git"],
 		"achievements": [
 			"Led several features from inception to production",
@@ -37,7 +37,7 @@
 		"company": "Bit Zesty",
 		"period": "2021 – 2022",
 		"description": "As a Full-Stack Software Developer at BitZesty, I've had the opportunity to work fully remotely in Ruby on Rails on a cross-functional team. Here I worked on several projects with different ruby and rails versions, trying to find the best budget conscious solution for clients.",
-		"logo": "/images/companies/bitzesty.jpg",
+		"logo": "/images/companies/bitzesty.webp",
 		"achievements": [
 			"Upgraded several projects from Rails 5 to Rails 6",
 			"Led the development of a new feature for a client"
@@ -69,7 +69,7 @@
 		"company": "WeDo Technologies",
 		"period": "2019",
 		"description": "During my tenure at WeDo Technologies (now Mobileum), I worked with their proprietary software 'RAID'. This is a logic based development software. I had the chance to work in a very small team and work a bit with unix, VMs and JavaScript.",
-		"logo": "/images/companies/wedo.jpg",
+		"logo": "/images/companies/wedo.webp",
 		"skills": ["JavaScript", "Unix", "SQL", "RAID"]
 	}
 ]

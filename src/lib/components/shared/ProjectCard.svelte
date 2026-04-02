@@ -21,6 +21,8 @@
 					style="view-transition-name: project-image-{slug}-0"
 					loading="lazy"
 					decoding="async"
+					width="640"
+					height="360"
 				/>
 			{:else}
 				<img
@@ -29,6 +31,8 @@
 					class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
 					style="view-transition-name: project-image-{slug}-0"
 					loading="lazy"
+					width="640"
+					height="360"
 				/>
 			{/if}
 			<!-- Hover overlay with arrow -->

@@ -8,7 +8,6 @@
 
 	export let data: PageData;
 	export let projects: Project[] = data.projects;
-	let mounted = false;
 	let searchQuery = '';
 	let isFilterOpen = false;
 	let selectedCategory = 'all';
@@ -28,8 +27,6 @@
 	const categoryKeys = Object.keys(categories);
 
 	onMount(() => {
-		mounted = true;
-
 		// Close dropdown when clicking outside
 		function handleClickOutside(event: MouseEvent) {
 			if (
@@ -122,7 +119,6 @@
 </script>
 
 <section class="mx-auto max-w-6xl px-6 py-12">
-	{#if mounted}
 		<div class="mb-12">
 			<div class="mb-8 flex items-center gap-3">
 				<BackButton href="/" />
@@ -305,5 +301,4 @@
 				</button>
 			</div>
 		{/if}
-	{/if}
 </section>

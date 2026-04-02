@@ -2,7 +2,6 @@
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
-	let mounted = false;
 	let formState = {
 		name: '',
 		email: '',
@@ -20,7 +19,6 @@
 	let nameInputRef: HTMLInputElement;
 
 	onMount(() => {
-		mounted = true;
 		// Focus the name field after mount for better UX
 		setTimeout(() => nameInputRef?.focus(), 100);
 	});
@@ -91,7 +89,6 @@
 </script>
 
 <section class="mx-auto max-w-xl px-6 py-16">
-	{#if mounted}
 		<div>
 			<h1 class="mb-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
 				Contact Me
@@ -291,5 +288,4 @@
 				</div>
 			</form>
 		{/if}
-	{/if}
 </section>

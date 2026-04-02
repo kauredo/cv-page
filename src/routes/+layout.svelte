@@ -64,25 +64,17 @@
 		}
 	</script>`}
 
-	<!-- Google Fonts (preconnect in app.html for early connection) -->
-	<link
-		rel="preload"
-		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
-		as="style"
-	/>
-	<link
+	<!-- Google Fonts — non-render-blocking via media swap -->
+	{@html `<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
 		media="print"
-		onload={function () {
-			this.media = 'all';
-		}}
-	/>
+		onload="this.media='all'"
+	/>`}
 	<noscript>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
-			type="text/css"
 		/>
 	</noscript>
 </svelte:head>

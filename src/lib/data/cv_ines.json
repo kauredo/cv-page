@@ -2,7 +2,7 @@
 	"basics": {
 		"name": "Inês Costa",
 		"label": "Psicóloga",
-		"image": "/images/ines.jpg",
+		"image": "/images/ines.webp",
 		"email": "inescosta1997@gmail.com",
 		"phone": "+351918502961",
 		"url": "",
@@ -87,7 +87,7 @@
 			"end": {},
 			"company": "St. Dominic's International School",
 			"website": "",
-			"logo": "/images/institutions/st-dominics.jpg"
+			"logo": "/images/institutions/st-dominics.webp"
 		},
 		{
 			"name": "St. Dominic's International School",
@@ -104,7 +104,7 @@
 			"end": { "year": 2025, "month": 8 },
 			"company": "St. Dominic's International School",
 			"website": "",
-			"logo": "/images/institutions/st-dominics.jpg"
+			"logo": "/images/institutions/st-dominics.webp"
 		},
 		{
 			"name": "St. Dominic's International School",
@@ -121,7 +121,7 @@
 			"end": { "year": 2023, "month": 9 },
 			"company": "St. Dominic's International School",
 			"website": "",
-			"logo": "/images/institutions/st-dominics.jpg"
+			"logo": "/images/institutions/st-dominics.webp"
 		},
 		{
 			"name": "Fidelidade",
@@ -243,7 +243,7 @@
 			"end": { "year": 2023 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/ucp.jpg"
+			"logo": "/images/institutions/ucp.webp"
 		},
 		{
 			"institution": "University of Sussex",
@@ -260,7 +260,7 @@
 			"end": { "year": 2019 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/sussex.jpg"
+			"logo": "/images/institutions/sussex.webp"
 		},
 		{
 			"institution": "University of Brighton",
@@ -277,7 +277,7 @@
 			"end": { "year": 2018 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/brighton.jpg"
+			"logo": "/images/institutions/brighton.webp"
 		},
 		{
 			"institution": "St. Julian's School",
@@ -294,7 +294,7 @@
 			"end": { "year": 2015 },
 			"website": "",
 			"gpa": "",
-			"logo": "/images/institutions/st-julians.jpg"
+			"logo": "/images/institutions/st-julians.webp"
 		}
 	],
 	"volunteer": [],

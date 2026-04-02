@@ -5,7 +5,7 @@
 	export let ballJumpHeight = 205;
 	export let duration = 1.1;
 	let cycleInterval = duration * 1000 * 2;
-	// half height until it reaches 1
+
 	let numberOfBounces = 1;
 	let tempHeight = ballJumpHeight;
 	let heightSteps = [tempHeight];
@@ -23,24 +23,23 @@
 	let isPaused = true;
 	let currentHeight = heightSteps[0];
 
+	let containerEl: HTMLDivElement;
+	let ballEl: HTMLImageElement;
+	let dribbleEl: HTMLDivElement;
+	let smashEl: HTMLDivElement;
+
 	const animateBall = () => {
 		if (isAnimating) return;
+		if (!ballEl || !dribbleEl || !smashEl) return;
 
-		const ball = document.getElementById('rotateImg');
-		const dribble = document.getElementById('dribble');
-		const smash = document.getElementById('smash');
-
-		if (!ball || !dribble || !smash) return;
-
-		if (ball.classList.contains('animation-untriggered')) {
-			ball.classList.remove('animation-untriggered');
-			dribble.classList.remove('animation-untriggered');
-			smash.classList.remove('animation-untriggered');
+		if (ballEl.classList.contains('animation-untriggered')) {
+			ballEl.classList.remove('animation-untriggered');
+			dribbleEl.classList.remove('animation-untriggered');
+			smashEl.classList.remove('animation-untriggered');
 			isPaused = false;
 			isAnimating = true;
 
-			// Start the height cycling
-			dribble.style.setProperty('--ballJumpHeight', `${currentHeight}px`);
+			dribbleEl.style.setProperty('--ballJumpHeight', `${currentHeight}px`);
 			startHeightCycle();
 		}
 	};
@@ -49,19 +48,13 @@
 		if (cycleTimer) clearInterval(cycleTimer);
 
 		cycleTimer = setInterval(() => {
-			// Move to next height
 			currentHeightIndex = (currentHeightIndex + 1) % heightSteps.length;
 			currentHeight = heightSteps[currentHeightIndex];
 
-			// If we've reached end of the height steps, pause the animation
 			if (currentHeightIndex === heightSteps.length - 1) {
 				pauseAnimation();
-				// Reset the height index for next time
 				currentHeightIndex = 0;
 				currentHeight = heightSteps[0];
-
-				// Wait a bit before allowing a new hover trigger
-
 				isAnimating = false;
 				updateAnimationHeight(0);
 			} else {
@@ -71,15 +64,11 @@
 	};
 
 	const pauseAnimation = () => {
-		const ball = document.getElementById('rotateImg');
-		const dribble = document.getElementById('dribble');
-		const smash = document.getElementById('smash');
+		if (!ballEl || !dribbleEl || !smashEl) return;
 
-		if (!ball || !dribble || !smash) return;
-
-		ball.classList.add('animation-untriggered');
-		dribble.classList.add('animation-untriggered');
-		smash.classList.add('animation-untriggered');
+		ballEl.classList.add('animation-untriggered');
+		dribbleEl.classList.add('animation-untriggered');
+		smashEl.classList.add('animation-untriggered');
 		isPaused = true;
 
 		if (cycleTimer) {
@@ -89,44 +78,63 @@
 	};
 
 	const updateAnimationHeight = (height = currentHeight) => {
-		const dribble = document.getElementById('dribble');
-		if (dribble) {
-			dribble.style.setProperty('--ballJumpHeight', `${height}px`);
+		if (dribbleEl) {
+			dribbleEl.style.setProperty('--ballJumpHeight', `${height}px`);
 		}
 	};
 
-	onMount(() => {
-		const ball = document.getElementById('rotateImg');
-		if (!ball) return;
+	let observer: IntersectionObserver | null = null;
 
-		ball.addEventListener('mouseover', () => {
+	onMount(() => {
+		if (!ballEl) return;
+
+		ballEl.addEventListener('mouseover', () => {
 			if (!isAnimating) {
 				animateBall();
 			}
 		});
+
+		// Only allow animation when the component is in the viewport
+		observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (!entry.isIntersecting && isAnimating) {
+						pauseAnimation();
+						isAnimating = false;
+					}
+				}
+			},
+			{ threshold: 0 }
+		);
+		observer.observe(containerEl);
 	});
 
 	onDestroy(() => {
 		if (cycleTimer) {
 			clearInterval(cycleTimer);
 		}
+		if (observer) {
+			observer.disconnect();
+		}
 	});
 </script>
 
-<div class="relative mb-6 h-full w-fit">
+<div class="relative mb-6 h-full w-fit" bind:this={containerEl} aria-hidden="true">
 	<div id="suport" class="h-full w-fit">
-		<div id="smash" class="animation-untriggered h-full w-fit">
+		<div bind:this={smashEl} class="animation-untriggered h-full w-fit smash-anim">
 			<div
-				id="dribble"
-				class="animation-untriggered h-full w-fit"
+				bind:this={dribbleEl}
+				class="animation-untriggered h-full w-fit dribble-anim"
 				style={`--ballWidth: ${width}px; --animationDuration: ${duration}s; width: ${width}px; height: ${width}px;`}
 			>
 				<img
-					id="rotateImg"
+					bind:this={ballEl}
 					src="/images/bball.svg"
 					alt="Basketball"
-					class="animation-untriggered mx-auto dark:invert"
+					class="animation-untriggered mx-auto rotate-anim dark:invert"
 					style="width: {width}px; height: {width}px;"
+					width={width}
+					height={width}
 				/>
 			</div>
 		</div>
@@ -141,7 +149,7 @@
 		text-align: center;
 	}
 
-	#smash {
+	.smash-anim {
 		animation-name: smash;
 		animation-duration: var(--animationDuration);
 		animation-direction: alternate;
@@ -150,13 +158,13 @@
 		transform-origin: bottom;
 	}
 
-	#dribble,
-	#rotateImg {
+	.dribble-anim,
+	.rotate-anim {
 		border-radius: 50%;
 		display: inline-block;
 	}
 
-	#dribble {
+	.dribble-anim {
 		animation-name: dribble;
 		animation-duration: var(--animationDuration);
 		animation-direction: alternate;
@@ -164,7 +172,7 @@
 		animation-timing-function: ease-out;
 	}
 
-	#rotateImg {
+	.rotate-anim {
 		background-size: 100%;
 		animation-name: rotateImg;
 		animation-duration: calc(var(--animationDuration) * 5.3);
@@ -172,10 +180,10 @@
 		animation-timing-function: linear;
 	}
 
-	/* The hover trigger and animation persistence class */
-	#rotateImg.animation-untriggered,
-	#dribble.animation-untriggered,
-	#smash.animation-untriggered {
+	/* Paused state */
+	.rotate-anim.animation-untriggered,
+	.dribble-anim.animation-untriggered,
+	.smash-anim.animation-untriggered {
 		animation-play-state: paused;
 	}
 

@@ -4,13 +4,10 @@
 	import Modal from '$lib/components/shared/Modal.svelte';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 	import Button from '$lib/components/shared/Button.svelte';
-	import { onMount } from 'svelte';
 
 	export let data: PageData;
 	export let project: Project = data.project;
 	let selectedImage: string | null = null;
-	let imagesLoaded = false;
-	let mounted = false;
 
 	function openModal(image: string) {
 		selectedImage = image;
@@ -19,28 +16,6 @@
 	function closeModal() {
 		selectedImage = null;
 	}
-
-	onMount(() => {
-		if (project.images.length > 0) {
-			// Create an array to track loaded images
-			const imagePromises = project.images.map((src) => {
-				return new Promise<void>((resolve) => {
-					const img = new Image();
-					img.onload = () => resolve();
-					img.onerror = () => resolve(); // Handle errors gracefully
-					img.src = src;
-				});
-			});
-
-			// When all images are loaded, set imagesLoaded to true
-			Promise.all(imagePromises).then(() => {
-				imagesLoaded = true;
-			});
-		} else {
-			imagesLoaded = true;
-		}
-		mounted = true;
-	});
 </script>
 
 <svelte:head>
@@ -56,7 +31,6 @@
 </svelte:head>
 
 <section class="mx-auto max-w-4xl p-6">
-	{#if mounted}
 		<div class="mb-8">
 			<div class="flex items-center gap-2">
 				<BackButton href="/projects" />
@@ -106,7 +80,7 @@
 		</div>
 
 		<!-- Display Featured Image -->
-		{#if project.images.length > 0 && imagesLoaded}
+		{#if project.images.length > 0}
 			<div class="mb-12">
 				<button
 					class="w-full overflow-hidden rounded-lg shadow-lg transition hover:shadow-xl"
@@ -117,6 +91,8 @@
 						style="view-transition-name: project-image-{project.slug}-0"
 						alt={project.title}
 						class="aspect-video w-full object-cover object-top transition hover:opacity-95 dark:opacity-90 dark:hover:opacity-100"
+						width="896"
+						height="504"
 					/>
 				</button>
 			</div>
@@ -131,7 +107,7 @@
 				</section>
 
 				<!-- Additional Images in a grid -->
-				{#if project.images && project.images.length > 1 && imagesLoaded}
+				{#if project.images && project.images.length > 1}
 					<section class="mb-10">
 						<h2 class="mb-4 text-2xl font-semibold">Gallery</h2>
 						<div class="grid grid-cols-2 gap-4">
@@ -145,6 +121,9 @@
 										style="view-transition-name: project-image-{project.slug}-{i + 1}"
 										alt={`${project.title} screenshot ${i + 1}`}
 										class="aspect-video w-full object-cover object-top transition hover:opacity-90 dark:opacity-80 dark:hover:opacity-100"
+										width="420"
+										height="236"
+										loading="lazy"
 									/>
 								</button>
 							{/each}
@@ -226,7 +205,6 @@
 				</section>
 			</div>
 		</div>
-	{/if}
 </section>
 
 <!-- Modal Component -->

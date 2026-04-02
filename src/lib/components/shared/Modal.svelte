@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { browser } from '$app/environment'; // Import browser check
-	import { on } from 'svelte/events';
+	import { browser } from '$app/environment';
 
 	export let isOpen: boolean = false;
 	export let images: string[] = [];
@@ -187,8 +186,10 @@
 				<img
 					src={imageSrc}
 					alt={altText}
-					class="h-full w-full object-cover p-4"
+					class="h-full w-full object-contain p-4"
 					on:load={handleImageLoad}
+					width="1280"
+					height="720"
 				/>
 
 				{#if images.length > 1}
