@@ -1,44 +1,73 @@
 <script lang="ts">
 	import type { Experience } from '$lib/types';
+	import SectionHeading from './shared/SectionHeading.svelte';
 
 	export let experiences: Experience[] = [];
 </script>
 
 <section aria-labelledby="experience-heading">
-	<h2
+	<SectionHeading
 		id="experience-heading"
-		class="mb-8 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-	>
-		Places I've Worked At
-	</h2>
+		index="03"
+		title="Places I've Worked At"
+		italicWord="Worked"
+		trailing
+		meta="Career · {experiences.length} roles"
+	/>
 
-	<div class="space-y-0">
+	<div>
 		{#each experiences as exp, i}
-			<div class="relative pl-8 pb-8 last:pb-0">
-				<!-- Timeline line -->
-				<div class="absolute top-3 bottom-0 left-[7px] w-px bg-slate-200 dark:bg-slate-700 {i === experiences.length - 1 ? 'hidden' : ''}"></div>
+			<div class="relative pb-10 pl-10 last:pb-0">
+				<!-- Vertical timeline track — visible vasco line -->
+				<div
+					class="bg-vasco-200 dark:bg-vasco-900/60 absolute top-4 bottom-0 left-[9px] w-0.5 {i ===
+					experiences.length - 1
+						? 'hidden'
+						: ''}"
+					aria-hidden="true"
+				></div>
 
-				<!-- Timeline dot -->
-				<div class="absolute top-2 left-0 h-3.5 w-3.5 rounded-full border-2 {exp.period.includes('Present') ? 'border-hoop-500 bg-hoop-500' : 'border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-900'}"></div>
+				<!-- Editorial timeline marker -->
+				<div
+					class="absolute top-1.5 left-0 flex h-5 w-5 items-center justify-center rounded-full {exp.period.includes(
+						'Present'
+					)
+						? 'bg-hoop-500 ring-hoop-200/70 dark:ring-hoop-900/60 ring-4'
+						: 'border-vasco-300 dark:border-vasco-700 border-2 bg-white dark:bg-slate-950'}"
+					aria-hidden="true"
+				></div>
 
 				<div class="flex items-start gap-4">
 					{#if exp.logo}
-						<img src={exp.logo} alt="" class="h-10 w-10 rounded-lg border border-slate-200 bg-white object-contain p-1 dark:border-slate-700 dark:bg-slate-800" aria-hidden="true" />
+						<img
+							src={exp.logo}
+							alt=""
+							class="h-12 w-12 rounded-lg border border-slate-200 bg-white object-contain p-1.5 dark:border-slate-700 dark:bg-slate-800"
+							aria-hidden="true"
+						/>
 					{/if}
 					<div class="flex-1">
 						<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-							<h3 class="font-bold text-slate-900 dark:text-white">{exp.title}</h3>
-							<span class="text-sm font-medium text-vasco-600 dark:text-vasco-400">{exp.company}</span>
+							<h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+								{exp.title}
+							</h3>
+							<span class="text-vasco-700 dark:text-vasco-300 text-sm font-semibold"
+								>@ {exp.company}</span
+							>
 						</div>
-						<p class="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{exp.period}</p>
-						<p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+						<p
+							class="mt-1 font-mono text-[11px] tracking-wider text-slate-600 uppercase dark:text-slate-400"
+						>
+							{exp.period}
+						</p>
+						<p class="mt-3 max-w-prose leading-relaxed text-slate-600 dark:text-slate-300">
 							{exp.description}
 						</p>
 						{#if exp.skills}
 							<div class="mt-3 flex flex-wrap gap-1.5">
 								{#each exp.skills.slice(0, 4) as skill}
 									<span
-										class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400"
+										class="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 font-mono text-[11px] text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
 									>
 										{skill}
 									</span>

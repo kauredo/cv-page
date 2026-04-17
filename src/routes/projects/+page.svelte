@@ -118,187 +118,181 @@
 	});
 </script>
 
-<section class="mx-auto max-w-6xl px-6 py-12">
-		<div class="mb-12">
-			<div class="mb-8 flex items-center gap-3">
-				<BackButton href="/" />
-				<div class="h-5 w-px bg-slate-300 dark:bg-slate-600"></div>
-				<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Home</span>
+<section class="mx-auto max-w-6xl px-6 py-12 sm:py-16">
+	<div class="mb-14">
+		<!-- Masthead-style breadcrumb -->
+		<div
+			class="mb-10 flex flex-wrap items-center justify-between gap-3 border-t border-b border-slate-900/10 py-2.5 dark:border-white/10"
+		>
+			<BackButton href="/" text="Home" />
+			<span class="eyebrow text-slate-600 dark:text-slate-400">Index / All work</span>
+		</div>
+
+		<!-- Editorial heading -->
+		<div class="mb-10">
+			<div class="flex items-baseline gap-3">
+				<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">∑</span>
+				<span class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-16 flex-none" aria-hidden="true"
+				></span>
 			</div>
-
-			<h1 class="mb-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
-				All Projects
+			<h1
+				class="font-display mt-3 text-5xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
+			>
+				All <span class="text-vasco-700 dark:text-vasco-300 font-medium italic">work</span><span
+					class="text-vasco-600 dark:text-vasco-400">.</span
+				>
 			</h1>
+		</div>
 
-			<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-				<!-- Search input -->
-				<div class="relative flex-1">
-					<input
-						type="text"
-						placeholder="Search projects..."
-						bind:value={searchQuery}
-						class="w-full rounded-lg border-2 border-slate-200 bg-white py-3 pr-12 pl-4 text-sm transition-colors focus:border-vasco-500 focus:ring-0 focus:outline-none dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-400"
-					/>
-					{#if searchQuery}
-						<button
-							on:click={() => (searchQuery = '')}
-							class="absolute top-3.5 right-10 text-slate-400 transition-colors hover:text-slate-600 dark:hover:text-slate-300"
-							aria-label="Clear search"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5"
-								viewBox="0 0 20 20"
-								fill="currentColor"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</button>
-					{/if}
-					<svg
-						class="absolute top-3.5 right-4 h-5 w-5 text-slate-400"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-						/>
-					</svg>
-				</div>
-
-				<!-- Filter dropdown with keyboard navigation -->
-				<div class="relative w-full sm:w-auto">
+		<div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+			<!-- Search input -->
+			<div class="relative flex-1">
+				<input
+					type="text"
+					placeholder="Search projects…"
+					bind:value={searchQuery}
+					class="focus:border-vasco-500 focus:ring-vasco-500/20 w-full rounded-xl border border-slate-300 bg-white py-3 pr-12 pl-4 font-mono text-sm transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500"
+				/>
+				{#if searchQuery}
 					<button
-						bind:this={filterButtonRef}
-						on:click={() => {
-							isFilterOpen = !isFilterOpen;
-							if (isFilterOpen) focusedIndex = 0;
-						}}
-						on:keydown={handleFilterKeydown}
-						class="flex w-full items-center justify-between gap-3 rounded-lg border-2 border-slate-200 bg-white px-4 py-3 text-sm font-medium transition-colors hover:border-slate-300 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:hover:border-slate-600"
-						aria-expanded={isFilterOpen}
-						aria-haspopup="listbox"
-						aria-controls="filter-listbox"
+						on:click={() => (searchQuery = '')}
+						class="absolute top-3.5 right-10 text-slate-400 transition-colors hover:text-slate-600 dark:hover:text-slate-300"
+						aria-label="Clear search"
 					>
-						<div class="flex items-center gap-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-4 w-4 text-slate-500"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-								/>
-							</svg>
-							<span class="text-slate-700 dark:text-slate-200">
-								{selectedCategory === 'all' ? 'All Categories' : selectedCategory}
-							</span>
-						</div>
 						<svg
-							class="h-4 w-4 text-slate-500 transition-transform {isFilterOpen ? 'rotate-180' : ''}"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							viewBox="0 0 20 20"
+							fill="currentColor"
 						>
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M19 9l-7 7-7-7"
+								fill-rule="evenodd"
+								d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+								clip-rule="evenodd"
 							/>
 						</svg>
 					</button>
-
-					{#if isFilterOpen}
-						<div
-							bind:this={dropdownRef}
-							id="filter-listbox"
-							class="absolute right-0 left-0 z-50 mt-2 overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-xl sm:right-0 sm:left-auto sm:w-52 dark:border-slate-700 dark:bg-slate-800"
-							transition:fade={{ duration: 150 }}
-							role="listbox"
-							tabindex="-1"
-							aria-label="Filter by category"
-							on:keydown={handleFilterKeydown}
-						>
-							{#each categoryKeys as category, index}
-								{@const isSelected = selectedCategory === (category === 'All' ? 'all' : category)}
-								{@const isFocused = focusedIndex === index}
-								<button
-									class="w-full px-4 py-3 text-left text-sm font-medium transition-colors
-										{isSelected ? 'bg-vasco-50 text-vasco-700 dark:bg-vasco-900/30 dark:text-vasco-300' : 'text-slate-700 dark:text-slate-200'}
-										{isFocused ? 'bg-slate-100 dark:bg-slate-700' : ''}
-										hover:bg-slate-50 dark:hover:bg-slate-700"
-									on:click={() => selectCategory(category)}
-									role="option"
-									aria-selected={isSelected}
-									tabindex={isFocused ? 0 : -1}
-								>
-									{category}
-								</button>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			</div>
-		</div>
-
-		{#if filteredProjects.length > 0}
-			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{#each filteredProjects as project (project.slug)}
-					<ProjectCard {project} />
-				{/each}
-			</div>
-		{:else}
-			<div class="py-24 text-center">
-				<div
-					class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800"
+				{/if}
+				<svg
+					class="absolute top-3.5 right-4 h-5 w-5 text-slate-400"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					aria-hidden="true"
 				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+					/>
+				</svg>
+			</div>
+
+			<!-- Filter dropdown with keyboard navigation -->
+			<div class="relative w-full sm:w-auto">
+				<button
+					bind:this={filterButtonRef}
+					on:click={() => {
+						isFilterOpen = !isFilterOpen;
+						if (isFilterOpen) focusedIndex = 0;
+					}}
+					on:keydown={handleFilterKeydown}
+					class="hover:border-vasco-400 focus-visible:ring-vasco-500/20 focus-visible:border-vasco-500 dark:hover:border-vasco-500/60 flex w-full items-center justify-between gap-3 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:outline-none sm:w-auto dark:border-slate-700 dark:bg-slate-900"
+					aria-expanded={isFilterOpen}
+					aria-haspopup="listbox"
+					aria-controls="filter-listbox"
+				>
+					<div class="flex items-center gap-3">
+						<span
+							class="font-mono text-[10px] tracking-wider text-slate-500 uppercase dark:text-slate-500"
+						>
+							Filter
+						</span>
+						<span class="font-display text-base font-bold text-slate-900 dark:text-white">
+							{selectedCategory === 'all' ? 'All' : selectedCategory}
+						</span>
+					</div>
 					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-8 w-8 text-slate-400"
+						class="h-4 w-4 text-slate-500 transition-transform {isFilterOpen ? 'rotate-180' : ''}"
 						fill="none"
-						viewBox="0 0 24 24"
 						stroke="currentColor"
+						viewBox="0 0 24 24"
 						aria-hidden="true"
 					>
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							stroke-width="2"
-							d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+							d="M19 9l-7 7-7-7"
 						/>
 					</svg>
-				</div>
-				<h3 class="mb-2 text-lg font-semibold text-slate-900 dark:text-white">No projects found</h3>
-				<p class="mb-6 text-slate-600 dark:text-slate-400">
-					Try adjusting your search or filter criteria
-				</p>
-				<button
-					class="rounded-lg bg-vasco-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-vasco-700 dark:bg-vasco-500 dark:hover:bg-vasco-600"
-					on:click={() => {
-						searchQuery = '';
-						selectedCategory = 'all';
-					}}
-				>
-					Clear filters
 				</button>
+
+				{#if isFilterOpen}
+					<div
+						bind:this={dropdownRef}
+						id="filter-listbox"
+						class="absolute right-0 left-0 z-50 mt-2 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl sm:right-0 sm:left-auto sm:w-56 dark:border-slate-700 dark:bg-slate-900"
+						transition:fade={{ duration: 150 }}
+						role="listbox"
+						tabindex="-1"
+						aria-label="Filter by category"
+						on:keydown={handleFilterKeydown}
+					>
+						{#each categoryKeys as category, index}
+							{@const isSelected = selectedCategory === (category === 'All' ? 'all' : category)}
+							{@const isFocused = focusedIndex === index}
+							<button
+								class="font-display flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-bold transition-colors
+										{isSelected
+									? 'bg-vasco-50 text-vasco-700 dark:bg-vasco-950/40 dark:text-vasco-300'
+									: 'text-slate-900 dark:text-white'}
+										{isFocused ? 'bg-slate-100 dark:bg-slate-800' : ''}
+										hover:bg-slate-50 dark:hover:bg-slate-800"
+								on:click={() => selectCategory(category)}
+								role="option"
+								aria-selected={isSelected}
+								tabindex={isFocused ? 0 : -1}
+							>
+								{category}
+								{#if isSelected}
+									<span class="bg-hoop-500 inline-block h-1.5 w-1.5 rounded-full" aria-hidden="true"
+									></span>
+								{/if}
+							</button>
+						{/each}
+					</div>
+				{/if}
 			</div>
-		{/if}
+		</div>
+	</div>
+
+	{#if filteredProjects.length > 0}
+		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
+			{#each filteredProjects as project (project.slug)}
+				<ProjectCard {project} />
+			{/each}
+		</div>
+	{:else}
+		<div class="py-24 text-center">
+			<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-4">Empty // 0 results</p>
+			<h3 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+				Air ball<span class="text-hoop-500 dark:text-hoop-400">.</span>
+			</h3>
+			<p class="mt-4 font-mono text-xs tracking-wider text-slate-600 uppercase dark:text-slate-400">
+				No projects match your filter
+			</p>
+			<button
+				class="focus-visible:ring-vasco-500 mt-8 inline-flex items-center gap-2 rounded-full border border-slate-900/25 px-6 py-3 font-mono text-xs font-semibold tracking-[0.18em] text-slate-900 uppercase transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:border-slate-900 active:bg-slate-900 active:text-white dark:border-white/30 dark:text-white dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-900 dark:active:border-white dark:active:bg-white dark:active:text-slate-900"
+				on:click={() => {
+					searchQuery = '';
+					selectedCategory = 'all';
+				}}
+			>
+				Clear filters
+			</button>
+		</div>
+	{/if}
 </section>

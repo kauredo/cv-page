@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { MetaTags } from 'svelte-meta-tags';
+	import Button from '$lib/components/shared/Button.svelte';
 
 	export let error: App.Error | null = page.error;
 	export let status: number = page.status;
@@ -8,47 +9,53 @@
 
 <MetaTags title="{status === 404 ? 'Page Not Found' : `Error ${status}`} — Vasco KF" />
 
-<main
-	class="flex min-h-screen items-center justify-center bg-stone-50 p-6 text-center dark:bg-gray-800 dark:text-gray-200"
->
-	<div class="w-full max-w-xl">
-		<div class="mb-6">
-			<svg
-				class="text-vasco-600 mx-auto h-16 w-16"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-				stroke-width="1.5"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.666 1.732-3L13.732 4c-.77-1.334-2.694-1.334-3.464 0L4.34 16c-.77 1.334.192 3 1.732 3z"
-				/>
-			</svg>
-		</div>
+<main class="relative flex min-h-[80vh] items-center bg-white dark:bg-slate-950">
+	<!-- Decorative court arc backdrop -->
+	<svg
+		class="text-hoop-500/15 absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/3"
+		viewBox="0 0 100 100"
+		fill="none"
+		aria-hidden="true"
+	>
+		<circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.4" />
+		<circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.4" />
+		<circle cx="50" cy="50" r="22" stroke="currentColor" stroke-width="0.4" />
+		<circle cx="50" cy="50" r="2" fill="currentColor" />
+	</svg>
 
-		<h1 class="mb-4 text-4xl font-bold">
-			{status === 404 ? '404 — Page Not Found' : `Error ${status}`}
-		</h1>
-
-		<p class="mb-6 text-lg text-gray-600 dark:text-gray-400">
-			{#if status === 404}
-				Sorry, there's no page at
-				<span class="text-vasco-600 font-semibold">{page.url.pathname}</span>. But feel free to
-				explore other parts of the site!
-			{:else if error?.message}
-				{error.message}
-			{:else}
-				Something went wrong — but it’s not your fault.
-			{/if}
+	<div class="relative mx-auto w-full max-w-3xl px-6 py-16">
+		<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-6">
+			{status === 404 ? 'Error // 404' : `Error // ${status}`}
 		</p>
 
-		<a
-			href="/"
-			class="bg-vasco-600 hover:bg-vasco-700 inline-block rounded-lg px-6 py-3 font-medium text-stone-50 shadow transition"
+		<h1
+			class="font-display text-slate-900 dark:text-white text-[clamp(4rem,16vw,12rem)] font-black leading-[0.85] tracking-[-0.04em]"
+			style="font-variation-settings: 'opsz' 144, 'SOFT' 100;"
 		>
-			← Go back home
-		</a>
+			{status === 404 ? 'Air ball' : 'Foul'}<span class="text-hoop-500 dark:text-hoop-400">.</span>
+		</h1>
+
+		<div class="mt-10 max-w-xl space-y-4">
+			<p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
+				{#if status === 404}
+					There's nothing at
+					<span class="font-mono text-hoop-600 dark:text-hoop-400">{page.url.pathname}</span>.
+					Maybe a typo, maybe a moved page.
+				{:else if error?.message}
+					{error.message}
+				{:else}
+					Something went wrong on our end — not yours.
+				{/if}
+			</p>
+
+			<p class="font-mono text-xs uppercase tracking-wider text-slate-500 dark:text-slate-500">
+				Fig. ∅ — Sometimes shots miss.
+			</p>
+		</div>
+
+		<div class="mt-10 flex flex-wrap items-center gap-4">
+			<Button type="primary" href="/">← Back home</Button>
+			<Button type="secondary" href="/projects">See projects</Button>
+		</div>
 	</div>
 </main>

@@ -6,10 +6,10 @@
 
 /* Font fallback metrics to prevent layout shift */
 @font-face {
-	font-family: 'Plus Jakarta Sans Fallback';
-	src: local('Arial');
-	size-adjust: 104%;
-	ascent-override: 98%;
+	font-family: 'Fraunces Fallback';
+	src: local('Georgia');
+	size-adjust: 105%;
+	ascent-override: 95%;
 	descent-override: 24%;
 	line-gap-override: 0%;
 }
@@ -20,6 +20,15 @@
 	size-adjust: 103%;
 	ascent-override: 96%;
 	descent-override: 23%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: 'JetBrains Mono Fallback';
+	src: local('Menlo'), local('Consolas');
+	size-adjust: 100%;
+	ascent-override: 90%;
+	descent-override: 22%;
 	line-gap-override: 0%;
 }
 
@@ -69,8 +78,9 @@
 	--ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
 	/* Font families with fallback metrics */
-	--font-display: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, sans-serif;
+	--font-display: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
 	--font-body: 'Instrument Sans', 'Instrument Sans Fallback', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, monospace;
 }
 
 html {
@@ -100,6 +110,60 @@ h1,
 h2,
 .font-display {
 	font-family: var(--font-display);
+	font-variation-settings: 'opsz' 144, 'SOFT' 50;
+	letter-spacing: -0.02em;
+}
+
+h1 {
+	font-variation-settings: 'opsz' 144, 'SOFT' 100;
+}
+
+.font-mono {
+	font-family: var(--font-mono);
+}
+
+/* Editorial eyebrow used for section labels and metadata */
+.eyebrow {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+}
+
+/* Selection color matches the brand */
+::selection {
+	background: var(--color-hoop-500);
+	color: white;
+}
+
+/* Court-arc divider — single SVG-as-mask, recolored via currentColor */
+.court-divider {
+	height: 28px;
+	width: 100%;
+	background-color: currentColor;
+	mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 28' preserveAspectRatio='none'><path d='M0 14 H420 M780 14 H1200' stroke='black' stroke-width='1.2' fill='none'/><path d='M420 14 A180 180 0 0 0 780 14' stroke='black' stroke-width='1.2' fill='none'/><circle cx='600' cy='14' r='3' fill='black'/></svg>");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 28' preserveAspectRatio='none'><path d='M0 14 H420 M780 14 H1200' stroke='black' stroke-width='1.2' fill='none'/><path d='M420 14 A180 180 0 0 0 780 14' stroke='black' stroke-width='1.2' fill='none'/><circle cx='600' cy='14' r='3' fill='black'/></svg>");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+}
+
+/* Subtle paper-grain backdrop, only on the body for atmosphere */
+.grain::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+	opacity: 0.06;
+	mix-blend-mode: multiply;
+}
+
+:where(.dark) .grain::before {
+	mix-blend-mode: screen;
+	opacity: 0.04;
 }
 
 /* Reduced motion support */

@@ -20,194 +20,176 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": [
-			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vascokf.com/" },
-			{ "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.vascokf.com/projects" },
-			{ "@type": "ListItem", "position": 3, "name": project.title, "item": "https://www.vascokf.com/projects/" + project.slug }
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vascokf.com/' },
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Projects',
+				item: 'https://www.vascokf.com/projects'
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: project.title,
+				item: 'https://www.vascokf.com/projects/' + project.slug
+			}
 		]
 	})}</script>`}
 </svelte:head>
 
-<section class="mx-auto max-w-4xl p-6">
-		<div class="mb-8">
-			<div class="flex items-center gap-2">
-				<BackButton href="/projects" />
-				<div class="h-6 w-px bg-gray-300 dark:bg-gray-700"></div>
-				<span class="text-sm text-gray-500 dark:text-gray-400">Projects</span>
-			</div>
+<article class="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+	<!-- Masthead breadcrumb -->
+	<div
+		class="mb-12 flex flex-wrap items-center justify-between gap-3 border-t border-b border-slate-900/10 py-2.5 dark:border-white/10"
+	>
+		<BackButton href="/projects" text="Projects" />
+		<span class="eyebrow text-slate-600 dark:text-slate-400">Case study</span>
+	</div>
 
-			<h1
-				class="mt-4 text-4xl font-bold"
-				style="view-transition-name: project-title-{project.slug}"
+	<!-- Editorial header -->
+	<header class="mb-12">
+		<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-6">Project / {project.slug}</p>
+
+		<h1
+			class="font-display text-4xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
+			style="view-transition-name: project-title-{project.slug}"
+		>
+			{project.title}<span class="text-hoop-500 dark:text-hoop-400">.</span>
+		</h1>
+
+		<p
+			class="mt-6 max-w-3xl text-xl leading-relaxed text-slate-700 sm:text-2xl dark:text-slate-200"
+			style="view-transition-name: project-description-{project.slug}"
+		>
+			{project.description}
+		</p>
+	</header>
+
+	<!-- Featured image -->
+	{#if project.images.length > 0}
+		<div class="mb-16">
+			<button
+				class="group focus-visible:ring-hoop-500 block w-full overflow-hidden rounded-2xl shadow-lg transition-shadow hover:shadow-2xl focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none active:shadow-2xl dark:focus-visible:ring-offset-slate-950"
+				on:click={() => openModal(project.images[0])}
 			>
-				{project.title}
-			</h1>
+				<img
+					src={project.images[0]}
+					style="view-transition-name: project-image-{project.slug}-0"
+					alt={project.title}
+					class="aspect-video w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02] group-active:scale-[1.02] motion-reduce:transform-none"
+					width="1024"
+					height="576"
+				/>
+			</button>
+		</div>
+	{/if}
 
-			<!-- Project Description -->
-			<p
-				class="mt-4 text-lg text-gray-700 dark:text-gray-400"
-				style="view-transition-name: project-description-{project.slug}"
-			>
-				{project.description}
-			</p>
-
-			<!-- Quick Stats -->
-			{#if project.stack && project.stack.length > 0}
-				<div class="mt-6 flex flex-wrap gap-4">
-					<div class="flex items-center gap-2">
-						<span class="text-sm font-semibold">Tech Stack:</span>
-						<div class="flex flex-wrap gap-2">
-							{#each project.stack.slice(0, 3) as tech}
-								<span
-									class="rounded-full bg-stone-50 px-3 py-1 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300"
-								>
-									{tech}
-								</span>
-							{/each}
-							{#if project.stack.length > 3}
-								<span
-									class="rounded-full bg-stone-50 px-3 py-1 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300"
-								>
-									+{project.stack.length - 3} more
-								</span>
-							{/if}
-						</div>
-					</div>
+	<!-- Body grid -->
+	<div class="grid gap-10 md:grid-cols-12 md:gap-12">
+		<!-- Main column -->
+		<div class="md:col-span-8">
+			<section class="mb-14">
+				<div class="mb-6 flex items-baseline gap-3">
+					<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">01</span>
+					<span class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-12 flex-none" aria-hidden="true"
+					></span>
+					<span class="eyebrow text-slate-600 dark:text-slate-400">Overview</span>
 				</div>
+				<p class="max-w-prose text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+					{project.details}
+				</p>
+			</section>
+
+			<!-- Gallery -->
+			{#if project.images && project.images.length > 1}
+				<section>
+					<div class="mb-6 flex items-baseline gap-3">
+						<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">02</span>
+						<span
+							class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-12 flex-none"
+							aria-hidden="true"
+						></span>
+						<span class="eyebrow text-slate-600 dark:text-slate-400">Gallery</span>
+					</div>
+					<div class="grid gap-4 sm:grid-cols-2">
+						{#each project.images.slice(1) as image, i}
+							<button
+								class="group focus-visible:ring-hoop-500 block overflow-hidden rounded-xl shadow-md transition-shadow hover:shadow-xl focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:outline-none active:shadow-xl dark:focus-visible:ring-offset-slate-950"
+								on:click={() => openModal(image)}
+							>
+								<img
+									src={image}
+									style="view-transition-name: project-image-{project.slug}-{i + 1}"
+									alt={`${project.title} screenshot ${i + 1}`}
+									class="aspect-video w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04] group-active:scale-[1.04] motion-reduce:transform-none"
+									width="512"
+									height="288"
+									loading="lazy"
+								/>
+							</button>
+						{/each}
+					</div>
+				</section>
 			{/if}
 		</div>
 
-		<!-- Display Featured Image -->
-		{#if project.images.length > 0}
-			<div class="mb-12">
-				<button
-					class="w-full overflow-hidden rounded-lg shadow-lg transition hover:shadow-xl"
-					on:click={() => openModal(project.images[0])}
-				>
-					<img
-						src={project.images[0]}
-						style="view-transition-name: project-image-{project.slug}-0"
-						alt={project.title}
-						class="aspect-video w-full object-cover object-top transition hover:opacity-95 dark:opacity-90 dark:hover:opacity-100"
-						width="896"
-						height="504"
-					/>
-				</button>
-			</div>
-		{/if}
-
-		<!-- Project Details -->
-		<div class="grid grid-cols-1 gap-12 md:grid-cols-3">
-			<div class="col-span-1 md:col-span-2">
-				<section class="mb-10">
-					<h2 class="mb-4 text-2xl font-semibold">Overview</h2>
-					<p class="leading-relaxed text-gray-700 dark:text-gray-400">{project.details}</p>
-				</section>
-
-				<!-- Additional Images in a grid -->
-				{#if project.images && project.images.length > 1}
-					<section class="mb-10">
-						<h2 class="mb-4 text-2xl font-semibold">Gallery</h2>
-						<div class="grid grid-cols-2 gap-4">
-							{#each project.images.slice(1) as image, i}
-								<button
-									class="overflow-hidden rounded-lg shadow-md transition hover:shadow-lg"
-									on:click={() => openModal(image)}
-								>
-									<img
-										src={image}
-										style="view-transition-name: project-image-{project.slug}-{i + 1}"
-										alt={`${project.title} screenshot ${i + 1}`}
-										class="aspect-video w-full object-cover object-top transition hover:opacity-90 dark:opacity-80 dark:hover:opacity-100"
-										width="420"
-										height="236"
-										loading="lazy"
-									/>
-								</button>
-							{/each}
-						</div>
-					</section>
-				{/if}
-			</div>
-
-			<div class="col-span-1">
-				<!-- Technology Stack -->
+		<!-- Sidebar -->
+		<aside class="md:sticky md:top-24 md:col-span-4 md:self-start" aria-label="Project meta">
+			<div
+				class="space-y-8 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 dark:border-slate-800 dark:bg-slate-900/60"
+			>
+				<!-- Tech stack -->
 				{#if project.stack && project.stack.length > 0}
-					<section
-						class="mb-8 rounded-lg bg-gray-50 p-6 dark:bg-gray-800"
-					>
-						<h2 class="mb-4 text-xl font-semibold">Technology Stack</h2>
-						<ul class="flex flex-wrap gap-2">
+					<div>
+						<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-3">Tech stack</p>
+						<ul class="flex flex-wrap gap-1.5">
 							{#each project.stack as tech}
 								<li
-									class="rounded-full bg-white px-3 py-1 text-sm text-gray-700 shadow-sm dark:bg-gray-700 dark:text-gray-300"
+									class="rounded-md border border-slate-300 bg-white px-2 py-0.5 font-mono text-[11px] text-slate-700 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-300"
 								>
 									{tech}
 								</li>
 							{/each}
 						</ul>
-					</section>
+					</div>
 				{/if}
 
 				<!-- Links -->
-				<section
-					class="mb-8 rounded-lg bg-gray-50 p-6 dark:bg-gray-800"
-				>
-					<h2 class="mb-4 text-xl font-semibold">Project Links</h2>
+				<div>
+					<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-3">Links</p>
 					<div class="flex flex-col gap-3">
-						{#if project.github}
-							<Button href={project.github} type="secondary" target_blank>
-								<span class="flex items-center gap-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="16"
-										height="16"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-github"
-										><path
-											d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-										/><path d="M9 18c-4.51 2-5-2-7-2" /></svg
-									>
-									GitHub Repository
-								</span>
-							</Button>
-						{/if}
 						{#if project.link}
 							<Button href={project.link} type="primary" target_blank>
 								<span class="flex items-center gap-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="16"
-										height="16"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-globe"
-										><circle cx="12" cy="12" r="10" /><path
-											d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-										/><path d="M2 12h20" /></svg
-									>
-									Visit Live Site
+									Visit live site
+									<span aria-hidden="true">↗</span>
+								</span>
+							</Button>
+						{/if}
+						{#if project.github}
+							<Button href={project.github} type="secondary" target_blank>
+								<span class="flex items-center gap-2">
+									GitHub repo
+									<span aria-hidden="true">↗</span>
 								</span>
 							</Button>
 						{/if}
 					</div>
-				</section>
+				</div>
 			</div>
-		</div>
-</section>
 
-<!-- Modal Component -->
+			<p class="mt-6 font-mono text-[10px] leading-relaxed text-slate-600 dark:text-slate-400">
+				Fig. — Case study sheet. <br />
+				Tap any image to enlarge.
+			</p>
+		</aside>
+	</div>
+</article>
+
+<!-- Modal -->
 <Modal
 	images={project.images}
 	isOpen={selectedImage !== null}

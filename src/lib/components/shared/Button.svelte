@@ -5,15 +5,17 @@
 
 	const styles: { [key in 'primary' | 'secondary']: string } = {
 		primary:
-			'text-white bg-vasco-600 hover:bg-vasco-700 shadow-sm hover:shadow-md hover:shadow-vasco-500/25 dark:bg-vasco-500 dark:hover:bg-vasco-600 dark:hover:shadow-vasco-500/30',
+			'group relative text-white bg-slate-900 hover:bg-hoop-500 active:bg-hoop-500 dark:bg-white dark:text-slate-900 dark:hover:bg-hoop-500 dark:hover:text-white dark:active:bg-hoop-500 dark:active:text-white shadow-[0_4px_0_0_var(--color-hoop-700)] hover:shadow-[0_2px_0_0_var(--color-hoop-700)] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] motion-reduce:transform-none',
 		secondary:
-			'text-slate-700 border border-slate-300 bg-white hover:border-slate-400 hover:bg-slate-50 dark:text-slate-200 dark:border-slate-600 dark:bg-slate-900 dark:hover:border-slate-500 dark:hover:bg-slate-800'
+			'text-slate-900 border border-slate-900/25 bg-transparent hover:border-slate-900 hover:bg-slate-900 hover:text-white active:border-slate-900 active:bg-slate-900 active:text-white dark:text-white dark:border-white/30 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-900 dark:active:border-white dark:active:bg-white dark:active:text-slate-900'
 	};
 </script>
 
 <a
 	{href}
-	class="inline-flex items-center rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 {styles[type]}"
+	class="focus-visible:ring-hoop-500 inline-flex items-center gap-2 rounded-full px-6 py-3 font-mono text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,color,border-color,transform,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:outline-none dark:focus-visible:ring-offset-slate-950 {styles[
+		type
+	]}"
 	target={target_blank ? '_blank' : undefined}
 	rel={target_blank ? 'noopener noreferrer' : undefined}
 >

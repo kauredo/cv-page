@@ -41,10 +41,14 @@
 
 <Hero />
 
-<div class="mx-auto max-w-6xl space-y-16 px-6 pb-16 sm:space-y-20 sm:pb-20">
+<div class="mx-auto max-w-6xl space-y-20 px-6 pb-20 pt-8 sm:space-y-28 sm:pb-28">
 	<Projects {featuredProject} {projects} />
+	<div class="text-slate-300/70 dark:text-slate-700/70 court-divider" aria-hidden="true"></div>
 	<Experiences {experiences} />
+	<div class="text-slate-300/70 dark:text-slate-700/70 court-divider" aria-hidden="true"></div>
 	<Schools {education} />
+	<div class="text-slate-300/70 dark:text-slate-700/70 court-divider" aria-hidden="true"></div>
 	<Now />
+	<div class="text-hoop-500/50 dark:text-hoop-400/50 court-divider" aria-hidden="true"></div>
 	<Contact />
 </div>

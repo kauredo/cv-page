@@ -139,18 +139,20 @@
 		></div>
 
 		<div
-			class="relative z-50 mx-4 flex max-h-[90vh] w-full max-w-5xl flex-col rounded-lg bg-white shadow-2xl dark:bg-gray-900"
+			class="relative z-50 mx-3 flex max-h-[90svh] w-full max-w-5xl flex-col rounded-2xl bg-white shadow-2xl sm:mx-4 dark:bg-slate-900"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-title"
 		>
 			<!-- Header with close button -->
-			<div class="flex items-center justify-between border-b p-4 dark:border-gray-700">
-				<h2 id="modal-title" class="text-lg font-medium dark:text-white">
+			<div
+				class="flex items-center justify-between border-b border-slate-200 p-4 dark:border-slate-800"
+			>
+				<h2 id="modal-title" class="font-display text-lg font-bold text-slate-900 dark:text-white">
 					{altText || `Image ${currentIndex + 1} of ${images.length}`}
 				</h2>
 				<button
-					class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+					class="hover:text-hoop-600 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 rounded-full p-2.5 text-slate-500 transition-[background-color,color,transform] duration-150 hover:bg-slate-100 focus-visible:ring-2 focus-visible:outline-none active:scale-95 active:bg-slate-200 motion-reduce:transform-none dark:text-slate-400 dark:hover:bg-slate-800 dark:active:bg-slate-700"
 					on:click={localCloseModal}
 					aria-label="Close modal"
 				>
@@ -172,13 +174,11 @@
 			</div>
 
 			<!-- Image container -->
-			<div class="relative flex-1 overflow-hidden">
+			<div class="relative flex-1 overflow-hidden bg-slate-50 dark:bg-slate-950">
 				{#if isLoading}
-					<div
-						class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800"
-					>
+					<div class="absolute inset-0 flex items-center justify-center">
 						<div
-							class="h-10 w-10 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"
+							class="border-vasco-200 border-t-hoop-500 dark:border-vasco-900 dark:border-t-hoop-400 h-10 w-10 animate-spin rounded-full border-4"
 						></div>
 					</div>
 				{/if}
@@ -195,7 +195,7 @@
 				{#if images.length > 1}
 					<!-- Navigation controls -->
 					<button
-						class="absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg transition-all hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800"
+						class="hover:bg-hoop-500 active:bg-hoop-500 focus-visible:ring-hoop-500 dark:hover:bg-hoop-500 dark:active:bg-hoop-500 absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg transition-[background-color,color,transform] duration-150 hover:text-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 active:text-white motion-reduce:transform-none sm:left-3 dark:bg-slate-800/90"
 						on:click={showPrevImage}
 						aria-label="Previous image"
 					>
@@ -216,7 +216,7 @@
 					</button>
 
 					<button
-						class="absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg transition-all hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800"
+						class="hover:bg-hoop-500 active:bg-hoop-500 focus-visible:ring-hoop-500 dark:hover:bg-hoop-500 dark:active:bg-hoop-500 absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg transition-[background-color,color,transform] duration-150 hover:text-white focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 active:text-white motion-reduce:transform-none sm:right-3 dark:bg-slate-800/90"
 						on:click={showNextImage}
 						aria-label="Next image"
 					>
@@ -240,8 +240,10 @@
 
 			<!-- Footer with pagination info -->
 			{#if images.length > 1}
-				<div class="border-t p-3 text-center dark:border-gray-700">
-					<span class="text-sm text-gray-600 dark:text-gray-400">
+				<div class="border-t border-slate-200 p-3 text-center dark:border-slate-800">
+					<span
+						class="font-mono text-xs tracking-wider whitespace-nowrap text-slate-600 uppercase dark:text-slate-400"
+					>
 						{currentIndex + 1} / {images.length}
 					</span>
 				</div>
