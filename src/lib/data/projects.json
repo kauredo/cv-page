@@ -18,7 +18,9 @@
 			"/images/myagentwebsite-2.webp",
 			"/images/myagentwebsite-3.webp",
 			"/images/myagentwebsite-4.webp",
-			"/images/myagentwebsite-5.webp"
+			"/images/myagentwebsite-5.webp",
+			"/images/myagentwebsite-6.webp",
+			"/images/myagentwebsite-7.webp"
 		],
 		"github": "https://github.com/kauredo/real-estate-scraper",
 		"updatedAt": "2026-01-30",
@@ -115,11 +117,10 @@
 		],
 		"images": [
 			"/images/coinsprout-1.webp",
-			"/images/wallet-joy-1.webp",
-			"/images/wallet-joy-2.webp",
-			"/images/wallet-joy-3.webp",
-			"/images/wallet-joy-4.webp",
-			"/images/wallet-joy-5.webp"
+			"/images/coinsprout-2.webp",
+			"/images/coinsprout-3.webp",
+			"/images/coinsprout-4.webp",
+			"/images/coinsprout-5.webp"
 		],
 		"github": "https://github.com/kauredo/finance_tracker",
 		"updatedAt": "2026-04-17",
@@ -165,7 +166,11 @@
 			"Cloudflare R2"
 		],
 		"images": [
-			"/images/resource-builder-1.webp"
+			"/images/resource-builder-1.webp",
+			"/images/resource-builder-2.webp",
+			"/images/resource-builder-3.webp",
+			"/images/resource-builder-4.webp",
+			"/images/resource-builder-5.webp"
 		],
 		"updatedAt": "2026-04-17",
 		"link": "https://resourcebuilder.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
@@ -187,7 +192,11 @@
 			"Dodo Payments"
 		],
 		"images": [
-			"/images/delivered-photos-1.webp"
+			"/images/delivered-photos-1.webp",
+			"/images/delivered-photos-2.webp",
+			"/images/delivered-photos-3.webp",
+			"/images/delivered-photos-4.webp",
+			"/images/delivered-photos-5.webp"
 		],
 		"updatedAt": "2026-04-17",
 		"link": "https://delivered.photos?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
@@ -205,7 +214,13 @@
 			"TailwindCSS"
 		],
 		"images": [
-			"/images/protasca-1.webp"
+			"/images/protasca-1.webp",
+			"/images/protasca-2.webp",
+			"/images/protasca-3.webp",
+			"/images/protasca-4.webp",
+			"/images/protasca-5.webp",
+			"/images/protasca-6.webp",
+			"/images/protasca-7.webp"
 		],
 		"updatedAt": "2026-04-17",
 		"link": "https://protasca.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
