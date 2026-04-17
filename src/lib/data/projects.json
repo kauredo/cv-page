@@ -152,16 +152,17 @@
 		"title": "Resource Builder",
 		"slug": "resource-builder",
 		"description": "Tool for therapists and psychologists to generate custom consultation resources and printable games, with PDF export.",
-		"details": "A tool for therapists and psychologists to create custom games and printable resources for use in consultations. Features a canvas-based visual editor built on Konva for composing resources, PDF export via @react-pdf for print-ready outputs, QR code generation for digital/physical crossovers, and multilingual support via next-intl. Separate product from UpSpeech — different market, different workflow.",
+		"details": "A tool for therapists and psychologists to create custom games and printable resources for use in consultations. Features a canvas-based visual editor built on Konva, AI-generated illustrations that match each therapist's visual style, PDF export via @react-pdf for print-ready outputs, QR code generation for digital/physical crossovers, and multilingual support via next-intl. Separate product from UpSpeech — different market, different workflow.",
 		"stack": [
 			"Next.js",
 			"TypeScript",
 			"Convex",
+			"Gemini",
 			"Konva",
 			"Radix UI",
 			"TailwindCSS",
 			"React PDF",
-			"AWS S3"
+			"Cloudflare R2"
 		],
 		"images": [
 			"/images/resource-builder-1.webp"
