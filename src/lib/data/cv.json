@@ -58,37 +58,37 @@
 			"displayName": "MyAgentWebsite",
 			"website": "https://myagentwebsite.com",
 			"githubUrl": "https://github.com/kauredo/real-estate-scraper",
-			"description": "SaaS platform for real estate agents to create professional websites without technical knowledge."
+			"description": "Multi-tenant 'Shopify for real estate agents' that lets agencies launch branded websites instantly, with a unified admin for listings, blog posts, testimonials, and newsletters. Each agent gets a white-label domain. Built on a Rails API with multiple React + TypeScript frontends — customer site, admin dashboard, and marketing landing."
 		},
 		{
 			"displayName": "UpSpeech",
 			"website": "https://upspeech.app",
 			"githubUrl": "",
-			"description": "Multi-tenant SaaS platform for speech-language pathologists focused on stuttering therapy."
+			"description": "Multi-tenant SaaS platform built for speech-language pathologists running stuttering therapy, covering session management, patient progress tracking, and clinician-parent collaboration. Built end-to-end with a Rails 8 API and a React + TypeScript frontend; currently extending it with a React Native companion for clinicians and patients."
 		},
 		{
 			"displayName": "Resource Builder",
 			"website": "https://resourcebuilder.app",
 			"githubUrl": "",
-			"description": "Tool for therapists and psychologists to generate custom consultation resources and printable games, with PDF export."
+			"description": "Tool for therapists and psychologists to create custom consultation games and printable resources. Features a Konva-based canvas editor, AI-generated illustrations via Gemini matched to each therapist's visual style, PDF export for print-ready outputs, QR codes for digital/physical crossovers, and multilingual support. Built with Next.js, TypeScript, and Convex."
 		},
 		{
 			"displayName": "Basketball Stats App",
 			"website": "https://basketballstatsapp.com",
 			"githubUrl": "https://github.com/kauredo/basketball-stats-app",
-			"description": "Full-stack basketball statistics tracking with real-time game scoring, shot charts, and cross-platform mobile support."
+			"description": "Full-stack basketball statistics platform with live game scoring, visual shot charts with heatmaps and zone analysis, player comparisons with radar charts, and automatic standings. Built as a Turborepo monorepo with a React web app and a React Native mobile app (iOS/Android) on a Convex serverless backend for real-time updates."
 		},
 		{
 			"displayName": "Basketball Video Analyzer",
 			"website": "https://basketballvideoanalyzer.com",
 			"githubUrl": "https://github.com/kauredo/basketball-video-analyzer",
-			"description": "Desktop app for basketball coaches to cut, categorize, and organize video clips for team scouting."
+			"description": "Cross-platform desktop app (Windows, macOS, Linux) built for basketball coaches to cut plays from game footage, organize clips into hierarchical categories, and save reusable presets across projects. Features time-based search, automatic clip organization, and export for sharing with teams. Built with Electron, React, TypeScript, and FFmpeg — released as open source."
 		},
 		{
 			"displayName": "Delivered Photos",
 			"website": "https://delivered.photos",
 			"githubUrl": "",
-			"description": "Multi-tenant SaaS for photographers to deliver client galleries, collect proof selections, and sell prints."
+			"description": "Multi-tenant client proofing and delivery platform for photographers — fast, beautiful galleries where clients select favorites, download high-res files, and order prints. Built as a pnpm monorepo with a Convex backend and two React + Vite apps (photographer dashboard + client gallery) sharing auth and schema, with S3 for storage and Dodo Payments for orders."
 		}
 	],
 	"work": [
