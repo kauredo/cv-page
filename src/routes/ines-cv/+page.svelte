@@ -1,5 +1,44 @@
 <script lang="ts">
-	import cv from '$lib/data/cv_ines.json';
+	import cvData from '$lib/data/cv_ines.json';
+
+	type CVSkill = {
+		name: string;
+		level: string;
+		keywords: string[];
+		rating: number;
+		yearsOfExperience?: number;
+	};
+	type CVProject = {
+		displayName: string;
+		website?: string;
+		githubUrl?: string;
+		description: string;
+	};
+	type CVAccomplishment = {
+		title: string;
+		startDate?: string;
+		endDate: string;
+		link?: string;
+		issuer: string;
+		description?: string;
+	};
+	type CVReference = {
+		name: string;
+		relationship?: string;
+		phone?: string;
+		email?: string;
+		contact?: string;
+	};
+
+	const cv = cvData as Omit<
+		typeof cvData,
+		'skills' | 'projects' | 'accomplishments' | 'references'
+	> & {
+		skills: CVSkill[];
+		projects: CVProject[];
+		accomplishments: CVAccomplishment[];
+		references: CVReference[];
+	};
 
 	const { basics, work, education, skills, projects, accomplishments, references } = cv;
 

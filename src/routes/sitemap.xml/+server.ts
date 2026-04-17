@@ -6,7 +6,7 @@ export function GET() {
 	const baseUrl = 'https://www.vascokf.com';
 	const today = new Date().toISOString().split('T')[0];
 
-	const staticPages = [
+	const staticPages: { url: string; changefreq: string; priority: string; lastmod?: string }[] = [
 		{ url: '/', changefreq: 'weekly', priority: '1.0' },
 		{ url: '/projects', changefreq: 'weekly', priority: '0.9' },
 		{ url: '/contact', changefreq: 'monthly', priority: '0.7' },

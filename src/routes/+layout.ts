@@ -30,7 +30,7 @@ export const load = ({ url }) => {
 			]
 		},
 		twitter: {
-			cardType: 'summary_large_image',
+			cardType: 'summary_large_image' as const,
 			title: 'Vasco KF — Full Stack Developer',
 			description:
 				'Full-stack developer building clean, functional web apps with Ruby on Rails, React, and TypeScript.',
