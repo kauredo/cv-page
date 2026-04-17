@@ -28,13 +28,15 @@
 		"title": "UpSpeech",
 		"slug": "upspeech",
 		"description": "Multi-tenant SaaS platform for speech-language pathologists focused on stuttering therapy.",
-		"details": "A multi-tenant SaaS platform that helps speech-language pathologists (SLPs) and their patients with stuttering therapy. Features include session management, patient progress tracking, clinical report generation, and a streamlined therapeutic workflow so clinicians can focus on patient care. Built the full platform from scratch — backend API, frontend application, multi-tenancy, authentication, and deployment infrastructure.",
+		"details": "A multi-tenant SaaS platform that helps speech-language pathologists (SLPs) deliver stuttering therapy. I built the web platform end-to-end — session management, patient progress tracking, multi-tenancy, authentication, and deployment infrastructure — with a Rails 8 API backing a React + TypeScript frontend. Currently extending the platform with a React Native mobile companion for clinicians and patients on the go.",
 		"stack": [
 			"Ruby on Rails",
 			"React",
+			"React Native",
 			"TypeScript",
 			"PostgreSQL",
-			"Docker"
+			"Docker",
+			"Kamal"
 		],
 		"images": [
 			"/images/upspeech-1.webp",
@@ -81,9 +83,12 @@
 		"details": "A cross-platform desktop application (Windows, macOS, Linux) built for basketball coaches and analysts. Allows cutting specific plays from game footage, organizing clips with hierarchical categories, and saving category structures as reusable presets across projects. Features include time-based search, automatic clip organization, and export capabilities for sharing with teams and players. Includes auto-update functionality.",
 		"stack": [
 			"Electron",
+			"React",
 			"TypeScript",
 			"Webpack",
-			"SQLite"
+			"SQLite",
+			"FFmpeg",
+			"Open Source"
 		],
 		"images": [
 			"/images/bball-video-1.webp",
@@ -96,19 +101,20 @@
 		"link": "https://basketballvideoanalyzer.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
-		"title": "Wallet Joy",
-		"slug": "wallet-joy",
-		"description": "Personal finance tracker with AI-powered bank statement parsing and household budget management.",
-		"details": "A modern personal finance app that makes managing money enjoyable. Features AI-powered parsing of bank statements (CSV, TSV, or images) using OpenAI GPT-4o, automatic transaction categorization, recurring transaction support, household management with role-based access, savings goals with visual progress, and interactive spending reports. Fully responsive with dark/light mode support.",
+		"title": "CoinSprout",
+		"slug": "coinsprout",
+		"description": "Production-grade personal finance tracker for individuals and couples, with AI-powered bank statement parsing.",
+		"details": "A personal finance tracker built for individuals and couples. Features a contextual dashboard, net-worth tracking, AI-powered parsing of bank statements (CSV/TSV/PDF/images) via OpenAI GPT-4o, split expenses and reimbursements, recurring transactions, per-category budgets and savings goals, and rich reporting (category breakdown, monthly income-vs-expenses, 90-day activity heatmap, month-over-month comparison, 3-month rolling trends). Light/dark mode.",
 		"stack": [
 			"Next.js",
 			"TypeScript",
-			"Supabase",
+			"Convex",
 			"OpenAI",
 			"TailwindCSS",
 			"Recharts"
 		],
 		"images": [
+			"/images/coinsprout-1.webp",
 			"/images/wallet-joy-1.webp",
 			"/images/wallet-joy-2.webp",
 			"/images/wallet-joy-3.webp",
@@ -116,14 +122,99 @@
 			"/images/wallet-joy-5.webp"
 		],
 		"github": "https://github.com/kauredo/finance_tracker",
-		"updatedAt": "2026-01-16"
+		"updatedAt": "2026-04-17",
+		"link": "https://coin-sprout.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "Analytics Hub",
+		"slug": "analytics-hub",
+		"description": "Centralized analytics dashboard aggregating metrics from 10+ sources across my projects, with weekly HTML digest emails.",
+		"details": "A centralized analytics dashboard that pulls metrics from 10+ sources — GA4, Search Console, Cloudflare, Vercel, Railway, GitHub, Bing, Lighthouse, and AhaSend — across all my personal projects. Runs scheduled Convex crons to sync data, exposes a Next.js dashboard to explore trends, and ships a weekly HTML digest email summarising traffic, deploys, and performance. Built to stop bouncing between dashboards.",
+		"stack": [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Convex",
+			"TailwindCSS",
+			"shadcn/ui",
+			"Recharts",
+			"AhaSend"
+		],
+		"images": [
+			"/images/analytics-hub-1.webp",
+			"/images/analytics-hub-2.webp",
+			"/images/analytics-hub-3.webp"
+		],
+		"updatedAt": "2026-04-17",
+		"link": "https://analytics-hub-phi.vercel.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "Resource Builder",
+		"slug": "resource-builder",
+		"description": "Tool for therapists and psychologists to generate custom consultation resources and printable games, with PDF export.",
+		"details": "A tool for therapists and psychologists to create custom games and printable resources for use in consultations. Features a canvas-based visual editor built on Konva for composing resources, PDF export via @react-pdf for print-ready outputs, QR code generation for digital/physical crossovers, and multilingual support via next-intl. Separate product from UpSpeech — different market, different workflow.",
+		"stack": [
+			"Next.js",
+			"TypeScript",
+			"Convex",
+			"Konva",
+			"Radix UI",
+			"TailwindCSS",
+			"React PDF",
+			"AWS S3"
+		],
+		"images": [
+			"/images/resource-builder-1.webp"
+		],
+		"updatedAt": "2026-04-17",
+		"link": "https://resourcebuilder.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "Delivered Photos",
+		"slug": "delivered-photos",
+		"description": "Multi-tenant SaaS for photographers to deliver client galleries, collect proof selections, and sell prints.",
+		"details": "A client proofing and delivery platform for photographers. Fast, beautiful galleries where clients select favorites, download high-res files, and order prints. Built as a pnpm monorepo with a Convex backend and two React + Vite apps — a photographer dashboard and the client-facing gallery — sharing auth and schema. Originals are stored in S3 with presigned URLs; payments run through Dodo. Competing with Pixieset and ShootProof, with a focus on speed and modern UX.",
+		"stack": [
+			"Convex",
+			"React",
+			"TypeScript",
+			"Vite",
+			"TailwindCSS",
+			"shadcn/ui",
+			"TanStack Router",
+			"AWS S3",
+			"Dodo Payments"
+		],
+		"images": [
+			"/images/delivered-photos-1.webp"
+		],
+		"updatedAt": "2026-04-17",
+		"link": "https://delivered.photos?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "ProTasca",
+		"slug": "protasca",
+		"description": "Multi-tenant website builder for restaurants — menus, reservations, online ordering, and local SEO, commission-free.",
+		"details": "A multi-tenant website builder for restaurants. Auto-populates sites from TheFork, Zomato, and Google Business; provides menu management, online ordering, reservations, and local SEO — all commission-free. Same multi-tenant pattern as the real-estate platform: Rails API, React frontend for the public site, React backoffice for owners, React promo site.",
+		"stack": [
+			"Ruby on Rails",
+			"PostgreSQL",
+			"React",
+			"Vite",
+			"TailwindCSS"
+		],
+		"images": [
+			"/images/protasca-1.webp"
+		],
+		"updatedAt": "2026-04-17",
+		"link": "https://protasca.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
 		"title": "FPB Calendar",
 		"slug": "fpb-calendar",
 		"description": "Tool to fetch team's basketball games and sync them to Google Calendar, with its own calendar.",
 		"details": "This tool fetches games from the Portuguese Basketball Federation and adds them to a shared Google Calendar. It also allows sharing among teams and uses OAuth to authenticate securely with Google.",
-		"stack": ["Sinatra", "Web Scraping", "Google Calendar API", "OAuth"],
+		"stack": ["Sinatra", "Nokogiri", "Web Scraping", "Google Calendar API", "OAuth"],
 		"images": ["/images/fpb-calendar-1.webp", "/images/fpb-calendar-2.webp", "/images/fpb-calendar-3.webp", "/images/fpb-calendar-4.webp"],
 		"github": "https://github.com/kauredo/fpb-calendar",
 		"updatedAt": "2025-12-08",
@@ -134,7 +225,7 @@
 		"slug": "nn",
 		"description": "A website for a photographer to manage and showcase his portfolio, with custom layout controls.",
 		"details": "This project was designed for an up-and-coming photographer to manage and publish his work. Admins can customize how galleries are presented (carousel, grid, etc), and upload images via Cloudinary using CarrierWave. It features a full custom CMS and dynamic content structure. Built with Rails and includes React-based components for preview/editing functionality.",
-		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave"],
+		"stack": ["Ruby on Rails", "React", "TypeScript", "Vite", "PostgreSQL", "Cloudinary", "CarrierWave"],
 		"images": ["/images/nn-1.webp", "/images/nn-2.webp", "/images/nn-3.webp", "/images/nn-4.webp"],
 		"github": "https://github.com/kauredo/nn",
 		"updatedAt": "2022-05-13",
@@ -145,7 +236,7 @@
 		"slug": "jovens-futuro",
 		"description": "Blog platform for young adults to share their passions with SEO optimization and social media previews.",
 		"details": "Jovens Futuro is a publishing platform for young adults. Writers can create rich blog posts using a WYSIWYG editor. Each article has optimized metadata, SEO-friendly URLs, and Open Graph preview images dynamically generated via Cloudinary. Built with Rails and React, with an admin backend for moderation.",
-		"stack": ["Ruby on Rails", "React", "Cloudinary", "CarrierWave", "SEO"],
+		"stack": ["Ruby on Rails", "React", "PostgreSQL", "Cloudinary", "CarrierWave"],
 		"images": [
 			"/images/jovens-futuro-1.webp",
 			"/images/jovens-futuro-2.webp",
@@ -175,7 +266,7 @@
 		"slug": "aoc-rb",
 		"description": "Ruby toolkit to automate Advent of Code puzzles. Contributed improvements and bug fixes.",
 		"details": "This toolkit sets up and manages daily Advent of Code challenges. I contributed bug fixes and quality-of-life improvements after using it in my own workflow. It's a fun CLI tool that makes AOC coding challenges smoother and more structured.",
-		"stack": ["Ruby", "CLI", "Open Source"],
+		"stack": ["Ruby", "Open Source"],
 		"github": "https://github.com/pacso/aoc_rb",
 		"updatedAt": "2022-12-01",
 		"images": ["/images/aoc-rb.webp"]
