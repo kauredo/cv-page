@@ -24,7 +24,7 @@
 				</a>
 			</div>
 
-			<p class="font-mono text-xs text-slate-500 dark:text-slate-500">
+			<p class="font-mono text-xs text-slate-600 dark:text-slate-400">
 				© {new Date().getFullYear()} Vasco Kaufmann Figueiredo · Built with SvelteKit
 			</p>
 		</div>

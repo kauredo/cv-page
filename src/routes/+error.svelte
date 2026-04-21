@@ -103,7 +103,7 @@
 				{/if}
 			</p>
 
-			<p class="font-mono text-xs uppercase tracking-wider text-slate-500 dark:text-slate-500">
+			<p class="font-mono text-xs uppercase tracking-wider text-slate-600 dark:text-slate-400">
 				Fig. ∅ — Sometimes shots miss.
 			</p>
 		</div>

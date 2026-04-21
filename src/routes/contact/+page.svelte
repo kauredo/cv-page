@@ -250,7 +250,7 @@
 					{:else}
 						<span></span>
 					{/if}
-					<span class="font-mono text-xs text-slate-500 dark:text-slate-500">
+					<span class="font-mono text-xs text-slate-600 dark:text-slate-400">
 						{formState.message.length} chars
 					</span>
 				</div>

@@ -65,7 +65,7 @@
 			<li
 				class="group relative flex flex-col justify-end overflow-hidden rounded-2xl p-5 transition-transform duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:-translate-y-0.5 {span ??
 					''} {variant === 'feature-orange'
-					? 'bg-hoop-500 dark:bg-hoop-600 text-white'
+					? 'bg-hoop-700 dark:bg-hoop-800 text-white'
 					: variant === 'feature-blue'
 						? 'bg-vasco-700 dark:bg-vasco-800 text-white'
 						: variant === 'mono'
