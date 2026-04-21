@@ -296,7 +296,7 @@
 						formState = { name: '', email: '', message: '' };
 						errors = { name: '', email: '', message: '' };
 					}}
-					class="focus-visible:ring-vasco-500 font-mono text-xs tracking-wider text-slate-500 uppercase transition-colors hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:text-slate-900 dark:text-slate-500 dark:hover:text-white dark:active:text-white"
+					class="focus-visible:ring-vasco-500 font-mono text-xs tracking-wider text-slate-600 uppercase transition-colors hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:text-slate-900 dark:text-slate-400 dark:hover:text-white dark:active:text-white"
 				>
 					Clear
 				</button>

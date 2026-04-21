@@ -206,7 +206,7 @@
 				>
 					<div class="flex items-center gap-3">
 						<span
-							class="font-mono text-[10px] tracking-wider text-slate-500 uppercase dark:text-slate-500"
+							class="font-mono text-[10px] tracking-wider text-slate-600 uppercase dark:text-slate-400"
 						>
 							Filter
 						</span>
@@ -270,6 +270,7 @@
 	</div>
 
 	{#if filteredProjects.length > 0}
+		<h2 class="sr-only">Projects</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
 			{#each filteredProjects as project (project.slug)}
 				<ProjectCard {project} />
@@ -278,9 +279,9 @@
 	{:else}
 		<div class="py-24 text-center">
 			<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-4">Empty // 0 results</p>
-			<h3 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+			<h2 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
 				Air ball<span class="text-hoop-500 dark:text-hoop-400">.</span>
-			</h3>
+			</h2>
 			<p class="mt-4 font-mono text-xs tracking-wider text-slate-600 uppercase dark:text-slate-400">
 				No projects match your filter
 			</p>
