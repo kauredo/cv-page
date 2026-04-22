@@ -3,6 +3,7 @@
 
 	export let project: Project;
 	export let small: boolean = false;
+	export let priority: boolean = false;
 	const { title, description, images, slug, stack } = project;
 </script>
 
@@ -29,7 +30,8 @@
 					alt={`Screenshot of ${title}`}
 					class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04] group-active:scale-[1.04] motion-reduce:transform-none"
 					style="view-transition-name: project-image-{slug}-0"
-					loading="lazy"
+					loading={priority ? 'eager' : 'lazy'}
+					fetchpriority={priority ? 'high' : 'auto'}
 					decoding="async"
 					width="640"
 					height="360"
@@ -40,7 +42,8 @@
 					alt={`Placeholder for ${title}`}
 					class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04] group-active:scale-[1.04] motion-reduce:transform-none"
 					style="view-transition-name: project-image-{slug}-0"
-					loading="lazy"
+					loading={priority ? 'eager' : 'lazy'}
+					fetchpriority={priority ? 'high' : 'auto'}
 					width="640"
 					height="360"
 				/>

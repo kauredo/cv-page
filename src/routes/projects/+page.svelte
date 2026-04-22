@@ -272,8 +272,8 @@
 	{#if filteredProjects.length > 0}
 		<h2 class="sr-only">Projects</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-			{#each filteredProjects as project (project.slug)}
-				<ProjectCard {project} />
+			{#each filteredProjects as project, i (project.slug)}
+				<ProjectCard {project} priority={i === 0} />
 			{/each}
 		</div>
 	{:else}
