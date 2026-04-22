@@ -18,6 +18,10 @@
 	const projects: Project[] = allProjects.slice(1, 7);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/images/me.webp" fetchpriority="high" />
+</svelte:head>
+
 <Hero />
 
 <div class="mx-auto max-w-6xl space-y-20 px-6 pt-8 pb-20 sm:space-y-28 sm:pb-28">
