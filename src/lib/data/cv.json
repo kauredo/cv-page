@@ -67,7 +67,7 @@
 			"description": "Multi-tenant SaaS platform built for speech-language pathologists running stuttering therapy, covering session management, patient progress tracking, and clinician-parent collaboration. Built end-to-end with a Rails 8 API and a React + TypeScript frontend; currently extending it with a React Native companion for clinicians and patients."
 		},
 		{
-			"displayName": "Resource Builder",
+			"displayName": "Therapy Resources",
 			"website": "https://therapyresources.app",
 			"githubUrl": "",
 			"description": "Tool for therapists and psychologists to create custom consultation games and printable resources. Features a Konva-based canvas editor, AI-generated illustrations via Gemini matched to each therapist's visual style, PDF export for print-ready outputs, QR codes for digital/physical crossovers, and multilingual support. Built with Next.js, TypeScript, and Convex."
