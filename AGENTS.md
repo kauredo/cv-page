@@ -1,9 +1,11 @@
 ## Design Context
 
 ### Users
+
 Portfolio visitors—primarily recruiters, hiring managers, and potential collaborators—who are evaluating a developer's skills and personality. They arrive with limited time and want to quickly assess competence, see real work, and get a sense of who they'd be working with. The site serves as a first impression before interviews or project discussions.
 
 ### Brand Personality
+
 **Fun, Bold, Approachable**
 
 The voice is confident but not arrogant—someone who takes their craft seriously while not taking themselves too seriously. The basketball motif and "making the web a little more fun" tagline reflect genuine enthusiasm. Design should feel human and personal, not templated or corporate.
@@ -19,6 +21,7 @@ The voice is confident but not arrogant—someone who takes their craft seriousl
 **Motion**: Subtle, purposeful animations (fade, fly) that enhance rather than distract. Support prefers-reduced-motion.
 
 **Anti-references**:
+
 - Generic Tailwind/Bootstrap templates that blend into the crowd
 - Stiff corporate sites that strip away personality
 - Over-animated portfolios that prioritize wow over substance

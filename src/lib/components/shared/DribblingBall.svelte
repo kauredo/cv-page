@@ -133,7 +133,7 @@
 					alt="Basketball"
 					class="animation-untriggered mx-auto rotate-anim dark:invert"
 					style="width: {width}px; height: {width}px;"
-					width={width}
+					{width}
 					height={width}
 				/>
 			</div>

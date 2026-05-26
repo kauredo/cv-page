@@ -9,7 +9,6 @@
 	// background-position: top left;
 	// background-size: cover;
 
-
 	.title {
 		text-align: center;
 		margin: auto;
@@ -17,7 +16,7 @@
 		width: fit-content;
 		padding: 2rem;
 		position: relative;
-		top: calc(50vh - (20rem/2) - #{$navbar-height});
+		top: calc(50vh - (20rem / 2) - #{$navbar-height});
 		display: block;
 		align-items: baseline;
 		fill: $main-color;
@@ -45,7 +44,7 @@
 		}
 	}
 
-	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
+	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9) {
 		height: calc(100vh - 8rem - 0.25rem);
 
 		.title .hero-svg {

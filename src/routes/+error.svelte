@@ -30,15 +30,7 @@
 		<!-- Backboard fill (subtle depth) -->
 		<rect x="60" y="38" width="74" height="54" rx="1" fill="currentColor" fill-opacity="0.22" />
 		<!-- Backboard outline -->
-		<rect
-			x="60"
-			y="38"
-			width="74"
-			height="54"
-			rx="1"
-			stroke="currentColor"
-			stroke-width="2"
-		/>
+		<rect x="60" y="38" width="74" height="54" rx="1" stroke="currentColor" stroke-width="2" />
 		<!-- Target square (bottom edge aligns with top of rim) -->
 		<rect x="83" y="72" width="28" height="18" stroke="currentColor" stroke-width="1.5" />
 		<!-- Strut connecting backboard bottom-center to rim back -->
@@ -94,8 +86,8 @@
 			<p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
 				{#if status === 404}
 					There's nothing at
-					<span class="font-mono text-hoop-600 dark:text-hoop-400">{page.url.pathname}</span>.
-					Maybe a typo, maybe a moved page.
+					<span class="font-mono text-hoop-600 dark:text-hoop-400">{page.url.pathname}</span>. Maybe
+					a typo, maybe a moved page.
 				{:else if error?.message}
 					{error.message}
 				{:else}

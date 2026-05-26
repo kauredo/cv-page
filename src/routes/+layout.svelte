@@ -83,9 +83,7 @@
 	</noscript>
 </svelte:head>
 
-<div
-	class="flex min-h-screen flex-col bg-white dark:bg-slate-950 dark:text-slate-100"
->
+<div class="flex min-h-screen flex-col bg-white dark:bg-slate-950 dark:text-slate-100">
 	<Navbar />
 	<main class="flex-1">
 		{@render children()}

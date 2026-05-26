@@ -1,43 +1,44 @@
 @import '../utils/utils';
 
 .footer {
-  background-color: $background-color;
-  color: $main-color;
-  height: $navbar-height;
-  width: 100%;
-  border-top: 0.25rem solid;
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    font-size: 1rem;
-    padding: 0.5rem 0;
+	background-color: $background-color;
+	color: $main-color;
+	height: $navbar-height;
+	width: 100%;
+	border-top: 0.25rem solid;
 
-    .footer-row {
-      padding: 0.5rem 0;
-    }
-  }
-  
-  .links {
-    display: flex;
-    align-items: center;
-    
-    p, a {
-      margin-right: 0.5rem;
-    }
-  }
-  
-  @media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9){
-    height: fit-content;
-    
-    .container {
-      flex-direction: column;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		font-size: 1rem;
+		padding: 0.5rem 0;
 
-      .footer-row {
-        font-size: 1.5rem;
-      }
-    }
-  }
+		.footer-row {
+			padding: 0.5rem 0;
+		}
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+
+		p,
+		a {
+			margin-right: 0.5rem;
+		}
+	}
+
+	@media only screen and (max-device-width: 736px) and (max-aspect-ratio: 13/9) {
+		height: fit-content;
+
+		.container {
+			flex-direction: column;
+
+			.footer-row {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }

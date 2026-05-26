@@ -18,17 +18,11 @@
 	})();
 
 	$: italicColor =
-		accent === 'hoop'
-			? 'text-hoop-600 dark:text-hoop-400'
-			: 'text-vasco-700 dark:text-vasco-300';
+		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
 	$: trailingColor =
-		accent === 'hoop'
-			? 'text-hoop-500 dark:text-hoop-400'
-			: 'text-vasco-600 dark:text-vasco-400';
+		accent === 'hoop' ? 'text-hoop-500 dark:text-hoop-400' : 'text-vasco-600 dark:text-vasco-400';
 	$: indexColor =
-		accent === 'hoop'
-			? 'text-hoop-600 dark:text-hoop-400'
-			: 'text-vasco-700 dark:text-vasco-300';
+		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
 </script>
 
 <header class="mb-10 sm:mb-14">

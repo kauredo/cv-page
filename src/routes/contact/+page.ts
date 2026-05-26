@@ -12,8 +12,7 @@ export const load = () => {
 		},
 		twitter: {
 			title: 'Contact — VascoKF',
-			description:
-				'Get in touch for freelance projects, collaborations, or just to say hi.'
+			description: 'Get in touch for freelance projects, collaborations, or just to say hi.'
 		}
 	}) satisfies MetaTagsProps;
 

@@ -110,12 +110,16 @@ h1,
 h2,
 .font-display {
 	font-family: var(--font-display);
-	font-variation-settings: 'opsz' 144, 'SOFT' 50;
+	font-variation-settings:
+		'opsz' 144,
+		'SOFT' 50;
 	letter-spacing: -0.02em;
 }
 
 h1 {
-	font-variation-settings: 'opsz' 144, 'SOFT' 100;
+	font-variation-settings:
+		'opsz' 144,
+		'SOFT' 100;
 }
 
 .font-mono {

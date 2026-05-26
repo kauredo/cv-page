@@ -1,46 +1,47 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon.png" />
+		<link rel="shortcut icon" href="%sveltekit.assets%/favicon.ico" />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon.png" />
-  <link rel="shortcut icon" href="%sveltekit.assets%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+		<link rel="preload" as="image" href="/images/me.webp" fetchpriority="high" />
+		%sveltekit.head%
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link rel="preload" as="image" href="/images/me.webp" fetchpriority="high" />
-  %sveltekit.head%
+		<script>
+			// Immediately execute this script to prevent flash of wrong theme
+			(function () {
+				const savedDarkMode = localStorage.getItem('darkMode');
+				const isDark =
+					savedDarkMode !== null
+						? savedDarkMode === 'true'
+						: window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  <script>
-    // Immediately execute this script to prevent flash of wrong theme
-    (function () {
-      const savedDarkMode = localStorage.getItem('darkMode');
-      const isDark = savedDarkMode !== null
-        ? savedDarkMode === 'true'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (isDark) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
+	</head>
 
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 
-<body data-sveltekit-preload-data="hover">
-  <div style="display: contents">%sveltekit.body%</div>
-
-  <!-- Google Analytics — deferred to avoid blocking FCP -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-55TK9L8WDT');
-  </script>
-</body>
-
+		<!-- Google Analytics — deferred to avoid blocking FCP -->
+		<script defer src="https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-55TK9L8WDT');
+		</script>
+	</body>
 </html>
