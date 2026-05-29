@@ -17,11 +17,8 @@ export const load: PageLoad = async ({ params }) => {
 
 	const project: Project = projectData;
 
-	const projectImage =
-		project.images && project.images.length > 0 && project.images[0].length > 0
-			? project.images[0]
-			: '/images/portfolio.webp';
-	const projectImageUrl = `https://www.vascokf.com${projectImage}`;
+	// Branded OG card generated at build time by /og/[slug].png (Satori).
+	const projectImageUrl = `https://www.vascokf.com/og/${project.slug}.png`;
 	const pageMetaTags = Object.freeze({
 		title: project.title,
 		description: project.description,
@@ -33,7 +30,7 @@ export const load: PageLoad = async ({ params }) => {
 					url: projectImageUrl,
 					alt: project.title,
 					secureUrl: projectImageUrl,
-					type: 'image/webp',
+					type: 'image/png',
 					width: 1200,
 					height: 630
 				}

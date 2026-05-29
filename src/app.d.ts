@@ -21,4 +21,9 @@ declare global {
 	}
 }
 
+declare module '*.woff?inline' {
+	const src: string;
+	export default src;
+}
+
 export {};
