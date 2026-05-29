@@ -5,14 +5,15 @@ import type { Project } from '$lib/types';
 
 // Brand-styled 1200x630 OG card, rendered only by Satori at build time (the
 // route is prerendered), never hydrated. Satori supports a flexbox subset, so
-// every container is display:flex. Tokens follow the "vasco" brand: blue accent
-// (#59a7ff) + hoop orange (#f97316) on a light slate ground, Fraunces display.
+// every container is display:flex. Tokens follow the "vasco" brand (app.css):
+// vasco blue (500/800) + hoop orange (500) on a light slate ground, Fraunces
+// display + JetBrains Mono eyebrow.
 const INK = '#0f172a';
 const MUTE = '#475569';
 const FAINT = '#94a3b8';
-const VASCO = '#59a7ff';
-const VASCO_DEEP = '#1746c4';
-const HOOP = '#f97316';
+const VASCO = '#59a7ff'; // vasco-500
+const VASCO_DEEP = '#1f4fad'; // vasco-800
+const HOOP = '#f97316'; // hoop-500
 const BG = '#f7f9fc';
 
 type El = { type: string; props: Record<string, unknown> };
@@ -78,7 +79,17 @@ function card(project: Project): El {
 					backgroundColor: VASCO,
 					marginRight: 20
 				}),
-				h('div', { fontSize: 22, fontWeight: 500, letterSpacing: 2, color: VASCO_DEEP }, eyebrow)
+				h(
+					'div',
+					{
+						fontFamily: 'JetBrains Mono',
+						fontSize: 20,
+						fontWeight: 600,
+						letterSpacing: 1,
+						color: VASCO_DEEP
+					},
+					eyebrow
+				)
 			]),
 
 			// Headline + description.
@@ -119,17 +130,24 @@ function card(project: Project): El {
 						'Vasco KF'
 					)
 				]),
-				h('div', { fontSize: 24, color: FAINT }, 'vascokf.com')
+				h(
+					'div',
+					{ fontFamily: 'JetBrains Mono', fontSize: 22, fontWeight: 600, color: FAINT },
+					'vascokf.com'
+				)
 			])
 		]
 	);
 }
 
-export async function renderProjectOg(project: Project): Promise<Buffer> {
+export async function renderProjectOg(project: Project): Promise<Uint8Array<ArrayBuffer>> {
 	const svg = await satori(card(project) as unknown as Parameters<typeof satori>[0], {
 		width: 1200,
 		height: 630,
 		fonts: OG_FONTS
 	});
-	return Buffer.from(new Resvg(svg).render().asPng());
+	// Copy into a fresh ArrayBuffer-backed Uint8Array so the bytes are a valid
+	// Response body type — resvg's Buffer is typed Uint8Array<ArrayBufferLike>,
+	// which TS won't accept as BodyInit.
+	return new Uint8Array(new Resvg(svg).render().asPng()) as Uint8Array<ArrayBuffer>;
 }
