@@ -10,6 +10,12 @@
 	export let project: Project = data.project;
 	let selectedImage: string | null = null;
 
+	// Unicode-escape the angle brackets and ampersand so a string value can't
+	// break out of the JSON-LD script tag. Plain-string replaceAll, not a regex
+	// literal, which Svelte's script-block tokenizer mis-parses here.
+	const ldJson = (obj: unknown): string =>
+		JSON.stringify(obj).replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
+
 	function openModal(image: string) {
 		selectedImage = image;
 	}
@@ -20,7 +26,7 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify({
+	{@html `<script type="application/ld+json">${ldJson({
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
 		itemListElement: [
@@ -39,7 +45,7 @@
 			}
 		]
 	})}</script>`}
-	{@html `<script type="application/ld+json">${JSON.stringify(projectJsonLd(project))}</script>`}
+	{@html `<script type="application/ld+json">${ldJson(projectJsonLd(project))}</script>`}
 </svelte:head>
 
 <article class="mx-auto max-w-5xl px-6 py-12 sm:py-16">
