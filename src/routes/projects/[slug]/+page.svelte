@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Project } from '$lib/types';
+	import { projectJsonLd } from '$lib/jsonld';
 	import Modal from '$lib/components/shared/Modal.svelte';
 	import BackButton from '$lib/components/shared/BackButton.svelte';
 	import Button from '$lib/components/shared/Button.svelte';
@@ -38,6 +39,7 @@
 			}
 		]
 	})}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(projectJsonLd(project))}</script>`}
 </svelte:head>
 
 <article class="mx-auto max-w-5xl px-6 py-12 sm:py-16">
