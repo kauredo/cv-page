@@ -15,7 +15,7 @@
 		"title": "Full-Stack Engineer",
 		"company": "Pixelmatters",
 		"period": "2025 – Present",
-		"description": "Working as a full-stack engineer at Pixelmatters, a digital product studio that partners with ambitious tech companies to design, build, and scale standout digital products. Currently building features for UJET.cx, an AI-powered cloud contact center platform, using Ruby on Rails and Angular.",
+		"description": "Working as a full-stack engineer at Pixelmatters, a digital product studio that designs and builds products for tech companies. Currently building features for UJET.cx, an AI-powered cloud contact center platform, using Ruby on Rails and Angular.",
 		"logo": "/images/companies/pixelmatters.png",
 		"skills": ["Rails", "Ruby", "Angular", "TypeScript", "PostgreSQL", "Git"],
 		"achievements": []

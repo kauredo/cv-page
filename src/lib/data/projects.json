@@ -3,7 +3,7 @@
 		"title": "MyAgentWebsite",
 		"slug": "myagentwebsite",
 		"description": "SaaS platform for real estate agents to create professional websites without technical knowledge.",
-		"details": "A multi-tenant 'Shopify for Real Estate Agents' platform that empowers agents and small agencies to launch professional websites instantly. Features a unified admin backoffice for managing listings, blog posts, testimonials, and newsletters. Each agent gets their own branded domain with white-label capabilities. Built on a Rails API with multiple React frontends (customer site, admin dashboard, and marketing site), all deployed on Railway and Vercel.",
+		"details": "A multi-tenant 'Shopify for Real Estate Agents' platform that lets agents and small agencies launch their own branded websites without a developer. Features a unified admin backoffice for managing listings, blog posts, testimonials, and newsletters. Each agent gets their own branded domain with white-label capabilities. Built on a Rails API with multiple React frontends (customer site, admin dashboard, and marketing site), all deployed on Railway and Vercel.",
 		"stack": [
 			"Ruby on Rails",
 			"React",
@@ -80,7 +80,7 @@
 		"title": "Basketball Stats App",
 		"slug": "basketball-stats-app",
 		"description": "Full-stack basketball statistics tracking with real-time game scoring, shot charts, and cross-platform mobile support.",
-		"details": "A comprehensive basketball statistics platform featuring live game scoring, visual shot charts with heatmaps and zone analysis, player comparisons with radar charts, and automatic league standings calculations. Built as a monorepo with shared TypeScript types, it includes both a React web app and a React Native mobile app (iOS/Android) powered by a Convex serverless backend for real-time updates.",
+		"details": "A basketball statistics platform with live game scoring, visual shot charts with heatmaps and zone analysis, player comparisons with radar charts, and automatic league standings. Built as a monorepo with shared TypeScript types, it includes both a React web app and a React Native mobile app (iOS/Android) powered by a Convex serverless backend for real-time updates.",
 		"stack": [
 			"React",
 			"React Native",
@@ -149,7 +149,7 @@
 	{
 		"title": "CoinSprout",
 		"slug": "coinsprout",
-		"description": "Production-grade personal finance tracker for individuals and couples, with AI-powered bank statement parsing.",
+		"description": "Personal finance tracker for individuals and couples, with AI-powered bank statement parsing.",
 		"details": "A personal finance tracker built for individuals and couples. Features a contextual dashboard, net-worth tracking, AI-powered parsing of bank statements (CSV/TSV/PDF/images) via OpenAI GPT-4o, split expenses and reimbursements, recurring transactions, per-category budgets and savings goals, and rich reporting (category breakdown, monthly income-vs-expenses, 90-day activity heatmap, month-over-month comparison, 3-month rolling trends). Light/dark mode.",
 		"stack": ["Next.js", "TypeScript", "Convex", "OpenAI", "TailwindCSS", "Recharts"],
 		"images": [
