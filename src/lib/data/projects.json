@@ -27,6 +27,21 @@
 		"link": "https://myagentwebsite.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
+		"title": "Dois Agentes",
+		"slug": "dois-agentes",
+		"description": "An AI assistant for Portuguese real estate agents that keeps track of contacts, deals and follow-ups, and drafts the next step.",
+		"details": "Dois Agentes is an assistant for real estate agents in Portugal, sold alongside MyAgentWebsite and able to inherit its listings. Work reaches it three ways: something arrives (a message, a synced listing, a form on the agent's site), a schedule fires (nightly briefs, follow-ups coming due), or the agent asks a question. It keeps the agent's contacts, deals, visit sheets and valuations, runs multi-step follow-up plans, and lets the agent consult specialists that cite the sources they used. It drafts and the agent decides what goes out. Built as a single Rails 8 app with Hotwire and Solid Queue on Railway, with Claude doing the reasoning through the official anthropic gem.",
+		"stack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Solid Queue", "Claude API", "Railway"],
+		"images": [
+			"/images/dois-agentes-1.webp",
+			"/images/dois-agentes-2.webp",
+			"/images/dois-agentes-3.webp",
+			"/images/dois-agentes-4.webp",
+			"/images/dois-agentes-5.webp"
+		],
+		"updatedAt": "2026-10-09"
+	},
+	{
 		"title": "UpSpeech",
 		"slug": "upspeech",
 		"description": "Multi-tenant SaaS platform for speech-language pathologists focused on stuttering therapy.",
@@ -73,8 +88,24 @@
 			"/images/resource-builder-4.webp",
 			"/images/resource-builder-5.webp"
 		],
-		"updatedAt": "2026-04-17",
+		"updatedAt": "2026-10-09",
 		"link": "https://therapyresources.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "KidShare",
+		"slug": "kidshare",
+		"description": "Co-parenting app for separated parents: shared expenses, the custody calendar and messages in one place.",
+		"details": "KidShare gives two households one record of the kids' lives. A parent logs a cost and picks the split, and KidShare keeps a running statement of who owes whom, with recurring expenses, monthly summaries and recorded payments. The custody calendar shows who has the kids each day and when the next handover is. Messages, family rules and documents live next to the money, so nothing gets lost across apps. Built with React 19 on a Convex backend, installable as a PWA with push notifications, and deployed on Vercel.",
+		"stack": ["React", "TypeScript", "Convex", "TailwindCSS", "shadcn/ui", "PWA", "Vercel"],
+		"images": [
+			"/images/kidshare-1.webp",
+			"/images/kidshare-2.webp",
+			"/images/kidshare-3.webp",
+			"/images/kidshare-4.webp",
+			"/images/kidshare-5.webp"
+		],
+		"updatedAt": "2026-10-09",
+		"link": "https://kidshare.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
 		"title": "Basketball Stats App",
@@ -95,13 +126,10 @@
 			"/images/bball-stats-2.webp",
 			"/images/bball-stats-3.webp",
 			"/images/bball-stats-4.webp",
-			"/images/bball-stats-5.webp",
-			"/images/bball-stats-6.webp",
-			"/images/bball-stats-7.webp",
-			"/images/bball-stats-8.webp"
+			"/images/bball-stats-5.webp"
 		],
 		"github": "https://github.com/kauredo/basketball-stats-app",
-		"updatedAt": "2026-02-03",
+		"updatedAt": "2026-10-09",
 		"link": "https://basketballstatsapp.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
@@ -117,7 +145,7 @@
 			"/images/bball-video-4.webp"
 		],
 		"github": "https://github.com/kauredo/basketball-video-analyzer",
-		"updatedAt": "2025-12-09",
+		"updatedAt": "2026-10-09",
 		"link": "https://basketballvideoanalyzer.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
@@ -143,7 +171,7 @@
 			"/images/delivered-photos-4.webp",
 			"/images/delivered-photos-5.webp"
 		],
-		"updatedAt": "2026-04-17",
+		"updatedAt": "2026-10-09",
 		"link": "https://delivered.photos?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
@@ -156,12 +184,33 @@
 			"/images/coinsprout-1.webp",
 			"/images/coinsprout-2.webp",
 			"/images/coinsprout-3.webp",
-			"/images/coinsprout-4.webp",
-			"/images/coinsprout-5.webp"
+			"/images/coinsprout-4.webp"
 		],
 		"github": "https://github.com/kauredo/finance_tracker",
-		"updatedAt": "2026-04-17",
+		"updatedAt": "2026-10-09",
 		"link": "https://coin-sprout.com?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
+	},
+	{
+		"title": "Cadence Studio",
+		"slug": "cadence-studio",
+		"description": "A one-person AI content studio: specialist agents draft in your voice, and nothing publishes until you approve it.",
+		"details": "Cadence runs a small team of specialist agents that write in your voice on a schedule you set. Drafts land in one review queue, and each draft sits next to one you already approved so you can judge the voice side by side. Before a draft reaches you, a voice check runs five rules and a 27-word watchlist against it and flags the usual tells of AI prose: em-dash asides, antithesis, hedge openers and resolution closers. Built with React 19, TanStack Router and Convex, using the Vercel AI SDK across Claude, Gemini and OpenAI, fal.ai for images, and Bluesky as the first publishing channel. In private beta.",
+		"stack": [
+			"React",
+			"TypeScript",
+			"TanStack Router",
+			"Convex",
+			"Vercel AI SDK",
+			"fal.ai",
+			"Bluesky API"
+		],
+		"images": [
+			"/images/cadence-studio-1.webp",
+			"/images/cadence-studio-2.webp",
+			"/images/cadence-studio-3.webp"
+		],
+		"updatedAt": "2026-10-09",
+		"link": "https://cadence-studio-theta.vercel.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
 		"title": "Analytics Hub",
@@ -181,9 +230,10 @@
 		"images": [
 			"/images/analytics-hub-1.webp",
 			"/images/analytics-hub-2.webp",
-			"/images/analytics-hub-3.webp"
+			"/images/analytics-hub-3.webp",
+			"/images/analytics-hub-4.webp"
 		],
-		"updatedAt": "2026-04-17",
+		"updatedAt": "2026-10-09",
 		"link": "https://analytics-hub-phi.vercel.app?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
@@ -214,10 +264,11 @@
 			"/images/fpb-calendar-1.webp",
 			"/images/fpb-calendar-2.webp",
 			"/images/fpb-calendar-3.webp",
-			"/images/fpb-calendar-4.webp"
+			"/images/fpb-calendar-4.webp",
+			"/images/fpb-calendar-5.webp"
 		],
 		"github": "https://github.com/kauredo/fpb-calendar",
-		"updatedAt": "2025-12-08",
+		"updatedAt": "2026-10-09",
 		"link": "https://calendariofpb.pt?utm_source=vascokf&utm_medium=portfolio&utm_campaign=cross-link"
 	},
 	{
