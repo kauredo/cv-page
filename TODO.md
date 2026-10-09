@@ -11,7 +11,6 @@
 
 ## Project entries
 
-- Dois Agentes has no `link`. Add one once there's a public URL.
 - Entry 0 in `projects.json` is the homepage feature and entries 1 to 6 fill the homepage grid. Re-check the order when a project ships or stalls.
 
 ## Unused files
