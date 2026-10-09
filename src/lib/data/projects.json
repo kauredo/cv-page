@@ -2,7 +2,7 @@
 	{
 		"title": "Basketball Stats App",
 		"slug": "basketball-stats-app",
-		"description": "Basketball stats for leagues and teams: live scoring, shot charts and standings, on the web and on phones.",
+		"description": "Basketball stats for leagues and teams, with live scoring and shot charts on the web and on phones.",
 		"details": "The scorer taps a player and a play during the game, and the box score, shot chart and league standings update live for everyone following. Coaches get shot heatmaps by court zone and side-by-side player comparisons. The web app is React and the iOS and Android apps are React Native. They share TypeScript types in one Turborepo monorepo and talk to the same Convex backend.",
 		"stack": [
 			"React",
@@ -28,7 +28,7 @@
 		"title": "UpSpeech",
 		"slug": "upspeech",
 		"description": "Software for speech therapy clinics that treat stuttering. Patients practice between sessions and the therapist follows every attempt.",
-		"details": "UpSpeech helps speech-language pathologists treat stuttering. Patients follow a practice plan between sessions, and every attempt goes back to the therapist, who decides what happens next. I built the web platform end to end, from session management and patient progress to multi-tenancy, auth and deployment. It runs on a Rails 8 API with a React and TypeScript frontend, shipped with Kamal. I'm now building the React Native companion app for patients and clinicians.",
+		"details": "UpSpeech helps speech-language pathologists treat stuttering. Patients follow a practice plan between sessions, and every attempt goes back to the therapist, who decides what happens next. I built the web platform end to end, including sessions, patient progress, multi-tenancy, auth and deployment. It's a Rails 8 API with a React and TypeScript frontend, shipped with Kamal. Now I'm building the React Native companion app for patients and clinicians.",
 		"stack": [
 			"Ruby on Rails",
 			"React",
@@ -79,7 +79,7 @@
 	{
 		"title": "Therapy Resources",
 		"slug": "resource-builder",
-		"description": "Therapists describe what they need for a session and get printable cards, games and worksheets in their own illustration style.",
+		"description": "Therapists describe what they need for a session and get printable cards and games in their own illustration style.",
 		"details": "Therapists and psychologists pick a visual style once, then generate session materials in it, such as emotion cards, flashcards, board games, posters and worksheets. Gemini draws the illustrations to match the style. A Konva canvas editor handles layout, and @react-pdf exports print-ready PDFs with an optional QR code. Therapists can publish what they make to a shared marketplace for others to reuse. The app runs in English and Portuguese, and it's a separate product from UpSpeech, built for a different market.",
 		"stack": [
 			"Next.js",
@@ -105,7 +105,7 @@
 	{
 		"title": "Basketball Video Analyzer",
 		"slug": "basketball-video-analyzer",
-		"description": "Free desktop app for basketball coaches to cut game film into clips, tag them and share them with the team.",
+		"description": "Free desktop app for basketball coaches to cut game film into tagged clips for the team.",
 		"details": "I got tired of scrubbing through game tape in VLC, so I built this. Load a game, mark in and out points with keyboard shortcuts, and tag each clip with categories like pick and roll or transition. Category sets save as presets you can reuse across games. Coaches can draw on a clip, present clips full screen, or export them as folders for players. It runs on Windows, macOS and Linux, updates itself, and is open source.",
 		"stack": ["Electron", "React", "TypeScript", "Webpack", "SQLite", "FFmpeg", "Open Source"],
 		"images": [
@@ -147,8 +147,8 @@
 	{
 		"title": "FPB Calendar",
 		"slug": "fpb-calendar",
-		"description": "Portuguese basketball fixtures, standings and box scores, with any team's games synced to your calendar.",
-		"details": "Calendário FPB scrapes the Portuguese Basketball Federation's site and turns it into pages that are easy to read. Every competition has standings and fixtures, every game has a box score, and every player has a stat line going back several seasons. Pick a team and its games land in your calendar, through a Google Calendar invite or an ICS feed for Apple Calendar and Outlook. Background jobs keep fixtures and results current. Built with Sinatra, Sequel and Nokogiri on Postgres.",
+		"description": "Portuguese basketball fixtures and box scores, with any team's games synced to your calendar.",
+		"details": "Calendário FPB scrapes the Portuguese Basketball Federation's site and builds a page for every competition, team, game and player. Players get a stat line going back several seasons. Pick a team and its games land in your calendar, through a Google Calendar invite or an ICS feed for Apple Calendar and Outlook. Background jobs keep fixtures and results current. Built with Sinatra and Sequel on Postgres, with Nokogiri doing the scraping.",
 		"stack": ["Sinatra", "Sequel", "PostgreSQL", "Nokogiri", "Google Calendar API"],
 		"images": [
 			"/images/fpb-calendar-1.webp",
@@ -181,7 +181,7 @@
 		"title": "KidShare",
 		"slug": "kidshare",
 		"description": "Co-parenting app for separated parents: shared expenses, the custody calendar and messages in one place.",
-		"details": "KidShare gives two households one record of the kids' lives. A parent logs a cost and picks the split, and KidShare keeps a running statement of who owes whom, with recurring expenses, monthly summaries and recorded payments. The custody calendar shows who has the kids each day and when the next handover is. Messages, family rules and documents live next to the money. Built with React 19 on a Convex backend, installable as a PWA with push notifications, and deployed on Vercel.",
+		"details": "KidShare gives two households one record of the kids' lives. A parent logs a cost and picks the split, and KidShare keeps a running statement of who owes whom, including recurring expenses and recorded payments. The custody calendar shows who has the kids each day and when the next handover is. Messages and family rules live next to the money. Built with React 19 on a Convex backend, installable as a PWA with push notifications, and deployed on Vercel.",
 		"stack": ["React", "TypeScript", "Convex", "TailwindCSS", "shadcn/ui", "PWA", "Vercel"],
 		"images": [
 			"/images/kidshare-1.webp",
@@ -197,7 +197,7 @@
 		"title": "ProTasca",
 		"slug": "protasca",
 		"description": "Website builder for restaurants, with menus, reservations, online ordering and local SEO. It takes no commission on orders.",
-		"details": "A restaurant signs up and gets a site filled in from its TheFork, Zomato and Google Business listings. Owners manage the menu, reservations and online orders from a backoffice, and ProTasca takes no cut of the orders. It reuses the MyAgentWebsite setup, with a Rails API behind React apps for the public site, the owner backoffice and the marketing site.",
+		"details": "A restaurant signs up and gets a site filled in from its TheFork, Zomato and Google Business listings. Owners run everything from one backoffice, and ProTasca takes no cut of the orders. It reuses the MyAgentWebsite setup, a Rails API behind separate React apps for the public site, the backoffice and the marketing site.",
 		"stack": ["Ruby on Rails", "PostgreSQL", "React", "Vite", "TailwindCSS"],
 		"images": [
 			"/images/protasca-1.webp",
@@ -214,8 +214,8 @@
 	{
 		"title": "Dois Agentes",
 		"slug": "dois-agentes",
-		"description": "An AI assistant for Portuguese real estate agents that keeps track of contacts, deals and follow-ups, and drafts the next step.",
-		"details": "Dois Agentes is an assistant for real estate agents in Portugal. It is sold alongside MyAgentWebsite and can inherit its listings. Work reaches it when a message or a synced listing arrives, when a scheduled job runs, or when the agent asks it something. It keeps the agent's contacts, deals, visit sheets and valuations, tracks each deal through a numbered service checklist, and lets the agent consult specialists that cite the sources they used. It drafts, and the agent decides what goes out. Built as a single Rails 8 app with Hotwire and Solid Queue on Railway, with Claude models called through OpenRouter.",
+		"description": "An AI assistant for Portuguese real estate agents that keeps track of their deals and drafts the next step.",
+		"details": "Dois Agentes is an assistant for real estate agents in Portugal. It is sold alongside MyAgentWebsite and can inherit its listings. Work reaches it when a message or a synced listing arrives, when a scheduled job runs, or when the agent asks it something. It keeps the agent's contacts, deals, visit sheets and valuations, and tracks each deal through a numbered service checklist. Agents can also consult specialists that cite the sources they used. It drafts, and the agent decides what goes out. Built as a single Rails 8 app with Hotwire and Solid Queue on Railway, with Claude models called through OpenRouter.",
 		"stack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Solid Queue", "OpenRouter", "Railway"],
 		"images": [
 			"/images/dois-agentes-1.webp",
@@ -230,7 +230,7 @@
 		"title": "Cadence Studio",
 		"slug": "cadence-studio",
 		"description": "A one-person AI content studio where specialist agents draft in your voice and nothing publishes until you approve it.",
-		"details": "Cadence runs a small team of specialist agents that write in your voice on a schedule you set. Drafts land in one review queue, and each draft sits next to one you already approved so you can compare the voice side by side. Every draft is checked against 16 rules, including a 27-word vocabulary watchlist, and the queue marks what they catch, such as em-dash asides, antithesis, hedge openers and resolution closers. Built with React 19, TanStack Router and Convex, using the Vercel AI SDK across Claude, Gemini and OpenAI, fal.ai for images, and Bluesky as the first publishing channel. It is in private beta.",
+		"details": "Cadence runs a small team of specialist agents that write in your voice on a schedule you set. Drafts land in one review queue, next to a draft you already approved, so you can compare the voice side by side. Cadence checks every draft against 16 rules and a 27-word vocabulary watchlist. The queue marks what they catch, like em-dash asides and hedge openers. It switches between Claude, Gemini and OpenAI through the Vercel AI SDK, makes images with fal.ai, and publishes to Bluesky first. It is in private beta.",
 		"stack": [
 			"React",
 			"TypeScript",
@@ -251,8 +251,8 @@
 	{
 		"title": "Analytics Hub",
 		"slug": "analytics-hub",
-		"description": "My own dashboard for every project I run. It pulls traffic, errors and deploys from ten sources and emails me a weekly digest.",
-		"details": "I built this to stop opening ten dashboards to check on my projects. Convex crons pull data from GA4, Search Console, Cloudflare, Vercel, Railway, GitHub, Sentry, Bing, Lighthouse and uptime checks. The Next.js home page lists the projects that need attention, and each project has pages for traffic, SEO, health, deploys and usage. Every week AhaSend delivers an HTML email with the traffic, deploys and performance numbers.",
+		"description": "My own dashboard for every project I run. It pulls traffic, errors and deploys from ten sources and emails me once a week.",
+		"details": "I built this to stop opening ten dashboards to check on my projects. Convex crons pull data from GA4, Search Console, Cloudflare, Vercel, Railway, GitHub, Sentry, Bing, Lighthouse and uptime checks. The Next.js home page lists the projects that need attention, and each project has its own pages for traffic, SEO, health, deploys and usage. Every Monday AhaSend sends me an HTML digest of the week.",
 		"stack": [
 			"Next.js",
 			"React",
