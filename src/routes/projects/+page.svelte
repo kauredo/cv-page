@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from '#lib/components/shared/Stop.svelte';
 	import ProjectCard from '#lib/components/shared/ProjectCard.svelte';
 	import BackButton from '#lib/components/shared/BackButton.svelte';
 	import type { Project } from '#lib/types.js';
@@ -139,9 +140,9 @@
 			<h1
 				class="font-display mt-3 text-5xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
-				All <span class="text-vasco-700 dark:text-vasco-300 font-medium italic">work</span><span
-					class="text-vasco-600 dark:text-vasco-400">.</span
-				>
+				All <span class="text-vasco-700 dark:text-vasco-300 font-medium italic">work</span><Stop
+					class="text-vasco-600 dark:text-vasco-400"
+				/>
 			</h1>
 		</div>
 
@@ -281,7 +282,7 @@
 		<div class="py-24 text-center">
 			<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-4">Empty // 0 results</p>
 			<h2 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
-				Air ball<span class="text-hoop-500 dark:text-hoop-400">.</span>
+				Air ball<Stop class="text-hoop-500 dark:text-hoop-400" />
 			</h2>
 			<p class="mt-4 font-mono text-xs tracking-wider text-slate-600 uppercase dark:text-slate-400">
 				No projects match your filter

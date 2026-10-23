@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from '#lib/components/shared/Stop.svelte';
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
@@ -112,9 +113,9 @@
 		<h1
 			class="font-display text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 		>
-			Say <span class="text-hoop-500 dark:text-hoop-400 font-medium italic">hi</span><span
-				class="text-hoop-500 dark:text-hoop-400">.</span
-			>
+			Say <span class="text-hoop-500 dark:text-hoop-400 font-medium italic">hi</span><Stop
+				class="text-hoop-500 dark:text-hoop-400"
+			/>
 		</h1>
 		<p class="mt-6 max-w-md text-lg leading-relaxed text-slate-700 dark:text-slate-300">
 			Got a project idea or just want to chat code or hoops?
@@ -140,7 +141,7 @@
 			</svg>
 			<p class="eyebrow text-hoop-300 relative mb-4">Status / 200 — sent</p>
 			<h2 class="font-display relative text-4xl leading-[0.95] font-bold sm:text-5xl">
-				Swish<span class="text-hoop-400">.</span>
+				Swish<Stop class="text-hoop-400" />
 			</h2>
 			<p class="text-vasco-100 relative mt-4 max-w-md text-lg leading-relaxed">
 				Thanks for reaching out. I'll get back to you soon.

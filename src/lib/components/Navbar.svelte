@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
+	import Badge from './shared/Badge.svelte';
 	export const darkModeStore = writable(false);
 
 	let darkMode = false;
@@ -54,18 +55,8 @@
 			href="/"
 			class="group focus-visible:ring-vasco-500 flex items-center rounded-md focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none dark:focus-visible:ring-offset-slate-950"
 		>
-			<img
-				src="/images/logo.svg"
-				class="h-7 w-auto transition-opacity group-hover:opacity-70 dark:invert"
-				on:error={(event) => {
-					const target = event.target as HTMLImageElement;
-					if (target) target.src = '/images/logo.webp';
-				}}
-				alt="VascoKF logo"
-				width="30"
-				height="28"
-			/>
-			<span class="sr-only">Home</span>
+			<Badge class="h-8 w-auto transition-opacity group-hover:opacity-70" />
+			<span class="sr-only">Vasco Kaufmann Figueiredo, home</span>
 		</a>
 
 		<div class="flex items-center gap-0.5 sm:gap-2 md:gap-3">

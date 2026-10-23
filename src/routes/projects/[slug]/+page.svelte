@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from '#lib/components/shared/Stop.svelte';
 	import type { PageData } from './$types';
 	import type { Project } from '#lib/types.js';
 	import { jsonLdScript, projectJsonLd } from '#lib/jsonld.js';
@@ -65,7 +66,12 @@
 			class="font-display text-4xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
 			style="view-transition-name: project-title-{project.slug}"
 		>
-			{project.title}<span class="text-hoop-500 dark:text-hoop-400">.</span>
+			<!-- The last word and the triangle stop stay on one line. -->
+			{project.title.slice(0, project.title.lastIndexOf(' ') + 1)}<span class="whitespace-nowrap"
+				>{project.title.slice(project.title.lastIndexOf(' ') + 1)}<Stop
+					class="text-hoop-500 dark:text-hoop-400"
+				/></span
+			>
 		</h1>
 
 		<p
