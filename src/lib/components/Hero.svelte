@@ -49,7 +49,9 @@
 					<span
 						class="font-name block text-[clamp(4.5rem,14vw,11rem)] leading-[0.88] tracking-[-0.03em]"
 					>
-						Vasco<Stop class="text-hoop-500" /><span class="sr-only">.</span>
+						Vasco<Stop
+							class="text-hoop-500 animate-drop origin-bottom motion-reduce:animate-none"
+						/><span class="sr-only">.</span>
 					</span>
 				</h1>
 
