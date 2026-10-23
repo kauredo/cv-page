@@ -74,8 +74,7 @@
 		</p>
 
 		<h1
-			class="font-display text-slate-900 dark:text-white text-[clamp(4rem,16vw,12rem)] font-black leading-[0.85] tracking-[-0.04em]"
-			style="font-variation-settings: 'opsz' 144, 'SOFT' 100;"
+			class="font-display text-slate-900 dark:text-white text-[clamp(4rem,16vw,12rem)] font-black leading-[0.85] tracking-[-0.03em]"
 		>
 			{status === 404 ? 'Air ball' : 'Foul'}<span
 				class="airball-period text-hoop-500 dark:text-hoop-400">.</span

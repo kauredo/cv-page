@@ -59,6 +59,11 @@
 <svelte:head>
 	<title>{basics.name} - CV</title>
 	<meta name="robots" content="noindex, nofollow" />
+	<!-- This CV keeps the site's previous display face; the brand's Archivo is Vasco's only. -->
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,wght@9..144,30..100,500;9..144,30..100,700;9..144,30..100,900&display=swap"
+	/>
 </svelte:head>
 
 <section class="screen-only-nav">
@@ -392,6 +397,14 @@
 </div>
 
 <style>
+	.ines-cv :global(:is(h1, h2, .font-display)) {
+		font-family: 'Fraunces', Georgia, serif;
+		font-variation-settings:
+			'opsz' 144,
+			'SOFT' 50;
+		letter-spacing: -0.02em;
+	}
+
 	/* Ines CV color theme - yellow/gold instead of blue */
 	.ines-cv {
 		--color-vasco-100: #fffde7;
