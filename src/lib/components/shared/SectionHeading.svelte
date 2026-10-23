@@ -41,13 +41,12 @@
 		{id}
 		class="font-display mt-6 text-4xl font-bold leading-[0.95] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
 	>
+		<!-- The stop touches the last letter, so no whitespace before it. -->
 		{#if italicWord}
-			{parts.before}<span class="{italicColor} font-medium italic">{italicWord}</span>{parts.after}
+			{parts.before}<span class="{italicColor} font-medium italic">{italicWord}</span
+			>{parts.after}{#if trailing}<Stop class={trailingColor} />{/if}
 		{:else}
-			{title}
-		{/if}
-		{#if trailing}
-			<Stop class={trailingColor} />
+			{title}{#if trailing}<Stop class={trailingColor} />{/if}
 		{/if}
 	</h2>
 </header>
