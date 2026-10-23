@@ -33,15 +33,22 @@
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 
-		<!-- Google Analytics — deferred to avoid blocking FCP -->
-		<script defer src="https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT"></script>
+		<!-- Google Analytics, loaded async and only on the production domain so local
+		     dev, previews and tests never send hits. GA4 enhanced measurement tracks
+		     client-side navigations itself, so nothing else calls gtag. -->
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
+			if (/(^|\.)vascokf\.com$/.test(location.hostname)) {
+				window.dataLayer = window.dataLayer || [];
+				window.gtag = function () {
+					dataLayer.push(arguments);
+				};
+				gtag('js', new Date());
+				gtag('config', 'G-55TK9L8WDT');
+				const ga = document.createElement('script');
+				ga.async = true;
+				ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-55TK9L8WDT';
+				document.head.appendChild(ga);
 			}
-			gtag('js', new Date());
-			gtag('config', 'G-55TK9L8WDT');
 		</script>
 	</body>
 </html>

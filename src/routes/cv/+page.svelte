@@ -72,7 +72,7 @@
 			<div class="contact-item">
 				<span>{basics.locationAsString}</span>
 			</div>
-			{#each filteredProfiles as profile}
+			{#each filteredProfiles as profile, i (i)}
 				<div class="contact-item">
 					<span>{profile.network}: </span>
 					<a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.username}</a>
@@ -89,7 +89,7 @@
 
 		<section class="experience">
 			<h2>Professional Experience</h2>
-			{#each work as job}
+			{#each work as job, i (i)}
 				<div class="job">
 					<div class="job-header">
 						<div class="job-title-group">
@@ -108,7 +108,7 @@
 
 		<section class="projects">
 			<h2>Featured Projects</h2>
-			{#each projects as project}
+			{#each projects as project, i (i)}
 				<div class="project mb-4">
 					<div class="project-header">
 						<div
@@ -133,7 +133,7 @@
 		<section class="skills">
 			<h2>Technical Skills</h2>
 			<div class="skills-grid">
-				{#each sortedSkills as skill}
+				{#each sortedSkills as skill, i (i)}
 					<div class="skill-item">
 						<span class="skill-name">{skill.name}</span>
 						<span class="years"
@@ -147,7 +147,7 @@
 		<section class="education">
 			<h2>Education</h2>
 			<div class="education-grid">
-				{#each education as edu}
+				{#each education as edu, i (i)}
 					<div class="education-item">
 						<h3>{edu.institution}</h3>
 						<p class="degree">{edu.area} {edu.studyType ? `- ${edu.studyType}` : ''}</p>

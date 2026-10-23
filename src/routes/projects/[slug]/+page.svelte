@@ -1,32 +1,17 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Project } from '#lib/types.js';
-	import { projectJsonLd } from '#lib/jsonld.js';
+	import { jsonLdScript, projectJsonLd } from '#lib/jsonld.js';
 	import Modal from '#lib/components/shared/Modal.svelte';
 	import BackButton from '#lib/components/shared/BackButton.svelte';
 	import Button from '#lib/components/shared/Button.svelte';
 
 	export let data: PageData;
-	export let project: Project = data.project;
+	let project: Project;
+	$: project = data.project;
 	let selectedImage: string | null = null;
 
-	// Unicode-escape the angle brackets and ampersand so a string value can't
-	// break out of the JSON-LD script tag. Plain-string replaceAll, not a regex
-	// literal, which Svelte's script-block tokenizer mis-parses here.
-	const ldJson = (obj: unknown): string =>
-		JSON.stringify(obj).replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
-
-	function openModal(image: string) {
-		selectedImage = image;
-	}
-
-	function closeModal() {
-		selectedImage = null;
-	}
-</script>
-
-<svelte:head>
-	{@html `<script type="application/ld+json">${ldJson({
+	$: breadcrumbLd = jsonLdScript({
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
 		itemListElement: [
@@ -44,8 +29,23 @@
 				item: 'https://www.vascokf.com/projects/' + project.slug
 			}
 		]
-	})}</script>`}
-	{@html `<script type="application/ld+json">${ldJson(projectJsonLd(project))}</script>`}
+	});
+	$: projectLd = jsonLdScript(projectJsonLd(project));
+
+	function openModal(image: string) {
+		selectedImage = image;
+	}
+
+	function closeModal() {
+		selectedImage = null;
+	}
+</script>
+
+<svelte:head>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON-LD from repo data, escaped by jsonLdScript -->
+	{@html breadcrumbLd}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON-LD from repo data, escaped by jsonLdScript -->
+	{@html projectLd}
 </svelte:head>
 
 <article class="mx-auto max-w-5xl px-6 py-12 sm:py-16">
@@ -123,7 +123,7 @@
 						<span class="eyebrow text-slate-600 dark:text-slate-400">Gallery</span>
 					</div>
 					<div class="grid gap-4 sm:grid-cols-2">
-						{#each project.images.slice(1) as image, i}
+						{#each project.images.slice(1) as image, i (i)}
 							<button
 								class="group focus-visible:ring-hoop-500 block overflow-hidden rounded-xl shadow-md transition-shadow hover:shadow-xl focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:outline-none active:shadow-xl dark:focus-visible:ring-offset-slate-950"
 								on:click={() => openModal(image)}
@@ -154,7 +154,7 @@
 					<div>
 						<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-3">Tech stack</p>
 						<ul class="flex flex-wrap gap-1.5">
-							{#each project.stack as tech}
+							{#each project.stack as tech, i (i)}
 								<li
 									class="rounded-md border border-slate-300 bg-white px-2 py-0.5 font-mono text-[11px] text-slate-700 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-300"
 								>

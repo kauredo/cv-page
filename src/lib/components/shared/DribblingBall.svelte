@@ -6,7 +6,6 @@
 	export let duration = 1.1;
 	let cycleInterval = duration * 1000 * 2;
 
-	let numberOfBounces = 1;
 	let tempHeight = ballJumpHeight;
 	let heightSteps = [tempHeight];
 	let tempReduction = 0.9;
@@ -14,13 +13,11 @@
 		tempHeight = tempHeight * tempReduction;
 		heightSteps.push(tempHeight);
 		tempReduction = tempReduction - 0.1;
-		numberOfBounces++;
 	}
 
 	let isAnimating = false;
 	let currentHeightIndex = 0;
 	let cycleTimer: ReturnType<typeof setInterval> | null = null;
-	let isPaused = true;
 	let currentHeight = heightSteps[0];
 
 	let containerEl: HTMLDivElement;
@@ -36,7 +33,6 @@
 			ballEl.classList.remove('animation-untriggered');
 			dribbleEl.classList.remove('animation-untriggered');
 			smashEl.classList.remove('animation-untriggered');
-			isPaused = false;
 			isAnimating = true;
 
 			dribbleEl.style.setProperty('--ballJumpHeight', `${currentHeight}px`);
@@ -69,7 +65,6 @@
 		ballEl.classList.add('animation-untriggered');
 		dribbleEl.classList.add('animation-untriggered');
 		smashEl.classList.add('animation-untriggered');
-		isPaused = true;
 
 		if (cycleTimer) {
 			clearInterval(cycleTimer);

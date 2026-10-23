@@ -16,7 +16,7 @@
 	/>
 
 	<div>
-		{#each experiences as exp, i}
+		{#each experiences as exp, i (i)}
 			<div class="relative pb-10 pl-10 last:pb-0">
 				<!-- Vertical timeline track — visible vasco line -->
 				<div
@@ -65,7 +65,7 @@
 						</p>
 						{#if exp.skills}
 							<div class="mt-3 flex flex-wrap gap-1.5">
-								{#each exp.skills.slice(0, 4) as skill}
+								{#each exp.skills.slice(0, 4) as skill, j (j)}
 									<span
 										class="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 font-mono text-[11px] text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
 									>

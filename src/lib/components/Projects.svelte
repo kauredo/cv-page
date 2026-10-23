@@ -75,7 +75,7 @@
 						</p>
 						{#if featuredProject.stack && featuredProject.stack.length > 0}
 							<div class="mt-5 flex flex-wrap gap-1.5">
-								{#each featuredProject.stack.slice(0, 3) as tech}
+								{#each featuredProject.stack.slice(0, 3) as tech, i (i)}
 									<span
 										class="rounded border border-white/20 bg-white/5 px-2 py-0.5 font-mono text-[11px] text-slate-300"
 									>
@@ -107,7 +107,7 @@
 	<!-- Regular grid -->
 	{#if projects.length > 0}
 		<div class="grid gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-			{#each projects as project}
+			{#each projects as project (project.slug)}
 				<ProjectCard {project} />
 			{/each}
 		</div>

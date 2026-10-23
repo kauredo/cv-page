@@ -7,7 +7,8 @@
 	import { onMount } from 'svelte';
 
 	export let data: PageData;
-	export let projects: Project[] = data.projects;
+	let projects: Project[];
+	$: projects = data.projects;
 	let searchQuery = '';
 	let isFilterOpen = false;
 	let selectedCategory = 'all';
@@ -241,7 +242,7 @@
 						aria-label="Filter by category"
 						on:keydown={handleFilterKeydown}
 					>
-						{#each categoryKeys as category, index}
+						{#each categoryKeys as category, index (category)}
 							{@const isSelected = selectedCategory === (category === 'All' ? 'all' : category)}
 							{@const isFocused = focusedIndex === index}
 							<button

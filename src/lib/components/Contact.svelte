@@ -66,7 +66,7 @@
 			<div class="md:col-span-5">
 				<p class="eyebrow mb-4 text-slate-400">Reach me on —</p>
 				<ul class="space-y-2">
-					{#each contacts as contact}
+					{#each contacts as contact, i (i)}
 						<li>
 							<a
 								href={contact.href}

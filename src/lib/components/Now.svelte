@@ -61,7 +61,7 @@
 	</SectionHeading>
 
 	<ul class="grid auto-rows-[minmax(140px,auto)] grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
-		{#each activities as { emoji, text, variant, span, caption }}
+		{#each activities as { emoji, text, variant, span, caption }, i (i)}
 			<li
 				class="group relative flex flex-col justify-end overflow-hidden rounded-2xl p-5 transition-transform duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:-translate-y-0.5 {span ??
 					''} {variant === 'feature-orange'
