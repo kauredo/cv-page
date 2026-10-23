@@ -26,19 +26,32 @@
 	<div
 		class="relative overflow-hidden rounded-2xl bg-slate-950 px-6 py-12 text-white sm:px-10 sm:py-14 md:px-12 md:py-16 dark:bg-slate-900"
 	>
-		<!-- Free-throw lane motif — bookends the hero -->
+		<!-- Calçada bounce lines along the bottom edge, each bounce lower than the last; they
+		     bookend the lines behind the hero portrait -->
 		<svg
-			class="text-hoop-500/35 absolute -right-12 -bottom-12 h-[220px] w-[220px] sm:-right-14 sm:-bottom-16 sm:h-[300px] sm:w-[300px] lg:-right-16 lg:-bottom-20 lg:h-[380px] lg:w-[380px]"
-			viewBox="0 0 200 200"
+			class="absolute inset-x-0 bottom-0 h-10 w-full opacity-70 sm:h-12 md:h-14"
+			viewBox="0 0 1200 80"
+			preserveAspectRatio="none"
 			fill="none"
 			aria-hidden="true"
 		>
-			<!-- Free-throw lane (the "key") -->
-			<rect x="60" y="20" width="80" height="120" stroke="currentColor" stroke-width="1" />
-			<!-- Free-throw circle -->
-			<circle cx="100" cy="140" r="32" stroke="currentColor" stroke-width="1" />
-			<!-- Hoop dot -->
-			<circle cx="100" cy="20" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+			<g stroke-width="2">
+				<path
+					class="stroke-hoop-500"
+					vector-effect="non-scaling-stroke"
+					d="M0 40Q221 -30 443 40Q618 -16 793 40Q921 0 1049 40Q1125 16 1200 40"
+				/>
+				<path
+					class="stroke-hoop-300"
+					vector-effect="non-scaling-stroke"
+					d="M0 58Q221 -12 443 58Q618 2 793 58Q921 18 1049 58Q1125 34 1200 58"
+				/>
+				<path
+					class="stroke-hoop-100"
+					vector-effect="non-scaling-stroke"
+					d="M0 76Q221 6 443 76Q618 20 793 76Q921 36 1049 76Q1125 52 1200 76"
+				/>
+			</g>
 		</svg>
 
 		<!-- Top metadata strip -->
