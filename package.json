@@ -42,5 +42,9 @@
 	},
 	"dependencies": {
 		"@vercel/analytics": "^2.0.1"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
 	}
 }

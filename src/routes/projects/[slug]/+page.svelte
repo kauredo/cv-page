@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Project } from '$lib/types';
-	import { projectJsonLd } from '$lib/jsonld';
-	import Modal from '$lib/components/shared/Modal.svelte';
-	import BackButton from '$lib/components/shared/BackButton.svelte';
-	import Button from '$lib/components/shared/Button.svelte';
+	import type { Project } from '#lib/types.js';
+	import { projectJsonLd } from '#lib/jsonld.js';
+	import Modal from '#lib/components/shared/Modal.svelte';
+	import BackButton from '#lib/components/shared/BackButton.svelte';
+	import Button from '#lib/components/shared/Button.svelte';
 
 	export let data: PageData;
 	export let project: Project = data.project;

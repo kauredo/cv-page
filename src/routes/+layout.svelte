@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { browser, dev } from '$app/environment';
+	import { browser, dev } from '$app/env';
 	import { inject } from '@vercel/analytics';
-	import { pageview } from '$lib/services/analytics';
+	import { pageview } from '#lib/services/analytics.js';
 	import '../app.css';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Navbar from '#lib/components/Navbar.svelte';
+	import Footer from '#lib/components/Footer.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { MetaTags, deepMerge } from 'svelte-meta-tags';

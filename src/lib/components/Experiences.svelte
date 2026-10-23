@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Experience } from '$lib/types';
+	import type { Experience } from '#lib/types.js';
 	import SectionHeading from './shared/SectionHeading.svelte';
 
 	export let experiences: Experience[] = [];

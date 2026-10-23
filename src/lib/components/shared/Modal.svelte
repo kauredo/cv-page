@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 
 	export let isOpen: boolean = false;
 	export let images: string[] = [];

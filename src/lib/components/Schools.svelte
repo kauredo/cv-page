@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Education } from '$lib/types';
+	import type { Education } from '#lib/types.js';
 
 	export let education: Education[] = [];
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import cvData from '$lib/data/cv_ines.json';
+	import cvData from '#lib/data/cv_ines.json';
 
 	type CVSkill = {
 		name: string;
