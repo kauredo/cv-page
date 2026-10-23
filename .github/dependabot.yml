@@ -8,6 +8,10 @@ updates:
     groups:
       minor-and-patch:
         update-types: ['minor', 'patch']
+    ignore:
+      # Vercel builds on Node 22.x. Move this major with the project's Node version.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
