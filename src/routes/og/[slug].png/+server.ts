@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import projects from '$lib/data/projects.json';
-import { renderProjectOg } from '$lib/og/renderProjectOg';
+import projects from '#lib/data/projects.json';
+import { renderProjectOg } from '#lib/og/renderProjectOg.js';
 import type { RequestHandler, EntryGenerator } from './$types';
 
 export const prerender = true;

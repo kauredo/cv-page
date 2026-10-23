@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ProjectCard from '$lib/components/shared/ProjectCard.svelte';
-	import BackButton from '$lib/components/shared/BackButton.svelte';
-	import type { Project } from '$lib/types';
+	import ProjectCard from '#lib/components/shared/ProjectCard.svelte';
+	import BackButton from '#lib/components/shared/BackButton.svelte';
+	import type { Project } from '#lib/types.js';
 	import type { PageData } from './$types';
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';

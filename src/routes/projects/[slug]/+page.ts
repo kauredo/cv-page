@@ -1,7 +1,7 @@
 import type { PageLoad, EntryGenerator } from './$types';
 import type { MetaTagsProps } from 'svelte-meta-tags';
-import projects from '$lib/data/projects.json';
-import type { Project } from '$lib/types';
+import projects from '#lib/data/projects.json';
+import type { Project } from '#lib/types.js';
 import { error } from '@sveltejs/kit';
 
 export const entries: EntryGenerator = () => {

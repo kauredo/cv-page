@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { MetaTags } from 'svelte-meta-tags';
-	import Button from '$lib/components/shared/Button.svelte';
+	import Button from '#lib/components/shared/Button.svelte';
 
 	export let error: App.Error | null = page.error;
 	export let status: number = page.status;

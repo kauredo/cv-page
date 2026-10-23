@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project } from '$lib/types';
+	import type { Project } from '#lib/types.js';
 	import ProjectCard from './shared/ProjectCard.svelte';
 	import SectionHeading from './shared/SectionHeading.svelte';
 

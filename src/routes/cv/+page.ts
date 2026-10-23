@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import type { MetaTagsProps } from 'svelte-meta-tags';
-import cv from '$lib/data/cv.json';
+import cv from '#lib/data/cv.json';
 
 export const load: PageLoad = async () => {
 	const pageMetaTags = Object.freeze({

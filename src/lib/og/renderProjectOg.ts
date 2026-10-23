@@ -1,7 +1,7 @@
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { OG_FONTS } from './fonts';
-import type { Project } from '$lib/types';
+import type { Project } from '#lib/types.js';
 
 // Brand-styled 1200x630 OG card, rendered only by Satori at build time (the
 // route is prerendered), never hydrated. Satori supports a flexbox subset, so

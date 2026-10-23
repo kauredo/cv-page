@@ -1,6 +1,6 @@
 <script lang="ts">
-	import cv from '$lib/data/cv.json';
-	import BackButton from '$lib/components/shared/BackButton.svelte';
+	import cv from '#lib/data/cv.json';
+	import BackButton from '#lib/components/shared/BackButton.svelte';
 
 	const { basics, work, education, skills, projects } = cv;
 

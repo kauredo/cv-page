@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project } from '$lib/types';
+	import type { Project } from '#lib/types.js';
 
 	export let project: Project;
 	export let small: boolean = false;
