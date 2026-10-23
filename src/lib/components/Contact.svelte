@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from '#lib/components/shared/Stop.svelte';
 	const contacts = [
 		{
 			type: 'Email',
@@ -54,7 +55,9 @@
 					id="contact-heading"
 					class="font-display text-5xl leading-[0.9] font-black tracking-tight sm:text-6xl lg:text-7xl"
 				>
-					Let's <span class="text-hoop-400 font-medium italic">play</span>.
+					Let's <span class="text-hoop-400 font-medium italic">play</span><Stop
+						class="text-hoop-400"
+					/>
 				</h2>
 
 				<p class="mt-6 max-w-md text-lg leading-relaxed text-slate-300">

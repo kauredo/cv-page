@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from './Stop.svelte';
 	export let index: string;
 	export let title: string;
 	export let italicWord: string = '';
@@ -46,7 +47,7 @@
 			{title}
 		{/if}
 		{#if trailing}
-			<span class={trailingColor}>.</span>
+			<Stop class={trailingColor} />
 		{/if}
 	</h2>
 </header>
