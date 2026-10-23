@@ -1,9 +1,9 @@
 // Static-weight font instances for Satori. Satori's font parser rejects
 // variable fonts (its fvar parser trips), so these are single-weight woff
-// instances pulled from Fontsource — Fraunces 700 (display), Instrument
-// Sans 500 (body), JetBrains Mono 600 (eyebrow/labels), matching the site's
-// brand type (app.css --font-display / --font-body / --font-mono).
-import fraunces from './fonts/Fraunces-700.woff?inline';
+// instances pulled from Fontsource — Archivo Black 400 (display, the brand's
+// name face), Instrument Sans 500 (body), JetBrains Mono 600 (eyebrow/labels),
+// matching the site's brand type (app.css --font-name / --font-body / --font-mono).
+import archivoBlack from './fonts/ArchivoBlack-400.woff?inline';
 import instrument from './fonts/InstrumentSans-500.woff?inline';
 import jetbrainsMono from './fonts/JetBrainsMono-600.woff?inline';
 
@@ -21,9 +21,9 @@ function dataUriToArrayBuffer(uri: string): ArrayBuffer {
 
 export const OG_FONTS = [
 	{
-		name: 'Fraunces',
-		data: dataUriToArrayBuffer(fraunces),
-		weight: 700 as const,
+		name: 'Archivo Black',
+		data: dataUriToArrayBuffer(archivoBlack),
+		weight: 400 as const,
 		style: 'normal' as const
 	},
 	{
