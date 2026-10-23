@@ -33,7 +33,7 @@
 			<ul
 				class="divide-y divide-slate-900/10 border-y border-slate-900/10 dark:divide-white/10 dark:border-white/10"
 			>
-				{#each education as edu}
+				{#each education as edu, i (i)}
 					<li
 						class="group relative py-6 transition-colors duration-300 hover:bg-slate-50/60 active:bg-slate-100/60 sm:py-8 dark:hover:bg-slate-900/40 dark:active:bg-slate-900/60"
 					>

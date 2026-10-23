@@ -10,7 +10,7 @@
 		Tools & Tech I Enjoy
 	</h2>
 	<div class="flex flex-wrap gap-2">
-		{#each skills as skill}
+		{#each skills as skill, i (i)}
 			<span
 				class="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300"
 			>

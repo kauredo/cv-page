@@ -3,8 +3,8 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import Button from '#lib/components/shared/Button.svelte';
 
-	export let error: App.Error | null = page.error;
-	export let status: number = page.status;
+	const error = $derived(page.error);
+	const status = $derived(page.status);
 </script>
 
 <MetaTags title="{status === 404 ? 'Page Not Found' : `Error ${status}`} — Vasco KF" />

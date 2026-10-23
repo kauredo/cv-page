@@ -111,7 +111,7 @@
 			<div class="contact-item">
 				<span>{basics.locationAsString}</span>
 			</div>
-			{#each filteredProfiles as profile}
+			{#each filteredProfiles as profile, i (i)}
 				<div class="contact-item">
 					<span>{profile.network}: </span>
 					<a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.username}</a>
@@ -134,7 +134,7 @@
 					class="from-vasco-700 via-vasco-800 to-vasco-700 absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b"
 				></div>
 
-				{#each work as job, index}
+				{#each work as job, index (index)}
 					<div class="relative mb-2 flex items-start">
 						<!-- Timeline dot/logo - only show if first entry or different company -->
 						{#if index === 0 || work[index - 1].company !== job.company}
@@ -197,7 +197,7 @@
 		{#if projects && projects.length > 0}
 			<section class="projects">
 				<h2>Projetos em Destaque</h2>
-				{#each projects as project}
+				{#each projects as project, i (i)}
 					<div class="project mb-6">
 						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 							<h3 class="mb-1 text-lg font-semibold text-gray-800 sm:mb-0">
@@ -231,7 +231,7 @@
 		<section class="skills">
 			<h2>Competências Profissionais</h2>
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-				{#each sortedSkills as skill}
+				{#each sortedSkills as skill, i (i)}
 					<div
 						class="flex items-baseline justify-between border-b border-dotted border-gray-300 pb-1"
 					>
@@ -249,7 +249,7 @@
 		{#if accomplishments && accomplishments.length > 0}
 			<section class="accomplishments">
 				<h2>Certificados e Conquistas Pessoais</h2>
-				{#each accomplishments as accomplishment}
+				{#each accomplishments as accomplishment, i (i)}
 					<div class="mb-6">
 						<div class="mb-2 flex flex-col sm:flex-row sm:items-start sm:justify-between">
 							<div class="mr-4 mb-1 flex items-baseline gap-2 sm:mb-0">
@@ -295,7 +295,7 @@
 					class="from-vasco-700 via-vasco-800 to-vasco-700 absolute top-0 bottom-0 left-8 w-0.5 bg-gradient-to-b"
 				></div>
 
-				{#each education as edu, index}
+				{#each education as edu, index (index)}
 					<div class="relative mb-2 flex items-start">
 						<!-- Timeline dot/logo - only show if first entry or different institution -->
 						{#if index === 0 || education[index - 1].institution !== edu.institution}
@@ -374,7 +374,7 @@
 			<h2>Referências</h2>
 			{#if references && references.length > 0}
 				<div class="references-list">
-					{#each references as ref}
+					{#each references as ref, i (i)}
 						<div class="reference-item">
 							<strong>{ref.name}</strong>
 							{#if ref.relationship}<span class="ref-rel"> – {ref.relationship}</span>{/if}

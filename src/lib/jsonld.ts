@@ -3,6 +3,18 @@ import type { Project } from './types';
 const SITE_URL = 'https://www.vascokf.com';
 
 /**
+ * A complete `<script type="application/ld+json">` tag for `{@html}`. The JSON
+ * has <, > and & unicode-escaped so a string value can't break out of the tag.
+ */
+export function jsonLdScript(data: unknown): string {
+	const json = JSON.stringify(data)
+		.replaceAll('<', '\\u003c')
+		.replaceAll('>', '\\u003e')
+		.replaceAll('&', '\\u0026');
+	return `<script type="application/ld+json">${json}</script>`;
+}
+
+/**
  * Per-project `SoftwareApplication` JSON-LD for a project detail page.
  * Complements the site-wide `Person` schema in the root layout (author ref).
  */

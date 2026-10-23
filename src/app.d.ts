@@ -8,17 +8,6 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
-
-	interface Window {
-		gtag: (
-			type: string,
-			action: string,
-			options?: {
-				[key: string]: any;
-			}
-		) => void;
-		dataLayer: any[];
-	}
 }
 
 declare module '*.woff?inline' {

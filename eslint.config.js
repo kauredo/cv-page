@@ -9,6 +9,8 @@ const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
 export default ts.config(
 	includeIgnoreFile(gitignorePath),
+	// old/ holds the previous static site, kept for reference and never built.
+	{ ignores: ['old/'] },
 	js.configs.recommended,
 	...ts.configs.recommended,
 	...svelte.configs.recommended,
@@ -32,6 +34,11 @@ export default ts.config(
 				extraFileExtensions: ['.svelte'],
 				parser: ts.parser
 			}
+		},
+		rules: {
+			// The site serves from / with no paths.base, so resolve() on an href
+			// returns it unchanged. goto() and pushState() are still checked.
+			'svelte/no-navigation-without-resolve': ['error', { ignoreLinks: true }]
 		}
 	}
 );
