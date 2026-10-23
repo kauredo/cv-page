@@ -1,6 +1,7 @@
 <script lang="ts">
 	import cv from '#lib/data/cv.json';
 	import BackButton from '#lib/components/shared/BackButton.svelte';
+	import Badge from '#lib/components/shared/Badge.svelte';
 
 	const { basics, work, education, skills, projects } = cv;
 
@@ -60,6 +61,7 @@
 			<div class="header-main">
 				<img src={basics.image} alt={basics.name} class="avatar w-20 sm:w-[100px]" />
 				<div class="name-title">
+					<Badge ink class="mb-3 h-7 w-auto" />
 					<h1 class="text-2xl sm:text-3xl">{basics.name}</h1>
 					<p class="title text-base sm:text-lg">{basics.label}</p>
 				</div>
