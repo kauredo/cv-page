@@ -1669,10 +1669,17 @@ satori@^0.26.0:
     postcss-value-parser "^4.2.0"
     yoga-layout "^3.2.1"
 
-schema-dts@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-1.1.5.tgz#9237725d305bac3469f02b292a035107595dc324"
-  integrity "sha1-kjdyXTBbrDRp8CspKgNRB1ldwyQ= sha512-RJr9EaCmsLzBX2NDiO5Z3ux2BVosNZN5jo0gWgsyKvxKIUL5R3swNvoorulAeL9kLB0iTSX7V6aokhla2m7xbg=="
+schema-dts-lib@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/schema-dts-lib/-/schema-dts-lib-1.1.0.tgz#43be42d5d0536eacb93844459c42b4307adf0f1a"
+  integrity sha512-Nx00FDPHDimSENMznVpADeYUJDsqlMiO9wcs2S+giggNTm5+ruNkM4m9z9qCk6xUJT+ThDM3NxxpwfHfFk1G+Q==
+
+schema-dts@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-2.1.0.tgz#7f52579c6dd266ad758c5d3f71aba874b6a6b1e7"
+  integrity sha512-Y/NvOvuJUZwrm+EmNqJF3M+bRufERJs1h5GJPLilUuK5D5b53ttU+XZgIjEFaAVRToh+ib+cQawFmxKC5Jt9ow==
+  dependencies:
+    schema-dts-lib "^1.1.0"
 
 semver@^7.6.3, semver@^7.7.2, semver@^7.7.3:
   version "7.8.1"
@@ -1744,12 +1751,12 @@ svelte-inview@^4.0.4:
   resolved "https://registry.yarnpkg.com/svelte-inview/-/svelte-inview-4.0.4.tgz#3d12dc00073376a36a6635d143a314cd0db66ab0"
   integrity "sha1-PRLcAAczdqNqZjXRQ6MUzQ22arA= sha512-PlXNSHHijvQ6MhmSYUj6cMyS+39NttoTffk7W5WYF8T2tsyLgJnKhyuAF+/hSujbY0vpsmqXaMd2nolEKvR8Kw=="
 
-svelte-meta-tags@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/svelte-meta-tags/-/svelte-meta-tags-4.7.0.tgz#df2af21aa0557d7de518f9cd377be9a2e47db5c9"
-  integrity sha512-H65QB8UAeS8eSt9CIa0jMoVbT7igtuCQP6itC+tqGoybxITl1Xb9m2nLNCwaS53UTeGyGtT7MGgwgsuhAJpfnQ==
+svelte-meta-tags@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/svelte-meta-tags/-/svelte-meta-tags-5.0.3.tgz#d8d208506f114265d30ab5f609d2aa6df7e34a20"
+  integrity sha512-vdJXLnx0u6sXznzy3DSnQTMnBXiqL0YywM4HulrveKMEmQXhusJv5nzqaa6hxmz6BS4UYewon/UeI7qmxtW4pw==
   dependencies:
-    schema-dts "^1.1.5"
+    schema-dts "^2.1.0"
 
 svelte@^5.0.0:
   version "5.55.9"
