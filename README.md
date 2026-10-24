@@ -7,7 +7,7 @@ Welcome to my personal portfolio site built with SvelteKit and TailwindCSS. This
 - **Animated Transitions**: Enhances user experience with smooth transitions.
 - **Project Showcase**: Displays various projects with detailed descriptions and images.
 - **JSON-Powered Content**: Easily manage content through JSON files.
-- **No-Backend Contact Form**: Utilizes Formspree for seamless form handling.
+- **Contact Form**: One server endpoint (`/api/contact`) sends messages through AhaSend. Everything else is prerendered.
 - **Responsive Design**: Ensures optimal viewing on various devices.
 
 ## Technologies Used
@@ -15,7 +15,7 @@ Welcome to my personal portfolio site built with SvelteKit and TailwindCSS. This
 - **SvelteKit**: A framework for building fast and efficient web applications.
 - **TypeScript**: Adds static types to JavaScript for improved developer experience.
 - **TailwindCSS**: A utility-first CSS framework for rapid UI development.
-- **Formspree**: A simple form backend for static sites.
+- **AhaSend**: Sends the contact form's email. It needs `AHASEND_API_KEY`, `AHASEND_ACCOUNT_ID` and `AHASEND_FROM_ADDRESS` (a sender on a domain verified in AhaSend), declared in `src/env.ts`. Until all three are set, the form tells visitors to email directly.
 
 ## Contact
 
