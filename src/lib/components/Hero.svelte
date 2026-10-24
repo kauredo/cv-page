@@ -115,7 +115,7 @@
 							class="font-name text-hoop-500 shrink-0 text-2xl leading-none tracking-[-0.03em]"
 							aria-hidden="true"
 						>
-							VKF<Stop />
+							VKF<Stop large />
 						</span>
 					</figcaption>
 				</figure>
