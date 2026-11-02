@@ -474,6 +474,27 @@ h2,
 	text-decoration: none;
 }
 
+/* On a phone the dates drop under the title and company instead of squeezing them. */
+@media (max-width: 639px) {
+	.cv-print:not(.ines-cv) .job-header {
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.cv-print:not(.ines-cv) .job-title-group {
+		flex-wrap: wrap;
+	}
+}
+
+.cv-print .summary-text + .summary-text {
+	margin-top: 0.75rem;
+}
+
+/* Paper can't follow a link, so print shows the address instead. */
+.cv-print .project-url {
+	display: none;
+}
+
 @media print {
 	@page {
 		margin: 2cm;
@@ -510,6 +531,36 @@ h2,
 
 	.cv-print section {
 		margin-bottom: 1cm !important;
+	}
+
+	/* Chrome breaks flex columns across pages badly; block flow breaks cleanly. */
+	.cv-print:not(.ines-cv) main {
+		display: block;
+	}
+
+	.cv-print:not(.ines-cv) section {
+		margin-bottom: 0.6cm !important;
+	}
+
+	.cv-print:not(.ines-cv) .job {
+		margin-bottom: 0.9rem;
+	}
+
+	.cv-print:not(.ines-cv) .job:last-child {
+		margin-bottom: 0;
+	}
+
+	.cv-print:not(.ines-cv) .skills-grid {
+		gap: 0.5rem 1rem;
+		margin-bottom: 0;
+	}
+
+	.cv-print .project-links a {
+		display: none;
+	}
+
+	.cv-print .project-url {
+		display: inline;
 	}
 
 	.cv-print section > * {
