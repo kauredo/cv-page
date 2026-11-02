@@ -2,6 +2,7 @@
 	import type { Project } from '#lib/types.js';
 	import ProjectCard from './shared/ProjectCard.svelte';
 	import SectionHeading from './shared/SectionHeading.svelte';
+	import Stop from './shared/Stop.svelte';
 
 	export let featuredProject: Project | null = null;
 	export let projects: Project[];
@@ -21,10 +22,13 @@
 	{#if featuredProject}
 		<a
 			href={`/projects/${featuredProject.slug}`}
-			class="group focus-visible:ring-hoop-500 relative mb-12 block overflow-hidden rounded-xl bg-slate-950 focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none dark:focus-visible:ring-offset-slate-950"
+			class="group focus-visible:ring-hoop-500 relative mb-12 block rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1.5 focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:outline-none motion-reduce:transform-none dark:focus-visible:ring-offset-slate-950"
 			data-sveltekit-preload-data="hover"
 		>
-			<div class="grid items-stretch gap-0 md:grid-cols-12">
+			<!-- The card's top edge falls left to right, like the badge's tile -->
+			<div
+				class="grid items-stretch gap-0 overflow-hidden rounded-xl bg-slate-950 [clip-path:polygon(0_0,100%_clamp(16px,4vw,48px),100%_100%,0_100%)] md:grid-cols-12"
+			>
 				<!-- Image — dominant, bleeds the block -->
 				<div class="relative md:col-span-7 lg:col-span-8">
 					<div class="relative aspect-video overflow-hidden md:aspect-auto md:h-full">
@@ -65,7 +69,9 @@
 							class="font-display mt-4 text-3xl leading-[0.95] font-bold tracking-tight sm:text-4xl"
 							style="view-transition-name: project-title-{featuredProject.slug}"
 						>
-							{featuredProject.title}
+							{featuredProject.title}<Stop
+								class="text-hoop-400 origin-bottom group-hover:animate-hop motion-reduce:animate-none"
+							/>
 						</h3>
 						<p
 							class="mt-4 leading-relaxed text-slate-300"
