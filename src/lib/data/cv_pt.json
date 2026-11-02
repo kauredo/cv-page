@@ -1,0 +1,353 @@
+{
+	"basics": {
+		"name": "Vasco Kaufmann Figueiredo",
+		"label": "Cofundador e CTO @UpSpeech",
+		"image": "https://avatars.githubusercontent.com/u/38565160?v=4",
+		"email": "vasco.kf@gmail.com",
+		"phone": "",
+		"url": "https://www.vascokf.com",
+		"summary": "Sou cofundador e CTO da UpSpeech e vivo em Lisboa. Há seis anos que desenvolvo produtos em Rails e React, em agências, numa startup da área da saúde e em projetos próprios. Nos tempos livres jogo e vejo basquetebol.\n\nUso agentes de IA todos os dias. O Claude Code escreve a maior parte do meu código e eu trato da arquitetura, da revisão e dos testes, com skills e hooks que criei para a minha forma de trabalhar. Também integro LLMs em produtos com utilizadores reais. O Therapy Resources gera ilustrações no estilo de cada terapeuta, e no Cadence Studio uma equipa de agentes escreve na voz do autor e só publica depois de ele aprovar.",
+		"profiles": [
+			{
+				"network": "gitconnected",
+				"username": "kauredo",
+				"url": "https://gitconnected.com/kauredo"
+			},
+			{
+				"network": "GitHub",
+				"username": "kauredo",
+				"url": "https://github.com/kauredo"
+			},
+			{
+				"network": "LinkedIn",
+				"url": "https://www.linkedin.com/in/vascokf",
+				"username": "vascokf"
+			}
+		],
+		"headline": "",
+		"blog": null,
+		"yearsOfExperience": 6,
+		"username": "kauredo",
+		"locationAsString": "Lisboa, Portugal",
+		"region": "Lisboa, Portugal",
+		"karma": 12,
+		"id": "e1a24db7-85af-470a-ae81-7f7c00d4f4a6",
+		"followers": 5,
+		"following": 5,
+		"picture": "https://avatars.githubusercontent.com/u/38565160?v=4",
+		"website": "https://www.vascokf.com"
+	},
+	"skills": [
+		{
+			"name": "Ruby on Rails",
+			"level": "Expert",
+			"keywords": [],
+			"rating": 5,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "React",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "TypeScript",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "PostgreSQL",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "Claude Code e desenvolvimento com agentes de IA",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 5,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "APIs de LLM: Anthropic, OpenAI, Gemini",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "React Native",
+			"level": "Intermediate",
+			"keywords": [],
+			"rating": 3,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "Convex",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": null
+		}
+	],
+	"projects": [
+		{
+			"displayName": "Cadence Studio",
+			"website": "https://cadence-studio-theta.vercel.app",
+			"githubUrl": "",
+			"description": "Ferramenta de criação de conteúdo para quem trabalha sozinho. Uma pequena equipa de agentes escreve publicações na voz do autor, segundo um calendário definido por ele, e nada sai sem a sua aprovação. Antes de um rascunho chegar à fila de revisão, a aplicação compara-o com 16 regras e uma lista de 27 palavras típicas de textos gerados por IA. Pode usar modelos Claude, Gemini ou OpenAI através do Vercel AI SDK, e gera imagens com o fal.ai. Feito com React, TypeScript e Convex. Está em beta privada."
+		},
+		{
+			"displayName": "Therapy Resources",
+			"website": "https://therapyresources.app",
+			"githubUrl": "",
+			"description": "Cada terapeuta escolhe um estilo de ilustração e passa a criar cartões, jogos de tabuleiro e fichas nesse estilo. O Gemini gera as ilustrações, um editor feito em Konva trata do layout e a aplicação exporta PDFs prontos a imprimir. Já se registaram 162 terapeutas, que criaram 470 recursos. Está disponível em português e inglês. Feito com Next.js, TypeScript e Convex."
+		},
+		{
+			"displayName": "Basketball Stats App",
+			"website": "https://basketballstatsapp.com",
+			"githubUrl": "https://github.com/kauredo/basketball-stats-app",
+			"description": "Estatísticas de basquetebol para ligas e equipas, com registo de jogos ao vivo, mapas de lançamento e de calor, comparação de jogadores e classificações automáticas. Tem 697 contas, 307 delas ativas nos últimos 30 dias, e 750 downloads nas lojas iOS e Android. É um monorepo Turborepo com a aplicação web em React e a móvel em React Native, ambas ligadas a um backend Convex que sincroniza em tempo real."
+		},
+		{
+			"displayName": "Basketball Video Analyzer",
+			"website": "https://basketballvideoanalyzer.com",
+			"githubUrl": "https://github.com/kauredo/basketball-video-analyzer",
+			"description": "Aplicação de desktop gratuita e open source para treinadores de basquetebol, que criei e mantenho. Permite cortar o vídeo de um jogo em clips com etiquetas, organizá-los por categorias e partilhá-los com a equipa. Funciona em Windows, macOS e Linux e tem cerca de 1000 downloads. Feita com Electron, React, TypeScript e FFmpeg."
+		}
+	],
+	"work": [
+		{
+			"name": "UpSpeech",
+			"location": "Remote",
+			"description": "",
+			"position": "Cofundador e CTO",
+			"url": "",
+			"startDate": "2024-12-01",
+			"endDate": "",
+			"summary": "Cofundei uma plataforma de terapia da fala para clínicas que tratam a gaguez. Desenvolvi a API em Rails, a aplicação web em React e a aplicação móvel em React Native, com contas multi-tenant, gestão de sessões, acompanhamento da evolução dos pacientes e deploy. Desde setembro de 2025, com o Claude Code, fiz merge de mais de 2700 pull requests. Como CTO, defino a arquitetura e o rumo do produto, e trabalho com o nosso responsável de IA na transcrição e nos relatórios clínicos.",
+			"highlights": [],
+			"isCurrentRole": true,
+			"start": {
+				"year": 2024,
+				"month": 12
+			},
+			"end": {},
+			"company": "UpSpeech",
+			"website": ""
+		},
+		{
+			"name": "Pixelmatters",
+			"location": "Porto, Portugal",
+			"description": "",
+			"position": "Engenheiro Full-Stack",
+			"url": "https://www.pixelmatters.com/",
+			"startDate": "2025-06-01",
+			"endDate": "2026-10-01",
+			"summary": "Trabalhei alocado à UJET.cx, uma plataforma de contact center na cloud, em Ruby on Rails e Angular. Pus os testes end-to-end a correr localmente, para a equipa apanhar erros de integração antes do CI, e ajudei os colegas novos a configurar o ambiente. Liderei o backend do projeto Deflection Audio e acompanhei um colega na sua primeira funcionalidade. Levei ferramentas de IA para a equipa, primeiro o Augment Code e depois as minhas skills de Claude Code para abrir PRs e fazer code review, que os colegas passaram a usar. Promovido a sénior (L3) em maio de 2026.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2025,
+				"month": 6
+			},
+			"end": {
+				"year": 2026,
+				"month": 10
+			},
+			"company": "Pixelmatters",
+			"website": "https://www.pixelmatters.com/"
+		},
+		{
+			"name": "Medihive",
+			"location": "Remote",
+			"description": "",
+			"position": "Programador Ruby on Rails",
+			"url": "https://www.medihive.com/",
+			"startDate": "2022-10-01",
+			"endDate": "2025-06-01",
+			"summary": "Trabalhei sobretudo em Ruby on Rails, numa equipa multidisciplinar. Desenvolvi ferramentas internas, como o backoffice e o painel dos médicos, e funcionalidades do site público, em ERB e algum React. Com o tempo passei a ser responsável por funcionalidades completas, da conceção à produção, e fui promovido a programador sénior.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2022,
+				"month": 10
+			},
+			"end": {
+				"year": 2025,
+				"month": 6
+			},
+			"company": "Medihive",
+			"website": "https://www.medihive.com/"
+		},
+		{
+			"name": "BitZesty",
+			"location": "Remote",
+			"description": "",
+			"position": "Programador Ruby on Rails",
+			"url": "https://bitzesty.com/",
+			"startDate": "2021-08-01",
+			"endDate": "2022-10-01",
+			"summary": "Trabalhei 100% em remoto, em Ruby on Rails, numa equipa multidisciplinar. Cada cliente tinha uma versão diferente de Ruby e Rails, e o desafio era encontrar a solução que coubesse no orçamento de cada um. Migrei várias aplicações de Rails 5 para Rails 6.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2021,
+				"month": 8
+			},
+			"end": {
+				"year": 2022,
+				"month": 10
+			},
+			"company": "BitZesty",
+			"website": "https://bitzesty.com/"
+		},
+		{
+			"name": "Landing.jobs",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "Programador Full-Stack",
+			"url": "https://landing.jobs/",
+			"startDate": "2020-02-01",
+			"endDate": "2021-07-01",
+			"summary": "Foi o meu primeiro emprego como programador. Num ano passei de júnior a mid-level, a trabalhar com Ruby on Rails, React, TypeScript e GraphQL, e recebi o prémio interno Revelação do Ano 2020.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2020,
+				"month": 2
+			},
+			"end": {
+				"year": 2021,
+				"month": 7
+			},
+			"company": "Landing.jobs",
+			"website": "https://landing.jobs/"
+		},
+		{
+			"name": "Accenture Portugal",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "Technology Trainee",
+			"url": "",
+			"startDate": "2019-01-01",
+			"endDate": "2020-01-01",
+			"summary": "Desenvolvi ferramentas em VBA e trabalhei num sistema de Customer Care & Billing em Java.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2019,
+				"month": null
+			},
+			"end": {
+				"year": 2020,
+				"month": null
+			},
+			"company": "Accenture Portugal",
+			"website": ""
+		},
+		{
+			"name": "WeDo Technologies",
+			"location": "Lisbon, Portugal",
+			"description": "",
+			"position": "Consultor Júnior",
+			"url": "",
+			"startDate": "2019-01-01",
+			"endDate": "2019-01-01",
+			"summary": "Trabalhei com o RAID, a plataforma proprietária da empresa. A WeDo é hoje a Mobileum.",
+			"highlights": [],
+			"isCurrentRole": false,
+			"start": {
+				"year": 2019,
+				"month": null
+			},
+			"end": {
+				"year": 2019,
+				"month": null
+			},
+			"company": "WeDo Technologies",
+			"website": ""
+		}
+	],
+	"publications": [],
+	"education": [
+		{
+			"institution": "University of Exeter",
+			"url": "",
+			"area": "Engenharia Eletrotécnica e Eletrónica",
+			"studyType": "Licenciatura (BEng)",
+			"startDate": "2015-09-01",
+			"endDate": "2018-08-01",
+			"score": "",
+			"courses": [],
+			"description": "",
+			"activities": "Vice-capitão do clube de basquetebol",
+			"start": {
+				"year": 2015,
+				"month": 9
+			},
+			"end": {
+				"year": 2018,
+				"month": 8
+			},
+			"website": "",
+			"gpa": ""
+		},
+		{
+			"institution": "LeWagon",
+			"url": "",
+			"area": "Bootcamp de programação",
+			"studyType": "",
+			"startDate": "",
+			"endDate": "2018-01-01",
+			"score": "Entre os 4 melhores da turma",
+			"courses": [],
+			"description": "",
+			"activities": "",
+			"start": {
+				"year": null,
+				"month": null
+			},
+			"end": {
+				"year": 2018,
+				"month": null
+			},
+			"website": "",
+			"gpa": "Entre os 4 melhores da turma"
+		}
+	],
+	"volunteer": [],
+	"awards": [],
+	"languages": [
+		{
+			"language": "Português",
+			"fluency": "Nativo"
+		},
+		{
+			"language": "Inglês",
+			"fluency": "Nativo"
+		},
+		{
+			"language": "Francês",
+			"fluency": "Boa compreensão, conversação básica"
+		},
+		{
+			"language": "Espanhol",
+			"fluency": "Boa compreensão, conversação básica"
+		}
+	],
+	"interests": [],
+	"references": [],
+	"certificates": [],
+	"meta": {
+		"note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+		"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+		"version": "v1.0.0",
+		"lastModified": "2020-12-29T15:53:00"
+	}
+}
