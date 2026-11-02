@@ -13,7 +13,7 @@
 <main class="relative flex min-h-[80vh] items-center bg-white dark:bg-slate-950">
 	<!-- Decorative hoop motif (shooter POV from left, ~3/4 view) -->
 	<svg
-		class="text-hoop-500/25 pointer-events-none absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/3"
+		class="text-hoop-500/25 pointer-events-none absolute top-1/2 right-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/2"
 		viewBox="0 0 200 200"
 		fill="none"
 		aria-hidden="true"
@@ -75,7 +75,7 @@
 		</p>
 
 		<h1
-			class="font-display text-slate-900 dark:text-white text-[clamp(4rem,16vw,12rem)] font-black leading-[0.85] tracking-[-0.03em]"
+			class="font-display text-[clamp(4rem,16vw,12rem)] leading-[0.85] font-black tracking-[-0.03em] text-slate-900 dark:text-white"
 		>
 			{status === 404 ? 'Air ' : ''}<span class="whitespace-nowrap"
 				>{status === 404 ? 'ball' : 'Foul'}<span
@@ -88,7 +88,7 @@
 			<p class="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
 				{#if status === 404}
 					There's nothing at
-					<span class="font-mono text-hoop-600 dark:text-hoop-400">{page.url.pathname}</span>. Maybe
+					<span class="text-hoop-600 dark:text-hoop-400 font-mono">{page.url.pathname}</span>. Maybe
 					a typo, maybe a moved page.
 				{:else if error?.message}
 					{error.message}
@@ -97,7 +97,7 @@
 				{/if}
 			</p>
 
-			<p class="font-mono text-xs uppercase tracking-wider text-slate-600 dark:text-slate-400">
+			<p class="font-mono text-xs tracking-wider text-slate-600 uppercase dark:text-slate-400">
 				Fig. ∅ — Sometimes shots miss.
 			</p>
 		</div>
