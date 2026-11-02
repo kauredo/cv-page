@@ -33,10 +33,7 @@
 		url: 'https://www.vascokf.com',
 		image: 'https://www.vascokf.com/images/portfolio.webp',
 		jobTitle: 'Full Stack Web Developer',
-		worksFor: [
-			{ '@type': 'Organization', name: 'UpSpeech' },
-			{ '@type': 'Organization', name: 'Pixelmatters' }
-		],
+		worksFor: { '@type': 'Organization', name: 'UpSpeech' },
 		sameAs: ['https://github.com/kauredo', 'https://linkedin.com/in/vascokf'],
 		knowsAbout: ['Ruby on Rails', 'React', 'TypeScript', 'SvelteKit', 'Web Development'],
 		description: 'Full-stack web developer building clean, functional, and playful web apps.'

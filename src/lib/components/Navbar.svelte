@@ -63,11 +63,11 @@
 		</a>
 
 		<div class="flex items-center gap-0.5 sm:gap-2 md:gap-3">
-			{#each [{ href: '/projects', label: 'Projects' }, { href: '/contact', label: 'Contact' }] as link (link.href)}
+			{#each [{ href: '/projects', label: 'Projects' }, { href: '/cv', label: 'CV' }, { href: '/contact', label: 'Contact' }] as link (link.href)}
 				<a
 					href={link.href}
 					aria-current={isActive(link.href) ? 'page' : undefined}
-					class="eyebrow group hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 relative inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
+					class="eyebrow group hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 relative inline-flex items-center gap-2 rounded-md px-1.5 py-2.5 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none sm:px-3 dark:text-slate-300"
 				>
 					{link.label}
 					<span

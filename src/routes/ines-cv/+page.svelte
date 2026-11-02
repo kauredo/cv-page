@@ -186,8 +186,12 @@
 											clip-rule="evenodd"
 										/>
 									</svg>
-									{new Date(job.startDate).getFullYear()} -
-									{job.endDate ? new Date(job.endDate).getFullYear() : 'Presente'}
+									{#if job.endDate && new Date(job.startDate).getFullYear() === new Date(job.endDate).getFullYear()}
+										{new Date(job.startDate).getFullYear()}
+									{:else}
+										{new Date(job.startDate).getFullYear()} -
+										{job.endDate ? new Date(job.endDate).getFullYear() : 'Presente'}
+									{/if}
 								</span>
 							</div>
 							{#if job.summary}
@@ -503,20 +507,24 @@
 			margin-bottom: 0.5cm !important;
 		}
 
+		/* Block flow so Chrome can break between sections, and let the timelines
+		   split between entries instead of jumping whole to the next page. */
 		.ines-cv :global(main) {
-			gap: 0 !important;
+			display: block;
 		}
 
-		.ines-cv :global(.experience) {
-			overflow: hidden;
+		.ines-cv :global(.experience > div),
+		.ines-cv :global(.education > div) {
+			break-inside: auto !important;
 		}
 
 		.ines-cv :global(.education) {
 			break-inside: avoid;
 		}
 
-		.ines-cv :global(.experience .absolute) {
-			height: 180vh !important;
+		/* Chrome rasterises box-shadows into the PDF, and macOS Preview draws them as grey squares. */
+		.ines-cv :global(.shadow-lg) {
+			box-shadow: none;
 		}
 
 		/* Keep individual items from breaking */
