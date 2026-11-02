@@ -15,7 +15,7 @@
 					href="/cv"
 					class="group eyebrow hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 -mx-2 inline-flex items-center gap-2 rounded-md px-2 py-2 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
 				>
-					Download CV
+					View CV
 					<span
 						class="bg-vasco-500/40 group-hover:bg-hoop-500 group-active:bg-hoop-500 h-px w-3 transition-all"
 						aria-hidden="true"
