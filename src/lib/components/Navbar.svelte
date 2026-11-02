@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
+	import { page } from '$app/state';
 	import Badge from './shared/Badge.svelte';
 	export const darkModeStore = writable(false);
+
+	const isActive = (path: string) => page.url.pathname.startsWith(path);
 
 	let darkMode = false;
 
@@ -60,26 +63,30 @@
 		</a>
 
 		<div class="flex items-center gap-0.5 sm:gap-2 md:gap-3">
-			<a
-				href="/projects"
-				class="eyebrow group hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
-			>
-				Projects
-				<span
-					class="bg-vasco-500/0 group-hover:bg-hoop-500 group-active:bg-hoop-500 h-px w-3 transition-all"
-					aria-hidden="true"
-				></span>
-			</a>
-			<a
-				href="/contact"
-				class="eyebrow group hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
-			>
-				Contact
-				<span
-					class="bg-vasco-500/0 group-hover:bg-hoop-500 group-active:bg-hoop-500 h-px w-3 transition-all"
-					aria-hidden="true"
-				></span>
-			</a>
+			{#each [{ href: '/projects', label: 'Projects' }, { href: '/contact', label: 'Contact' }] as link (link.href)}
+				<a
+					href={link.href}
+					aria-current={isActive(link.href) ? 'page' : undefined}
+					class="eyebrow group hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 dark:active:text-hoop-300 relative inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
+				>
+					{link.label}
+					<span
+						class="bg-vasco-500/0 group-hover:bg-hoop-500 group-active:bg-hoop-500 h-px w-3 transition-all"
+						aria-hidden="true"
+					></span>
+					{#if isActive(link.href)}
+						<!-- The current page's triangle; the view transition springs it between links -->
+						<svg
+							class="fill-hoop-500 absolute bottom-0 left-[calc(50%-0.75rem)] h-2 w-[7px]"
+							style="view-transition-name: nav-marker"
+							viewBox="0 0 268 330"
+							aria-hidden="true"
+						>
+							<path d="M0 330H268L130 0Z" />
+						</svg>
+					{/if}
+				</a>
+			{/each}
 
 			<button
 				on:click={toggleDarkMode}

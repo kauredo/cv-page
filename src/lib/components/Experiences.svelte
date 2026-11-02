@@ -27,15 +27,20 @@
 					aria-hidden="true"
 				></div>
 
-				<!-- Editorial timeline marker -->
-				<div
-					class="absolute top-1.5 left-0 flex h-5 w-5 items-center justify-center rounded-full {exp.period.includes(
+				<!-- Timeline marker: the brand triangle, solid for the current role, outlined for past ones -->
+				<svg
+					class="absolute top-1 left-0.5 h-5 w-4 bg-white dark:bg-slate-950 {exp.period.includes(
 						'Present'
 					)
-						? 'bg-hoop-500 ring-hoop-200/70 dark:ring-hoop-900/60 ring-4'
-						: 'border-vasco-300 dark:border-vasco-700 border-2 bg-white dark:bg-slate-950'}"
+						? 'fill-hoop-500'
+						: 'fill-none stroke-slate-900 dark:stroke-white'}"
+					viewBox="0 0 268 330"
+					stroke-width="28"
+					stroke-linejoin="round"
 					aria-hidden="true"
-				></div>
+				>
+					<path d="M18 316H250L130 32Z" />
+				</svg>
 
 				<div class="flex items-start gap-4">
 					{#if exp.logo}
