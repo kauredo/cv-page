@@ -29,10 +29,6 @@
 			<span class="eyebrow hidden text-slate-600 sm:inline dark:text-slate-400"
 				>Lisbon, PT · 38°N</span
 			>
-			<span class="eyebrow inline-flex items-center gap-2 text-slate-700 dark:text-slate-300">
-				<span class="bg-hoop-500 inline-block h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
-				Available — Apr 2026
-			</span>
 		</div>
 	</div>
 
