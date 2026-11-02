@@ -5,11 +5,20 @@
 
 /* Font fallback metrics to prevent layout shift */
 @font-face {
-	font-family: 'Fraunces Fallback';
-	src: local('Georgia');
-	size-adjust: 105%;
-	ascent-override: 95%;
-	descent-override: 24%;
+	font-family: 'Archivo Fallback';
+	src: local('Arial');
+	size-adjust: 102%;
+	ascent-override: 88%;
+	descent-override: 21%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: 'Archivo Black Fallback';
+	src: local('Arial Black'), local('Arial');
+	size-adjust: 100%;
+	ascent-override: 88%;
+	descent-override: 21%;
 	line-gap-override: 0%;
 }
 
@@ -77,7 +86,8 @@
 	--ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
 	/* Font families with fallback metrics */
-	--font-display: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
+	--font-display: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
+	--font-name: 'Archivo Black', 'Archivo Black Fallback', 'Arial Black', sans-serif;
 	--font-body: 'Instrument Sans', 'Instrument Sans Fallback', system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, monospace;
 }
@@ -104,21 +114,22 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Display headings use the display font */
+/* Display headings use the display font. Archivo ships real weights and italics, so
+   the browser never fakes either. */
 h1,
 h2,
 .font-display {
 	font-family: var(--font-display);
-	font-variation-settings:
-		'opsz' 144,
-		'SOFT' 50;
-	letter-spacing: -0.02em;
+	font-synthesis: none;
+	letter-spacing: -0.015em;
 }
 
-h1 {
-	font-variation-settings:
-		'opsz' 144,
-		'SOFT' 100;
+/* The name, as in the wordmark: Archivo Black has one weight and no italic. */
+.font-name {
+	font-family: var(--font-name);
+	font-weight: 400;
+	font-style: normal;
+	font-synthesis: none;
 }
 
 .font-mono {

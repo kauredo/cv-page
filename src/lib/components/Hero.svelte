@@ -42,13 +42,11 @@
 				<h1 class="font-display text-slate-900 dark:text-white">
 					<span
 						class="block text-2xl font-medium text-slate-500 italic sm:text-3xl dark:text-slate-400"
-						style="font-variation-settings: 'opsz' 14, 'SOFT' 100;"
 					>
 						Hey, I'm —
 					</span>
 					<span
-						class="block text-[clamp(4.5rem,14vw,11rem)] leading-[0.88] font-black tracking-[-0.04em]"
-						style="font-variation-settings: 'opsz' 144, 'SOFT' 100;"
+						class="font-name block text-[clamp(4.5rem,14vw,11rem)] leading-[0.88] tracking-[-0.03em]"
 					>
 						Vasco<span class="text-hoop-500 dark:text-hoop-400">.</span>
 					</span>
@@ -109,9 +107,8 @@
 						</span>
 						<!-- Initials signature -->
 						<span
-							class="font-display text-hoop-500 shrink-0 text-2xl leading-none font-black tracking-[-0.04em]"
+							class="font-name text-hoop-500 shrink-0 text-2xl leading-none tracking-[-0.03em]"
 							aria-hidden="true"
-							style="font-variation-settings: 'opsz' 144, 'SOFT' 100;"
 						>
 							VKF.
 						</span>

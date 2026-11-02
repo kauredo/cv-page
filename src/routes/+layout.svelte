@@ -54,17 +54,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 
-	<!-- Google Fonts — non-render-blocking via media swap. Fraunces with SOFT axis. -->
+	<!-- Google Fonts — non-render-blocking via media swap. Archivo (variable, with italics) for
+	     headings, Archivo Black for the name. -->
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -- static markup; Svelte can't render an onload attribute string -->
 	{@html `<link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,wght@0,9..144,30..100,500;0,9..144,30..100,700;0,9..144,30..100,900;1,9..144,30..100,500&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
 		media="print"
 		onload="this.media='all'"
 	/>`}
 	<noscript>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,wght@0,9..144,30..100,500;0,9..144,30..100,700;0,9..144,30..100,900;1,9..144,30..100,500&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
 	</noscript>
