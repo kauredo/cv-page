@@ -1,12 +1,12 @@
 {
 	"basics": {
 		"name": "Vasco Kaufmann Figueiredo",
-		"label": "Co-Founder @UpSpeech | Full-Stack Engineer @Pixelmatters",
+		"label": "Co-Founder & CTO @UpSpeech",
 		"image": "https://avatars.githubusercontent.com/u/38565160?v=4",
 		"email": "vasco.kf@gmail.com",
 		"phone": "",
 		"url": "https://www.vascokf.com",
-		"summary": "I'm a Web Developer based in Lisbon, Portugal. My interests include watching and playing basketball, reading and watching TV - series, movies or documentaries. Beginner 3D printing enthusiast. I'm very passionate about learning, developing and working in cohesive, friendly teams, and am always looking for new ways of simplifying or automating any processes that are monotonous or tedious.",
+		"summary": "Co-founder and CTO of UpSpeech, based in Lisbon. I've spent six years shipping Rails and React products at agencies, at a health-tech startup and on my own. Away from the keyboard I play and watch basketball.\n\nI build with AI agents every day. Claude Code writes most of my code while I own the architecture, the reviews and the tests, and I've built my own skills and hooks around how I work. I also put LLMs into products people use. Therapy Resources draws illustrations in each therapist's own style, and Cadence Studio runs a team of agents that draft in the writer's voice and wait for approval before anything goes out.",
 		"profiles": [
 			{
 				"network": "gitconnected",
@@ -26,7 +26,7 @@
 		],
 		"headline": "",
 		"blog": null,
-		"yearsOfExperience": 5,
+		"yearsOfExperience": 6,
 		"username": "kauredo",
 		"locationAsString": "Lisbon, Portugal",
 		"region": "Lisbon, Portugal",
@@ -50,45 +50,75 @@
 			"level": "Advanced",
 			"keywords": [],
 			"rating": 4,
-			"yearsOfExperience": 4
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "TypeScript",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "PostgreSQL",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": 6
+		},
+		{
+			"name": "Claude Code and agentic workflows",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 5,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "LLM APIs: Anthropic, OpenAI, Gemini",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "React Native",
+			"level": "Intermediate",
+			"keywords": [],
+			"rating": 3,
+			"yearsOfExperience": null
+		},
+		{
+			"name": "Convex",
+			"level": "Advanced",
+			"keywords": [],
+			"rating": 4,
+			"yearsOfExperience": null
 		}
 	],
 	"projects": [
 		{
-			"displayName": "MyAgentWebsite",
-			"website": "https://myagentwebsite.com",
-			"githubUrl": "https://github.com/kauredo/real-estate-scraper",
-			"description": "Multi-tenant 'Shopify for real estate agents' that lets agencies launch branded websites instantly, with a unified admin for listings, blog posts, testimonials, and newsletters. Each agent gets a white-label domain. Built on a Rails API with multiple React + TypeScript frontends — customer site, admin dashboard, and marketing landing."
-		},
-		{
-			"displayName": "UpSpeech",
-			"website": "https://upspeech.app",
+			"displayName": "Cadence Studio",
+			"website": "https://cadence-studio-theta.vercel.app",
 			"githubUrl": "",
-			"description": "Multi-tenant SaaS platform built for speech-language pathologists running stuttering therapy, covering session management, patient progress tracking, and clinician-parent collaboration. Built end-to-end with a Rails 8 API and a React + TypeScript frontend; currently extending it with a React Native companion for clinicians and patients."
+			"description": "A content studio for one person. A small team of agents writes posts in your voice on a schedule you set, and nothing publishes until you approve it. Every draft gets checked against 16 rules and a 27-word watchlist of AI tells before it reaches the review queue. It switches between Claude, Gemini and OpenAI models through the Vercel AI SDK and makes images with fal.ai. Built with React, TypeScript and Convex, and in private beta."
 		},
 		{
 			"displayName": "Therapy Resources",
 			"website": "https://therapyresources.app",
 			"githubUrl": "",
-			"description": "Tool for therapists and psychologists to create custom consultation games and printable resources. Features a Konva-based canvas editor, AI-generated illustrations via Gemini matched to each therapist's visual style, PDF export for print-ready outputs, QR codes for digital/physical crossovers, and multilingual support. Built with Next.js, TypeScript, and Convex."
+			"description": "Therapists pick an illustration style once, then generate cards, board games and worksheets in it. Gemini draws the illustrations to match the style, a Konva canvas editor handles layout, and the app exports print-ready PDFs. 162 therapists have signed up and made 470 resources, in English and Portuguese. Built with Next.js, TypeScript and Convex."
 		},
 		{
 			"displayName": "Basketball Stats App",
 			"website": "https://basketballstatsapp.com",
 			"githubUrl": "https://github.com/kauredo/basketball-stats-app",
-			"description": "Full-stack basketball statistics platform with live game scoring, visual shot charts with heatmaps and zone analysis, player comparisons with radar charts, and automatic standings. Built as a Turborepo monorepo with a React web app and a React Native mobile app (iOS/Android) on a Convex serverless backend for real-time updates."
+			"description": "Basketball stats for leagues and teams, with live scoring, shot charts and heatmaps, player comparisons and automatic standings. It has 697 accounts, 307 of them active in the last 30 days, and 750 downloads across the iOS and Android apps. One Turborepo holds the React web app and the React Native app, both on a Convex backend that updates in real time."
 		},
 		{
 			"displayName": "Basketball Video Analyzer",
 			"website": "https://basketballvideoanalyzer.com",
 			"githubUrl": "https://github.com/kauredo/basketball-video-analyzer",
-			"description": "Cross-platform desktop app (Windows, macOS, Linux) built for basketball coaches to cut plays from game footage, organize clips into hierarchical categories, and save reusable presets across projects. Features time-based search, automatic clip organization, and export for sharing with teams. Built with Electron, React, TypeScript, and FFmpeg — released as open source."
-		},
-		{
-			"displayName": "Delivered Photos",
-			"website": "https://delivered.photos",
-			"githubUrl": "",
-			"description": "Multi-tenant client proofing and delivery platform for photographers — fast, beautiful galleries where clients select favorites, download high-res files, and order prints. Built as a pnpm monorepo with a Convex backend and two React + Vite apps (photographer dashboard + client gallery) sharing auth and schema, with S3 for storage and Dodo Payments for orders."
+			"description": "A free, open-source desktop app for basketball coaches that I built and maintain. Coaches cut game film into tagged clips, sort them into categories and export them for the team. It runs on Windows, macOS and Linux and has about 1,000 installer downloads. Built with Electron, React, TypeScript and FFmpeg."
 		}
 	],
 	"work": [
@@ -96,11 +126,11 @@
 			"name": "UpSpeech",
 			"location": "Remote",
 			"description": "",
-			"position": "Co-Founder",
+			"position": "Co-Founder & CTO",
 			"url": "",
 			"startDate": "2024-12-01",
 			"endDate": "",
-			"summary": "Co-founded a speech therapy SaaS platform for speech-language pathologists. Built the full platform from scratch — a multi-tenant application with session management, clinical report generation, patient progress tracking, and deployment infrastructure. Responsible for architecture, product direction, and full-stack development across Rails and React.",
+			"summary": "Co-founded a speech therapy platform for clinics that treat stuttering. I built the Rails API, the React web app and the React Native app, including multi-tenant accounts, session management, patient progress tracking and deployment. Working with Claude Code, I've merged over 2,700 pull requests across them since September 2025. As CTO I own the architecture and product direction, and I work with our AI lead on the transcription and report-writing service.",
 			"highlights": [],
 			"isCurrentRole": true,
 			"start": {
@@ -118,15 +148,18 @@
 			"position": "Full-Stack Engineer",
 			"url": "https://www.pixelmatters.com/",
 			"startDate": "2025-06-01",
-			"endDate": "",
-			"summary": "Full-stack engineer at a digital product studio partnering with ambitious tech companies. Currently building features for UJET.cx, an AI-powered cloud contact center platform, using Ruby on Rails and Angular.",
+			"endDate": "2026-10-01",
+			"summary": "Placed with UJET.cx, a cloud contact center platform, building features in Ruby on Rails and Angular. I got the end-to-end tests running in local development, so the team could catch integration bugs before CI, and helped new engineers get their setup working. I led the backend of the Deflection Audio project and mentored a teammate through their first feature. I also brought AI tooling to the team, first Augment Code and then my own Claude Code skills for shipping and code review, which colleagues started using. Promoted to senior (L3) in May 2026.",
 			"highlights": [],
-			"isCurrentRole": true,
+			"isCurrentRole": false,
 			"start": {
 				"year": 2025,
 				"month": 6
 			},
-			"end": {},
+			"end": {
+				"year": 2026,
+				"month": 10
+			},
 			"company": "Pixelmatters",
 			"website": "https://www.pixelmatters.com/"
 		},
@@ -138,7 +171,7 @@
 			"url": "https://www.medihive.com/",
 			"startDate": "2022-10-01",
 			"endDate": "2025-06-01",
-			"summary": "Worked mostly with Ruby on Rails in a cross-functional team focused on delivering the best possible product to clients. Built internal tools, admin and doctor panels, and client-facing features. Gradually increased responsibilities, owning and developing features end-to-end.",
+			"summary": "Worked mostly in Ruby on Rails on a cross-functional team. I built internal tools, including the admin and doctor panels, and features on the client-facing site in ERB and some React. Over time I took on whole features from start to production, and the company promoted me to senior developer.",
 			"highlights": [],
 			"isCurrentRole": false,
 			"start": {
@@ -160,7 +193,7 @@
 			"url": "https://bitzesty.com/",
 			"startDate": "2021-08-01",
 			"endDate": "2022-10-01",
-			"summary": "As a Full-Stack Software Developer at BitZesty, I've had the opportunity to work fully remotely in Ruby on Rails on a cross-functional team. Here I worked on several projects with different ruby and rails versions, trying to find the best budget conscious solution for clients.",
+			"summary": "Worked fully remote in Ruby on Rails on a cross-functional team. Each client ran a different Ruby and Rails version, and the job was finding the fix that fit their budget. I upgraded several apps from Rails 5 to Rails 6.",
 			"highlights": [],
 			"isCurrentRole": false,
 			"start": {
@@ -178,11 +211,11 @@
 			"name": "Landing.jobs",
 			"location": "Lisbon, Portugal",
 			"description": "",
-			"position": "Full-stack Developer",
+			"position": "Full-Stack Developer",
 			"url": "https://landing.jobs/",
 			"startDate": "2020-02-01",
 			"endDate": "2021-07-01",
-			"summary": "At Landing.Jobs, I worked my way up from Junior to Mid-Level Software Developer in under a year. I had the opportunity to work with Ruby on Rails, React, Typescript, GraphQL and CSS. This was my first developing job and I was able to apply my skills in a real-world setting, contributing to the company's success.",
+			"summary": "My first developer job. I went from junior to mid-level in a year, working in Ruby on Rails, React, TypeScript and GraphQL, and won the company's Revelation of the Year award for 2020.",
 			"highlights": [],
 			"isCurrentRole": false,
 			"start": {
@@ -204,7 +237,7 @@
 			"url": "",
 			"startDate": "2019-01-01",
 			"endDate": "2020-01-01",
-			"summary": "At Accenture, I mainly worked with VBA and a Customer Care & Billing software, in Java. It was my first experience with any of these languages, which I acquired reasonably quickly at a basic level.",
+			"summary": "VBA tools and a Customer Care & Billing system in Java.",
 			"highlights": [],
 			"isCurrentRole": false,
 			"start": {
@@ -226,7 +259,7 @@
 			"url": "",
 			"startDate": "2019-01-01",
 			"endDate": "2019-01-01",
-			"summary": "During my tenure at WeDo Technologies (now Mobileum), I worked with their proprietary software 'RAID'. This is a logic based development software. I had the chance to work in a very small team and work a bit with unix, VMs and JavaScript.",
+			"summary": "Logic-based development in RAID, the company's in-house tool. WeDo is now Mobileum.",
 			"highlights": [],
 			"isCurrentRole": false,
 			"start": {
@@ -246,8 +279,8 @@
 		{
 			"institution": "University of Exeter",
 			"url": "",
-			"area": "Electrical and Electronical Engineering",
-			"studyType": "Bachelors of Engineering",
+			"area": "Electrical and Electronic Engineering",
+			"studyType": "Bachelor of Engineering",
 			"startDate": "2015-09-01",
 			"endDate": "2018-08-01",
 			"score": "",
@@ -290,7 +323,24 @@
 	],
 	"volunteer": [],
 	"awards": [],
-	"languages": [],
+	"languages": [
+		{
+			"language": "Portuguese",
+			"fluency": "Native"
+		},
+		{
+			"language": "English",
+			"fluency": "Native"
+		},
+		{
+			"language": "French",
+			"fluency": "Good understanding, basic speaking"
+		},
+		{
+			"language": "Spanish",
+			"fluency": "Good understanding, basic speaking"
+		}
+	],
 	"interests": [],
 	"references": [],
 	"certificates": [],
