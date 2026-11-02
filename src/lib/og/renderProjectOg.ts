@@ -45,6 +45,8 @@ function card(project: Project): El {
 	return h(
 		'div',
 		{
+			// Satori 0.63 lays this out as content-box, which pushed the footer off the card.
+			boxSizing: 'border-box',
 			width: '100%',
 			height: '100%',
 			flexDirection: 'column',

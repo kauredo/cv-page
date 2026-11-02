@@ -70,7 +70,7 @@
 							style="view-transition-name: project-title-{featuredProject.slug}"
 						>
 							{featuredProject.title}<Stop
-								class="text-hoop-400 origin-bottom group-hover:animate-hop motion-reduce:animate-none"
+								class="text-hoop-400 group-hover:animate-hop origin-bottom motion-reduce:animate-none"
 							/>
 						</h3>
 						<p

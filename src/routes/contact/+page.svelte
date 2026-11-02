@@ -249,8 +249,7 @@
 					class="focus:border-vasco-500 focus:ring-vasco-500/20 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-base leading-relaxed text-slate-900 transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-white"
 					aria-required="true"
 					aria-invalid={errors.message ? 'true' : 'false'}
-					aria-describedby={errors.message ? 'message-error' : undefined}
-				></textarea>
+					aria-describedby={errors.message ? 'message-error' : undefined}></textarea>
 				<div class="mt-2 flex items-center justify-between">
 					{#if errors.message}
 						<p

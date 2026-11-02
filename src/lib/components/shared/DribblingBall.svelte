@@ -116,17 +116,17 @@
 
 <div class="relative mb-6 h-full w-fit" bind:this={containerEl} aria-hidden="true">
 	<div id="suport" class="h-full w-fit">
-		<div bind:this={smashEl} class="animation-untriggered h-full w-fit smash-anim">
+		<div bind:this={smashEl} class="animation-untriggered smash-anim h-full w-fit">
 			<div
 				bind:this={dribbleEl}
-				class="animation-untriggered h-full w-fit dribble-anim"
+				class="animation-untriggered dribble-anim h-full w-fit"
 				style={`--ballWidth: ${width}px; --animationDuration: ${duration}s; width: ${width}px; height: ${width}px;`}
 			>
 				<img
 					bind:this={ballEl}
 					src="/images/bball.svg"
 					alt="Basketball"
-					class="animation-untriggered mx-auto rotate-anim dark:invert"
+					class="animation-untriggered rotate-anim mx-auto dark:invert"
 					style="width: {width}px; height: {width}px;"
 					{width}
 					height={width}
