@@ -20,8 +20,6 @@
 
 	$: italicColor =
 		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
-	$: trailingColor =
-		accent === 'hoop' ? 'text-hoop-500 dark:text-hoop-400' : 'text-vasco-600 dark:text-vasco-400';
 	$: indexColor =
 		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
 </script>
@@ -44,9 +42,9 @@
 		<!-- The stop touches the last letter, so no whitespace before it. -->
 		{#if italicWord}
 			{parts.before}<span class="{italicColor} font-medium italic">{italicWord}</span
-			>{parts.after}{#if trailing}<Stop class={trailingColor} />{/if}
+			>{parts.after}{#if trailing}<Stop class="text-hoop-500 dark:text-hoop-400" />{/if}
 		{:else}
-			{title}{#if trailing}<Stop class={trailingColor} />{/if}
+			{title}{#if trailing}<Stop class="text-hoop-500 dark:text-hoop-400" />{/if}
 		{/if}
 	</h2>
 </header>

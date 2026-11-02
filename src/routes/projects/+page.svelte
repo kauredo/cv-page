@@ -141,7 +141,7 @@
 				class="font-display mt-3 text-5xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
 				All <span class="text-vasco-700 dark:text-vasco-300 font-medium italic">work</span><Stop
-					class="text-vasco-600 dark:text-vasco-400"
+					class="text-hoop-500 dark:text-hoop-400"
 				/>
 			</h1>
 		</div>

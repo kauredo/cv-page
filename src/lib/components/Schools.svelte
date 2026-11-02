@@ -20,7 +20,7 @@
 				class="font-display mt-6 text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
 				<span class="text-vasco-700 dark:text-vasco-300 font-medium italic">Studied</span><Stop
-					class="text-vasco-600 dark:text-vasco-400"
+					class="text-hoop-500 dark:text-hoop-400"
 				/>
 			</h2>
 			<p
