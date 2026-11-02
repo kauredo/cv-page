@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { MetaTags } from 'svelte-meta-tags';
 	import Button from '#lib/components/shared/Button.svelte';
+	import Stop from '#lib/components/shared/Stop.svelte';
 
 	const error = $derived(page.error);
 	const status = $derived(page.status);
@@ -76,8 +77,10 @@
 		<h1
 			class="font-display text-slate-900 dark:text-white text-[clamp(4rem,16vw,12rem)] font-black leading-[0.85] tracking-[-0.03em]"
 		>
-			{status === 404 ? 'Air ball' : 'Foul'}<span
-				class="airball-period text-hoop-500 dark:text-hoop-400">.</span
+			{status === 404 ? 'Air ' : ''}<span class="whitespace-nowrap"
+				>{status === 404 ? 'ball' : 'Foul'}<span
+					class="airball-period text-hoop-500 dark:text-hoop-400"><Stop /></span
+				></span
 			>
 		</h1>
 

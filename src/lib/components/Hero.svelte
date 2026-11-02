@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from './shared/Button.svelte';
+	import Stop from './shared/Stop.svelte';
 </script>
 
 <section class="relative overflow-hidden" aria-label="Introduction">
@@ -48,7 +49,7 @@
 					<span
 						class="font-name block text-[clamp(4.5rem,14vw,11rem)] leading-[0.88] tracking-[-0.03em]"
 					>
-						Vasco<span class="text-hoop-500 dark:text-hoop-400">.</span>
+						Vasco<Stop class="text-hoop-500" /><span class="sr-only">.</span>
 					</span>
 				</h1>
 
@@ -110,7 +111,7 @@
 							class="font-name text-hoop-500 shrink-0 text-2xl leading-none tracking-[-0.03em]"
 							aria-hidden="true"
 						>
-							VKF.
+							VKF<Stop />
 						</span>
 					</figcaption>
 				</figure>

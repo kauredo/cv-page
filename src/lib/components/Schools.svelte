@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Stop from '#lib/components/shared/Stop.svelte';
 	import type { Education } from '#lib/types.js';
 
 	export let education: Education[] = [];
@@ -18,9 +19,9 @@
 				id="education-heading"
 				class="font-display mt-6 text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
-				<span class="text-vasco-700 dark:text-vasco-300 font-medium italic">Studied</span><span
-					class="text-vasco-600 dark:text-vasco-400">.</span
-				>
+				<span class="text-vasco-700 dark:text-vasco-300 font-medium italic">Studied</span><Stop
+					class="text-vasco-600 dark:text-vasco-400"
+				/>
 			</h2>
 			<p
 				class="mt-4 font-mono text-[11px] tracking-wider text-slate-600 uppercase dark:text-slate-400"
