@@ -85,6 +85,35 @@
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 	--ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
+	/* The brand's drop and rebound: the triangle falls, squashes and bounces twice. */
+	--animate-drop: drop 1.1s ease-in 0.35s both;
+
+	@keyframes drop {
+		0% {
+			transform: translateY(-450%);
+			opacity: 0;
+		}
+		12% {
+			opacity: 1;
+		}
+		38% {
+			transform: translateY(0) scale(1.18, 0.78);
+		}
+		52% {
+			transform: translateY(-55%) scale(0.95, 1.06);
+		}
+		66% {
+			transform: translateY(0) scale(1.08, 0.9);
+		}
+		76% {
+			transform: translateY(-16%);
+		}
+		86%,
+		100% {
+			transform: none;
+		}
+	}
+
 	/* Font families with fallback metrics */
 	--font-display: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
 	--font-name: 'Archivo Black', 'Archivo Black Fallback', 'Arial Black', sans-serif;
