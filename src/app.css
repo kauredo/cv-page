@@ -395,9 +395,24 @@ h2,
 	margin-left: 0.5rem;
 }
 
+/* The brand triangle: the full stop on section headings, and the mark between job title
+   and company. Print keeps its colour. */
+.cv-print h2::after,
 .cv-print .job-title-group span::before {
-	content: '•';
-	color: #718096;
+	content: '';
+	display: inline-block;
+	width: 0.195em;
+	height: 0.24em;
+	margin-left: 0.06em;
+	background: var(--color-hoop-500);
+	clip-path: polygon(0 100%, 100% 100%, 48.5% 0);
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+}
+
+.cv-print .job-title-group span::before {
+	width: 0.4em;
+	height: 0.5em;
 	margin: 0 0.5rem;
 }
 
