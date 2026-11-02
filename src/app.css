@@ -193,6 +193,13 @@ h2,
 	-webkit-mask-size: 100% 100%;
 }
 
+/* Calçada bounce lines from the brand pattern (docs/brand/pattern.svg), as a mask so the
+   element's background colour sets the line colour. */
+.calcada {
+	mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 341.46 28'><path d='M0 7Q63 -28.28 126 7Q175.77 -20.87 225.54 7Q262.08 -13.46 298.62 7Q320.04 -5 341.46 7M0 35Q63 -0.28 126 35Q175.77 7.13 225.54 35Q262.08 14.54 298.62 35Q320.04 23 341.46 35' stroke='black' stroke-width='2.5' fill='none'/></svg>");
+	mask-size: 512px 42px;
+}
+
 /* Subtle paper-grain backdrop, only on the body for atmosphere */
 .grain::before {
 	content: '';

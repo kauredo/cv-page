@@ -88,11 +88,13 @@
 			>
 				<figure>
 					<div class="relative">
-						<!-- Tilted blue color block backdrop -->
+						<!-- Tilted blue color block backdrop, paved with calçada lines -->
 						<div
-							class="bg-vasco-600 dark:bg-vasco-700 absolute -inset-3 rotate-[3deg] rounded-2xl"
+							class="bg-vasco-600 dark:bg-vasco-700 absolute -inset-3 rotate-[3deg] overflow-hidden rounded-2xl"
 							aria-hidden="true"
-						></div>
+						>
+							<div class="calcada absolute inset-0 bg-white/20"></div>
+						</div>
 						<img
 							src="/images/me.webp"
 							alt="Vasco Kaufmann Figueiredo"
