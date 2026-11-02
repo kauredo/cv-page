@@ -56,26 +56,27 @@
 		return isValid;
 	}
 
-	async function handleSubmit(event: { preventDefault: () => void }) {
-		if (formStatus === 'submitting') return;
-
-		if (!validateForm()) {
-			event.preventDefault();
-			return;
-		}
+	async function handleSubmit(event: SubmitEvent & { currentTarget: HTMLFormElement }) {
+		event.preventDefault();
+		if (formStatus === 'submitting' || !validateForm()) return;
 
 		formStatus = 'submitting';
 
 		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				body: new FormData(event.currentTarget),
+				headers: { Accept: 'application/json' }
+			});
+			if (!response.ok) {
+				const body = await response.json().catch(() => ({}));
+				throw new Error(body.error ?? 'Something went wrong. Please try again.');
+			}
 			formStatus = 'success';
 		} catch (error) {
 			formStatus = 'error';
-			if (error instanceof Error) {
-				errorMessage = error.message;
-			} else {
-				errorMessage = 'Something went wrong. Please try again.';
-			}
-			event.preventDefault();
+			errorMessage =
+				error instanceof Error ? error.message : 'Something went wrong. Please try again.';
 		}
 	}
 
@@ -128,20 +129,27 @@
 			transition:fade
 			class="bg-vasco-700 dark:bg-vasco-800 relative overflow-hidden rounded-2xl p-8 text-white sm:p-12"
 		>
+			<!-- The shot goes in: the triangle arcs through the rim, then lands as the heading's stop.
+			     The 404 page is the same shot, missing. -->
 			<svg
-				class="text-hoop-400/25 absolute -right-12 -bottom-20 h-72 w-72"
-				viewBox="0 0 100 100"
+				class="absolute top-4 right-4 h-36 w-36 sm:h-44 sm:w-44"
+				viewBox="0 0 200 200"
 				fill="none"
 				aria-hidden="true"
 			>
-				<circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.6" />
-				<circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.6" />
-				<circle cx="50" cy="50" r="22" stroke="currentColor" stroke-width="0.6" />
-				<circle cx="50" cy="50" r="2" fill="currentColor" />
+				<path class="swish-shot fill-hoop-400 motion-reduce:hidden" d="M24 182H36L30 167Z" />
+				<ellipse cx="140" cy="62" rx="24" ry="6" class="stroke-white/70" stroke-width="3" />
+				<path
+					d="M116 62L124 92H156L164 62M130 64L134 92M150 64L146 92"
+					class="stroke-white/30"
+					stroke-width="1.5"
+				/>
 			</svg>
 			<p class="eyebrow text-hoop-300 relative mb-4">Status / 200 — sent</p>
 			<h2 class="font-display relative text-4xl leading-[0.95] font-bold sm:text-5xl">
-				Swish<Stop class="text-hoop-400" />
+				Swish<Stop
+					class="text-hoop-400 animate-drop origin-bottom [animation-delay:1s]! motion-reduce:animate-none"
+				/>
 			</h2>
 			<p class="text-vasco-100 relative mt-4 max-w-md text-lg leading-relaxed">
 				Thanks for reaching out. I'll get back to you soon.
@@ -170,13 +178,16 @@
 	{/if}
 
 	{#if formStatus !== 'success'}
-		<form
-			method="POST"
-			action="https://formspree.io/f/vasco.kf@gmail.com"
-			on:submit={handleSubmit}
-			class="space-y-7"
-			novalidate
-		>
+		<form method="POST" action="/api/contact" on:submit={handleSubmit} class="space-y-7" novalidate>
+			<!-- Honeypot for bots; hidden from people and screen readers -->
+			<input
+				type="text"
+				name="website"
+				tabindex="-1"
+				autocomplete="off"
+				class="hidden"
+				aria-hidden="true"
+			/>
 			<div>
 				<label for="name" class="eyebrow mb-2 block text-slate-700 dark:text-slate-300">
 					Name <span class="text-hoop-500">*</span>
@@ -305,3 +316,29 @@
 		</form>
 	{/if}
 </section>
+
+<style>
+	/* From the bottom left, up over the rim, then down through the net. Units are the
+	   SVG's own (viewBox 0 0 200 200). */
+	.swish-shot {
+		animation: swish-shot 1s cubic-bezier(0.3, 0, 0.7, 1) both;
+	}
+
+	@keyframes swish-shot {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		50% {
+			translate: 60px -160px;
+		}
+		80% {
+			translate: 110px -112px;
+			opacity: 1;
+		}
+		100% {
+			translate: 110px -80px;
+			opacity: 0;
+		}
+	}
+</style>

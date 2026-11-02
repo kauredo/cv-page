@@ -277,7 +277,7 @@
 		"title": "Portfolio Site",
 		"slug": "portfolio-site",
 		"description": "This site. SvelteKit and Tailwind, with every project page built from one JSON file.",
-		"details": "You're on it. Projects and experience live in JSON, and SvelteKit prerenders a page, an Open Graph image and structured data for each project at build time. The contact form posts to Formspree, so there's no backend to run. It has light and dark themes, and the motion switches off when your system asks for reduced motion.",
+		"details": "You're on it. Projects and experience live in JSON, and SvelteKit prerenders a page, an Open Graph image and structured data for each project at build time. The contact form is its one server route, and sends mail through AhaSend. It has light and dark themes, and the motion switches off when your system asks for reduced motion.",
 		"stack": ["SvelteKit", "TypeScript", "TailwindCSS"],
 		"images": [
 			"/images/portfolio-site-1.webp",
