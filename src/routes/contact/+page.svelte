@@ -197,6 +197,7 @@
 					type="text"
 					id="name"
 					name="name"
+					autocomplete="name"
 					bind:value={formState.name}
 					class="focus:border-vasco-500 focus:ring-vasco-500/20 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-white"
 					aria-required="true"
@@ -221,6 +222,7 @@
 					type="email"
 					id="email"
 					name="email"
+					autocomplete="email"
 					bind:value={formState.email}
 					class="focus:border-vasco-500 focus:ring-vasco-500/20 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-mono text-sm text-slate-900 transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-white"
 					aria-required="true"
