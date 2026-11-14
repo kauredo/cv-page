@@ -5,6 +5,13 @@
 
 	let { cv, lang }: { cv: typeof cvEn; lang: 'en' | 'pt' } = $props();
 
+	$effect(() => {
+		document.documentElement.lang = lang;
+		return () => {
+			document.documentElement.lang = 'en';
+		};
+	});
+
 	const LABELS = {
 		en: {
 			back: 'Back',
