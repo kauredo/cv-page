@@ -14,9 +14,9 @@ The voice is confident but not arrogant—someone who takes their craft seriousl
 
 **Visual tone**: Clean minimalism with moments of personality. High design quality with intentional restraint—not flashy, but polished. Every element should feel considered.
 
-**Theme**: Light and dark modes, both first-class citizens. The "vasco" blue palette (#59a7ff → #0f2e8a) provides identity without overwhelming.
+**Theme**: Light and dark modes, both first-class citizens. The orange "hoop" palette (`--color-hoop-*`) is the primary accent, with the "vasco" blue palette (#59a7ff → #0f2e8a) as secondary. Brand assets are in `docs/brand/`.
 
-**Typography**: Inter for readability, generous line-height, clear hierarchy.
+**Typography**: Archivo (display), Archivo Black (name), Instrument Sans (body) and JetBrains Mono (mono), set in `src/app.css`. Generous line-height, clear hierarchy.
 
 **Motion**: Subtle, purposeful animations (fade, fly) that enhance rather than distract. Support prefers-reduced-motion.
 
