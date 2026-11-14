@@ -9,6 +9,11 @@ export function cvMetaTags(cv: typeof cvEn, locale: string) {
 	return Object.freeze({
 		title,
 		description: cv.basics.summary,
+		additionalLinkTags: [
+			{ rel: 'alternate', hreflang: 'en', href: 'https://www.vascokf.com/cv' },
+			{ rel: 'alternate', hreflang: 'pt', href: 'https://www.vascokf.com/cv/pt' },
+			{ rel: 'alternate', hreflang: 'x-default', href: 'https://www.vascokf.com/cv' }
+		],
 		openGraph: {
 			title,
 			description: cv.basics.summary,
