@@ -138,10 +138,12 @@
 html {
 	overflow-y: scroll;
 	overflow-x: hidden;
+	color-scheme: light;
 	scrollbar-width: thin;
 	scrollbar-color: var(--color-vasco-400) var(--color-slate-100);
 
 	&.dark {
+		color-scheme: dark;
 		scrollbar-color: var(--color-vasco-500) var(--color-slate-900);
 	}
 }
