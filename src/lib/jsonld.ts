@@ -50,7 +50,7 @@ export function cvProfileJsonLd(path: string, inLanguage: string) {
 
 /**
  * Per-project `SoftwareApplication` JSON-LD for a project detail page.
- * Complements the site-wide `Person` schema in the root layout (author ref).
+ * Names the author inline, since the `Person` schema is only on the home page and CVs.
  */
 export function projectJsonLd(project: Project): Record<string, unknown> {
 	const pageUrl = `${SITE_URL}/projects/${project.slug}`;
