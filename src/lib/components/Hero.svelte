@@ -47,7 +47,12 @@
 					>
 						Vasco<Stop
 							class="text-hoop-500 animate-drop origin-bottom motion-reduce:animate-none"
-						/><span class="sr-only">.</span>
+						/>
+					</span>
+					<span
+						class="mt-4 block text-xl font-semibold tracking-tight text-slate-700 sm:text-2xl dark:text-slate-300"
+					>
+						Kaufmann Figueiredo<span class="sr-only">.</span>
 					</span>
 				</h1>
 
@@ -63,6 +68,18 @@
 							>playful</span
 						>
 						web apps.
+					</p>
+
+					<p class="text-base text-slate-600 dark:text-slate-400">
+						Full stack developer in Lisbon, working in Rails, React and TypeScript. <span
+							class="whitespace-nowrap">Co-founder</span
+						>
+						and CTO at
+						<a
+							href="/projects/upspeech"
+							class="decoration-hoop-500/60 hover:text-hoop-600 dark:hover:text-hoop-400 font-medium text-slate-900 underline underline-offset-4 dark:text-white"
+							>UpSpeech</a
+						>.
 					</p>
 
 					<p class="text-base text-slate-600 dark:text-slate-400">

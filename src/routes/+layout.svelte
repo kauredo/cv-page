@@ -7,7 +7,6 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { MetaTags, deepMerge } from 'svelte-meta-tags';
-	import { jsonLdScript } from '#lib/jsonld.js';
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -24,29 +23,11 @@
 
 	let { data, children } = $props();
 	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
-
-	const personLd = jsonLdScript({
-		'@context': 'https://schema.org',
-		'@type': 'Person',
-		name: 'Vasco Kaufmann Figueiredo',
-		alternateName: 'VascoKF',
-		url: 'https://www.vascokf.com',
-		image: 'https://www.vascokf.com/images/portfolio.webp',
-		jobTitle: 'Full Stack Web Developer',
-		worksFor: { '@type': 'Organization', name: 'UpSpeech' },
-		sameAs: ['https://github.com/kauredo', 'https://linkedin.com/in/vascokf'],
-		knowsAbout: ['Ruby on Rails', 'React', 'TypeScript', 'SvelteKit', 'Web Development'],
-		description: 'Full-stack web developer building clean, functional, and playful web apps.'
-	});
 </script>
 
 <MetaTags {...metaTags} />
 
 <svelte:head>
-	<!-- JSON-LD Structured Data -->
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -- static JSON-LD, escaped by jsonLdScript -->
-	{@html personLd}
-
 	<!-- Font preconnect to shave handshake time off LCP -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
