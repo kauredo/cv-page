@@ -69,8 +69,13 @@
 </svelte:head>
 
 <div class="flex min-h-screen flex-col bg-white dark:bg-slate-950 dark:text-slate-100">
+	<a
+		href="#main"
+		class="bg-vasco-600 focus-visible:ring-hoop-500 sr-only z-30 rounded-md px-4 py-2 font-medium text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus-visible:ring-2 focus-visible:outline-none"
+		>Skip to content</a
+	>
 	<Navbar />
-	<main class="flex-1">
+	<main id="main" tabindex="-1" class="flex-1 focus:outline-none">
 		{@render children()}
 	</main>
 	<Footer />

@@ -151,6 +151,7 @@
 			<div class="relative flex-1">
 				<input
 					type="text"
+					aria-label="Search projects"
 					placeholder="Search projects…"
 					bind:value={searchQuery}
 					class="focus:border-vasco-500 focus:ring-vasco-500/20 w-full rounded-xl border border-slate-300 bg-white py-3 pr-12 pl-4 font-mono text-sm transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500"
