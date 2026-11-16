@@ -111,7 +111,7 @@
 		{
 			"displayName": "Basketball Stats App",
 			"website": "https://basketballstatsapp.com",
-			"githubUrl": "https://github.com/kauredo/basketball-stats-app",
+			"githubUrl": "",
 			"description": "Estatísticas de basquetebol para ligas e equipas, com registo de jogos ao vivo, mapas de lançamento e de calor, comparação de jogadores e classificações automáticas. Tem 697 contas, 307 delas ativas nos últimos 30 dias, e 750 downloads nas lojas iOS e Android. É um monorepo Turborepo com a aplicação web em React e a móvel em React Native, ambas ligadas a um backend Convex que sincroniza em tempo real."
 		},
 		{
