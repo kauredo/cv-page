@@ -111,7 +111,7 @@
 		{
 			"displayName": "Basketball Stats App",
 			"website": "https://basketballstatsapp.com",
-			"githubUrl": "https://github.com/kauredo/basketball-stats-app",
+			"githubUrl": "",
 			"description": "Basketball stats for leagues and teams, with live scoring, shot charts and heatmaps, player comparisons and automatic standings. It has 697 accounts, 307 of them active in the last 30 days, and 750 downloads across the iOS and Android apps. One Turborepo holds the React web app and the React Native app, both on a Convex backend that updates in real time."
 		},
 		{
