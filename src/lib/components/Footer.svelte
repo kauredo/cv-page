@@ -34,7 +34,12 @@
 			</div>
 
 			<p class="font-mono text-xs text-slate-600 dark:text-slate-400">
-				© {new Date().getFullYear()} Vasco Kaufmann Figueiredo · Built with SvelteKit
+				© {new Date().getFullYear()} Vasco Kaufmann Figueiredo · Built with SvelteKit ·
+				<a
+					href="/privacy"
+					class="hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 -mx-1 inline-block rounded px-1 py-1.5 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+					>Privacy</a
+				>
 			</p>
 		</div>
 

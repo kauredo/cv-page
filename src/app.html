@@ -37,13 +37,20 @@
 
 		<!-- Google Analytics, loaded async and only on the production domain so local
 		     dev, previews and tests never send hits. GA4 enhanced measurement tracks
-		     client-side navigations itself, so nothing else calls gtag. -->
+		     client-side navigations itself, so nothing else calls gtag. Consent stays
+		     denied (there is no banner), so GA sets no cookies and sends cookieless pings. -->
 		<script>
 			if (/(^|\.)vascokf\.com$/.test(location.hostname)) {
 				window.dataLayer = window.dataLayer || [];
 				window.gtag = function () {
 					dataLayer.push(arguments);
 				};
+				gtag('consent', 'default', {
+					ad_storage: 'denied',
+					ad_user_data: 'denied',
+					ad_personalization: 'denied',
+					analytics_storage: 'denied'
+				});
 				gtag('js', new Date());
 				gtag('config', 'G-55TK9L8WDT');
 				const ga = document.createElement('script');

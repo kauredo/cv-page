@@ -11,7 +11,8 @@ export function GET() {
 		{ url: '/projects', changefreq: 'weekly', priority: '0.9' },
 		{ url: '/contact', changefreq: 'monthly', priority: '0.7' },
 		{ url: '/cv', changefreq: 'monthly', priority: '0.8' },
-		{ url: '/cv/pt', changefreq: 'monthly', priority: '0.6' }
+		{ url: '/cv/pt', changefreq: 'monthly', priority: '0.6' },
+		{ url: '/privacy', changefreq: 'yearly', priority: '0.3' }
 	];
 
 	const projectPages = projects.map((p) => ({
