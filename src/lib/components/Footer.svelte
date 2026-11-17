@@ -1,5 +1,15 @@
 <script lang="ts">
 	import Wordmark from './shared/Wordmark.svelte';
+	import projects from '#lib/data/projects.json';
+
+	// Live products on their own domains. UpSpeech is a startup kept out of this row,
+	// and imkaufmann.com is a client site.
+	const skip = new Set(['upspeech', 'nn']);
+	const products = projects.flatMap((p) => {
+		if (!p.link || skip.has(p.slug)) return [];
+		const host = new URL(p.link).hostname.replace(/^www\./, '');
+		return host.endsWith('vercel.app') ? [] : [{ host, href: p.link }];
+	});
 </script>
 
 <footer
@@ -27,5 +37,23 @@
 				© {new Date().getFullYear()} Vasco Kaufmann Figueiredo · Built with SvelteKit
 			</p>
 		</div>
+
+		<nav
+			aria-label="Live products"
+			class="mt-8 flex flex-col gap-3 border-t border-slate-900/10 pt-6 sm:flex-row sm:items-baseline sm:gap-6 dark:border-white/10"
+		>
+			<span class="eyebrow shrink-0 text-slate-600 dark:text-slate-400">Live products</span>
+			<ul class="flex flex-wrap gap-x-5 gap-y-1">
+				{#each products as product (product.host)}
+					<li>
+						<a
+							href={product.href}
+							class="hover:text-hoop-600 active:text-hoop-700 focus-visible:ring-vasco-500 dark:hover:text-hoop-400 -mx-1 inline-block rounded px-1 py-1.5 font-mono text-xs text-slate-700 transition-colors focus-visible:ring-2 focus-visible:outline-none dark:text-slate-300"
+							>{product.host}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		</nav>
 	</div>
 </footer>
