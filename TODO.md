@@ -9,6 +9,11 @@
 | MyAgentWebsite | From April. Still matches the live site, so refresh when its design changes.                              |
 | ProTasca       | From April. Same as above.                                                                                |
 
+## Privacy
+
+- `static/.well-known/security.txt` expires on 2027-10-31. Move `Expires` about 11 months forward before then.
+- `/privacy` names every outside service the browser talks to (Google Analytics, Vercel Analytics, Google Fonts, the GitHub avatar). A new one also needs a line there, a host in the CSP in `vite.config.ts`, and a new "Updated" date.
+
 ## Project entries
 
 - Entry 0 in `projects.json` is the homepage feature and entries 1 to 6 fill the homepage grid. Re-check the order when a project ships or stalls.
