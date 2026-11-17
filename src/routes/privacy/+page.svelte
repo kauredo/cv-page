@@ -54,7 +54,8 @@
 			<p class={body}>
 				Google Analytics runs with storage turned off, so it sets no cookies and can't recognise you
 				on your next visit. Each page view still sends Google a ping with the page, the site that
-				sent you here and a rough location.
+				sent you here and your browser details. Google sees your IP address with it and uses it for
+				a rough location, and says Analytics doesn't store the address.
 			</p>
 			<p class={body}>
 				Vercel Web Analytics counts page views, referrers and countries. It sets no cookies either.
@@ -77,7 +78,8 @@
 			<p class={body}>
 				Nothing here follows you around the web. There are no ads, no share buttons and no embedded
 				social feeds. The fonts come from Google Fonts, so your browser fetches them from Google's
-				servers. Vercel keeps the usual short-lived request logs for the site.
+				servers. The photo on the CV pages loads from GitHub, so GitHub sees your IP address when
+				you open one. Vercel keeps the usual short-lived request logs for the site.
 			</p>
 		</section>
 
