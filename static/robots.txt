@@ -4,5 +4,19 @@ Allow: /
 # Secret CV route
 Disallow: /ines-cv/
 
+# AI crawlers are welcome. A named group replaces the * group for that bot,
+# so the private route is repeated here.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /ines-cv/
+
 # Point to your sitemap
 Sitemap: https://www.vascokf.com/sitemap.xml
