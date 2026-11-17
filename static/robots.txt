@@ -1,9 +1,6 @@
 User-agent: *
 Allow: /
 
-# Prevent crawling of old content
-Disallow: /old/
-
 # Secret CV route
 Disallow: /ines-cv/
 
