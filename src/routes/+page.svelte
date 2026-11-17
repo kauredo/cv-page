@@ -9,6 +9,7 @@
 	import Hero from '#lib/components/Hero.svelte';
 	import Now from '#lib/components/Now.svelte';
 	import Projects from '#lib/components/Projects.svelte';
+	import { jsonLdScript, personJsonLd } from '#lib/jsonld.js';
 
 	const experiences: Experience[] = experienceData;
 	const education: Education[] = educationData;
@@ -17,6 +18,11 @@
 	const featuredProject: Project | null = allProjects[0] || null;
 	const projects: Project[] = allProjects.slice(1, 7);
 </script>
+
+<svelte:head>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- static JSON-LD, escaped by jsonLdScript -->
+	{@html jsonLdScript(personJsonLd)}
+</svelte:head>
 
 <Hero />
 

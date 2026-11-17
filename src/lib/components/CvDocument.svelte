@@ -57,10 +57,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{basics.name} - CV</title>
-</svelte:head>
-
 <section class="screen-only-nav">
 	<nav>
 		<div class="flex items-center gap-2">

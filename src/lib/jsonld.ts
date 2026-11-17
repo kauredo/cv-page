@@ -14,9 +14,43 @@ export function jsonLdScript(data: unknown): string {
 	return `<script type="application/ld+json">${json}</script>`;
 }
 
+const person = {
+	'@type': 'Person',
+	name: 'Vasco Kaufmann Figueiredo',
+	alternateName: 'VascoKF',
+	url: SITE_URL,
+	image: `${SITE_URL}/images/me.webp`,
+	jobTitle: 'Co-Founder and CTO',
+	worksFor: { '@type': 'Organization', name: 'UpSpeech' },
+	address: { '@type': 'PostalAddress', addressLocality: 'Lisbon', addressCountry: 'PT' },
+	contactPoint: {
+		'@type': 'ContactPoint',
+		contactType: 'professional inquiries',
+		url: `${SITE_URL}/contact`,
+		availableLanguage: ['English', 'Portuguese']
+	},
+	sameAs: ['https://github.com/kauredo', 'https://linkedin.com/in/vascokf'],
+	knowsAbout: ['Ruby on Rails', 'React', 'TypeScript', 'SvelteKit', 'Web Development'],
+	description: 'Full stack developer in Lisbon, and co-founder and CTO of UpSpeech.'
+};
+
+/** `Person` JSON-LD for the home page. */
+export const personJsonLd = { '@context': 'https://schema.org', ...person };
+
+/** `ProfilePage` JSON-LD for a CV page, with the person as its main entity. */
+export function cvProfileJsonLd(path: string, inLanguage: string) {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'ProfilePage',
+		url: `${SITE_URL}${path}`,
+		inLanguage,
+		mainEntity: person
+	};
+}
+
 /**
  * Per-project `SoftwareApplication` JSON-LD for a project detail page.
- * Complements the site-wide `Person` schema in the root layout (author ref).
+ * Names the author inline, since the `Person` schema is only on the home page and CVs.
  */
 export function projectJsonLd(project: Project): Record<string, unknown> {
 	const pageUrl = `${SITE_URL}/projects/${project.slug}`;
