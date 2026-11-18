@@ -40,3 +40,7 @@ The voice is confident but not arrogant—someone who takes their craft seriousl
 4. **Dark mode as equal** — Both themes deserve the same attention. Dark mode isn't an afterthought.
 
 5. **Accessible by default** — WCAG AA contrast ratios, keyboard navigation, screen reader support. Good design works for everyone.
+
+## Audit
+
+Audit, Nov 2026: `docs/audit-2026-11.md` lists open work, won't-do decisions and competitors; open work has plans in `plans/`.
