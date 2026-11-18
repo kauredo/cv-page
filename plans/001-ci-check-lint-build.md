@@ -31,8 +31,9 @@ The repo has no tests and no CI. The only check on a pull request, Dependabot's 
   - `"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"`
   - `"lint": "prettier --check . && eslint ."`
   - `"build": "vite build"`
-- Package manager is Yarn 1 (`yarn.lock`, no `packageManager` field, no `.nvmrc`). Vercel builds on Node 22.x (see the comment in `.github/dependabot.yml`: "Vercel builds on Node 22.x").
-- **Trap**: in Yarn 1, `yarn check` is a built-in command (it verifies installed packages against the lockfile). It runs instead of the `check` script, and on a fresh install it fails with errors about wrong package versions. The script must be invoked as `yarn run check`. Checked at planning time on Node 24.19.0 and Yarn 1.22.22: `yarn run check` reports `0 ERRORS 0 WARNINGS`, `yarn lint` passes, `yarn build` passes (it prints "Could not detect a supported production environment", which is the expected adapter-auto message, not a failure).
+- Package manager is Yarn 1 (`yarn.lock`, no `packageManager` field). `.nvmrc` contains the single word `node` (latest), so it is no guide. Vercel builds on Node 22.x (see the comment in `.github/dependabot.yml`: "Vercel builds on Node 22.x"), so CI pins Node 22. `.npmrc` sets `engine-strict=true`; there is no `engines` field, so it has no effect today.
+- GitHub Actions billing: the owner's notes say Actions billing fails on this account. The same notes say the failure stops CI on private repos only and that public repos still run. This repo is public (`gh repo view kauredo/cv-page --json visibility`), and its Dependabot Actions runs on 2026-11-14 and 2026-11-16 completed with `success`.
+- **Trap**: in Yarn 1, `yarn check` is a built-in command (it verifies installed packages against the lockfile). It runs instead of the `check` script, and on a fresh install it fails with errors about wrong package versions. The script must be invoked as `yarn run check`. Checked at planning time in the main checkout, Yarn 1.22.22: on Node 24.19.0 `yarn run check` reports `0 ERRORS 0 WARNINGS` and `yarn lint` passes, and `yarn build` passes on both Node 24.19.0 and 22.23.2 (it prints "Could not detect a supported production environment", which is the expected adapter-auto message, not a failure).
 - `.github/` holds only `dependabot.yml`. It already has a `github-actions` ecosystem block, so Dependabot will keep action versions current once a workflow exists.
 - The contact route reads `AHASEND_API_KEY`, `AHASEND_ACCOUNT_ID` and `AHASEND_FROM_ADDRESS` through `src/env.ts` (`defineEnvVars`). The build passed locally with none of them set, so CI needs no secrets.
 - Repo style: tabs in JSON and source, single quotes in YAML (see `.github/dependabot.yml`), conventional commits (`ci:`, `feat:`, `fix:`, `docs:`, `chore:`).
@@ -62,21 +63,27 @@ The repo has no tests and no CI. The only check on a pull request, Dependabot's 
 
 ## Git workflow
 
-- Branch: `advisor/001-ci-check-lint-build`
+- Branch: `advisor/001-ci-check-lint-build`, cut from the default branch (`master`)
 - Commit message style: conventional commits, for example `ci: run check, lint and build on pull requests`.
 - Do NOT push or open a PR unless the operator instructed it.
 
 ## Steps
 
+### Step 0: Confirm Actions run on this repo
+
+Run `gh run list --repo kauredo/cv-page --limit 5`.
+
+**Verify**: recent runs show `success` (Dependabot Updates runs count). If runs show `failure` with no steps run, Actions billing is failing: STOP and report, because a workflow cannot run.
+
 ### Step 1: Confirm the three commands pass on a clean install
 
-Run `yarn install --frozen-lockfile`, then `yarn run check`, `yarn lint`, `yarn build`.
+In a fresh checkout with Node 22 active, run `yarn install --frozen-lockfile`, then `yarn run check`, `yarn lint`, `yarn build`.
 
 **Verify**: all four exit 0. If any fails, STOP.
 
 ### Step 2: Create the workflow
 
-Create `.github/workflows/ci.yml` with this shape. Look up the current major version of `actions/checkout` and `actions/setup-node` with `gh api repos/actions/checkout/releases/latest -q .tag_name` (and the same for `setup-node`) and use those majors.
+Create `.github/workflows/ci.yml` with this shape. Use `actions/checkout@v7` and `actions/setup-node@v7` (latest releases on 2026-11-18 are v7.0.1 and v7.1.0; confirm with `gh api repos/actions/checkout/releases/latest -q .tag_name` and the same for `setup-node`, and use the newer major if there is one). Pin by major tag, not by SHA. Dependabot's `github-actions` block keeps them current.
 
 ```yaml
 name: CI
@@ -98,8 +105,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@<major>
-      - uses: actions/setup-node@<major>
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: yarn
@@ -121,19 +128,22 @@ Stage `.github/workflows/ci.yml` by name and commit.
 
 ## Test plan
 
-No unit tests exist for a workflow file. The real test is the first run: when the branch is pushed and a PR is opened (only if the operator asked for that), the `verify` job on the PR must finish green. Until then, Step 1 is the stand-in, since the job runs those same commands.
+No unit tests exist for a workflow file. Step 1 is the stand-in, since the job runs those same commands. The first real run happens when the branch is pushed and a PR is opened. Only the operator does that. When they do, the `verify` job must finish green, and a red first run means the plan is wrong, so report it.
+
+The `concurrency`, `timeout-minutes` and `permissions` keys are standard hygiene (cancel superseded runs, cap a stuck job, read-only token). The `push` trigger on `master` makes the check run on the merged result too.
 
 ## Done criteria
 
 - [ ] `.github/workflows/ci.yml` exists and `npx --yes prettier --check .github/workflows/ci.yml` exits 0
 - [ ] The file contains `yarn run check`, `yarn lint`, `yarn build` and does not contain `yarn check`
 - [ ] The trigger names `master`
-- [ ] No files outside `.github/workflows/` and `plans/README.md` are modified (`git status`)
+- [ ] `git diff --stat master..HEAD` lists only `.github/workflows/ci.yml` and `plans/README.md`
 - [ ] `plans/README.md` status row updated
 
 ## STOP conditions
 
 - `yarn run check`, `yarn lint` or `yarn build` fails on a clean `yarn install --frozen-lockfile`. Report the output instead of fixing source.
+- Step 0 shows Actions runs failing with no steps (billing).
 - The default branch is no longer `master` (`git symbolic-ref refs/remotes/origin/HEAD`).
 - A `.github/workflows/` directory already exists with another CI file. Report it, since this plan would duplicate it.
 
