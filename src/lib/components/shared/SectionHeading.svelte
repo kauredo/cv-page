@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Stop from './Stop.svelte';
-	export let index: string;
 	export let title: string;
 	export let italicWord: string = '';
 	export let id: string = '';
@@ -20,24 +19,12 @@
 
 	$: italicColor =
 		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
-	$: indexColor =
-		accent === 'hoop' ? 'text-hoop-600 dark:text-hoop-400' : 'text-vasco-700 dark:text-vasco-300';
 </script>
 
 <header class="mb-10 sm:mb-14">
-	<div
-		class="flex items-center justify-between gap-4 border-b border-slate-900/15 pb-3 dark:border-white/15"
-	>
-		<span class="eyebrow {indexColor}">№ {index}</span>
-		{#if meta || $$slots.meta}
-			<span class="eyebrow text-slate-600 dark:text-slate-400">
-				<slot name="meta">{meta}</slot>
-			</span>
-		{/if}
-	</div>
 	<h2
 		{id}
-		class="font-display mt-6 text-4xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
+		class="font-display text-4xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
 	>
 		<!-- The stop touches the last letter, so no whitespace before it. -->
 		{#if italicWord}
@@ -47,4 +34,9 @@
 			{title}{#if trailing}<Stop class="text-hoop-500 dark:text-hoop-400" />{/if}
 		{/if}
 	</h2>
+	{#if meta || $$slots.meta}
+		<p class="mt-4 text-sm text-slate-600 dark:text-slate-400">
+			<slot name="meta">{meta}</slot>
+		</p>
+	{/if}
 </header>

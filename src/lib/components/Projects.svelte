@@ -11,11 +11,10 @@
 <section aria-labelledby="projects-heading">
 	<SectionHeading
 		id="projects-heading"
-		index="02"
 		title="What I've Been Building"
 		italicWord="Building"
 		trailing
-		meta="Selected · 2020 — 2026"
+		meta="Selected work, 2020 to 2026"
 	/>
 
 	<!-- Featured project — image-dominant editorial spread -->
@@ -60,13 +59,8 @@
 					class="relative flex flex-col justify-between p-6 text-white sm:p-8 md:col-span-5 md:p-8 lg:col-span-4 lg:p-10"
 				>
 					<div class="relative">
-						<span class="eyebrow text-hoop-400 inline-flex items-center gap-2">
-							<span class="bg-hoop-500/70 h-px w-6" aria-hidden="true"></span>
-							Featured · Case study
-						</span>
-
 						<h3
-							class="font-display mt-4 text-3xl leading-[0.95] font-bold tracking-tight sm:text-4xl"
+							class="font-display text-3xl leading-[0.95] font-bold tracking-tight sm:text-4xl"
 							style="view-transition-name: project-title-{featuredProject.slug}"
 						>
 							{featuredProject.title}<Stop
@@ -130,11 +124,6 @@
 				aria-hidden="true"
 			></span>
 			See all projects
-			<span
-				aria-hidden="true"
-				class="transition-transform group-hover:translate-x-1 group-active:translate-x-1 motion-reduce:transform-none"
-				>→</span
-			>
 		</a>
 	</div>
 </section>

@@ -8,11 +8,10 @@
 <section aria-labelledby="experience-heading">
 	<SectionHeading
 		id="experience-heading"
-		index="03"
 		title="Places I've Worked At"
 		italicWord="Worked"
 		trailing
-		meta="Career · {experiences.length} roles"
+		meta="{experiences.length} roles"
 	/>
 
 	<div>

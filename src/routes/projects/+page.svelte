@@ -127,18 +127,12 @@
 			class="mb-10 flex flex-wrap items-center justify-between gap-3 border-t border-b border-slate-900/10 py-2.5 dark:border-white/10"
 		>
 			<BackButton href="/" text="Home" />
-			<span class="eyebrow text-slate-600 dark:text-slate-400">Index / All work</span>
 		</div>
 
 		<!-- Editorial heading -->
 		<div class="mb-10">
-			<div class="flex items-baseline gap-3">
-				<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">∑</span>
-				<span class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-16 flex-none" aria-hidden="true"
-				></span>
-			</div>
 			<h1
-				class="font-display mt-3 text-5xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
+				class="font-display text-5xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
 				All <span class="text-vasco-700 dark:text-vasco-300 font-medium italic">work</span><Stop
 					class="text-hoop-500 dark:text-hoop-400"
@@ -281,7 +275,6 @@
 		</div>
 	{:else}
 		<div class="py-24 text-center">
-			<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-4">Empty // 0 results</p>
 			<h2 class="font-display text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
 				Air ball<Stop class="text-hoop-500 dark:text-hoop-400" />
 			</h2>
