@@ -11,7 +11,7 @@
 		title="Places I've Worked At"
 		italicWord="Worked"
 		trailing
-		meta="Career · {experiences.length} roles"
+		meta="{experiences.length} roles"
 	/>
 
 	<div>

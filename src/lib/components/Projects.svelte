@@ -14,7 +14,7 @@
 		title="What I've Been Building"
 		italicWord="Building"
 		trailing
-		meta="Selected · 2020 — 2026"
+		meta="Selected work, 2020 to 2026"
 	/>
 
 	<!-- Featured project — image-dominant editorial spread -->

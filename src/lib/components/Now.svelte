@@ -50,14 +50,14 @@
 				></span>
 				<span class="bg-hoop-500 relative inline-flex h-2 w-2 rounded-full"></span>
 			</span>
-			Live · updated this month
+			Live, updated this month
 		</span>
 	</SectionHeading>
 
 	<ul class="grid auto-rows-[minmax(140px,auto)] grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
 		{#each activities as { text, variant, span, caption }, i (i)}
 			<li
-				class="group relative flex flex-col justify-end overflow-hidden rounded-2xl p-5 transition-transform duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:-translate-y-0.5 {span ??
+				class="relative flex flex-col justify-end overflow-hidden rounded-2xl p-5 transition-transform duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:-translate-y-0.5 {span ??
 					''} {variant === 'feature-orange'
 					? 'bg-hoop-700 dark:bg-hoop-800 text-white'
 					: variant === 'feature-blue'
