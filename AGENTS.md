@@ -27,6 +27,8 @@ The voice is confident but not arrogant—someone who takes their craft seriousl
 - Over-animated portfolios that prioritize wow over substance
 - Boring or forgettable designs that don't reflect the "fun, bold" personality
 
+**Layout targets**: A section opens with its heading; the hero's masthead strip is the one label on the page. Icons are inline SVG in the site's existing style, or absent. A headline is one sentence.
+
 **Direction**: Greater focus on distinctive design—elevate beyond clean-but-generic to something memorable. Bold doesn't mean loud; it means confident choices that create a unique impression.
 
 ### Design Principles

@@ -8,7 +8,6 @@
 <section aria-labelledby="experience-heading">
 	<SectionHeading
 		id="experience-heading"
-		index="03"
 		title="Places I've Worked At"
 		italicWord="Worked"
 		trailing

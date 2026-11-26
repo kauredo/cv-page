@@ -106,11 +106,9 @@
 			>
 			Home
 		</a>
-		<span class="eyebrow text-slate-600 dark:text-slate-400">Get in touch</span>
 	</div>
 
 	<div class="mb-10">
-		<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-6">Form / Direct message</p>
 		<h1
 			class="font-display text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 		>
@@ -145,7 +143,6 @@
 					stroke-width="1.5"
 				/>
 			</svg>
-			<p class="eyebrow text-hoop-300 relative mb-4">Status / 200 — sent</p>
 			<h2 class="font-display relative text-4xl leading-[0.95] font-bold sm:text-5xl">
 				Swish<Stop
 					class="text-hoop-400 animate-drop origin-bottom [animation-delay:1s]! motion-reduce:animate-none"
@@ -166,13 +163,12 @@
 			transition:fade
 			class="mb-8 rounded-xl border border-red-300 bg-red-50 p-5 dark:border-red-800/60 dark:bg-red-950/30"
 		>
-			<p class="eyebrow mb-2 text-red-700 dark:text-red-400">Error</p>
 			<p class="text-sm font-medium text-red-900 dark:text-red-200">{errorMessage}</p>
 			<button
 				on:click={() => (formStatus = 'idle')}
 				class="mt-3 font-mono text-xs font-semibold tracking-wider text-red-700 uppercase underline transition-colors hover:text-red-900 dark:text-red-400 dark:hover:text-red-200"
 			>
-				Try again →
+				Try again
 			</button>
 		</div>
 	{/if}

@@ -9,15 +9,9 @@
 	<div class="grid gap-10 md:grid-cols-12 md:gap-10 lg:gap-12">
 		<!-- Editorial heading column -->
 		<header class="md:col-span-4">
-			<div
-				class="flex items-center justify-between gap-4 border-b border-slate-900/15 pb-3 dark:border-white/15"
-			>
-				<span class="eyebrow text-vasco-700 dark:text-vasco-300">№ 04</span>
-				<span class="eyebrow text-slate-600 dark:text-slate-400">Foundations</span>
-			</div>
 			<h2
 				id="education-heading"
-				class="font-display mt-6 text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
+				class="font-display text-5xl leading-[0.9] font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
 			>
 				<span class="text-vasco-700 dark:text-vasco-300 font-medium italic">Studied</span><Stop
 					class="text-hoop-500 dark:text-hoop-400"

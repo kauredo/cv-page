@@ -55,13 +55,10 @@
 		class="mb-12 flex flex-wrap items-center justify-between gap-3 border-t border-b border-slate-900/10 py-2.5 dark:border-white/10"
 	>
 		<BackButton href="/projects" text="Projects" />
-		<span class="eyebrow text-slate-600 dark:text-slate-400">Case study</span>
 	</div>
 
 	<!-- Editorial header -->
 	<header class="mb-12">
-		<p class="eyebrow text-vasco-700 dark:text-vasco-300 mb-6">Project / {project.slug}</p>
-
 		<h1
 			class="font-display text-4xl leading-[0.95] font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
 			style="view-transition-name: project-title-{project.slug}"
@@ -106,12 +103,6 @@
 		<!-- Main column -->
 		<div class="md:col-span-8">
 			<section class="mb-14">
-				<div class="mb-6 flex items-baseline gap-3">
-					<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">01</span>
-					<span class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-12 flex-none" aria-hidden="true"
-					></span>
-					<span class="eyebrow text-slate-600 dark:text-slate-400">Overview</span>
-				</div>
 				<p class="max-w-prose text-lg leading-relaxed text-slate-700 dark:text-slate-300">
 					{project.details}
 				</p>
@@ -120,14 +111,6 @@
 			<!-- Gallery -->
 			{#if project.images && project.images.length > 1}
 				<section>
-					<div class="mb-6 flex items-baseline gap-3">
-						<span class="eyebrow text-vasco-700 dark:text-vasco-300 shrink-0">02</span>
-						<span
-							class="bg-vasco-500/60 dark:bg-vasco-400/60 h-px w-12 flex-none"
-							aria-hidden="true"
-						></span>
-						<span class="eyebrow text-slate-600 dark:text-slate-400">Gallery</span>
-					</div>
 					<div class="grid gap-4 sm:grid-cols-2">
 						{#each project.images.slice(1) as image, i (i)}
 							<button

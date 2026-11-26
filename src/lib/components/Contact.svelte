@@ -54,15 +54,7 @@
 			</g>
 		</svg>
 
-		<!-- Top metadata strip -->
-		<div
-			class="relative flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-4"
-		>
-			<span class="eyebrow text-hoop-400">№ 06 — Hit me up</span>
-			<span class="eyebrow text-slate-400">CC: vasco.kf @ Lisbon</span>
-		</div>
-
-		<div class="relative mt-10 grid gap-10 md:grid-cols-12 md:items-end md:gap-10 lg:gap-12">
+		<div class="relative grid gap-10 md:grid-cols-12 md:items-end md:gap-10 lg:gap-12">
 			<div class="md:col-span-7">
 				<h2
 					id="contact-heading"
@@ -80,7 +72,6 @@
 			</div>
 
 			<div class="md:col-span-5">
-				<p class="eyebrow mb-4 text-slate-400">Reach me on —</p>
 				<ul class="space-y-2">
 					{#each contacts as contact, i (i)}
 						<li>
@@ -103,7 +94,7 @@
 								<span
 									class="font-mono text-xs text-slate-400 transition-colors group-hover:text-white group-active:text-white"
 								>
-									{contact.label} →
+									{contact.label}
 								</span>
 							</a>
 						</li>
